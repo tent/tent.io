@@ -27,7 +27,7 @@ Your type schema needs to have `url`, `name`, `description`, `version`, and `con
 
 | Name            | Required | Type   | Description      | 
 | --------------- | -------- | ------ | ---------------- | 
-| `status`				| Required | String | Possible values: "single", "in a relationship", "it's complicated" |
+| `status`				| Required | String | Possible values: "single", "in a relationship", "it's complicated", "divorced" |
 | `interested_in` | Required | Array  | Possible values: "men", "women" |
 | `looking_for`   | Required | Array  | Possible values: "random play", "friendship", "relationship", "whatever I can get", "networking" |
 
