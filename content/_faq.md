@@ -1,6 +1,6 @@
 ### What is Tent?
 
-Tent is a protocol for distributed social networking. Tent users share data with
+Tent is a protocol for decentralized social networking. Tent users can share data with
 apps and each other. Anyone can host their own Tent server, or write a server or app
 that uses the Tent protocol. Users can take their content and relationships with
 them when they move servers. Tent supports extensible data types so developers can create new kinds of interaction.
@@ -12,14 +12,14 @@ a secure site login replacement so you don't need passwords when accessing other
 sites on the web.
 
 
-### Why is Tent distributed?
+### Why is Tent decentralized?
 
-Distributed services are resilient. If one part breaks or is turned off the
-other parts continue to operate normally. This is why the whole internet doesn't
-shut down when one site or server is having problems. Important services should
-be decentralized, offering users a choice of providers and developers the
+Decentralized services are resilient. If one part breaks or is turned off the
+other parts continue to operate normally. The Internet is decentralized. That's why the whole Internet doesn't
+shut down when one site or server is having problems. Important systems should
+be decentralized and offer users a choice of providers and developers the
 opportunity to innovate. The Internet itself, and the most important services on
-it, like the World Wide Web and Email, are all distributed systems based on open
+it, like the World Wide Web and Email, are all decentralized systems based on open
 protocols. So is Tent. Most existing social sites could be reimplemented
 based on Tent.
 
@@ -34,7 +34,7 @@ distributed services inside the country, like that nation's Web often continue t
 Tent can also be run on a wireless mesh network and/or as a Tor hidden service, unlike centralized social networks.
 
 The social web is too important to leave in the hands of any one company or
-government. The services on which the world depends need to be distributed. With
+government. The services on which the world depends need to be decentralized. With
 Tent, now the world can depend on social.
 
 
@@ -117,8 +117,8 @@ them.
 ### Does Tent have ads?
 
 Tent is a protocol like email or the World Wide Web. Anyone can run their own
-tent server (which would be ad-free) or host a tent server for others. Just like
-email, some providers show ads to make money so they can host your tent server
+tent server (which would be ad-free) or host a Tent server for others. Just like
+email, some providers show ads to make money so they can host your Tent server
 for free. Others charge users directly and don't need ads. It's your choice.
 
 
