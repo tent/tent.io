@@ -3,9 +3,9 @@ html lang='en'
   head == render '_head'
   body
     == render '_navbar'
-    .container
+    .container.doc
       .row
-        .span2.doc-nav
+        .span2
           ul.nav.nav-list.well
             li.nav-header Tent
             li == nav_link_with_active 'Protocol Introduction', '/docs'
@@ -21,5 +21,13 @@ html lang='en'
             li == nav_link_with_active 'Conversation', '/docs/example-conversation'
             li == nav_link_with_active 'Conversation Thread', '/docs/example-conversation-thread'
         .span8
+          .alert.alert-block
+            h4 Alpha Documentation 
+            p These docs are very rough, incorrect, and incomplete. They will be modified heavily over the next few weeks.
+            p
+              ' Please contribute by making Pull Requests and Issues on the
+              == link_to 'GitHub repository', 'https://github.com/tent/tent.io'
+              | .
+
           == yield
     == render '_footer'

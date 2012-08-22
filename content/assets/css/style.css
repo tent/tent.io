@@ -71,6 +71,7 @@ article {
 article date {
   display: block;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 footer {
@@ -81,6 +82,10 @@ footer {
   border-top: 1px grey solid;
 }
 
-.doc-nav {
+.doc {
   margin-top: 10px;
+}
+
+.alert h4 {
+  font-weight: bold;
 }
