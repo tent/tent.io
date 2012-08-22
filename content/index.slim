@@ -1,1 +1,10 @@
 #faq == render_child('/_faq/')
+
+#mailchimp-signup
+  h3 For updates on Tent, sign up here:
+  form.form-inline action="http://tent.us4.list-manage.com/subscribe/post?u=f318e535ee890f27bfd3ec2d8&amp;id=05ba32ffe8" method="post"
+    label for="mc-email"
+      ' Email Address:
+      input#mc-email.required.email type="email" name="EMAIL"
+    input.btn.btn-primary name="subscribe" type="submit" value="Subscribe"
+
