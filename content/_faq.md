@@ -13,11 +13,6 @@ a secure site login replacement so you don't need passwords when accessing other
 sites on the web.
 
 
-### How does Tent work?
-
-Check out this page for a full description
-
-
 ### What does Tent do?
 
 When you create new content, Tent sends it to the followers you choose. It also
