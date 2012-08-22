@@ -40,7 +40,7 @@ to see them.
 
 Soon you will be able to download and run Tent server on your own hardware or get started with
 a hosted provider who runs the server for you. You could also write your own
-server and apps from scratch using the developer documentation **LINK**.
+server and apps from scratch using the [developer documentation](/docs).
 
 
 ### Can I switch Tent servers?
