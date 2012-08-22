@@ -22,15 +22,6 @@ compile '/sitemap/' do
   filter :erb
 end
 
-compile '/sitemap/', rep: 'gzip' do
-  filter :erb
-  filter :shellcmd, cmd: 'gzip'
-end
-
-route '/sitemap/', rep: 'gzip' do
-  '/sitemap.xml.gz'
-end
-
 compile '/blog/feed/' do
   filter :erb
 end
