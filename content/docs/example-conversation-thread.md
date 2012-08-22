@@ -9,7 +9,10 @@ Brant decides the weather is great for going to the beach, he publicly asks a fe
 ```
 POST https://tent.brant.io/posts
 Content-Type: application/json
-Authorization: Basic 6BAtLBGtCK8417S2kEzZUZs/GU87l2beDKKLNo+BGZ8evqv35WiKVlRum4z0dOK0WNPfU9tZzkCK8Q+0RdOwFw==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -46,7 +49,10 @@ Kelsi responds:
 ```
 POST https://kelsi.io/tent/posts
 Content-Type: application/json
-Authorization: Basic Ak98PTWmfK6B55VrOx8W1QZGoR8ptSRpEMqXqW9mtCgn9vgzZTL0pU2eD9O8qo/GQwaDo3kmGtWN39coOHSrow==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -87,7 +93,10 @@ Susie is following Kelsi and responds to her post:
 ```
 POST https://tent.susie.com/posts
 Content-Type: application/json
-Authorization: Basic hsKqPQ3wktYmByYgnOH21MTRq1DDAXkOyDGlfKGZ8RhiB7mBePA+68o+b1jyYG2nXlzUqUPIGz8yeKmJckB1XQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -131,7 +140,10 @@ Brant responds:
 ```
 POST https://tent.brant.io/posts
 Content-Type: application/json
-Authorization: Basic 6BAtLBGtCK8417S2kEzZUZs/GU87l2beDKKLNo+BGZ8evqv35WiKVlRum4z0dOK0WNPfU9tZzkCK8Q+0RdOwFw==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
