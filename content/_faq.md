@@ -158,7 +158,7 @@ If there isn't you should write one!
 ### Where did Tent come from?
 
 Tent began after a conversation between Jonathan Rudenberg, Daniel Siders, Jesse
-Stuart, and Lucas Wojciechowski. It was inspired by hypertext, Xanadu, SMTP, the
+Stuart, and Lucas Wojciechowski. It was inspired by Hypertext, Xanadu, SMTP, the
 World Wide Web, and distributed peer-to-peer services.
 
 ### How is Tent licensed?
