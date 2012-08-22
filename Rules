@@ -64,6 +64,8 @@ compile '*' do
     layout 'none'
   when %r{^/blog/.+}
     layout 'post'
+  when %r{^/docs/}
+    layout 'doc'
   else
     layout 'default'
   end

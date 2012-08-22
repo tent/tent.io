@@ -2,7 +2,7 @@
 title: App Authentication
 ---
 
-# App Authentication
+## App Authentication
 
 Tent uses [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-31) for app
 authentication. Because of the distributed nature of Tent, it is necessary for
@@ -13,7 +13,7 @@ with [MAC Access
 Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01).
 
 
-## App Registration
+### App Registration
 
 Before authenticating a user, the application must be registered with the
 specified Tent entity. The first step is to perform discovery on the provided
@@ -62,13 +62,15 @@ Location: https://tent.titanous.com/apps/6737b
 ```
 
 
+```json
+{
   "id": "6737b",
   "secret": "3d2adf9a68bf64f4eaff70a7c7700a8",
   "mac_algorithm": "hmac-sha-256"
 }
 ```
 
-### Request Parameters
+#### Request Parameters
 
 | Name            | Required | Type   | Description |
 | --------------- | -------- | ------ | ----------- |
@@ -79,7 +81,7 @@ Location: https://tent.titanous.com/apps/6737b
 | `redirect_uris` | Optional | Array  | A list of **exact** (including parameters) urls that will be used as OAuth `redirect_uri` |
 | `scopes`        | Optional | Object | A list of scope key to description value mappings of all scopes that the app might use. The descriptions should describe why the specific scope is necessary for the app to function. |
 
-### Response Parameters
+#### Response Parameters
 
 | Name            | Description |
 | --------------- | ----------- |
@@ -87,12 +89,12 @@ Location: https://tent.titanous.com/apps/6737b
 | `secret`        | The secret used as the MAC key when modifying the registration and receiving notifications. |
 | `mac_algorithm` | The MAC algorithm to be used. |
 
-## App Registration Modification
+### App Registration Modification
 
 The request must be authenticated with a MAC generated using the secret from the
 initial registration.
 
-### PATCH /apps/:id
+#### PATCH /apps/:id
 
 ```text
 PATCH /apps/aff70a7
@@ -120,9 +122,9 @@ Authorization: MAC id="aff70a7",
 ```
 
 
-## Authentication Flow
+### Authentication Flow
 
-### Auth Request
+#### Auth Request
 
 The app requests the user's Tent identifier, and performs discovery on it to
 find the Tent API root. The app then builds an auth request and redirects the
@@ -134,10 +136,10 @@ user-agent to it:
   &scope=read_posts,read_profile
   &state=87351cc2f6737bfc8ba
   &tent_profile_info_types=https://tent.io/types/info/music
-  &tent_post_types=https://tent.io/types/posts/status#0.2.0,https://tent.io/types/posts/photo#0.2.0
+  &tent_post_types=https://tent.io/types/posts/status##0.2.0,https://tent.io/types/posts/photo##0.2.0
 ```
 
-#### Parameters
+##### Parameters
 
 | Name                        | Required  | Description |
 | --------------------------- | --------- | ----------- |
@@ -145,11 +147,11 @@ user-agent to it:
 | `redirect_uri`              | Required  | The URI to redirect to after authentication is complete. It must **exactly** match a URI (including parameters) provided during app registration in `redirect_uris`. |
 | `state`                     | Optional  | This parameter will be added to the `redirect_uri` and should always be set to a random string that is stored in the session, and then verified to prevent cross-site request forgery attacks. |
 | `scope`                     | Optional  | A comma-separated list of scopes that the app is requesting access to. |
-| `tent_profile_info_types`   | Optional  | A comma-separated list of `profile_info_type_url#version` profile info type specifiers that the app is requesting access to. Set to `all` to request full access to the profile. |
-| `tent_post_types`           | Optional  | A comma-separated list of `post_type_url#version` type/version specifiers that the app is requesting access to. Set to `all` to request access to all posts. |
+| `tent_profile_info_types`   | Optional  | A comma-separated list of `profile_info_type_url##version` profile info type specifiers that the app is requesting access to. Set to `all` to request full access to the profile. |
+| `tent_post_types`           | Optional  | A comma-separated list of `post_type_url##version` type/version specifiers that the app is requesting access to. Set to `all` to request access to all posts. |
 
 
-#### Scopes
+##### Scopes
 
 | Scope              | Description                                                            |
 | ------------------ | ---------------------------------------------------------------------- |
@@ -163,7 +165,7 @@ user-agent to it:
 | `write_posts`      | Read and publish posts with types listed in the `post_types` parameter |
 
 
-### Redirect
+#### Redirect
 
 After the user has authorized the application, the Tent server will redirect the
 User-Agent back to the specified `redirect_uri` with a `code` that can be used
@@ -177,12 +179,12 @@ the initial request to prevent request forgery.
 Location: http://fooapp.com/tent/callback?code=27ec1c54980f1af74&state=87351cc2f6737bfc8ba
 ```
 
-### Access Token
+#### Access Token
 
 The `code` must be traded for permanent authentication details that can be used
 to access the Tent server on behalf of the user.
 
-#### POST /apps/:id/access\_token
+##### POST /apps/:id/access\_token
 
 The request must be signed with a MAC using the secret obtained during app
 registration. Currently only the `mac` `token_type` is supported.
@@ -221,7 +223,7 @@ Content-Type: application/json
 }
 ```
 
-#### Response Parameters
+##### Response Parameters
 
 | Name            | Description                                      |
 | --------------- | ------------------------------------------------ |
@@ -231,7 +233,7 @@ Content-Type: application/json
 | `token_type`    | Specifies the token type. Currently always `mac` |
 
 
-## Request Authentication
+### Request Authentication
 
 Tent uses [HTTP MAC Access
 Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01) to

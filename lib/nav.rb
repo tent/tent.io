@@ -1,13 +1,13 @@
 include Nanoc::Helpers::LinkTo
 
 def nav_link_with_active(text, target, attributes = {})
-  path = target.is_a?(String) ? target : target.path
-  rep_path = @item_rep.path
+  target_path = target.is_a?(String) ? target : target.path
+  item_path = @item_rep.path.sub(/\..+/, '')
 
-  active = if path == '/'
-             path == rep_path
+  active = if attributes.delete(:top)
+             /^#{target_path}/ =~ item_path
            else
-             /^#{path}/ =~ rep_path
+             target_path == item_path
            end
 
   "<li #{'class="active"' if active}>" + link_to(text, target, attributes) + "</li>"

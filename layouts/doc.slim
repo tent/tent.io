@@ -1,0 +1,25 @@
+doctype html
+html lang='en'
+  head == render '_head'
+  body
+    == render '_navbar'
+    .container
+      .row
+        .span2.doc-nav
+          ul.nav.nav-list.well
+            li.nav-header Tent
+            li == nav_link_with_active 'Protocol Introduction', '/docs'
+            li == nav_link_with_active 'Server Protocol', '/docs/server-protocol'
+            li == nav_link_with_active 'Tent Profile', '/docs/profile'
+            li == nav_link_with_active 'App Authentication', '/docs/app-auth'
+            li == nav_link_with_active 'Server API for Apps', '/docs/app-server'
+            li == nav_link_with_active 'App Notifications', '/docs/app-notifications'
+            li.nav-header Types
+            li == nav_link_with_active 'Post Types', '/docs/post-types'
+            li == nav_link_with_active 'Profile Info Types', '/docs/info-types'
+            li.nav-header Examples
+            li == nav_link_with_active 'Conversation', '/docs/example-conversation'
+            li == nav_link_with_active 'Conversation Thread', '/docs/example-conversation-thread'
+        .span8
+          == yield
+    == render '_footer'
