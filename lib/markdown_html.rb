@@ -1,10 +1,12 @@
-require 'albino'
+require 'pygments.rb'
+
+RubyPython.start python_exe: 'python2.6' if ENV['RACK_ENV'] == 'production'
 
 class MarkdownHTML < Redcarpet::Render::HTML
   include Redcarpet::Render::SmartyPants
 
   def block_code(code, language)
-    language ? Albino.colorize(code, language) : code
+    Pygments.highlight(code, lexer: language)
   end
 
   def table(header, body)
