@@ -1,10 +1,9 @@
 ### What is Tent?
 
 Tent is a protocol for distributed social networking. Tent users share data with
-apps and each other. Tent supports extensible data types for future expanded
-functionality. Anyone can host their own Tent server, or write a server or app
+apps and each other. Anyone can host their own Tent server, or write a server or app
 that uses the Tent protocol. Users can take their content and relationships with
-them when they move servers.
+them when they move servers. Tent supports extensible data types so developers can create new kinds of interaction.
 
 Tent is for sharing with others and seeing what others have shared. Because you
 control your own Tent server, it is also a good place to store things you don't
@@ -13,12 +12,38 @@ a secure site login replacement so you don't need passwords when accessing other
 sites on the web.
 
 
+### Why is Tent distributed?
+
+Distributed services are resilient. If one part breaks or is turned off the
+other parts continue to operate normally. This is why the whole internet doesn't
+shut down when one site or server is having problems. Important services should
+be decentralized, offering users a choice of providers and developers the
+opportunity to innovate. The Internet itself, and the most important services on
+it, like the World Wide Web and Email, are all distributed systems based on open
+protocols. So is Tent. Most existing social sites could be reimplemented
+based on Tent.
+
+Companies and products don't last forever. if a company changes its terms, shuts
+down, gets bought, discontinues a product, no problem-- you can take your data
+and services with you and set up somewhere else-- on your own server or at
+another company. Distributed services using protocols have another big advantage:
+users on a network separated from the regular internet can still use them. Some
+countries and Internet Service Providers block access to services and content
+outside the country. Totalitarian regimes have blocked social networks, but
+distributed services inside the country, like that nation's Web often continue to operate.
+Tent can also be run on a wireless mesh network and/or as a Tor hidden service, unlike centralized social networks.
+
+The social web is too important to leave in the hands of any one company or
+government. The services on which the world depends need to be distributed. With
+Tent, now the world can depend on social.
+
+
 ### What does Tent do?
 
-When you create new content, Tent sends it to the followers you choose. It also
+When you create new content, your Tent server sends it to the followers you choose. It also
 listens for and stores new messages and content from the people and
 organizations you follow. Every user on Tent also has a profile that stores
-basic information about the user.
+basic information about the user. Tent also lets you control which apps can access your data and what they can do with it.
 
 
 ### How do I use Tent?
@@ -31,9 +56,9 @@ content from people you follow. You can limit apps so they can't see all your
 content. If you have private photos or messages, you might want only a few apps
 to see them.
 
-You can download and run Tent server on your own hardware or get started with
+Soon you will be able to download and run Tent server on your own hardware or get started with
 a hosted provider who runs the server for you. You could also write your own
-server and apps from scratch.
+server and apps from scratch using the developer documentation **LINK**.
 
 
 ### Can I switch Tent servers?
@@ -51,52 +76,26 @@ authorize a Tent app or a new Tent server to view the content and it will
 transfer over automatically.
 
 
-### Why is Tent distributed?
-
-Distributed services are resilient. If one part breaks or is turned off the
-other parts continue to operate normally. This is why the whole internet doesn't
-shut down when one site or server is having problems. Important services should
-be decentralized, offering users a choice of providers and developers the
-opportunity to innovate. The Internet itself, and the most important services on
-it, like the World Wide Web and Email, are all distributed systems based on open
-protocols. Just like Tent. Most existing social sites could be reimplemented
-based on Tent.
-
-Companies and products don't last forever. if a company changes its terms, shuts
-down, gets bought, discontinues a product, no problem-- you can take your data
-and services with you and set up somewhere else-- on your own server or at
-another company. Distributed protocol-based service have another big advantage:
-users on a network separated from the internet can still use them. Some
-countries and Internet Service Providers block access to services and content
-outside the country. Totalitarian regimes have blocked social networks, but
-distributed services inside the country, like that nation's Web still operate.
-Tent can be run inside
-
-The social web is too important to leave in the hands of any one company or
-government. The services on which the world depends need to be distributed. With
-Tent, now the world can depend on social.
-
-
 ### What does Tent do that existing social networks don't?
 
-You can take your relationships--the users you follow and the users who follow
-you--and your content with you. Tent also lets you control your data, decide who
+Tent users can take their relationships--the users they follow and the users who follow
+them--and their content with them. Tent also lets them control their data, decide who
 can see it, and how they can use it. Tent is distributed and an open protocol,
-so if you don't like an app or service you can write your own, or change
+so if they don't like an app or service they can write their own, or change
 providers.
 
-You do not have to advertise your tent server to anyone. You can also run a Tent
-server as a TOR hidden service, making it even harder for someone to silence
-your voice online or track you down. Tent respects pseudonyms, handles, and your
-right to anonymity. Since you control your Tent server, you also choose your
-name, which can be anything you want.
+They do not have to advertise their Tent servers to anyone. They can also run a Tent
+server as a TOR hidden service, making it even harder for anyone to silence
+their voices online or track them down. Tent respects pseudonyms, handles, and everyone's
+right to anonymity. Since users control their own Tent servers, they also choose their
+name, which can be anything they want.
 
-Even more features are coming in the next version of Tent
+Even more features are coming in the next version of Tent.
 
 
 ### What's wrong with other social services?
 
-Centralized Social Service Providers (CSSPs) limit what you can share and who
+Centralized Social Service Providers limit what you can share and who
 you can share with. They only allow Because their products are centralized and
 maintained by a company, users are left in the cold when the company changes its
 products or shuts down. There's nothing wrong with a company offering users
@@ -113,6 +112,22 @@ money. Your data is far more valuable-- your family and friends' photos,
 locations, and private communications. You should be able to store them
 somewhere you trust, move them when you want, control who can and can't see
 them.
+
+
+### Does Tent have ads?
+
+Tent is a protocol like email or the World Wide Web. Anyone can run their own
+tent server (which would be ad-free) or host a tent server for others. Just like
+email, some providers show ads to make money so they can host your tent server
+for free. Others charge users directly and don't need ads. It's your choice.
+
+
+### Does Tent cost money?
+
+Tent is a set of protocols like email or the world wide web. Tent itself is and
+will always be free. Anyone can run or implement a Tent service or write a new
+app that works with Tent.  Just like email, some providers are free and others
+cost money. Don't like any of the existing providers? Start your own.
 
 
 ### What's wrong with a federated social web?
@@ -145,26 +160,9 @@ The architects of Tent investigated existing protocols for the distributed
 social web. Each of them lacked critical features
 
 
-### Does Tent have ads?
-
-Tent is a protocol like email or the World Wide Web. Anyone can run their own
-tent server (which would be ad-free) or host a tent server for others. Just like
-email, some providers show ads to make money so they can host your tent server
-for free. Others charge users directly and don't need ads. It's your choice.
-
-
-### Does Tent cost money?
-
-Tent is a set of protocols like email or the world wide web. Tent itself is and
-will always be free. Anyone can run or implement a Tent service or write a new
-app that works with Tent.  Just like email, some providers are free and others
-cost money. Don't like any of the existing providers? Start your own.
-
-
 ### Can I donate to Tent?
 
-You can not donate money to Tent. If you want to support the Tent effort there
-are several ways you can help:
+Tent needs *you*, not your money. There are several ways you can help:
 
 1. **Start your own Tent server.**  The most important thing you can do is switch to
    using Tent. You can host your own Tent server by downloading the code here or
@@ -183,18 +181,13 @@ are several ways you can help:
    libraries are coming soon.
 
 
+### Is there a Tent app for my favorite activity?
+
+If there isn't you should write one!
+   
+   
 ### Where did Tent come from?
 
 Tent began after a conversation between Jonathan Rudenberg, Daniel Siders, Jesse
 Stuart, and Lucas Wojciechowski. It was inspired by hypertext, Xanadu, SMTP, the
 World Wide Web, and distributed peer-to-peer services.
-
-
-### Where can I see some examples?
-
-Here.
-
-
-### Is there a Tent app for my favorite activity?
-
-If there isn't you should write one!
