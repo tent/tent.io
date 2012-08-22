@@ -26,7 +26,7 @@ soon so you can focus on writing your app.
 
 ### Users
 
-Tent users are called entities and are defined by a URI.
+Tent users are called entities and are identified by a domain name.
 
 **Example:** John Smith's entity might be `johnsmith.me`, implying a [HEAD
 request](http://en.wikipedia.org/wiki/HEAD_%28HTTP%29#Request_methods) to
