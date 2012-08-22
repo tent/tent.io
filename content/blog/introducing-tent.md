@@ -65,8 +65,7 @@ The first Tent server implementation will be available as an open source
 repository very soon. A hosted version for users unwilling or unable to host
 their own will follow quickly.
 
-In the meantime, we encourage anyone developing apps or services supporting Tent
-to add your services to the list in the GitHub repository via pull request. The
+In the meantime, we encourage anyone with feedback or suggestions on the protocol or who is developing apps or services supporting Tent to add your services to the list in the GitHub repository via pull request. The
 same goes for post-types and profile info-types: a community site will launch
 soon, for now, use pull requests or reach out directly: info@tent.io
 
