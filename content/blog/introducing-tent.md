@@ -44,7 +44,7 @@ with its users.
 
 ### The Tent Ecosystem
 
-Tent not specifying the economics of an ecosystem. There will be many options
+Tent is not specifying the economics of an ecosystem. There will be many options
 for users, from free to paid to self hosted, from ad supported to
 advertising-free, with providers that serve different market segments and
 types of users. Since anyone can set up a Tent server or become a service

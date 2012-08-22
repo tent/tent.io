@@ -1,41 +1,23 @@
 ### What is Tent?
 
-Tent is a protocol for decentralized social networking. Tent users can share data with
-apps and each other. Anyone can host their own Tent server, or write a server or app
+Tent is a protocol for decentralized, open social networking. Tent users share content with
+apps and each other. Anyone can run a Tent server, or write an app or alternative server
 that uses the Tent protocol. Users can take their content and relationships with
-them when they move servers. Tent supports extensible data types so developers can create new kinds of interaction.
+them when they change or move servers. Tent supports extensible data types so developers can create new kinds of interaction.
 
-Tent is for sharing with others and seeing what others have shared. Because you
-control your own Tent server, it is also a good place to store things you don't
-want to share with others, a sort of personal data vault. It can also be used as
-a secure site login replacement so you don't need passwords when accessing other
-sites on the web.
+Tent is for sharing with others and seeing what others have shared with you. You can ask to follow other users and other users can follow you. Because you control your own Tent server, it is also a good place to store things you do not
+want to share with others, a sort of personal data vault. It can also be used as a secure site login replacement so you don't need passwords when accessing other sites on the web.
 
 
 ### Why is Tent decentralized?
 
-Decentralized services are resilient. If one part breaks or is turned off the
-other parts continue to operate normally. The Internet is decentralized. That's why the whole Internet doesn't
-shut down when one site or server is having problems. Important systems should
-be decentralized and offer users a choice of providers and developers the
-opportunity to innovate. The Internet itself, and the most important services on
-it, like the World Wide Web and Email, are all decentralized systems based on open
-protocols. So is Tent. Most existing social sites could be reimplemented
-based on Tent.
+Decentralized services are resilient. If one part breaks or is turned off the other parts continue to operate normally. The Internet is decentralized. That's why the whole Internet doesn't shut down when one site or server is having problems. Important systems should be decentralized. The Internet itself, and the most important services on it, like the World Wide Web and email, are all decentralized systems based on open protocols. So is Tent. Most existing social sites could be reimplemented using Tent.
 
-Companies and products don't last forever. if a company changes its terms, shuts
-down, gets bought, discontinues a product, no problem-- you can take your data
-and services with you and set up somewhere else-- on your own server or at
-another company. Distributed services using protocols have another big advantage:
-users on a network separated from the regular internet can still use them. Some
-countries and Internet Service Providers block access to services and content
-outside the country. Totalitarian regimes have blocked social networks, but
-distributed services inside the country, like that nation's Web often continue to operate.
-Tent can also be run on a wireless mesh network and/or as a Tor hidden service, unlike centralized social networks.
+Decentralized services put users in control. Companies and products do not last forever. If a company changes its terms, shuts down, gets bought, discontinues a product, no problem-- users can take their data and services with them and set up somewhere else-- on their own server or at another company. Decentralized, protocol-based systems offer users a choice of providers and developers the opportunity to innovate, since developers deal directly with users, not a platform or company.
 
-The social web is too important to leave in the hands of any one company or
-government. The services on which the world depends need to be decentralized. With
-Tent, now the world can depend on social.
+Distributed services using protocols have another big advantage: users on a network separated from the regular internet can still use them. Some countries and Internet Service Providers block access to services and content they disagree with. Totalitarian regimes have blocked centralized social networks, but distributed services inside the country, like that nation's web often continue to operate. Tent servers can be accessed over a wireless mesh network and run as a Tor hidden service, unlike centralized social networks. 
+
+The social web is too important to leave in the hands of any one company or government. The services on which the world depends need to be decentralized. Using Tent, the world can depend on social.
 
 
 ### What does Tent do?
@@ -76,7 +58,7 @@ authorize a Tent app or a new Tent server to view the content and it will
 transfer over automatically.
 
 
-### What does Tent do that existing social networks don't?
+### What can Tent users do that they could not on other social networks?
 
 Tent users can take their relationships--the users they follow and the users who follow
 them--and their content with them. Tent also lets them control their data, decide who
@@ -93,30 +75,20 @@ name, which can be anything they want.
 Even more features are coming in the next version of Tent.
 
 
-### What's wrong with other social services?
+### What is wrong with other social services?
 
 Centralized Social Service Providers limit what you can share and who
-you can share with. They only allow Because their products are centralized and
-maintained by a company, users are left in the cold when the company changes its
-products or shuts down. There's nothing wrong with a company offering users
-social services. But users shouldn't be limited by those companies. Imagine if
-you could only email other customers of your Internet Service Provider.
-Unfortunately Centralized Social Service Providers have done just that. You can
-only communicate directly with other users of their closed network.
+you can share with. They only allow users to interact with other users on the same network.
+Because their products are centralized and maintained by a company, users are left in the cold when the company changes its products or shuts down. There's nothing wrong with a company offering users social services. But users shouldn't be limited by those companies. Imagine if you could only email other customers of your Internet Service Provider.
+Unfortunately Centralized Social Service Providers have done just that. You can only communicate directly with other users of their closed network.
 
-If you don't like a bank you can withdraw your money and deposit it somewhere
-else, including your own home. You could even start a new bank where you and
-your friends felt safe. You can still pay your bills and maintain your financial
-relationships, just tell them about your new account. We aren't talking about
-money. Your data is far more valuable-- your family and friends' photos,
-locations, and private communications. You should be able to store them
-somewhere you trust, move them when you want, control who can and can't see
-them.
+If you don't like a bank you can withdraw your money and deposit it somewhere else, including your own home. You could even start a new bank where you and your friends felt safe. You can still pay your bills and maintain your financial
+relationships, just tell them about your new account. We aren't talking about money. Your data is far more valuable-- your family and friends' photos, locations, and private communications. You should be able to store them somewhere you trust, move them when you want, control who can and can't see them.
 
 
 ### Does Tent have ads?
 
-Tent is a protocol like email or the World Wide Web. Anyone can run their own
+Tent is a protocol like E-mail or the World Wide Web. Anyone can run their own
 Tent server (which would be ad-free) or host a Tent server for others. Just like
 email, some providers show ads to make money so they can host your Tent server
 for free. Others charge users directly and don't need ads. It's your choice.

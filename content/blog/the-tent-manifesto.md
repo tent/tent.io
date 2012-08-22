@@ -85,5 +85,5 @@ determined only by those participating. Conversation is too important to trust
 to any third party.
 
 
-We're announcing Tent, an open protocol for distributed social networks.
+We're [introducing Tent](/blog/introducing-tent), an open protocol for distributed social networks.
 Everyone controls what happens to their content.
