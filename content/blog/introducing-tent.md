@@ -6,7 +6,7 @@ created_at: August 22, 2012 14:05 EDT
 
 Tent is a new protocol for open, distributed social networking.
 
-What we believe -- [The Tent Manifesto](/blog/the-tent-manifesto)
+*What we believe* -- [The Tent Manifesto](/blog/the-tent-manifesto)
 
 ### What makes Tent different?
 
@@ -70,4 +70,4 @@ to add your services to the list in the GitHub repository via pull request. The
 same goes for post-types and profile info-types: a community site will launch
 soon, for now, use pull requests or reach out directly: info@tent.io
 
-More coming soon about the future of Tent.
+Read more about Tent in the [FAQ](http://tent.io) and [developer documentation](/docs/).
