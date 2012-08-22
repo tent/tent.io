@@ -13,6 +13,10 @@ Your app, or a third party app your using, will request the profile JSON from yo
 ```
 GET /profile
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -57,6 +61,10 @@ If given permission, an app can update your profile JSON. An app can have permis
 PATCH /profile
 Accept: application/json
 Content-Type: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 ```json
 [
@@ -129,6 +137,10 @@ App gets list of entities your server is following.
 ```
 GET /following
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -164,6 +176,10 @@ App tells server to follow an entitie.
 ```
 POST /following
 Content-Type: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 ```json
 {
@@ -186,6 +202,10 @@ App changes what groups are applied to an entity your server is following.
 PATCH /following/bda7f416fbba
 Accept: application/json
 Content-Type: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 ```json
 {
@@ -214,6 +234,10 @@ App tells server not to follow an entity.
 
 ```
 DELETE /following/bda7f416fbba
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -227,6 +251,10 @@ App asks for list of entities that are following the server.
 ```
 GET /followers
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -255,6 +283,10 @@ App tells server to update information about a follower entity.
 PATCH /followers/ddd67278456b
 Accept: application/json
 Content-Type: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 ```json
 {
@@ -287,6 +319,10 @@ App asks for info about specific follower
 ```
 GET /followers/ddd67278456b
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -309,6 +345,10 @@ App tells server not to send notifications to entity.
 
 ```
 DELETE /followers/ddd67278456b
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```
@@ -326,6 +366,10 @@ See [conversation example](https://github.com/tent/tent-docs/blob/master/example
 ```
 POST /posts
 Content-Type: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 ```json
 {
@@ -391,6 +435,10 @@ You want to see it, so your app requests it from your server.
 ```
 GET /posts/3fe1abef41cb?entity=smithson%2Eme&fetch=force
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 #### Request Params
@@ -435,6 +483,10 @@ For example, your app has a stream view showing status updates from you and your
 ```
 GET https://tent.johnsmith.io/posts?since_id=80b445839dd1&limit=50
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 #### GET /posts[?params]
@@ -442,6 +494,10 @@ Accept: application/json
 ```
 GET /posts?fetch=false
 Accept: application/json
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 #### Request Params
