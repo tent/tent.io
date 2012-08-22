@@ -72,3 +72,11 @@ article date {
   display: block;
   margin-bottom: 10px;
 }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px grey solid;
+}
