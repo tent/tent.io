@@ -19,16 +19,16 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     ffi (1.0.11)
-    kgio (2.7.4)
     mime-types (1.19)
     nanoc (3.4.0)
       cri (~> 2.2)
     nanoc-cachebuster (0.3.1)
       nanoc (>= 3.3.0)
     nokogiri (1.5.5)
+    puma (1.6.1)
+      rack (~> 1.2)
     rack (1.4.1)
     rack-rewrite (1.2.1)
-    raindrops (0.10.0)
     rainpress (1.0)
     redcarpet (2.1.1)
     rubypython (0.6.2)
@@ -39,10 +39,6 @@ GEM
       tilt (~> 1.3.3)
     temple (0.4.0)
     tilt (1.3.3)
-    unicorn (4.3.1)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -55,10 +51,10 @@ DEPENDENCIES
   nanoc
   nanoc-cachebuster
   nokogiri
+  puma
   pygments.rb!
   rack
   rack-rewrite
   rainpress
   redcarpet
   slim
-  unicorn
