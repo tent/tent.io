@@ -117,7 +117,7 @@ them.
 ### Does Tent have ads?
 
 Tent is a protocol like email or the World Wide Web. Anyone can run their own
-tent server (which would be ad-free) or host a Tent server for others. Just like
+Tent server (which would be ad-free) or host a Tent server for others. Just like
 email, some providers show ads to make money so they can host your Tent server
 for free. Others charge users directly and don't need ads. It's your choice.
 
@@ -191,3 +191,7 @@ If there isn't you should write one!
 Tent began after a conversation between Jonathan Rudenberg, Daniel Siders, Jesse
 Stuart, and Lucas Wojciechowski. It was inspired by hypertext, Xanadu, SMTP, the
 World Wide Web, and distributed peer-to-peer services.
+
+### How is Tent licensed?
+
+Tent will be completely free and open and treated as a standard. To prevent fragmentation before launch, the original authors currently retain copyright. This is a temporary situation which will be remedied immediately after a governance model is chosen. We decided it would be best to share what we could as soon as possible, releasing early and often. We are entirely committed to free and open software and protocols with open governance models leading to a ratified standard.

@@ -12,7 +12,7 @@ What we believe -- [The Tent Manifesto](/blog/the-tent-manifesto)
 
 Tent is decentralized, not federated or centralized. Any Tent server can connect
 to any other Tent server. All features are available to any server as
-first-class citizens. Anyone can host their own tent server. Tent servers can
+first-class citizens. Anyone can host their own Tent server. Tent servers can
 also be run as Tor hidden services to create a social darknet for at-risk
 organizers and activists. Anyone can write applications that connect to Tent in
 order to display or create user content.
