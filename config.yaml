@@ -1,7 +1,7 @@
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
-text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml' ]
+text_extensions: [ 'coffee', 'css', 'erb', 'haml', 'handlebars', 'hb', 'htm', 'html', 'js', 'less', 'markdown', 'md', 'ms', 'mustache', 'php', 'rb', 'sass', 'scss', 'txt', 'xhtml', 'xml', 'slim' ]
 
 # The path to the directory where all generated files will be written to. This
 # can be an absolute path starting with a slash, but it can also be path
@@ -78,6 +78,9 @@ watcher:
 
 google_analytics_id: UA-34258323-1
 base_url: http://tent.io
+title: Tent
+author_name: Tent
+author_uri: http://tent.io
 
 # Configure the robots.txt file for this site.
 # Setting 'default' to true-ish will use sensible defaults. If you

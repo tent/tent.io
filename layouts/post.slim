@@ -6,4 +6,4 @@ html lang='en'
     .container
       .row
         .span8.offset2
-          == yield
+          == render '_post', post: @item, content: yield

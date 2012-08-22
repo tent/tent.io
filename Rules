@@ -31,12 +31,12 @@ route '/sitemap/', rep: 'gzip' do
   '/sitemap.xml.gz'
 end
 
-compile '/posts/feed/' do
+compile '/blog/feed/' do
   filter :erb
 end
 
-route '/posts/feed/' do
-  '/posts.xml'
+route '/blog/feed/' do
+  '/blog.xml'
 end
 
 compile %r{^/(google|robots|assets|favicon)} do
@@ -47,11 +47,22 @@ compile '*' do
   when 'slim'
     filter :slim
   when 'md'
-    filter :redcarpet, renderer: MarkdownHTML, options: { fenced_code_blocks: true }
+    filter :redcarpet, renderer: MarkdownHTML, options: {
+      fenced_code_blocks: true,
+      no_intra_emphasis: true,
+      autolink: true,
+      tables: true,
+      strikethrough: true,
+      lax_html_blocks: true,
+      space_after_headers: true,
+      superscript: true
+    }
   end
 
   case item.identifier
-  when %r{^/posts/}
+  when %r{/_}
+    layout 'none'
+  when %r{^/blog/.+}
     layout 'post'
   else
     layout 'default'
@@ -65,6 +76,8 @@ route '/' do
 end
 
 route '*' do
+  next nil if item.identifier.split('/')[-1][0,1] == '_' # partial 
+
   if item.binary?
     # Write item with identifier /foo/ to /foo.ext
     item.identifier.chop + '.' + item[:extension]

@@ -1,0 +1,5 @@
+article
+  h1 == link_to @post[:title], @post.identifier.chop
+  - time = Time.parse(@post[:created_at])
+  date title=time.strftime('%F %R %Z') datetime=time.strftime('%FT%T%:z') pubdate=true = time.strftime('%B %-d, %Y')
+  == @content || @post.compiled_content

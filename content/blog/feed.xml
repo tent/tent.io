@@ -1,0 +1,1 @@
+<%= atom_feed limit: 10 %>

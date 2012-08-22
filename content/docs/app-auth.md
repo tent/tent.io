@@ -61,8 +61,7 @@ Content-Type: application/json
 Location: https://tent.titanous.com/apps/6737b
 ```
 
-```json
-{
+
   "id": "6737b",
   "secret": "3d2adf9a68bf64f4eaff70a7c7700a8",
   "mac_algorithm": "hmac-sha-256"
@@ -71,93 +70,22 @@ Location: https://tent.titanous.com/apps/6737b
 
 ### Request Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Required</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>name</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>The human name of the app to show the user</td>
-    </tr>
-    <tr>
-      <td><code>description</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>A short description of the application to show the user</td>
-    </tr>
-    <tr>
-      <td><code>url</code></td>
-      <td>Required</td>
-      <td>String</td>
-      <td>The main url of the app</td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>Optional</td>
-      <td>String</td>
-      <td>The url to an icon for the app</td>
-    </tr>
-    <tr>
-      <td><code>redirect_uris</code></td>
-      <td>Optional</td>
-      <td>Array</td>
-      <td>
-        A list of <strong>exact</strong> (including parameters) urls that will 
-        be used as OAuth <code>redirect_uri</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>scopes</code></td>
-      <td>Optional</td>
-      <td>Object</td>
-      <td>
-        A list of scope key to description value mappings of all scopes that
-        the app might use. The descriptions should describe why the specific
-        scope is necessary for the app to function.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name            | Required | Type   | Description |
+| --------------- | -------- | ------ | ----------- |
+| `name`          | Required | String | The human name of the app to show the user |
+| `description`   | Required | String | A short description of the application to show the user |
+| `url`           | Required | String | The main url of the app |
+| `icon`          | Optional | String | The url to an icon for the app |
+| `redirect_uris` | Optional | Array  | A list of **exact** (including parameters) urls that will be used as OAuth `redirect_uri` |
+| `scopes`        | Optional | Object | A list of scope key to description value mappings of all scopes that the app might use. The descriptions should describe why the specific scope is necessary for the app to function. |
 
 ### Response Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>id</code></td>
-      <td>
-        The identifier of the app. This is used as the MAC key identifier for
-        requests to/from the Tent server, as well as the <code>client_id</code>
-        in the OAuth flow.
-      </td>
-    </tr>
-    <tr>
-      <td><code>secret</code></td>
-      <td>
-        The secret used as the MAC key when modifying the registration and
-        receiving notifications.
-      </td>
-    </tr>
-    <tr>
-      <td><code>mac_algorithm</code></td>
-      <td>The MAC algorithm to be used.</td>
-    </tr>
-  </tbody>
-</table>
+| Name            | Description |
+| --------------- | ----------- |
+| `id`            | The identifier of the app. This is used as the MAC key identifier for requests to/from the Tent server, as well as the `client_id` in the OAuth flow. |
+| `secret`        | The secret used as the MAC key when modifying the registration and receiving notifications. |
+| `mac_algorithm` | The MAC algorithm to be used. |
 
 ## App Registration Modification
 
@@ -211,112 +139,29 @@ user-agent to it:
 
 #### Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Required</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>client_id</code></td>
-      <td>Required</td>
-      <td>
-        The <code>id</code> obtained by registering with the Tent server
-      </td>
-    </tr>
-    <tr>
-      <td><code>redirect_uri</code></td>
-      <td>Required</td>
-      <td>
-        The URI to redirect to after authentication is complete. It must
-        <strong>exactly</strong> match a URI (including parameters)
-        provided during app registration in <code>redirect_uris</code>.
-      </td>
-    </tr>
-    <tr>
-      <td><code>state</code></td>
-      <td>Optional</td>
-      <td>
-        This parameter will be added to the <code>redirect_uri</code> and should
-        always be set to a random string that is stored in the session, and then
-        verified to prevent cross-site request forgery attacks.
-      </td>
-    </tr>
-    <tr>
-      <td><code>scope</code></td>
-      <td>Optional</td>
-      <td>
-        A comma-separated list of scopes that the app is requesting access to.
-      </td>
-    </tr>
-    <tr>
-      <td><code>tent_profile_info_types</code></td>
-      <td>Optional</td>
-      <td>
-        A comma-separated list of <code>profile_info_type_url#version</code>
-        profile info type specifiers that the app is requesting access to. Set
-        to <code>all</code> to request full access to the profile.
-      </td>
-    </tr>
-    <tr>
-      <td><code>tent_post_types</code></td>
-      <td>Optional</td>
-      <td>
-        A comma-separated list of <code>post_type_url#version</code>
-        type/version specifiers that the app is requesting access to.
-        Set to <code>all</code> to request access to all posts.
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Name                        | Required  | Description |
+| --------------------------- | --------- | ----------- |
+| `client_id`                 | Required  | The `id` obtained by registering with the Tent server |
+| `redirect_uri`              | Required  | The URI to redirect to after authentication is complete. It must **exactly** match a URI (including parameters) provided during app registration in `redirect_uris`. |
+| `state`                     | Optional  | This parameter will be added to the `redirect_uri` and should always be set to a random string that is stored in the session, and then verified to prevent cross-site request forgery attacks. |
+| `scope`                     | Optional  | A comma-separated list of scopes that the app is requesting access to. |
+| `tent_profile_info_types`   | Optional  | A comma-separated list of `profile_info_type_url#version` profile info type specifiers that the app is requesting access to. Set to `all` to request full access to the profile. |
+| `tent_post_types`           | Optional  | A comma-separated list of `post_type_url#version` type/version specifiers that the app is requesting access to. Set to `all` to request access to all posts. |
+
 
 #### Scopes
 
-<table>
-  <thead>
-    <tr>
-      <th>Scope</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>read_profile</code></td>
-      <td>Read profile sections listed in the <code>profile_info</code> parameter</td>
-    </tr>
-    <tr>
-      <td><code>write_profile</code></td>
-      <td>Read and write profile sections listed in the <code>profile_info</code> parameter</td>
-    </tr>
-    <tr>
-      <td><code>read_followers</code></td>
-      <td>Read follower list</td>
-    </tr>
-    <tr>
-      <td><code>write_followers</code></td>
-      <td>Read follower list and block followers</td>
-    </tr>
-    <tr>
-      <td><code>read_followings</code></td>
-      <td>Read followings list</td>
-    </tr>
-    <tr>
-      <td><code>write_followings</code></td>
-      <td>Read followings list and follow new entities</td>
-    </tr>
-    <tr>
-      <td><code>read_posts</code></td>
-      <td>Read posts with types listed in the <code>post_types</code> parameter</td>
-    </tr>
-    <tr>
-      <td><code>write_posts</code></td>
-      <td>Read and publish posts with types listed in the <code>post_types</code> parameter</td>
-    </tr>
-  </tbody>
-</table>
+| Scope              | Description                                                            |
+| ------------------ | ---------------------------------------------------------------------- |
+| `read_profile`     | Read profile sections listed in the `profile_info` parameter           |
+| `write_profile`    | Read and write profile sections listed in the `profile_info` parameter |
+| `read_followers`   | Read follower list                                                     |
+| `write_followers`  | Read follower list and block followers                                 |
+| `read_followings`  | Read followings list                                                   |
+| `write_followings` | Read followings list and follow new entities                           |
+| `read_posts`       | Read posts with types listed in the `post_types` parameter             |
+| `write_posts`      | Read and publish posts with types listed in the `post_types` parameter |
+
 
 ### Redirect
 
@@ -378,32 +223,13 @@ Content-Type: application/json
 
 #### Response Parameters
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>access_token</code></td>
-      <td>Used as the MAC key identifier.</td>
-    </tr>
-    <tr>
-      <td><code>mac_key</code></td>
-      <td>Used as the MAC key for requests.</td>
-    </tr>
-    <tr>
-      <td><code>mac_algorithm</code></td>
-      <td>The MAC algorithm to be used.</td>
-    </tr>
-    <tr>
-      <td><code>token_type</code></td>
-      <td>Specifies the token type. Currently always <code>mac</code></td>
-    </tr>
-  </tbody>
-</table>
+| Name            | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `access_token`  | Used as the MAC key identifier.                  |
+| `mac_key`       | Used as the MAC key for requests.                |
+| `mac_algorithm` | The MAC algorithm to be used.                    |
+| `token_type`    | Specifies the token type. Currently always `mac` |
+
 
 ## Request Authentication
 
