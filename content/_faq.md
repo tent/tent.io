@@ -165,7 +165,7 @@ social web. Each of them lacked critical features
 Tent needs *you*, not your money. There are several ways you can help:
 
 1. **Start your own Tent server.**  The most important thing you can do is switch to
-   using Tent. Soon you will be able to download the source code for Tent server and can host your own.
+   using Tent. Soon you will be able to download the source code for Tent server and host your own.
    There will also be a hosted service at Tent.is soon.
 2. **Tell your friends.**  The next generation of the social web won't be of much
    use if people don't use it for their social networks. Tell your friends to
@@ -173,7 +173,7 @@ Tent needs *you*, not your money. There are several ways you can help:
    world--on your business card, email signatures, and other social services.
 3. **Suggest a feature or change in Tent.**  Tent is still under development. If you
    see something wrong or confusing or think we left something out, please tell
-   us by emailing comment@tent.io or creating an issue on our github repository.
+   us by emailing comment@tent.io or creating an issue on our [github repository](https://github.com/tent/tent.io).
 4. **Build for Tent.**  Please integrate Tent support into your existing and new
    services. The Tent ecosystem needs apps as much as users. Tent gives
    developers much more freedom than Centralized Social Service Providers have
