@@ -63,3 +63,12 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
 }
+
+article {
+  margin-bottom: 30px;
+}
+
+article date {
+  display: block;
+  margin-bottom: 10px;
+}
