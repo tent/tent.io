@@ -11,7 +11,10 @@ His client posts to his server:
 ```text
 POST https://tent.jerrold.me/posts
 Content-Type: application/json
-Authorization: Basic siueXXjTBoVvjpJAH8Mi2CB58pxGoGes06F2Yhhv4sh13LEdasECwCBOt+GhE3PiBniMZoiBoOeNUiI+mIUN0w==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -47,7 +50,10 @@ His server lets the recipients know about the post:
 ```text
 POST https://tent.kavon.me/notifications
 Content-Type: application/json
-Authorization: Basic pFxCQ0EIDgJDAkWi1kXr1nHBR2BhrSqY5IGgjgXgwriuuiFI8R+u2jKuw8+DmiJMcUt+08HI55xDeT7KBgnhLQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -81,7 +87,10 @@ Authorization: Basic pFxCQ0EIDgJDAkWi1kXr1nHBR2BhrSqY5IGgjgXgwriuuiFI8R+u2jKuw8+
 ```text
 POST https://shirley.me/tent/notifications
 Content-Type: application/json
-Authorization: Basic 8g/A17DuOlwKODrhxr6wKUnm2kmoA7wMHnMtdsj7pTLGcNaoq8wavPgxzd7ihtif2ywPrwJowHaHy8wTexeRCg==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -117,7 +126,10 @@ Their servers instantly propigate the post to designated clients:
 ```text
 POST https://status-updates.kavon.me/notifications
 Content-Type: application/json
-Authorization: Basic wMgriYX2cr2kgVFRrrlndRuz4K20pAcm5GZzQ8akYYqSxRHS3mkujksjHkszZhp3IP+EXcA7vYDAt3k/8QIYeQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -154,7 +166,10 @@ Shirley has her client in maintenence mode; jerrold.me will attempt to deliver t
 ```text
 POST https://shirley.me/status-updates/notifications
 Content-Type: application/json
-Authorization: Basic 3H5i9F6HlFCgdFywnuUN1ATleGgaO1Y+fYTWBBPQ35NzyG9YzLeLRS2xdlibiGl15UQ91w/e61+5F9PM0KGqvQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -191,7 +206,10 @@ Kavon responds to the post:
 ```text
 POST https://tent.kavon.me/posts
 Content-Type: application/json
-Authorization: Basic LfSERqFpMAyaYhWCMsQrZuY+SYwrjAarVqrtYWDkE209igHeo3TbRjWu2hY8r9IeUkXZlyUqicNvkV8zIrUL9Q==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -234,7 +252,10 @@ His server sends it along to Jerrold’s server:
 ```text
 POST https://tent.jerrold.me/notifications
 Content-Type: application/json
-Authorization: Basic Em3TI5yRwASeeVlUIEBW5T8rBSKdtwZR9CPZ/8hOphLRwWjOzns1bctZSVFm9MrEdR/jZ61EEPInOl4cvFr8bg==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -278,7 +299,10 @@ Jerrold’s server instantly propagates it to his client:
 ```
 POST https://status.jerrold.me/notifications
 Content-Type: application/json
-Authorization: Basic SySu6uvpKu+Wc7jpZGStQMTQU6HVLC0TGaH2gyHwmRGNHUOhFiRK0WAN4+6YzXC2qWkiH7DxurpoqCtWFsrH7A==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -322,7 +346,10 @@ Jerrold sees Kavon’s reply and reposts it to his friends:
 ```
 POST https://tent.jerrold.me/posts
 Content-Type: application/json
-Authorization: Basic siueXXjTBoVvjpJAH8Mi2CB58pxGoGes06F2Yhhv4sh13LEdasECwCBOt+GhE3PiBniMZoiBoOeNUiI+mIUN0w==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -363,7 +390,10 @@ Shirley’s client is back up and receives the two posts:
 ```
 POST https://shirley.me/status-updates/notifications
 Content-Type: application/json
-Authorization: Basic 3H5i9F6HlFCgdFywnuUN1ATleGgaO1Y+fYTWBBPQ35NzyG9YzLeLRS2xdlibiGl15UQ91w/e61+5F9PM0KGqvQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -398,7 +428,10 @@ Authorization: Basic 3H5i9F6HlFCgdFywnuUN1ATleGgaO1Y+fYTWBBPQ35NzyG9YzLeLRS2xdli
 ```
 POST https://shirley.me/status-updates/notifications
 Content-Type: application/json
-Authorization: Basic 3H5i9F6HlFCgdFywnuUN1ATleGgaO1Y+fYTWBBPQ35NzyG9YzLeLRS2xdlibiGl15UQ91w/e61+5F9PM0KGqvQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 ```json
@@ -438,7 +471,10 @@ Her client requests Kavon’s post:
 ```
 GET https://shirley.me/tent/posts/d8c9d3453e33
 Content-Type: application/json
-Authorization: Basic QIGjvhI003diqWIoZlcegn/zSGMpSUheElNZv/uBUEgXE6n2kCNrnu16kLRgZ5keZI37IXStGJUdDH7lZ5mCLQ==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 It is not on her server, so it attempts to fetch it:
@@ -446,7 +482,10 @@ It is not on her server, so it attempts to fetch it:
 ```
 GET https://tent.kavon.me/posts/d8c9d3453e33
 Content-Type: application/json
-Authorization: Basic uzYm8HtmWBAjqBdLA+kmTT4yZc5930ydU/dSQxFDtzFXu0xEfektBCDy/c167JFBOClqmShh0wF3omuqD9Mhvg==
+Authorization: MAC id="775ecf8",
+                   ts="1336363200",
+                   nonce="dj83hs9s",
+                   mac="bhCQXTVyfj5cmA9uKkPFx1zeOXM="
 ```
 
 She is not authorized to see it, so Kavon’s server responds with:
