@@ -121,7 +121,7 @@ Authorization: MAC id="775ecf8",
 200 OK
 ```
 
-Their servers instantly propigate the post to designated clients:
+Their servers instantly propagate the post to designated clients:
 
 ```text
 POST https://status-updates.kavon.me/notifications
@@ -161,7 +161,7 @@ Authorization: MAC id="775ecf8",
 200 OK ## response can be any 200 series http code
 ```
 
-Shirley has her client in maintenence mode; jerrold.me will attempt to deliver the notification later using an exponential backoff algorithm.
+Shirley has her client in maintenance mode; jerrold.me will attempt to deliver the notification later using an exponential backoff algorithm.
 
 ```text
 POST https://shirley.me/status-updates/notifications
