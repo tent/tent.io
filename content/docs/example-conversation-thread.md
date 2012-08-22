@@ -31,7 +31,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0"
+      "version": "0.1.0"
     },
     "text": "^Allison ^Kelsi looks like a great day to go beaching"
   }
@@ -75,7 +75,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0"
+      "version": "0.1.0"
     },
     "text": "^Brant ^Allison I'm not doing anything later if you want to go around 3"
   }
@@ -122,7 +122,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0"
+      "version": "0.1.0"
     },
     "text": "^Kelsi I'll be down there around 2:30"
   }
@@ -174,7 +174,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0"
+      "version": "0.1.0"
     },
     "text": "^Kelsi ^Susie Should I meet the two of you there around 3?"
   }

@@ -47,7 +47,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -65,7 +65,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io/types/profile/music",
-      "version": "2.0.0"
+      "version": "0.1.0"
     },
     "bands": [ "foo", "bar" ]
   }
@@ -306,7 +306,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "Tent.io is awesome!"
@@ -342,7 +342,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/delete",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "id": "jA4Mzdh",
@@ -437,7 +437,7 @@ Content-Type: application/json
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "Tent.io is awesome!"
@@ -479,7 +479,7 @@ Content-Type: application/json
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0",
+      "version": "0.1.0",
       "view": "full"
     },
     "text": "Tent.io is awesome!"

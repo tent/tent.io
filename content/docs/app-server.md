@@ -28,7 +28,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -46,7 +46,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io/types/info/music",
-      "version": "2.0.0"
+      "version": "0.1.0"
     },
     "bands": [ "foo", "bar" ]
   }
@@ -71,7 +71,7 @@ Authorization: MAC id="775ecf8",
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -89,7 +89,7 @@ Authorization: MAC id="775ecf8",
   {
     "type": {
       "url": "https://tent.io/types/info/music",
-      "version": "2.0.0"
+      "version": "0.1.0"
     },
     "bands": [ "foo", "bar", "baz" ]
   }
@@ -105,7 +105,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -123,7 +123,7 @@ Content-Type: application/json
   {
     "type": {
       "url": "https://tent.io/types/info/music",
-      "version": "2.0.0"
+      "version": "0.1.0"
     },
     "bands": [ "foo", "bar", "baz" ]
   }
@@ -156,13 +156,13 @@ Content-Type: application/json
     "licenses": [
       {
         "url": "http://license.org/free-speach",
-        "version": "1.0.0"
+        "version": "0.1.0"
       }
     ],
     "post_types": [
       {
         "url": "https://tent.io/post-types/photo",
-        "version": "1.0.0"
+        "version": "0.1.0"
       }
     ]
   }
@@ -381,13 +381,13 @@ Authorization: MAC id="775ecf8",
   "licences": [
     {
       "url": "https://licences.org/free-speach",
-      "version": "1.0.0"
+      "version": "0.1.0"
     }
   ],
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0",
+      "version": "0.1.0",
       "view": "full"
     },
     "text": "Necessitatibus saepe exercitationem. Quidem rem aspernatur atque numquam in. Voluptas qui et.",
@@ -414,13 +414,13 @@ For example, a post your app has previously fetched or otherwise obtained is ref
   "licences": [
     {
       "url": "https://licences.org/free-speach",
-      "version": "1.0.0"
+      "version": "0.1.0"
     }
   ],
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/repost",
-      "version": "1.0.0",
+      "version": "0.1.0",
     },
     "id": "3fe1abef41cb",
     "entity": "smithson.me"
@@ -461,13 +461,13 @@ Content-Type: application/json
   "licences": [
     {
       "url": "https://licences.org/free-speach",
-      "version": "1.0.0"
+      "version": "0.1.0"
     }
   ],
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/repost",
-      "version": "1.0.0",
+      "version": "0.1.0",
       "view": "full"
     },
     "entity": "elza-mraz.me"
@@ -527,13 +527,13 @@ Content-Type: application/json
     "licences": [
       {
         "url": "https://licences.org/free-speach",
-        "version": "1.0.0"
+        "version": "0.1.0"
       }
     ],
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/repost",
-        "version": "1.0.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "entity": "elza-mraz.me"

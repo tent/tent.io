@@ -40,7 +40,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "Think different!"
@@ -85,7 +85,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/delete",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "id": "fadb14",
@@ -124,7 +124,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/following",
-        "version": "1.1.0",
+        "version": "0.1.0",
         "view": "meta"
       },
       "groups": ["friends"],
@@ -161,7 +161,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/following",
-      "version": "1.1.0",
+      "version": "0.1.0",
       "view": "meta"
     },
     "id": "54f85a",
@@ -198,7 +198,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/follower",
-      "version": "1.1.0",
+      "version": "0.1.0",
       "view": "meta"
     },
     "action": "add",
@@ -235,7 +235,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/follower",
-      "version": "1.1.0",
+      "version": "0.1.0",
       "view": "meta"
     },
     "action": "remove",

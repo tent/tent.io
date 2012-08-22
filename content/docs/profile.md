@@ -16,7 +16,7 @@ A very basic profile might look like this:
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -43,7 +43,7 @@ You could add support for another Tent version like this:
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {
@@ -59,7 +59,7 @@ You could add support for another Tent version like this:
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     "licenses": [
       {
@@ -82,7 +82,7 @@ You could add your basic information:
   {
     "type": {
       "url": "https://tent.io",
-      "version": "0.2.0"
+      "version": "0.1.0"
     },
     "licenses": [
       {

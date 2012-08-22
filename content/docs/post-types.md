@@ -52,7 +52,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/text",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "General Text Post",
   "description": "Text-only blog post",
   "views": {
@@ -77,7 +77,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/html",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "HTML post",
   "description": "HTML blog post",
   "views": {
@@ -104,7 +104,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/status",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "Short status update",
   "description": "160 character or less text post",
   "views": {
@@ -196,7 +196,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/photo",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "Photo",
   "description": "any format of photo",
   "views": {
@@ -230,7 +230,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/video",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "Video",
   "description": "any format of video",
   "views": {
@@ -266,7 +266,7 @@ For example, if you wanted to create a type for post cards the JSON schema might
 ```json
 {
   "url": "https://tent.io/types/posts/message",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "name": "Message",
   "description": "Tent equivalent of email",
   "views": {

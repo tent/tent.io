@@ -32,7 +32,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/status",
-      "version": "1.2.0"
+      "version": "0.1.0"
     },
     "text": "I love kittens!"
   }
@@ -72,7 +72,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0"
+        "version": "0.1.0"
       },
       "text": "I love kittens!"
     }
@@ -109,7 +109,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0"
+        "version": "0.1.0"
       },
       "text": "I love kittens!"
     }
@@ -148,7 +148,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "I love kittens!"
@@ -188,7 +188,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "I love kittens!"
@@ -233,7 +233,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/photo",
-      "version": "0.6.0"
+      "version": "0.1.0"
     },
     "exif": { ... },
     "binary": "...",
@@ -279,7 +279,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/photo",
-        "version": "0.6.0"
+        "version": "0.1.0"
       },
       "exif": { ... },
       "binary": "...",
@@ -326,7 +326,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/photo",
-        "version": "0.6.0"
+        "version": "0.1.0"
       },
       "exif": { ... },
       "binary": "...",
@@ -373,7 +373,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/repost",
-      "version": "1.0.0"
+      "version": "0.1.0"
     },
     "entity": "kavon.me",
     "id": "d8c9d3453e33"
@@ -412,7 +412,7 @@ Authorization: MAC id="775ecf8",
     "content": {
       "type": {
         "url": "https://tent.io/types/posts/status",
-        "version": "1.2.0",
+        "version": "0.1.0",
         "view": "full"
       },
       "text": "I love kittens!"
@@ -454,7 +454,7 @@ Authorization: MAC id="775ecf8",
   "content": {
     "type": {
       "url": "https://tent.io/types/posts/repost",
-      "version": "1.0.0"
+      "version": "0.1.0"
     },
     "entity": "kavon.me",
     "id": "d8c9d3453e33"
