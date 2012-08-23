@@ -171,7 +171,7 @@ Content-Type: application/json
 
 ### Follow
 
-App tells server to follow an entitie.
+App tells server to follow an entity.
 
 ```
 POST /following
