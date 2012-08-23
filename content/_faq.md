@@ -22,7 +22,7 @@ The social web is too important to leave in the hands of any one company or gove
 
 ### What does Tent do?
 
-Tent servers maintain relationships between users and manages apps. Users create and view content on apps. When a users creates new content, their Tent server sends it to the followers they chose. It also listens for and stores new messages and content from the people and organizations that user follows. Every user on Tent also has a profile that stores basic information about the user. Tent also lets users control which apps can access their data and what can be done with it.
+Tent servers maintain relationships between users and manage apps. Users create and view content on apps. When a users creates new content, their Tent server sends it to the followers they chose. It also listens for and stores new messages and content from the people and organizations that user follows. Every user on Tent also has a profile that stores basic information about the user. Tent also lets users control which apps can access their data and what can be done with it.
 
 
 ### How can I use Tent?
