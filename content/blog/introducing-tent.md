@@ -19,7 +19,7 @@ order to display or create user content.
 
 Relationships are between users, independent of their service providers, so
 users take their data and relationships with them when they change Tent service
-providers. Every user decide which other users can follow them and what
+providers. Every user decides which other users can follow them and what
 information will be shared with each of their followers.
 
 ### You are your memories and relationships
@@ -45,7 +45,7 @@ with its users.
 ### The Tent Ecosystem
 
 Tent is not specifying the economics of an ecosystem. There will be many options
-for users, from free to paid to self hosted, from ad supported to
+for users, from free to paid to self hosted, from ad-supported to
 advertising-free, with providers that serve different market segments and
 types of users. Since anyone can set up a Tent server or become a service
 provider, niche needs should quickly be met, based on demand.
