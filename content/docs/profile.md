@@ -6,7 +6,7 @@ title: Tent Profile
 
 This is where you define what version(s) of Tent you're using, what urls act as
 Tent API endpoints for your content, what licences you support, your entity name
-(can be any URI with a `Tent-Server` header, and any other information about you
+(can be any URI with a tent-`Link` header, and any other information about you
 (e.g. Your real name, email, interest, etc.)
 
 A very basic profile might look like this:
