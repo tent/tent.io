@@ -52,12 +52,35 @@ provider, niche needs should quickly be met, based on demand.
 
 There are many spectrums of need:
 
-| technically experienced | inexperienced |
-| rich | poor |
-| ad tolerant | ad intolerant|
-| verified | pseudonyms |
-| public | private |
-| centralized | distributed |
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <td>technically experienced</td>
+      <td>inexperienced</td>
+    </tr>
+    <tr>
+      <td>rich</td>
+      <td>poor</td>
+    </tr>
+    <tr>
+      <td>ad tolerant</td>
+      <td>ad intolerant</td>
+    </tr>
+    <tr>
+      <td>verified</td>
+      <td>pseudonyms</td>
+    </tr>
+    <tr>
+      <td>public</td>
+      <td>private</td>
+    </tr>
+    <tr>
+      <td>centralized</td>
+      <td>distributed</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Next steps
 
