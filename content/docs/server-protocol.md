@@ -26,7 +26,7 @@ added to all responses associated with the Tent entity.
 Link: <https://tent.titanous.com>; rel="tent"
 ```
 
-There might be multiple `Link` headerr which should be tried in order.
+There might be multiple `Link` headers which should be tried in order.
 
 
 ### Entity Profile
