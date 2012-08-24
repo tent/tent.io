@@ -26,7 +26,7 @@ Host: titanous.com
 
 ```text
 200 OK
-Tent-Server: https://tent.titanous.com
+Link: <https://tent.titanous.com>; rel="tent"
 ```
 
 The next step is to register the application with the server. Registration
