@@ -23,11 +23,10 @@ instead of getting the page and parsing it for the `link` tag. It should be
 added to all responses associated with the Tent entity.
 
 ```text
-Tent-Server: https://tent.titanous.com
+Link: <https://tent.titanous.com>; rel="tent"
 ```
 
-The `Tent-Server` header can contain multiple comma-separated urls that should
-be tried in order.
+There might be multiple `Link` headerr which should be tried in order.
 
 
 ### Entity Profile
