@@ -52,12 +52,12 @@ provider, niche needs should quickly be met, based on demand.
 
 There are many spectrums of need:
 
-technically experienced - inexperienced<br>
-rich - poor<br>
-ad tolerant - ad intolerant<br>
-verified - pseudonyms<br>
-public - private<br>
-centralized - distributed<br>
+| technically experienced | inexperienced |
+| rich | poor |
+| ad tolerant | ad intolerant|
+| verified | pseudonyms |
+| public | private |
+| centralized | distributed |
 
 ## Next steps
 

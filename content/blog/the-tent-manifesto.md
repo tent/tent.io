@@ -31,8 +31,7 @@ of user accounts hosted.
 
 ### Every user has the right to communicate with any other user, regardless of their service provider.
 
-No service provider shall interfere with the communications of any group or paid
-of users, or exclude any users on the basis of their service provider.
+No service provider shall interfere with the communications of any group or pair of users, or exclude any users on the basis of their service provider.
 
 
 ### Every user has the right to take their data and relationships with them.
@@ -51,7 +50,7 @@ communications and must not be restricted.
 ### Different users have different needs.
 
 No single company, product, or platform can solve them all equally. The only
-ecosystems required to serve these needs are protocol-based and decentralized.
+ecosystems capable of serving these needs are protocol-based and decentralized.
 No user's needs need be served poorly for others' needs to be served.
 
 
