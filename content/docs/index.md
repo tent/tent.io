@@ -10,11 +10,7 @@ your data, who has access to it, and what can be done with it.
 
 ### API Overview
 
-The API is
-[RESTful](http://en.wikipedia.org/wiki/Representational_state_transfer#RESTful_web_services),
-using [JSON](http://en.wikipedia.org/wiki/JSON) over
-[HTTPS](http://en.wikipedia.org/wiki/HTTPS) (**Important**: HTTPS is used
-everywhere.)
+Tent uses [JSON](http://en.wikipedia.org/wiki/JSON) over HTTP.
 
 Requests are authenticated with [HMAC](http://en.wikipedia.org/wiki/Hash-based_message_authentication_code)
 signatures, and apps use [OAuth 2](http://en.wikipedia.org/wiki/OAuth) to access
