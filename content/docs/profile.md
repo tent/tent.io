@@ -18,16 +18,20 @@ A very basic profile might look like this:
       "url": "https://tent.io",
       "version": "0.1.0"
     },
-    "licenses": [
-      {
-        "url": "https://tent.io/types/licenses/creative-commons",
-        "version": "3.0.0"
-      }
-    ],
-    "entity": "johnsmith.io",
-    "servers": [
-      "https://tent.johnsmith.io"
-    ]
+    "name": "tent.io specification",
+    "description": "Specification for tent.io servers.",
+    "content": {
+      "licenses": [
+        {
+          "url": "https://tent.io/types/licenses/creative-commons",
+          "version": "3.0.0"
+        }
+      ],
+      "entity": "johnsmith.io",
+      "servers": [
+        "https://tent.johnsmith.io"
+      ]
+    }
   }
 ]
 ```
@@ -45,32 +49,36 @@ You could add support for another Tent version like this:
       "url": "https://tent.io",
       "version": "0.1.0"
     },
-    "licenses": [
-      {
-        "url": "https://tent.io/types/licenses/creative-commons",
-        "version": "3.0.0"
-      }
-    ],
-    "entity": "johnsmith.io",
-    "servers": [
-      "https://tent.johnsmith.io"
-    ]
+    "content": {
+      "licenses": [
+        {
+          "url": "https://tent.io/types/licenses/creative-commons",
+          "version": "3.0.0"
+        }
+      ],
+      "entity": "johnsmith.io",
+      "servers": [
+        "https://tent.johnsmith.io"
+      ]
+    }
   },
   {
     "type": {
       "url": "https://tent.io",
       "version": "0.2.0"
     },
-    "licenses": [
-      {
-        "url": "https://tent.io/types/licenses/creative-commons",
-        "version": "3.0.0"
-      }
-    ],
-    "entity": "johnsmith.io",
-    "servers": [
-      "https://tent.johnsmith.io"
-    ]
+    "content": {
+      "licenses": [
+        {
+          "url": "https://tent.io/types/licenses/creative-commons",
+          "version": "3.0.0"
+        }
+      ],
+      "entity": "johnsmith.io",
+      "servers": [
+        "https://tent.johnsmith.io"
+      ]
+    }
   }
 ]
 ```
@@ -84,24 +92,28 @@ You could add your basic information:
       "url": "https://tent.io",
       "version": "0.1.0"
     },
-    "licenses": [
-      {
-        "url": "https://tent.io/types/licenses/creative-commons",
-        "version": "3.0.0"
-      }
-    ],
-    "entity": "johnsmith.io",
-    "servers": [
-      "https://tent.johnsmith.io"
-    ]
+    "content": {
+      "licenses": [
+        {
+          "url": "https://tent.io/types/licenses/creative-commons",
+          "version": "3.0.0"
+        }
+      ],
+      "entity": "johnsmith.io",
+      "servers": [
+        "https://tent.johnsmith.io"
+      ]
+    }
   },
   {
     "type": {
       "url": "https://tent.io/types/info-types/basic-info",
       "version": "0.1.0"
     },
-    "name": "John Smith",
-    "age": 25
+    "content": {
+      "name": "John Smith",
+      "age": 25
+    }
   }
 ]
 ```
