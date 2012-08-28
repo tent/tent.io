@@ -26,8 +26,8 @@ Tent users are called entities and are defined by a URI.
 
 **Example:** John Smith's entity might be `johnsmith.me`, implying a [HEAD
 request](http://en.wikipedia.org/wiki/HEAD_%28HTTP%29#Request_methods) to
-`https://johnsmith.me/` would respond with a `Tent-Server` header pointing to
-a Tent API root (e.g. `Tent-Server: https://tent.johnsmith.me`)
+`https://johnsmith.me/` would respond with a `Link` header pointing to
+a Tent API root (e.g. `Link: <https://tent.johnsmith.me>; rel="tent"`)
 
 
 ### Profiles

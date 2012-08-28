@@ -61,7 +61,7 @@ Every profile JSON file must have this
 | Name            | Required | Type   | Description      | 
 | --------------- | -------- | ------ | ---------------- | 
 | `licenses`			| Required | Array  | List of accepted licences (url and version) |
-| `entity`				| Required | String | Url with `Tent-Server` header pointing to your tent-api root (https:// prefix is implied) |
+| `entity`				| Required | String | Url with tent-`Link` header pointing to your tent-api root (https:// prefix is implied) |
 | `servers`				| Required | Array  | List of canonical tent-api roots |
 
 ### Profile
