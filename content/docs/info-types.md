@@ -13,10 +13,12 @@ Your type schema needs to have `url`, `name`, `description`, `version`, and `con
 #### Example
 ```json
 {
-  "url": "https://tent.io/types/info/relationship-status",
+  "type": {
+    "url": "https://tent.io/types/info/relationship-status",
+    "version": "0.1.0"
+  },
   "name": "Relationship Status",
   "description": "Publish your relationship status",
-  "version": "0.1.0",
   "content": {
     "status": "single",
     "interested_in": ["women"],
@@ -37,10 +39,12 @@ Every profile JSON file must have this
 
 ```json
 {
-  "url": "https://tent.io/types/info/tent",
+  "type": {
+    "url": "https://tent.io/types/info/tent",
+    "version": "0.1.0"
+  },
   "name": "Tent",
   "description": "Core of self.json, must be included to be Tent compatible",
-  "version": "0.1.0",
   "content": {
     "licences": [
       {
@@ -70,10 +74,12 @@ Basic personal information.
 
 ```json
 {
-  "url": "https://tent.io/types/info/profile",
+  "type": {
+    "url": "https://tent.io/types/info/profile",
+    "version": "0.1.0"
+  },
   "name": "Profile",
   "description": "Basic personal information",
-  "version": "0.1.0",
   "content": {
     "display_name": "jdoe",
     "full_name": "Dr. John Blake Doe",
