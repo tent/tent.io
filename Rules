@@ -38,6 +38,7 @@ compile '*' do
   when 'slim'
     filter :slim
   when 'md'
+    filter :schema_table
     filter :redcarpet, renderer: MarkdownHTML, options: {
       fenced_code_blocks: true,
       no_intra_emphasis: true,

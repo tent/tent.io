@@ -6,6 +6,13 @@ GIT
     pygments.rb (0.2.12)
       rubypython (~> 0.6.1)
 
+GIT
+  remote: git@git:tent-schemas.git
+  revision: 965ad389012f24ed220156f978905038d93a67e6
+  specs:
+    tent-schemas (0.1.0)
+      json-schema
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -19,6 +26,7 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     ffi (1.0.11)
+    json-schema (1.0.9)
     mime-types (1.19)
     nanoc (3.4.0)
       cri (~> 2.2)
@@ -58,3 +66,4 @@ DEPENDENCIES
   rainpress
   redcarpet
   slim
+  tent-schemas!
