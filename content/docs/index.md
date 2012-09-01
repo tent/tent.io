@@ -10,7 +10,7 @@ your data, who has access to it, and what can be done with it.
 
 ### API Overview
 
-Tent uses [JSON](http://en.wikipedia.org/wiki/JSON) over HTTP.
+Tent is a social layer over HTTP using [JSON](http://en.wikipedia.org/wiki/JSON).
 
 Requests are authenticated with [HMAC](http://en.wikipedia.org/wiki/Hash-based_message_authentication_code)
 signatures, and apps use [OAuth 2](http://en.wikipedia.org/wiki/OAuth) to access
