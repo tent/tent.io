@@ -39,6 +39,7 @@ compile '*' do
     filter :slim
   when 'md'
     filter :schema_table
+    filter :api_example
     filter :redcarpet, renderer: MarkdownHTML, options: {
       fenced_code_blocks: true,
       no_intra_emphasis: true,
