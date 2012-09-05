@@ -16,27 +16,30 @@ GIT
 
 GIT
   remote: git@github.com:tent/tent-apidoc.git
-  revision: 3894f0a84d5ca02896139da07edd321b1551887a
+  revision: 9bb0ab5c2f0bad683fa407148d0635a96c1ab71d
   branch: master
   specs:
     tent-apidoc (0.1.0)
+      fabrication
+      faker
       rack-test
       tent-client
       tentd
 
 GIT
   remote: git@github.com:tent/tent-client-ruby.git
-  revision: cefddd03e1d2b42dc4ccca0059d0dd7c333d06f3
+  revision: d70a052f676173823a8d34de0e13aeb40a95e006
   branch: master
   specs:
     tent-client (0.0.1)
       faraday (= 0.8.4)
       faraday_middleware (= 0.8.8)
+      json
       nokogiri
 
 GIT
   remote: git@github.com:tent/tentd.git
-  revision: 64b90e175e265f76db937dc9483e86e5ae1cc71c
+  revision: 6c492a0953a32e8d0c1f1b0f0bd6ab30f821ce31
   branch: master
   specs:
     tentd (0.0.1)
@@ -114,6 +117,9 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.8)
       data_objects (= 0.10.8)
+    fabrication (2.2.3)
+    faker (1.0.1)
+      i18n (~> 0.4)
     faraday (0.8.4)
       multipart-post (~> 1.1)
     faraday_middleware (0.8.8)
@@ -123,6 +129,7 @@ GEM
     girl_friday (0.10.0)
       connection_pool (~> 0.9.0)
     hashie (1.2.0)
+    i18n (0.6.1)
     json (1.7.5)
     json-schema (1.0.9)
     json_pure (1.7.5)
