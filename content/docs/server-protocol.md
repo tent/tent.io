@@ -15,8 +15,9 @@ The HTTP header allows discovery of Tent servers by just doing a HEAD request
 instead of getting the page and parsing it for the `link` tag. It should be
 added to all responses associated with the Tent entity.
 
+
 ```text
-Link: <https://tent.titanous.com>; rel="https://tent.io/rels/profile"
+Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile"
 ```
 
 #### HTML `link` tag
@@ -25,7 +26,7 @@ The `link` tag should be placed in the `head` tag of all HTML pages associated
 with the Tent entity.
 
 ```html
-<link href="https://tent.titanous.com" rel="https://tent.io/rels/profile" />
+<link href="https://tent.titanous.com/profile" rel="https://tent.io/rels/profile" />
 ```
 
 

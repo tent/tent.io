@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tent-apidoc.git
-  revision: 9bb0ab5c2f0bad683fa407148d0635a96c1ab71d
+  revision: e2a5370bf7b0a6c76bccfbed64737fec13118016
   branch: master
   specs:
     tent-apidoc (0.1.0)
@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tent-client-ruby.git
-  revision: d70a052f676173823a8d34de0e13aeb40a95e006
+  revision: 8688a03c6858512cd25201a5366c201ee3b12440
   branch: master
   specs:
     tent-client (0.0.1)
@@ -39,7 +39,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tentd.git
-  revision: 6c492a0953a32e8d0c1f1b0f0bd6ab30f821ce31
+  revision: 2a6b47050d20b99bcdd0d41d51831374038fe17a
   branch: master
   specs:
     tentd (0.0.1)
