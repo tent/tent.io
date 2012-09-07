@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/tent/tent-schemas.git
-  revision: 52b7bd803759775be13b273d4456a81130c66ba6
+  revision: 0ab0f93410d1959746136d6aac0cb67bb7976fcb
   branch: master
   specs:
     tent-schemas (0.0.1)
@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tent-apidoc.git
-  revision: dcd6de68a96f6f747b22cfaec38665df36999937
+  revision: 748c297e05c8e6978c80d6bde7f713d7e05e2439
   branch: master
   specs:
     tent-apidoc (0.1.0)
@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tent-client-ruby.git
-  revision: 14be20e340477e75bfb9bedb962fd5c2c96173cb
+  revision: 8e2755dae78a1ae991eb288085e2f00b1d6a0c75
   branch: master
   specs:
     tent-client (0.0.1)
@@ -39,7 +39,7 @@ GIT
 
 GIT
   remote: git@github.com:tent/tentd.git
-  revision: 2a6b47050d20b99bcdd0d41d51831374038fe17a
+  revision: 2c2f3108e2c78a07a0d7b30ca3d14a642d3df29d
   branch: master
   specs:
     tentd (0.0.1)
@@ -60,7 +60,7 @@ GEM
       rack (>= 1.0.0)
     bcrypt-ruby (3.0.1)
     blankslate (2.1.2.4)
-    builder (3.0.0)
+    builder (3.1.1)
     clogger (1.1.0)
       rack (> 0.9)
     colored (1.2)

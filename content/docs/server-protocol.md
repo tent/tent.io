@@ -42,6 +42,7 @@ published by an entity.
 
 ## Authentication
 
+
 All requests should be made using SSL.
 
 Authentication is required to access resources that are not marked as public.
@@ -75,64 +76,18 @@ are signed as well.
 {delete_follower example}
 
 
-## Notifications
-
-Notification from titanous.com to danielsiders.com that new content has been
-posted.
-
-
-
-## Fetch Post Feed
+## Fetch Posts
 
 ### GET /posts
 
-#### Parameters
+{follower_get_posts example}
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Required</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>post_types</code></td>
-      <td>Optional</td>
-      <td>string</td>
-      <td>Specifies the post types and views to return. ex: <code>https://tent.io/types/posts/blog#excerpt,https://tent.io/types/posts/photo#meta</code>
-    </tr>
-    <tr>
-      <td><code>since_id</code></td>
-      <td>Optional</td>
-      <td>string</td>
-      <td>Show posts newer than this id.</td>
-    </tr>
-    <tr>
-      <td><code>before_id</code></td>
-      <td>Optional</td>
-      <td>string</td>
-      <td>Show posts older than this id.</td>
-    </tr>
-    <tr>
-      <td><code>since_time</code></td>
-      <td>Optional</td>
-      <td>integer</td>
-      <td>Show posts made since this time (unix epoch time).</td>
-    </tr>
-    <tr>
-      <td><code>before_time</code></td>
-      <td>Optional</td>
-      <td>integer</td>
-      <td>Show posts made before this time (unix epoch time).</td>
-    </tr>
-    <tr>
-      <td><code>count</code></td>
-      <td>Optional</td>
-      <td>integer</td>
-      <td>The number of posts to return.</td>
-    </tr>
-  </tbody>
-</table>
+### GET /posts/:id
+
+{follower_get_post example}
+
+
+## Notifications
+
+Notifications of new content are sent as POST requests to `/posts` and
+authenticated using the negotiated credentials.

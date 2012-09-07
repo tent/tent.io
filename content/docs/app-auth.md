@@ -62,6 +62,7 @@ user-agent to it:
 | `scope`                     | Optional  | A comma-separated list of scopes that the app is requesting access to. |
 | `tent_profile_info_types`   | Optional  | A comma-separated list of profile info type urls that the app is requesting access to. Set to `all` to request full access to the profile. |
 | `tent_post_types`           | Optional  | A comma-separated list of type urls that the app is requesting access to. Set to `all` to request access to all posts. |
+| `tent_notification_url`     | Optional  | The URI to send post notifications to. |
 
 
 ##### Scopes
@@ -88,7 +89,7 @@ The `state` parameter should be matched against the `state` parameter sent in
 the initial request to prevent request forgery.
 
 ```text
-302 Found
+HTTP/1.1 302 Found
 Location: http://app.example.com/tent/callback?code={app_code var}&state=87351cc2f6737bfc8ba
 ```
 
@@ -133,4 +134,10 @@ respectively.
 The request must be authenticated with a MAC generated using the secret from the
 initial registration.
 
+#### GET /apps/:id
+
+{get_app example}
+
 #### PUT /apps/:id
+
+{update_app example}

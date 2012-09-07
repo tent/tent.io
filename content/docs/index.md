@@ -16,25 +16,21 @@ Requests are authenticated with [HMAC](http://en.wikipedia.org/wiki/Hash-based_m
 signatures, and apps use [OAuth 2](http://en.wikipedia.org/wiki/OAuth) to access
 content on behalf of users.
 
-Client libraries for Ruby, Python, Java, Objective-C, JavaScript, and C++ are coming
-soon so you can focus on writing your app.
-
 
 ### Users
 
 Tent users are called entities and are defined by a URI.
 
-**Example:** John Smith's entity might be `johnsmith.me`, implying a [HEAD
+**Example:** John Smith's entity might be `https://johnsmith.me/`, implying a [HEAD
 request](http://en.wikipedia.org/wiki/HEAD_%28HTTP%29#Request_methods) to
-`https://johnsmith.me/` would respond with a `Tent-Server` header pointing to
-a Tent API root (e.g. `Tent-Server: https://tent.johnsmith.me`)
+`https://johnsmith.me/` would respond with a `Link` header pointing to
+a Tent profile (e.g. `https://tent.johnsmith.me/profile`)
 
 
 ### Profiles
 
-Every Tent entity has a profile JSON file describing it. The profile contains an
-array of JSON objects each described by an info-type. The most basic profile has
-a single object containing the supported Tent version, the entity name (e.g.
+Every Tent entity has a profile JSON file describing it. The most basic profile
+has a single object containing the Tent version, the entity name (e.g.
 johnsmith.me), an array of supported licences, and an array of servers
 containing canonical API roots.
 
@@ -73,15 +69,11 @@ For example:
 ### Posts
 
 Tent posts can be used to describe anything. The term used to describe a piece
-of content is __post__. Posts each have a post-type which describes its data.
-
-For example, a post containing a photo would be described by a photo post-type.
-The post-type outlines what content keys to expect, in this case it might have
-`exif`, `binary`, and `filetype`.
+of content is __post__. Posts each have a post type which describes its data.
 
 
 ### Notifications
 
 Tent notifications are used when a server needs to let another server or app
-know about new content updates. Notifications are JSON webhooks with an array of
-Tent posts.
+know about new content updates. Notifications are JSON POST requests containing
+posts.
