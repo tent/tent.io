@@ -19,7 +19,7 @@ title: Post Types
 
 ### Photo
 
-`https://tent.io/types/post/album/v0.1.0`
+`https://tent.io/types/post/photo/v0.1.0`
 
 {post_photo schema}
 
