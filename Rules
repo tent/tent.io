@@ -70,6 +70,9 @@ route '/' do
   '/index.html'
 end
 
+route 'api_examples.yaml' do
+end
+
 route '*' do
   next nil if item.identifier.split('/')[-1][0,1] == '_' # partial 
 
