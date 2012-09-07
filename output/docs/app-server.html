@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Server API for Apps · Tent - the decentralized social web</title>
+    <link href="/assets/css/bootstrap-cb0b9b6b1fd.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap-responsive-cb034fa29d4.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style-cba5092b759.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/blog.xml" rel="alternate" title="Atom feed" type="application/atom+xml" />
+    <script type="text/javascript">var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34258323-1']);
+      _gaq.push(['_setSiteSpeedSampleRate', 50]);
+      _gaq.push(['_trackPageview']); 
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();</script></head>
+  <body><div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <a class="brand" href="/">Tent</a>
+        <ul class="nav"><li ><a href="/blog">Blog</a></li><li class="active"><a href="/docs">Docs</a></li></ul>
+      </div>
+    </div><div class="container doc">
+      <div class="row">
+        <div class="span2">
+          <ul class="nav nav-list well">
+            <li class="nav-header">Tent</li>
+            <li><li ><a href="/docs">Protocol Introduction</a></li></li>
+            <li><li ><a href="/docs/server-protocol">Server Protocol</a></li></li>
+            <li><li ><a href="/docs/app-auth">App Authentication</a></li></li>
+            <li><li class="active"><a href="/docs/app-server">Server API for Apps</a></li></li>
+            <li class="nav-header">Types</li>
+            <li><li ><a href="/docs/post-types">Post Types</a></li></li>
+            <li><li ><a href="/docs/info-types">Profile Info Types</a></li></li>
+          </ul>
+        </div>
+        <div class="span8">
+          <div class="alert alert-block">
+            <h4>Alpha Documentation </h4>
+            <p>These docs are very rough, incorrect, and incomplete. They will be modified heavily over the next few weeks.</p>
+            <p>Please contribute by making Pull Requests and Issues on the <a href="https://github.com/tent/tent.io">GitHub repository</a>.</p>
+          </div><h2>Server API for Apps</h2>
+
+<h3>GET /profile</h3>
+<div class="highlight"><pre>GET /profile HTTP/1.1
+Accept: application/vnd.tent.v0+json
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 420
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;https://tent.io/types/info/core/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;https://tent.example.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;http://eqt5g4fuenphqinx.onion/&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;https://tent.io/types/info/basic/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Tentity&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/avatar.jpg&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;birthdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-08-23&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;The Internet&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Et repudiandae et itaque.&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h3>PUT /profile/:type</h3>
+<div class="highlight"><pre>PUT /profile/https%3A%2F%2Ftent.io%2Ftypes%2Finfo%2Fbasic%2Fv0.1.0 HTTP/1.1
+Content-Type: application/vnd.tent.v0+json
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;53958a&quot;, mac=&quot;tyDhHq7ys5JWbXRbunucJt10Hr1GpJxQWZRfGWm9Abs=&quot;
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Tentity&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/avatar.jpg&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;birthdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-08-23&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;The Internet&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Exercitationem perferendis voluptatem ad dolorem velit dolores cumque vero.&quot;</span>
+<span class="p">}</span>
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 470
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;https://tent.io/types/info/core/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;https://tent.example.org&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;http://eqt5g4fuenphqinx.onion/&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;https://tent.io/types/info/basic/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Tentity&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/avatar.jpg&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;birthdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-08-23&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;The Internet&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Exercitationem perferendis voluptatem ad dolorem velit dolores cumque vero.&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h3>POST /followings</h3>
+<div class="highlight"><pre>POST /followings HTTP/1.1
+Content-Type: application/vnd.tent.v0+json
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;9aa86d&quot;, mac=&quot;Phkn5uHbA4vZxUFxTRDYV+XdqyH/fd6VG8DR41aIKn4=&quot;
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span>
+<span class="p">}</span>
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 211
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;remote_id&quot;</span><span class="p">:</span> <span class="s2">&quot;eazohw&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;icb7x0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+  <span class="p">],</span>
+  <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h3>GET /followings</h3>
+<div class="highlight"><pre>GET /followings HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;5fb6eb&quot;, mac=&quot;rT3N3hbziQMelFZrq3dzLoyBJhvPd5NUiJ4wPumY30A=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 213
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;remote_id&quot;</span><span class="p">:</span> <span class="s2">&quot;eazohw&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;icb7x0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre>
+</div>
+
+<h3>GET /followings/:id</h3>
+<div class="highlight"><pre>GET /followings HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;5fb6eb&quot;, mac=&quot;rT3N3hbziQMelFZrq3dzLoyBJhvPd5NUiJ4wPumY30A=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 213
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;remote_id&quot;</span><span class="p">:</span> <span class="s2">&quot;eazohw&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;icb7x0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre>
+</div>
+
+<h3>DELETE /followings/:id</h3>
+<div class="highlight"><pre>DELETE /followings/icb7x0 HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;681e1c&quot;, mac=&quot;4fOAdx3lv4Yz/xwDRWnui5RXvUbgjbLLajG1jCXMZeQ=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 0
+</pre>
+</div>
+
+<h3>GET /followers</h3>
+<div class="highlight"><pre>GET /followers HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;867d51&quot;, mac=&quot;s72ysBXjISmuyTEsL0XMymcBgL67kxLHetvdpn5no/s=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 1432
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7m3dto&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;https://tent.io/types/info/core/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;https://tent.example.org&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;http://eqt5g4fuenphqinx.onion/&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;https://tent.io/types/info/basic/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Tentity&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/avatar.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;birthdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-08-23&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;The Internet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Et repudiandae et itaque.&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;https://tent.io/types/post/essay/v0.1.0#full&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;eazohw&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;profile&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;https://tent.io/types/info/core/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;servers&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;https://tent.example.org&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;http://eqt5g4fuenphqinx.onion/&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;https://tent.io/types/info/basic/v0.1.0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;The Tentity&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;avatar_url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.org/avatar.jpg&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;birthdate&quot;</span><span class="p">:</span> <span class="s2">&quot;2012-08-23&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;The Internet&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;gender&quot;</span><span class="p">:</span> <span class="s2">&quot;Unknown&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;bio&quot;</span><span class="p">:</span> <span class="s2">&quot;Exercitationem perferendis voluptatem ad dolorem velit dolores cumque vero.&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;all&quot;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre>
+</div>
+
+<h3>GET /followers/:id</h3>
+<div class="highlight"><pre>GET /followers/7m3dto HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;3824e1&quot;, mac=&quot;aRnrSo+80AHRru2FJE1Sj6GfCsmpKcyv7w5FZONAtOM=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 152
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7m3dto&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;all&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h3>DELETE /followers/:id</h3>
+<div class="highlight"><pre>DELETE /followers/eazohw HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;fa20ba&quot;, mac=&quot;SkbEBnIsBUvZ9jLce6cXfry7dqNN9OELnnF1UvwkHys=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 403 Forbidden
+Content-Type: text/html
+Content-Length: 12
+</pre>
+</div>
+<div class="highlight"><pre>Unauthorized
+</pre>
+</div>
+
+<h4>POST /posts</h4>
+<div class="highlight"><pre>POST /posts HTTP/1.1
+Content-Type: application/vnd.tent.v0+json
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;25d6b6&quot;, mac=&quot;En8hMilWUOdUKaaKBbGduhsSKU/a/01NmlPd/knxf4w=&quot;
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+        <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 471
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+        <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xk3mlq&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FooApp&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+  <span class="p">],</span>
+  <span class="nt">&quot;known_entity&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h3>GET /posts</h3>
+<div class="highlight"><pre>GET /posts HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;c45f60&quot;, mac=&quot;gGFV+/u8vMxq0Inp40dlzyN40k9Y1YNriznzv7QKKOA=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 473
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+          <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+      <span class="p">],</span>
+      <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xk3mlq&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FooApp&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;known_entity&quot;</span><span class="p">:</span> <span class="kc">null</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre>
+</div>
+
+<h3>GET /posts/:id</h3>
+<div class="highlight"><pre>GET /posts/xk3mlq HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;u:083dc7a9&quot;, ts=&quot;1346984266&quot;, nonce=&quot;026f07&quot;, mac=&quot;mvVK92nXEX8XQor+x4nH46OcvtopAX8YHJwiiylH8r0=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: public
+Content-Length: 471
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+        <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;groups&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="nt">&quot;entities&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xk3mlq&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;received_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FooApp&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+  <span class="p">],</span>
+  <span class="nt">&quot;known_entity&quot;</span><span class="p">:</span> <span class="kc">null</span>
+<span class="p">}</span>
+</pre>
+</div>
+</div>
+      </div>
+    </div><footer>© 2012 Apollic Software, LLC</footer></body>
+</html>

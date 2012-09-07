@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tent - the decentralized social web</title>
+    <link href="/assets/css/bootstrap-cb0b9b6b1fd.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap-responsive-cb034fa29d4.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style-cba5092b759.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/blog.xml" rel="alternate" title="Atom feed" type="application/atom+xml" />
+    <script type="text/javascript">var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34258323-1']);
+      _gaq.push(['_setSiteSpeedSampleRate', 50]);
+      _gaq.push(['_trackPageview']); 
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();</script></head>
+  <body><div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <a class="brand" href="/">Tent</a>
+        <ul class="nav"><li ><a href="/blog">Blog</a></li><li class="active"><a href="/docs">Docs</a></li></ul>
+      </div>
+    </div><div class="container doc">
+      <div class="row">
+        <div class="span2">
+          <ul class="nav nav-list well">
+            <li class="nav-header">Tent</li>
+            <li><li ><a href="/docs">Protocol Introduction</a></li></li>
+            <li><li class="active"><a href="/docs/server-protocol">Server Protocol</a></li></li>
+            <li><li ><a href="/docs/app-auth">App Authentication</a></li></li>
+            <li><li ><a href="/docs/app-server">Server API for Apps</a></li></li>
+            <li class="nav-header">Types</li>
+            <li><li ><a href="/docs/post-types">Post Types</a></li></li>
+            <li><li ><a href="/docs/info-types">Profile Info Types</a></li></li>
+          </ul>
+        </div>
+        <div class="span8">
+          <div class="alert alert-block">
+            <h4>Alpha Documentation </h4>
+            <p>These docs are very rough, incorrect, and incomplete. They will be modified heavily over the next few weeks.</p>
+            <p>Please contribute by making Pull Requests and Issues on the <a href="https://github.com/tent/tent.io">GitHub repository</a>.</p>
+          </div><h2>Tent Server-Server Communication Protocol</h2>
+
+<p>This document describes the protocol that Tent servers use to communicate with
+each other.</p>
+
+<h3>Server Discovery</h3>
+
+<p>Server discovery is done through HTTP <code>Link</code> headers as well as HTML <code>link</code>
+tags. Multiple links may be presented, and should be tried by the client in
+order.</p>
+
+<h4>HTTP <code>Link</code> Header</h4>
+
+<p>The HTTP header allows discovery of Tent servers by just doing a HEAD request
+instead of getting the page and parsing it for the <code>link</code> tag. It should be
+added to all responses associated with the Tent entity.</p>
+<div class="highlight"><pre>Link: &lt;https://tent.titanous.com/profile&gt;; rel=&quot;https://tent.io/rels/profile&quot;
+</pre>
+</div>
+
+<h4>HTML <code>link</code> tag</h4>
+
+<p>The <code>link</code> tag should be placed in the <code>head</code> tag of all HTML pages associated
+with the Tent entity.</p>
+<div class="highlight"><pre><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">&quot;https://tent.titanous.com/profile&quot;</span> <span class="na">rel=</span><span class="s">&quot;https://tent.io/rels/profile&quot;</span> <span class="nt">/&gt;</span>
+</pre>
+</div>
+
+<h3>Follow an entity</h3>
+
+<p>A follow request is required in order to receive notifications about posts
+published by an entity.</p>
+
+<h3>POST /followers</h3>
+<div class="highlight"><pre>POST /followers HTTP/1.1
+Content-Type: application/vnd.tent.v0+json
+Accept: application/vnd.tent.v0+json
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;all&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 254
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7m3dto&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mac_key_id&quot;</span><span class="p">:</span> <span class="s2">&quot;s:16e9933f&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mac_key&quot;</span><span class="p">:</span> <span class="s2">&quot;fd45af54f59b930e5e6eab4bf1e6a0f3&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;mac_algorithm&quot;</span><span class="p">:</span> <span class="s2">&quot;hmac-sha-256&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;all&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h2>Authentication</h2>
+
+<p>All requests should be made using SSL.</p>
+
+<p>Authentication is required to access resources that are not marked as public.</p>
+
+<p>Tent uses <a href="http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01">MAC Access
+Authentication</a>
+for all requests.</p>
+
+<p>All requests must be signed using MAC, and all notifications from the server
+are signed as well.</p>
+
+<h2>Get Current Following</h2>
+
+<h3>GET /followers/:id</h3>
+<div class="highlight"><pre>GET /followers/7m3dto HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;3824e1&quot;, mac=&quot;aRnrSo+80AHRru2FJE1Sj6GfCsmpKcyv7w5FZONAtOM=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 152
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7m3dto&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;all&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h2>Edit Following</h2>
+
+<h3>PUT /followers/:id</h3>
+<div class="highlight"><pre>PUT /followers/7m3dto HTTP/1.1
+Content-Type: application/vnd.tent.v0+json
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;6e4ff8&quot;, mac=&quot;MAr2L6Z1ZcAe4tv5XGmafCUH8w/OrkUFpJKhK8dtoBs=&quot;
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://tent.io/types/post/essay/v0.1.0#full&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Content-Length: 193
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;7m3dto&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;https://tent.io/types/post/essay/v0.1.0#full&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h2>Stop Following</h2>
+
+<h3>DELETE /followers/:id</h3>
+<div class="highlight"><pre>DELETE /followers/eazohw HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;fa20ba&quot;, mac=&quot;SkbEBnIsBUvZ9jLce6cXfry7dqNN9OELnnF1UvwkHys=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 403 Forbidden
+Content-Type: text/html
+Content-Length: 12
+</pre>
+</div>
+<div class="highlight"><pre>Unauthorized
+</pre>
+</div>
+
+<h2>Fetch Posts</h2>
+
+<h3>GET /posts</h3>
+<div class="highlight"><pre>GET /posts HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;11a3ee&quot;, mac=&quot;30RvjuvuDkTitC+iubWLvMfqyr2JegqtrKaSE+cEN78=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: private
+Content-Length: 378
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+          <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+    <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xk3mlq&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FooApp&quot;</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre>
+</div>
+
+<h3>GET /posts/:id</h3>
+<div class="highlight"><pre>GET /posts/xk3mlq HTTP/1.1
+Accept: application/vnd.tent.v0+json
+Authorization: MAC id=&quot;s:16e9933f&quot;, ts=&quot;1346984266&quot;, nonce=&quot;e9d768&quot;, mac=&quot;gaw/GTjat0ANZmdoo+X4NHpAk+SuJNLj+rSGdcD0JbE=&quot;
+</pre>
+</div>
+<div class="highlight"><pre>HTTP/1.1 200 OK
+Content-Type: application/vnd.tent.v0+json
+Last-Modified: Fri, 07 Sep 2012 02:17:46 GMT
+Cache-Control: public
+Content-Length: 376
+</pre>
+</div>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nt">&quot;entity&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.org&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;https://tent.io/types/post/status/v0.1.0&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;licenses&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;http://creativecommons.org/licenses/by/3.0/&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;content&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;text&quot;</span><span class="p">:</span> <span class="s2">&quot;Just landed.&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Point&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mi">50</span><span class="err">.</span><span class="mi">923878</span><span class="p">,</span>
+        <span class="mi">4</span><span class="err">.</span><span class="mi">028605</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;published_at&quot;</span><span class="p">:</span> <span class="mi">1346984266</span><span class="p">,</span>
+  <span class="nt">&quot;permissions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;public&quot;</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;xk3mlq&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;app&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://example.com&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;FooApp&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;attachments&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+<h2>Notifications</h2>
+
+<p>Notifications of new content are sent as POST requests to <code>/posts</code> and
+authenticated using the negotiated credentials.</p>
+</div>
+      </div>
+    </div><footer>© 2012 Apollic Software, LLC</footer></body>
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: *
+Sitemap: http://tent.io/sitemap.xml

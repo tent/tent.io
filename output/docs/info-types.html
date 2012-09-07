@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head><meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Profile Info Types · Tent - the decentralized social web</title>
+    <link href="/assets/css/bootstrap-cb0b9b6b1fd.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/bootstrap-responsive-cb034fa29d4.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/style-cba5092b759.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/blog.xml" rel="alternate" title="Atom feed" type="application/atom+xml" />
+    <script type="text/javascript">var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-34258323-1']);
+      _gaq.push(['_setSiteSpeedSampleRate', 50]);
+      _gaq.push(['_trackPageview']); 
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();</script></head>
+  <body><div class="navbar navbar-static-top">
+      <div class="navbar-inner">
+        <a class="brand" href="/">Tent</a>
+        <ul class="nav"><li ><a href="/blog">Blog</a></li><li class="active"><a href="/docs">Docs</a></li></ul>
+      </div>
+    </div><div class="container doc">
+      <div class="row">
+        <div class="span2">
+          <ul class="nav nav-list well">
+            <li class="nav-header">Tent</li>
+            <li><li ><a href="/docs">Protocol Introduction</a></li></li>
+            <li><li ><a href="/docs/server-protocol">Server Protocol</a></li></li>
+            <li><li ><a href="/docs/app-auth">App Authentication</a></li></li>
+            <li><li ><a href="/docs/app-server">Server API for Apps</a></li></li>
+            <li class="nav-header">Types</li>
+            <li><li ><a href="/docs/post-types">Post Types</a></li></li>
+            <li><li class="active"><a href="/docs/info-types">Profile Info Types</a></li></li>
+          </ul>
+        </div>
+        <div class="span8">
+          <div class="alert alert-block">
+            <h4>Alpha Documentation </h4>
+            <p>These docs are very rough, incorrect, and incomplete. They will be modified heavily over the next few weeks.</p>
+            <p>Please contribute by making Pull Requests and Issues on the <a href="https://github.com/tent/tent.io">GitHub repository</a>.</p>
+          </div><h2>Profile Info Types</h2>
+
+<h3>Core</h3>
+
+<p><code>https://tent.io/types/info/core/v0.1.0</code></p>
+<table class="table table-striped table-bordered">
+<thead >
+<tr>
+<th>Property</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody >
+<tr>
+<td><code>entity</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>The canonical entity identitifier.</td>
+</tr>
+<tr>
+<td><code>licenses</code></td>
+<td>Optional</td>
+<td>Array</td>
+<td>The licenses the entity publishes content under.</td>
+</tr>
+<tr>
+<td><code>servers</code></td>
+<td>Optional</td>
+<td>Array</td>
+<td>The canonical API roots that can be used to interact with the entity.</td>
+</tr>
+</tbody>
+</table>
+
+<h3>Basic</h3>
+
+<p><code>https://tent.io/types/info/basic/v0.1.0</code></p>
+<table class="table table-striped table-bordered">
+<thead >
+<tr>
+<th>Property</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody >
+<tr>
+<td><code>name</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>Name to be displayed publicly.</td>
+</tr>
+<tr>
+<td><code>avatar_url</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>URL to avatar to be displayed publicly.</td>
+</tr>
+<tr>
+<td><code>birthdate</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>Date of birth in one of these formats: <code>YYYY-MM-DD</code>, <code>YYYY-MM</code>, <code>MM-DD</code></td>
+</tr>
+<tr>
+<td><code>location</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>Location to be displayed publicly.</td>
+</tr>
+<tr>
+<td><code>gender</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>Gender to be displayed publicly.</td>
+</tr>
+<tr>
+<td><code>bio</code></td>
+<td>Optional</td>
+<td>String</td>
+<td>Biography/self-description to be displayed publicly.</td>
+</tr>
+</tbody>
+</table>
+</div>
+      </div>
+    </div><footer>© 2012 Apollic Software, LLC</footer></body>
+</html>
