@@ -48,10 +48,9 @@ title: Server API for Apps
 
 {delete_follower example}
 
-#### POST /posts
+### POST /posts
 
 {create_post example}
-
 
 ### GET /posts
 
@@ -61,3 +60,11 @@ title: Server API for Apps
 ### GET /posts/:id
 
 {get_post example}
+
+### Post Attachments
+
+{create_post_with_attachments example}
+
+#### GET /posts/:post_id/attachments/:name
+
+{get_post_attachment example}
