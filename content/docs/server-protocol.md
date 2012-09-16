@@ -49,15 +49,15 @@ Every user can always decide who can see different content. Following is about i
 
 There are three ways a follower can specify what information she wants to receive: licenses, post types, and views.
 
-Licenses determine the terms under which content was published. Different users use different licenses for different reasons.
+*Licenses* determine the terms under which content was published. Different users use different licenses for different reasons.
 
-Post types are the kind of content the user created, like statuses, essays, photos, and albums. Anyone can create new post types.
+*Post types* are the kind of content the user created, like statuses, essays, photos, and albums. Anyone can create new post types.
 
-Views specify what kind of content will be sent for each post type. For example, essays can be long so some users might only want to receive an excerpt of each essay before deciding to download the whole thing. Photos and albums can take up lots of space. Requesting an incomplete view of a post type does not mean the user can not download the rest later. A user with permission to see a post can see any of its views. The view types for each post type are defined in that type's description.
+*Views* specify what kind of content will be sent for each post type. For example, essays can be long so some users might only want to receive an excerpt of each essay before deciding to download the whole thing. Photos and albums can take up lots of space. Requesting an incomplete view of a post type does not mean the user can not download the rest later. A user with permission to see a post can see any of its views. The view types for each post type are defined in that type's description.
 
 By combining these three options, users can request only specific types of content from another user when asking to follow them.
 
-*Example:* A user, https://example.org, wants to follow her friend, https://cloudmir.com. If her request is accepted, https://example.org will receive new updates from https://cloudmir.com as soon as they are created. 
+**Example:** A user, https://example.org, wants to follow her friend, https://cloudmir.com. If her request is accepted, https://example.org will receive new updates from https://cloudmir.com as soon as they are created. 
 
 First, https://example.org needs to tell her friend what kind of content she wants to receive directly. Since https://cloudmir.com's server will send out new content immediately to everyone following him, https://example.org needs to think carefully about what to request. Her friend posts lots of photos and statuses which would clutter https://example.org's feed. 
 
