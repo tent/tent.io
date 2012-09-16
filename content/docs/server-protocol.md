@@ -3,21 +3,32 @@
 This document describes the protocol that Tent servers use to communicate with
 each other.
 
+###Basics
+
+Every Tent user is represented by a server. Servers establish and maintain relationships and exchange content between users. 
+
+Applications send new content to servers and receive content from the server.
+
+Servers should always be online and be accessible over HTTPS.
+
 ### Server Discovery
 
-Server discovery is done through HTTP `Link` headers as well as HTML `link`
-tags. Multiple links may be presented, and should be tried by the client in
-order.
+Users and applications discover Tent servers in one of two ways: HTTP `Link` Headers and HTML `link` tags. Users can provide multiple links to access their Tent server. Multiple links are usually provided in case a particular address becomes unavailble. When multiple links are listed, they should be listed in order of preference from most preferred to least preferred, and contact attempted in the same order.
+
 
 #### HTTP `Link` Header
 
-The HTTP header allows discovery of Tent servers by just doing a HEAD request
-instead of getting the page and parsing it for the `link` tag. It should be
-added to all responses associated with the Tent entity.
+The HTTP header allows discovery of Tent servers by performing a HEAD request
+instead of retrieving the entire page and parsing for the `link` tag. It should be
+added to all responses associated with the Tent entity. Other pages associated with the user may also serve the same header.
 
 
 ```text
 Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile"
+```
+or
+```text
+Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile", <https://titanous.tent.is/profile>; rel="https://tent.io/rels/profile", <https://tent.jonathan.cloudmir.com/profile>; rel="https://tent.io/rels/profile"
 ```
 
 #### HTML `link` tag
