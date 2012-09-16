@@ -43,7 +43,7 @@ with the Tent entity.
 
 ### Follow an entity
 
-Users follow other users to receive new content. Different users create different kinds of content. Follow requests determine who follows whom and what content is delivered to each user in real time. 
+Users follow other users to receive new content. Different users create different kinds of content and following relationships are not symmetrical. Follow requests determine who follows whom and what content is delivered to each user in real time. 
 
 Every user can always decide who can see different content. Following is about interest, not permission. Just because someone requests content from a user does not give them access to all of their posts.
 
@@ -89,12 +89,16 @@ are signed as well.
 
 ## Get Current Following
 
+Some details are available on who is following whom. A server can request information about a specific following, including your own current details, as specified below. Only your apps and the follower herself can see the specific details of their following.
+
 ### GET /followers/:id
 
 {get_follower example}
 
 
 ## Edit Following
+
+When a user wants to change the licenses, views, or post types she receives, she makes a PUT request.
 
 ### PUT /followers/:id
 
@@ -103,6 +107,8 @@ are signed as well.
 
 ## Stop Following
 
+If one user wants to stop following another, a DELETE request will end their relationship.
+
 ### DELETE /followers/:id
 
 {delete_follower example}
@@ -110,16 +116,22 @@ are signed as well.
 
 ## Fetch Posts
 
+Following is not the only way to get posts or other content from a user. Anyone can request posts from another user with a GET request. If the requesting user is not authenticated, only public posts will be available. 
+
 ### GET /posts
+
+There are a number of parameters available to limit the scope of the request.
 
 {follower_get_posts example}
 
 ### GET /posts/:id
+
+It is also possible to retrieve a single post by that post's id. This is useful in retrieving reposted content and 
 
 {follower_get_post example}
 
 
 ## Notifications
 
-Notifications of new content are sent as POST requests to `/posts` and
+New content is sent as a POST request to `/posts` and
 authenticated using the negotiated credentials.
