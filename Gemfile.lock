@@ -27,6 +27,7 @@ GEM
     cri (2.3.0)
       colored (>= 1.2)
     ffi (1.0.11)
+    fssm (0.2.9)
     json-schema (1.0.9)
     mime-types (1.19)
     nanoc (3.4.0)
@@ -56,6 +57,7 @@ DEPENDENCIES
   adsf
   builder
   clogger
+  fssm
   mime-types
   nanoc
   nanoc-cachebuster

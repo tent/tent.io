@@ -5,16 +5,15 @@ title: App Authentication
 ## App Authentication
 
 Tent uses [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-31) for app
-authentication. Because of the distributed nature of Tent, it is necessary for
-apps to register with the Tent entity before doing the authentication flow.
+authentication. Because of the distributed nature of Tent,
+apps must register with the Tent entity before starting the authentication flow.
 
-After the authentication flow, requests are authenticated using the credentials
+After the authentication flow is complete, requests are authenticated using the credentials
 with [MAC Access
 Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01).
 
 
 ### App Registration
-
 
 Before authenticating a user, the application must be registered with the
 specified Tent entity. The first step is to perform discovery on the provided
