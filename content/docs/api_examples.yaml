@@ -1,38 +1,14 @@
 ---
 :examples:
-  :create_follower: ! "\n```text\nPOST /followers HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n
-    \ \"types\": [\n    \"all\"\n  ],\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \ ]\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length:
-    259\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n  \"permissions\":
-    {\n    \"public\": false\n  },\n  \"id\": \"pod8nk\",\n  \"mac_key_id\": \"s:111dc9ce\",\n
-    \ \"mac_key\": \"61686866995262ea880dc3a8b0ebe9f4\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
-    \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
-    \ \"types\": [\n    \"all#full\"\n  ]\n}\n```\n"
-  :get_follower: ! "\n```text\nGET /followers/pod8nk HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:111dc9ce\", ts=\"1347139238\", nonce=\"00ca43\", mac=\"YMssE9eTEz9NPjkBilm6TyCEXWiVG54O1LYJXTMLzX8=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:38 GMT\nCache-Control: private\nContent-Length: 157\n```\n\n```json\n{\n
-    \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
-    false\n  },\n  \"id\": \"pod8nk\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \ ],\n  \"types\": [\n    \"all#full\"\n  ]\n}\n```\n"
-  :update_follower: ! "\n```text\nPUT /followers/pod8nk HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"s:111dc9ce\", ts=\"1347139238\",
-    nonce=\"f48dd4\", mac=\"Orfrn0j4QaMqdYJG1LNPg02N9FXS6RuW86Vjnikn+e0=\"\n```\n\n```json\n{\n
-    \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \ ],\n  \"types\": [\n    \"https://tent.io/types/post/essay/v0.1.0#full\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 186\n```\n\n```json\n{\n
-    \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
-    false\n  },\n  \"id\": \"pod8nk\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \ ],\n  \"types\": [\n    \"https://tent.io/types/post/essay#full\"\n  ]\n}\n```\n"
   :get_profile: ! "\n```text\nGET /profile HTTP/1.1\nAccept: application/vnd.tent.v0+json\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 430\n```\n\n```json\n{\n
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 464\n```\n\n```json\n{\n
     \ \"https://tent.io/types/info/core/v0.1.0\": {\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"entity\": \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.org\",\n
-    \     \"http://eqt5g4fuenphqinx.onion/\"\n    ]\n  },\n  \"https://tent.io/types/info/basic/v0.1.0\":
-    {\n    \"name\": \"The Tentity\",\n    \"avatar_url\": \"http://example.org/avatar.jpg\",\n
-    \   \"birthdate\": \"2012-08-23\",\n    \"location\": \"The Internet\",\n    \"gender\":
-    \"Unknown\",\n    \"bio\": \"Sunt est aut voluptate accusantium.\"\n  }\n}\n```\n"
+    \   ],\n    \"entity\": \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.com\",\n
+    \     \"http://eqt5g4fuenphqinx.onion/\"\n    ],\n    \"public\": true\n  },\n
+    \ \"https://tent.io/types/info/basic/v0.1.0\": {\n    \"name\": \"The Tentity\",\n
+    \   \"avatar_url\": \"http://example.org/avatar.jpg\",\n    \"birthdate\": \"2012-08-23\",\n
+    \   \"location\": \"The Internet\",\n    \"gender\": \"Unknown\",\n    \"bio\":
+    \"Cum rerum dicta ut neque et libero dolor.\",\n    \"public\": true\n  }\n}\n```\n"
   :create_app: ! "\n```text\nPOST /apps HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
     application/vnd.tent.v0+json\n```\n\n```json\n{\n  \"name\": \"FooApp\",\n  \"description\":
     \"Does amazing foos with your data\",\n  \"url\": \"http://example.com\",\n  \"icon\":
@@ -45,25 +21,68 @@
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
-    \ },\n  \"id\": \"9zlqt6\",\n  \"mac_key_id\": \"a:8237ba5e\",\n  \"mac_key\":
-    \"5801d888065619a2e7276d2de2f89fde\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
+    \ },\n  \"id\": \"u5qn9p\",\n  \"mac_key_id\": \"a:3ef27c0b\",\n  \"mac_key\":
+    \"c1bf3f61850f54a7a5eb3a04f4de3a46\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
     \ \"authorizations\": [\n\n  ]\n}\n```\n"
-  :app_auth: ! "\n```text\nPOST /apps/9zlqt6/authorizations HTTP/1.1\nContent-Type:
+  :app_auth: ! "\n```text\nPOST /apps/u5qn9p/authorizations HTTP/1.1\nContent-Type:
     application/vnd.tent.v0+json\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"a:8237ba5e\", ts=\"1347139239\", nonce=\"401153\", mac=\"k8Bwk8qDM3fs3URHvammFf52vRP3FzJGXB75Y5UAGpk=\"\n```\n\n```json\n{\n
-    \ \"code\": \"4ef4481abb7f3eff123f5b4bde803806\",\n  \"token_type\": \"mac\"\n}\n```\n\n```text\nHTTP/1.1
+    MAC id=\"a:3ef27c0b\", ts=\"1348008594\", nonce=\"30b43b\", mac=\"43p0w/Pd0ytsRJodXTpwHnkg1So7SYj/hfhBdJxGc34=\"\n```\n\n```json\n{\n
+    \ \"code\": \"2ad6d4402bf3d2b644530ec9d0be0e8a\",\n  \"token_type\": \"mac\"\n}\n```\n\n```text\nHTTP/1.1
     200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 124\n```\n\n```json\n{\n
-    \ \"access_token\": \"u:ebd291c4\",\n  \"mac_key\": \"19a3b2adc2df89d57c267d654268f557\",\n
+    \ \"access_token\": \"u:4d997348\",\n  \"mac_key\": \"cb17134a8ec6505bc69a1fcfe7b7c11b\",\n
     \ \"mac_algorithm\": \"hmac-sha-256\",\n  \"token_type\": \"mac\"\n}\n```\n"
-  :get_app: ! "\n```text\nGET /apps/9zlqt6 HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"a:8237ba5e\", ts=\"1347139239\", nonce=\"f03240\", mac=\"dME5ozN+6W+kwxIHdbvn1sxxB90CmEKVjbVBdw1wtvk=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nContent-Length: 853\n```\n\n```json\n{\n  \"name\": \"FooApp\",\n
+  :create_following: ! "\n```text\nPOST /followings HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:4d997348\", ts=\"1348008594\",
+    nonce=\"9a84e1\", mac=\"5lu67MVzWqJL1XWKIzpr4zo98K2Hb/A/9n/cqe2jYGo=\"\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type:
+    application/vnd.tent.v0+json\nContent-Length: 673\n```\n\n```json\n{\n  \"remote_id\":
+    \"je9ajg\",\n  \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"groups\":
+    [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": false\n  },\n  \"id\":
+    \"4vc3yz\",\n  \"created_at\": 1348008594,\n  \"updated_at\": 1348008594,\n  \"groups\":
+    [\n\n  ],\n  \"profile\": {\n    \"https://tent.io/types/info/core/v0.1.0\": {\n
+    \     \"licenses\": [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \     ],\n      \"entity\": \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
+    \       \"http://eqt5g4fuenphqinx.onion/\"\n      ],\n      \"public\": true\n
+    \   },\n    \"https://tent.io/types/info/basic/v0.1.0\": {\n      \"name\": \"The
+    Tentity\",\n      \"avatar_url\": \"http://example.org/avatar.jpg\",\n      \"birthdate\":
+    \"2012-08-23\",\n      \"location\": \"The Internet\",\n      \"gender\": \"Unknown\",\n
+    \     \"bio\": \"Cum rerum dicta ut neque et libero dolor.\",\n      \"public\":
+    true\n    }\n  },\n  \"licenses\": [\n\n  ]\n}\n```\n"
+  :create_follower: ! "\n```text\nPOST /followers HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n
+    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/4vc3yz\",\n
+    \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 254\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
+    false\n  },\n  \"id\": \"562f04\",\n  \"mac_key_id\": \"s:aab46f00\",\n  \"mac_key\":
+    \"ba92e39ca7ed9d05987bba6542085f2d\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
+    \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
+    \ \"types\": [\n    \"all\"\n  ]\n}\n```\n"
+  :get_follower: ! "\n```text\nGET /followers/562f04 HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"s:aab46f00\", ts=\"1348008594\", nonce=\"f8847a\", mac=\"UQWHwvyDLr84Q4FUW4ym49ENxnymOhIv1dDBCpRGlQ4=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 152\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
+    false\n  },\n  \"id\": \"562f04\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"types\": [\n    \"all\"\n  ]\n}\n```\n"
+  :update_follower: ! "\n```text\nPUT /followers/562f04 HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"s:aab46f00\", ts=\"1348008594\",
+    nonce=\"c92590\", mac=\"IASjwS4J8jwe3bYV9q5ua8GLCkBBxd5OXi2tCJfghhc=\"\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"types\": [\n    \"https://tent.io/types/post/essay/v0.1.0#full\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 193\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
+    false\n  },\n  \"id\": \"562f04\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"types\": [\n    \"https://tent.io/types/post/essay/v0.1.0#full\"\n  ]\n}\n```\n"
+  :get_app: ! "\n```text\nGET /apps/u5qn9p HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"a:3ef27c0b\", ts=\"1348008594\", nonce=\"859bf7\", mac=\"Q0dsDo0CO2BhxbtVxny2fHfFcDz0Fpt5kiQd4QWmm4E=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nContent-Length: 853\n```\n\n```json\n{\n  \"name\": \"FooApp\",\n
     \ \"description\": \"Does amazing foos with your data\",\n  \"url\": \"http://example.com\",\n
     \ \"icon\": \"http://example.com/icon.png\",\n  \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n
     \ ],\n  \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to
     describe foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
-    \ },\n  \"id\": \"9zlqt6\",\n  \"authorizations\": [\n    {\n      \"post_types\":
+    \ },\n  \"id\": \"u5qn9p\",\n  \"authorizations\": [\n    {\n      \"post_types\":
     [\n        \"https://tent.io/types/post/status/v0.1.0\",\n        \"https://tent.io/types/post/photo/v0.1.0\"\n
     \     ],\n      \"profile_info_types\": [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n
     \     ],\n      \"scopes\": [\n        \"read_posts\",\n        \"write_posts\",\n
@@ -72,11 +91,11 @@
     \       \"write_followings\",\n        \"read_groups\",\n        \"write_groups\",\n
     \       \"read_permissions\",\n        \"write_permissions\",\n        \"read_apps\",\n
     \       \"write_apps\",\n        \"follow_ui\",\n        \"read_secrets\",\n        \"write_secrets\"\n
-    \     ],\n      \"notification_url\": null,\n      \"id\": \"fj61yv\"\n    }\n
+    \     ],\n      \"notification_url\": null,\n      \"id\": \"9pc7uh\"\n    }\n
     \ ]\n}\n```\n"
-  :update_app: ! "\n```text\nPUT /apps/9zlqt6 HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"a:8237ba5e\", ts=\"1347139239\",
-    nonce=\"3355a5\", mac=\"/agzxh/aN07RDtfhbxQPgnglZwOel4Df36jZ67yN1iE=\"\n```\n\n```json\n{\n
+  :update_app: ! "\n```text\nPUT /apps/u5qn9p HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"a:3ef27c0b\", ts=\"1348008594\",
+    nonce=\"f7cbaf\", mac=\"Vxl+vaiCnJ1MMakV2HFmV5z6HHLOL5G2A2OGOyHBZNY=\"\n```\n\n```json\n{\n
     \ \"name\": \"FooApp\",\n  \"description\": \"Does amazing foos with your data\",\n
     \ \"url\": \"http://example.com\",\n  \"icon\": \"http://example.com/icon.png\",\n
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
@@ -90,7 +109,7 @@
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\",\n
     \   \"write_following\": \"Follow new users when you click\"\n  },\n  \"id\":
-    \"9zlqt6\",\n  \"authorizations\": [\n    {\n      \"post_types\": [\n        \"https://tent.io/types/post/status/v0.1.0\",\n
+    \"u5qn9p\",\n  \"authorizations\": [\n    {\n      \"post_types\": [\n        \"https://tent.io/types/post/status/v0.1.0\",\n
     \       \"https://tent.io/types/post/photo/v0.1.0\"\n      ],\n      \"profile_info_types\":
     [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n      ],\n      \"scopes\":
     [\n        \"read_posts\",\n        \"write_posts\",\n        \"import_posts\",\n
@@ -99,7 +118,7 @@
     \       \"read_groups\",\n        \"write_groups\",\n        \"read_permissions\",\n
     \       \"write_permissions\",\n        \"read_apps\",\n        \"write_apps\",\n
     \       \"follow_ui\",\n        \"read_secrets\",\n        \"write_secrets\"\n
-    \     ],\n      \"notification_url\": null,\n      \"id\": \"fj61yv\"\n    }\n
+    \     ],\n      \"notification_url\": null,\n      \"id\": \"9pc7uh\"\n    }\n
     \ ]\n}\n```\n"
   :discovery: ! '
 
@@ -125,66 +144,71 @@
 '
   :update_profile: ! "\n```text\nPUT /profile/https%3A%2F%2Ftent.io%2Ftypes%2Finfo%2Fbasic%2Fv0.1.0
     HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"5e4b4c\", mac=\"v9TpgaktkRG4Ll/Jh6WjwHlIUc1U/EbvqVfY9i5Cf4s=\"\n```\n\n```json\n{\n
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"a564aa\", mac=\"uto4AP8IiCvOljK0blj7d9aEk60koznQuJO5JwkWh9U=\"\n```\n\n```json\n{\n
     \ \"name\": \"The Tentity\",\n  \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \ \"birthdate\": \"2012-08-23\",\n  \"location\": \"The Internet\",\n  \"gender\":
-    \"Unknown\",\n  \"bio\": \"Voluptatum est vero maxime expedita.\"\n}\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 431\n```\n\n```json\n{\n
-    \ \"https://tent.io/types/info/core/v0.1.0\": {\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"entity\": \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.org\",\n
-    \     \"http://eqt5g4fuenphqinx.onion/\"\n    ]\n  },\n  \"https://tent.io/types/info/basic/v0.1.0\":
-    {\n    \"name\": \"The Tentity\",\n    \"avatar_url\": \"http://example.org/avatar.jpg\",\n
-    \   \"birthdate\": \"2012-08-23\",\n    \"location\": \"The Internet\",\n    \"gender\":
-    \"Unknown\",\n    \"bio\": \"Voluptatum est vero maxime expedita.\"\n  }\n}\n```\n"
+    \"Unknown\",\n  \"bio\": \"Dignissimos voluptatum blanditiis vel officiis necessitatibus
+    non ea.\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length:
+    493\n```\n\n```json\n{\n  \"https://tent.io/types/info/core/v0.1.0\": {\n    \"licenses\":
+    [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n    \"entity\":
+    \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.com\",\n
+    \     \"http://eqt5g4fuenphqinx.onion/\"\n    ],\n    \"public\": true\n  },\n
+    \ \"https://tent.io/types/info/basic/v0.1.0\": {\n    \"name\": \"The Tentity\",\n
+    \   \"avatar_url\": \"http://example.org/avatar.jpg\",\n    \"birthdate\": \"2012-08-23\",\n
+    \   \"location\": \"The Internet\",\n    \"gender\": \"Unknown\",\n    \"bio\":
+    \"Dignissimos voluptatum blanditiis vel officiis necessitatibus non ea.\",\n    \"public\":
+    false\n  }\n}\n```\n"
   :create_post: ! "\n```text\nPOST /posts HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:ebd291c4\", ts=\"1347139239\",
-    nonce=\"ca26e5\", mac=\"OEGYniI3ReTO8Bm4lMgJtXwbObE66r1qbEDtB05MQkM=\"\n```\n\n```json\n{\n
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:4d997348\", ts=\"1348008594\",
+    nonce=\"4bd34b\", mac=\"UKkGWb9uk1v7YUb9Jie9atku2m3DtQcwL94B9vYEVXM=\"\n```\n\n```json\n{\n
     \ \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n  \"published_at\":
-    1347139239,\n  \"permissions\": {\n    \"public\": true\n  },\n  \"licenses\":
+    1348008594,\n  \"permissions\": {\n    \"public\": true\n  },\n  \"licenses\":
     [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n  \"content\": {\n
     \   \"text\": \"Just landed.\",\n    \"location\": {\n      \"type\": \"Point\",\n
     \     \"coordinates\": [\n        50.923878,\n        4.028605\n      ]\n    }\n
     \ }\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length:
-    464\n```\n\n```json\n{\n  \"type\": \"https://tent.io/types/post/status\",\n  \"entity\":
-    \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \ ],\n  \"content\": {\n    \"text\": \"Just landed.\",\n    \"location\": {\n
-    \     \"type\": \"Point\",\n      \"coordinates\": [\n        50.923878,\n        4.028605\n
-    \     ]\n    }\n  },\n  \"published_at\": 1347139239,\n  \"permissions\": {\n
-    \   \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n
-    \ },\n  \"id\": \"404yfx\",\n  \"updated_at\": 1347139239,\n  \"received_at\":
-    1347139239,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\":
-    \"FooApp\"\n  },\n  \"attachments\": [\n\n  ],\n  \"known_entity\": null\n}\n```\n"
+    497\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n  \"licenses\":
+    [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n  \"content\": {\n
+    \   \"text\": \"Just landed.\",\n    \"location\": {\n      \"type\": \"Point\",\n
+    \     \"coordinates\": [\n        50.923878,\n        4.028605\n      ]\n    }\n
+    \ },\n  \"published_at\": 1348008594,\n  \"permissions\": {\n    \"groups\": [\n\n
+    \   ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\": \"pvws8i\",\n
+    \ \"updated_at\": 1348008594,\n  \"received_at\": 1348008594,\n  \"attachments\":
+    [\n\n  ],\n  \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n  \"version\":
+    1,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\": \"FooApp\"\n
+    \ },\n  \"mentions\": [\n\n  ],\n  \"known_entity\": null\n}\n```\n"
   :create_post_with_attachments: ! "\n```text\nPOST /posts HTTP/1.1\nContent-Type:
     multipart/form-data;boundary=-----------TentAttachment\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"49457e\", mac=\"BiBx4EigI4ASqn97uiIGJMlTpz16i5LgrkEvlmQGl8U=\"\n```\n\n```text\n-------------TentAttachment\r\nContent-Disposition:
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"bbfbcb\", mac=\"sCdw7zq5dZPKGM+/QowrKQWlWO7KWox8zjeRQN4kQH8=\"\n```\n\n```text\n-------------TentAttachment\r\nContent-Disposition:
     form-data; name=\"post\"; filename=\"post.json\"\r\nContent-Length: 206\r\nContent-Type:
-    application/vnd.tent.v0+json\r\nContent-Transfer-Encoding: binary\r\n\r\n{\"type\":\"https://tent.io/types/post/photo/v0.1.0\",\"published_at\":1347139239,\"permissions\":{\"public\":true},\"licenses\":[\"http://creativecommons.org/licenses/by/3.0/\"],\"content\":{\"caption\":\"Some
+    application/vnd.tent.v0+json\r\nContent-Transfer-Encoding: binary\r\n\r\n{\"type\":\"https://tent.io/types/post/photo/v0.1.0\",\"published_at\":1348008594,\"permissions\":{\"public\":true},\"licenses\":[\"http://creativecommons.org/licenses/by/3.0/\"],\"content\":{\"caption\":\"Some
     fake photos\"}}\r\n-------------TentAttachment\r\nContent-Disposition: form-data;
-    name=\"photos\"; filename=\"fake_photo1.jpg\"\r\nContent-Length: 26\r\nContent-Type:
+    name=\"photos[0]\"; filename=\"fake_photo1.jpg\"\r\nContent-Length: 26\r\nContent-Type:
     image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nPhoto 1 data would go here\r\n-------------TentAttachment\r\nContent-Disposition:
-    form-data; name=\"photos\"; filename=\"fake_photo2.jpg\"\r\nContent-Length: 26\r\nContent-Type:
-    image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nPhoto 2 data would go here\r\n-------------TentAttachment--\r\n\r\n\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 560\n```\n\n```json\n{\n
-    \ \"type\": \"https://tent.io/types/post/photo\",\n  \"entity\": \"https://example.org\",\n
-    \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
-    \ \"content\": {\n    \"caption\": \"Some fake photos\"\n  },\n  \"published_at\":
-    1347139239,\n  \"permissions\": {\n    \"groups\": [\n\n    ],\n    \"entities\":
-    {\n    },\n    \"public\": true\n  },\n  \"id\": \"agr7fh\",\n  \"updated_at\":
-    1347139239,\n  \"received_at\": 1347139239,\n  \"app\": {\n    \"url\": \"http://example.com\",\n
-    \   \"name\": \"FooApp\"\n  },\n  \"attachments\": [\n    {\n      \"type\": \"image/jpeg\",\n
-    \     \"category\": \"photos\",\n      \"name\": \"fake_photo1.jpg\",\n      \"size\":
-    26\n    },\n    {\n      \"type\": \"image/jpeg\",\n      \"category\": \"photos\",\n
-    \     \"name\": \"fake_photo2.jpg\",\n      \"size\": 26\n    }\n  ],\n  \"known_entity\":
-    null\n}\n```\n"
+    form-data; name=\"photos[1]\"; filename=\"fake_photo2.jpg\"\r\nContent-Length:
+    26\r\nContent-Type: image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nPhoto
+    2 data would go here\r\n-------------TentAttachment--\r\n\r\n\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nContent-Length: 633\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"content\": {\n    \"caption\": \"Some fake photos\"\n  },\n  \"published_at\":
+    1348008594,\n  \"permissions\": {\n    \"groups\": [\n\n    ],\n    \"entities\":
+    {\n    },\n    \"public\": true\n  },\n  \"id\": \"ogu052\",\n  \"updated_at\":
+    1348008594,\n  \"received_at\": 1348008594,\n  \"attachments\": [\n    {\n      \"type\":
+    \"image/jpeg\",\n      \"category\": \"photos\",\n      \"name\": \"fake_photo1.jpg\",\n
+    \     \"size\": 26,\n      \"post_version_id\": 6\n    },\n    {\n      \"type\":
+    \"image/jpeg\",\n      \"category\": \"photos\",\n      \"name\": \"fake_photo2.jpg\",\n
+    \     \"size\": 26,\n      \"post_version_id\": 6\n    }\n  ],\n  \"type\": \"https://tent.io/types/post/photo/v0.1.0\",\n
+    \ \"version\": 1,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\":
+    \"FooApp\"\n  },\n  \"mentions\": [\n\n  ],\n  \"known_entity\": null\n}\n```\n"
   :get_post_attachment: ! '
 
     ```text
 
-    GET /posts/agr7fh/attachments/fake_photo2.jpg HTTP/1.1
+    GET /posts/ogu052/attachments/fake_photo2.jpg HTTP/1.1
 
     Accept: image/jpeg
 
-    Authorization: MAC id="u:ebd291c4", ts="1347139239", nonce="57b83d", mac="t8trOYzGtgZP3QfiYwQY2sVoRz2fXnvnLFZ2mqtY2fw="
+    Authorization: MAC id="u:4d997348", ts="1348008594", nonce="3d6d08", mac="2IKvAYbWZ2MFpXLxnufgsdVZd/I5JbuM3+YhHtdBW8E="
 
     ```
 
@@ -207,42 +231,49 @@
     ```
 
 '
-  :create_following: ! "\n```text\nPOST /followings HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:ebd291c4\", ts=\"1347139239\",
-    nonce=\"3f8982\", mac=\"KCuMEKXp3v/E0ULD7tFlrodsgczBzgEfSU8JLd7Pa10=\"\n```\n\n```json\n{\n
-    \ \"entity\": \"https://example.org\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type:
-    application/vnd.tent.v0+json\nContent-Length: 211\n```\n\n```json\n{\n  \"remote_id\":
-    \"vyrykf\",\n  \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"groups\":
-    [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": false\n  },\n  \"id\":
-    \"veevtd\",\n  \"created_at\": 1347139239,\n  \"updated_at\": 1347139239,\n  \"groups\":
-    [\n\n  ],\n  \"profile\": {\n  },\n  \"licenses\": [\n\n  ]\n}\n```\n"
   :get_followings: ! "\n```text\nGET /followings HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"d7a8a9\", mac=\"G8GDXL65Z4iH0b1tP6EPYGFBDG3ev6XtbFjs5uCGM8k=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: private\nContent-Length: 213\n```\n\n```json\n[\n
-    \ {\n    \"remote_id\": \"vyrykf\",\n    \"entity\": \"https://example.org\",\n
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"9ba512\", mac=\"0ED3rwchS1ehPx0weaY23PSpn7N+hHUGOMFQ3y78FIQ=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 675\n```\n\n```json\n[\n
+    \ {\n    \"remote_id\": \"je9ajg\",\n    \"entity\": \"https://example.org\",\n
     \   \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n
-    \     },\n      \"public\": false\n    },\n    \"id\": \"veevtd\",\n    \"created_at\":
-    1347139239,\n    \"updated_at\": 1347139239,\n    \"groups\": [\n\n    ],\n    \"profile\":
-    {\n    },\n    \"licenses\": [\n\n    ]\n  }\n]\n```\n"
-  :get_following: ! "\n```text\nGET /followings/veevtd HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"78e831\", mac=\"wsr+mfLDvQ2vjozT3Ns1LDTQFHx6YQur2eZUlMsUMNs=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: private\nContent-Length: 211\n```\n\n```json\n{\n
-    \ \"remote_id\": \"vyrykf\",\n  \"entity\": \"https://example.org\",\n  \"permissions\":
+    \     },\n      \"public\": false\n    },\n    \"id\": \"4vc3yz\",\n    \"created_at\":
+    1348008594,\n    \"updated_at\": 1348008594,\n    \"groups\": [\n\n    ],\n    \"profile\":
+    {\n      \"https://tent.io/types/info/core/v0.1.0\": {\n        \"licenses\":
+    [\n          \"http://creativecommons.org/licenses/by/3.0/\"\n        ],\n        \"entity\":
+    \"https://example.org\",\n        \"servers\": [\n          \"https://tent.example.com\",\n
+    \         \"http://eqt5g4fuenphqinx.onion/\"\n        ],\n        \"public\":
+    true\n      },\n      \"https://tent.io/types/info/basic/v0.1.0\": {\n        \"name\":
+    \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
+    \       \"birthdate\": \"2012-08-23\",\n        \"location\": \"The Internet\",\n
+    \       \"gender\": \"Unknown\",\n        \"bio\": \"Cum rerum dicta ut neque
+    et libero dolor.\",\n        \"public\": true\n      }\n    },\n    \"licenses\":
+    [\n\n    ]\n  }\n]\n```\n"
+  :get_following: ! "\n```text\nGET /followings/4vc3yz HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"18f175\", mac=\"d36tCzdPFlovBU9vb0Bk+qigWfYSUUaKwxzcV0wypmw=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 673\n```\n\n```json\n{\n
+    \ \"remote_id\": \"je9ajg\",\n  \"entity\": \"https://example.org\",\n  \"permissions\":
     {\n    \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": false\n
-    \ },\n  \"id\": \"veevtd\",\n  \"created_at\": 1347139239,\n  \"updated_at\":
-    1347139239,\n  \"groups\": [\n\n  ],\n  \"profile\": {\n  },\n  \"licenses\":
-    [\n\n  ]\n}\n```\n"
+    \ },\n  \"id\": \"4vc3yz\",\n  \"created_at\": 1348008594,\n  \"updated_at\":
+    1348008594,\n  \"groups\": [\n\n  ],\n  \"profile\": {\n    \"https://tent.io/types/info/core/v0.1.0\":
+    {\n      \"licenses\": [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \     ],\n      \"entity\": \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
+    \       \"http://eqt5g4fuenphqinx.onion/\"\n      ],\n      \"public\": true\n
+    \   },\n    \"https://tent.io/types/info/basic/v0.1.0\": {\n      \"name\": \"The
+    Tentity\",\n      \"avatar_url\": \"http://example.org/avatar.jpg\",\n      \"birthdate\":
+    \"2012-08-23\",\n      \"location\": \"The Internet\",\n      \"gender\": \"Unknown\",\n
+    \     \"bio\": \"Cum rerum dicta ut neque et libero dolor.\",\n      \"public\":
+    true\n    }\n  },\n  \"licenses\": [\n\n  ]\n}\n```\n"
   :delete_following: ! '
 
     ```text
 
-    DELETE /followings/veevtd HTTP/1.1
+    DELETE /followings/4vc3yz HTTP/1.1
 
     Accept: application/vnd.tent.v0+json
 
-    Authorization: MAC id="u:ebd291c4", ts="1347139239", nonce="f1e807", mac="Khmagq9LnS3Y1OZiA2kKGBiS7kTGEcvqpv21FwYsW54="
+    Authorization: MAC id="u:4d997348", ts="1348008594", nonce="b5df09", mac="CGxHEXoOtTb1QJLvbI96osIE3Ot1JXPcFzlsUNJiCu8="
 
     ```
 
@@ -259,127 +290,107 @@
 
 '
   :get_followers: ! "\n```text\nGET /followers HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"99e2a0\", mac=\"+orlq/dKmvEvESB/AAZhmZWjV/1+nMjp1hyphS4pN0s=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: private\nContent-Length: 1401\n```\n\n```json\n[\n
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"327134\", mac=\"kCa0imCs6SnuLWBZc4maLQcvu49qmKXHNJRfte+d0Ao=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 756\n```\n\n```json\n[\n
     \ {\n    \"entity\": \"https://example.org\",\n    \"permissions\": {\n      \"groups\":
     [\n\n      ],\n      \"entities\": {\n      },\n      \"public\": false\n    },\n
-    \   \"id\": \"pod8nk\",\n    \"created_at\": 1347139238,\n    \"updated_at\":
-    1347139238,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/core/v0.1.0\":
+    \   \"id\": \"562f04\",\n    \"created_at\": 1348008594,\n    \"updated_at\":
+    1348008594,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/core/v0.1.0\":
     {\n        \"licenses\": [\n          \"http://creativecommons.org/licenses/by/3.0/\"\n
     \       ],\n        \"entity\": \"https://example.org\",\n        \"servers\":
-    [\n          \"https://tent.example.org\",\n          \"http://eqt5g4fuenphqinx.onion/\"\n
-    \       ]\n      },\n      \"https://tent.io/types/info/basic/v0.1.0\": {\n        \"name\":
-    \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
+    [\n          \"https://tent.example.com\",\n          \"http://eqt5g4fuenphqinx.onion/\"\n
+    \       ],\n        \"public\": true\n      },\n      \"https://tent.io/types/info/basic/v0.1.0\":
+    {\n        \"name\": \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \       \"birthdate\": \"2012-08-23\",\n        \"location\": \"The Internet\",\n
-    \       \"gender\": \"Unknown\",\n        \"bio\": \"Sunt est aut voluptate accusantium.\"\n
-    \     }\n    },\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"types\": [\n      \"https://tent.io/types/post/essay#full\"\n    ]\n
-    \ },\n  {\n    \"entity\": \"https://example.org\",\n    \"permissions\": {\n
-    \     \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
-    false\n    },\n    \"id\": \"vyrykf\",\n    \"created_at\": 1347139239,\n    \"updated_at\":
-    1347139239,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/core/v0.1.0\":
-    {\n        \"licenses\": [\n          \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \       ],\n        \"entity\": \"https://example.org\",\n        \"servers\":
-    [\n          \"https://tent.example.org\",\n          \"http://eqt5g4fuenphqinx.onion/\"\n
-    \       ]\n      },\n      \"https://tent.io/types/info/basic/v0.1.0\": {\n        \"name\":
-    \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
-    \       \"birthdate\": \"2012-08-23\",\n        \"location\": \"The Internet\",\n
-    \       \"gender\": \"Unknown\",\n        \"bio\": \"Voluptatum est vero maxime
-    expedita.\"\n      }\n    },\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"types\": [\n      \"all#full\"\n    ]\n  }\n]\n```\n"
+    \       \"gender\": \"Unknown\",\n        \"bio\": \"Cum rerum dicta ut neque
+    et libero dolor.\",\n        \"public\": true\n      }\n    },\n    \"licenses\":
+    [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n    \"types\":
+    [\n      \"https://tent.io/types/post/essay/v0.1.0#full\"\n    ]\n  }\n]\n```\n"
   :get_posts: ! "\n```text\nGET /posts HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"963ba5\", mac=\"PHi8c+1N678Ubs/Okw/jjax5eFdBFqHm+39zQn+3moE=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: private\nContent-Length: 1027\n```\n\n```json\n[\n
-    \ {\n    \"type\": \"https://tent.io/types/post/status\",\n    \"entity\": \"https://example.org\",\n
-    \   \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n
-    \   \"content\": {\n      \"text\": \"Just landed.\",\n      \"location\": {\n
-    \       \"type\": \"Point\",\n        \"coordinates\": [\n          50.923878,\n
-    \         4.028605\n        ]\n      }\n    },\n    \"published_at\": 1347139239,\n
-    \   \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n
-    \     },\n      \"public\": true\n    },\n    \"id\": \"404yfx\",\n    \"updated_at\":
-    1347139239,\n    \"received_at\": 1347139239,\n    \"app\": {\n      \"url\":
-    \"http://example.com\",\n      \"name\": \"FooApp\"\n    },\n    \"attachments\":
-    [\n\n    ],\n    \"known_entity\": null\n  },\n  {\n    \"type\": \"https://tent.io/types/post/photo\",\n
-    \   \"entity\": \"https://example.org\",\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"7050ab\", mac=\"gYpc29uR8CmCKtfCHn0yhKtmNOciClwzb0ATNR21MWo=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 1133\n```\n\n```json\n[\n
+    \ {\n    \"entity\": \"https://example.org\",\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
     \   ],\n    \"content\": {\n      \"caption\": \"Some fake photos\"\n    },\n
-    \   \"published_at\": 1347139239,\n    \"permissions\": {\n      \"groups\": [\n\n
+    \   \"published_at\": 1348008594,\n    \"permissions\": {\n      \"groups\": [\n\n
     \     ],\n      \"entities\": {\n      },\n      \"public\": true\n    },\n    \"id\":
-    \"agr7fh\",\n    \"updated_at\": 1347139239,\n    \"received_at\": 1347139239,\n
-    \   \"app\": {\n      \"url\": \"http://example.com\",\n      \"name\": \"FooApp\"\n
-    \   },\n    \"attachments\": [\n      {\n        \"type\": \"image/jpeg\",\n        \"category\":
-    \"photos\",\n        \"name\": \"fake_photo1.jpg\",\n        \"size\": 26\n      },\n
-    \     {\n        \"type\": \"image/jpeg\",\n        \"category\": \"photos\",\n
-    \       \"name\": \"fake_photo2.jpg\",\n        \"size\": 26\n      }\n    ],\n
-    \   \"known_entity\": null\n  }\n]\n```\n"
-  :get_post: ! "\n```text\nGET /posts/404yfx HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:ebd291c4\", ts=\"1347139239\", nonce=\"e44603\", mac=\"m0EoMpId8Rirg0Xy6HLYD20UxXzPxwG4JTRnNMe9+VE=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: public\nContent-Length: 464\n```\n\n```json\n{\n
-    \ \"type\": \"https://tent.io/types/post/status\",\n  \"entity\": \"https://example.org\",\n
-    \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
-    \ \"content\": {\n    \"text\": \"Just landed.\",\n    \"location\": {\n      \"type\":
-    \"Point\",\n      \"coordinates\": [\n        50.923878,\n        4.028605\n      ]\n
-    \   }\n  },\n  \"published_at\": 1347139239,\n  \"permissions\": {\n    \"groups\":
-    [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\":
-    \"404yfx\",\n  \"updated_at\": 1347139239,\n  \"received_at\": 1347139239,\n  \"app\":
-    {\n    \"url\": \"http://example.com\",\n    \"name\": \"FooApp\"\n  },\n  \"attachments\":
-    [\n\n  ],\n  \"known_entity\": null\n}\n```\n"
-  :follower_get_post: ! '
-
-    ```text
-
-    GET /posts/us27xt HTTP/1.1
-
-    Accept: application/vnd.tent.v0+json
-
-    Authorization: MAC id="s:111dc9ce", ts="1347139239", nonce="9831f2", mac="L0EbRa+w32onD896OdzMAKtU5pcAWxcllEEkHyNpS5c="
-
-    ```
-
-
-    ```text
-
-    HTTP/1.1 404 Not Found
-
-    Content-Type: text/html
-
-    Content-Length: 0
-
-    ```
-
-'
+    \"ogu052\",\n    \"updated_at\": 1348008594,\n    \"received_at\": 1348008594,\n
+    \   \"attachments\": [\n      {\n        \"type\": \"image/jpeg\",\n        \"category\":
+    \"photos\",\n        \"name\": \"fake_photo1.jpg\",\n        \"size\": 26,\n        \"post_version_id\":
+    6\n      },\n      {\n        \"type\": \"image/jpeg\",\n        \"category\":
+    \"photos\",\n        \"name\": \"fake_photo2.jpg\",\n        \"size\": 26,\n        \"post_version_id\":
+    6\n      }\n    ],\n    \"type\": \"https://tent.io/types/post/photo/v0.1.0\",\n
+    \   \"version\": 1,\n    \"app\": {\n      \"url\": \"http://example.com\",\n
+    \     \"name\": \"FooApp\"\n    },\n    \"mentions\": [\n\n    ],\n    \"known_entity\":
+    null\n  },\n  {\n    \"entity\": \"https://example.org\",\n    \"licenses\": [\n
+    \     \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n    \"content\":
+    {\n      \"text\": \"Just landed.\",\n      \"location\": {\n        \"type\":
+    \"Point\",\n        \"coordinates\": [\n          50.923878,\n          4.028605\n
+    \       ]\n      }\n    },\n    \"published_at\": 1348008594,\n    \"permissions\":
+    {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
+    true\n    },\n    \"id\": \"pvws8i\",\n    \"updated_at\": 1348008594,\n    \"received_at\":
+    1348008594,\n    \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n
+    \   \"version\": 1,\n    \"app\": {\n      \"url\": \"http://example.com\",\n
+    \     \"name\": \"FooApp\"\n    },\n    \"mentions\": [\n\n    ],\n    \"known_entity\":
+    null\n  }\n]\n```\n"
+  :get_post: ! "\n```text\nGET /posts/pvws8i HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:4d997348\", ts=\"1348008594\", nonce=\"5ba8f9\", mac=\"icsbMreZQPhhbpgeNa5NsWjrxPzWKGWJ85yFUcpAhhs=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: public\nContent-Length: 497\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"content\": {\n    \"text\": \"Just landed.\",\n    \"location\": {\n
+    \     \"type\": \"Point\",\n      \"coordinates\": [\n        50.923878,\n        4.028605\n
+    \     ]\n    }\n  },\n  \"published_at\": 1348008594,\n  \"permissions\": {\n
+    \   \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n
+    \ },\n  \"id\": \"pvws8i\",\n  \"updated_at\": 1348008594,\n  \"received_at\":
+    1348008594,\n  \"attachments\": [\n\n  ],\n  \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n
+    \ \"version\": 1,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\":
+    \"FooApp\"\n  },\n  \"mentions\": [\n\n  ],\n  \"known_entity\": null\n}\n```\n"
+  :follower_get_post: ! "\n```text\nGET /posts/pvws8i HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"s:aab46f00\", ts=\"1348008594\", nonce=\"0b0057\", mac=\"Y2iJ+mijBxudyIoW8xqw74mIt45zHaSZ7jzaBmNMZao=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: public\nContent-Length: 402\n```\n\n```json\n{\n
+    \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \ ],\n  \"content\": {\n    \"text\": \"Just landed.\",\n    \"location\": {\n
+    \     \"type\": \"Point\",\n      \"coordinates\": [\n        50.923878,\n        4.028605\n
+    \     ]\n    }\n  },\n  \"published_at\": 1348008594,\n  \"permissions\": {\n
+    \   \"public\": true\n  },\n  \"id\": \"pvws8i\",\n  \"attachments\": [\n\n  ],\n
+    \ \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n  \"version\": 1,\n
+    \ \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\": \"FooApp\"\n
+    \ },\n  \"mentions\": [\n\n  ]\n}\n```\n"
   :follower_get_posts: ! "\n```text\nGET /posts HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:111dc9ce\", ts=\"1347139239\", nonce=\"f87bd6\", mac=\"Kqb3zbMKjz4dENUBEyzpRzB9qp3OZq9gwmhyelpISF4=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Sat, 08 Sep
-    2012 21:20:39 GMT\nCache-Control: private\nContent-Length: 837\n```\n\n```json\n[\n
-    \ {\n    \"type\": \"https://tent.io/types/post/status\",\n    \"entity\": \"https://example.org\",\n
+    MAC id=\"s:aab46f00\", ts=\"1348008594\", nonce=\"960923\", mac=\"3ghpl0sIY05ZhNDNwtQuC4H/qgNkiylrZEfZfrJD1XU=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLast-Modified: Tue, 18 Sep
+    2012 22:49:54 GMT\nCache-Control: private\nContent-Length: 943\n```\n\n```json\n[\n
+    \ {\n    \"entity\": \"https://example.org\",\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
+    \   ],\n    \"content\": {\n      \"caption\": \"Some fake photos\"\n    },\n
+    \   \"published_at\": 1348008594,\n    \"permissions\": {\n      \"public\": true\n
+    \   },\n    \"id\": \"ogu052\",\n    \"attachments\": [\n      {\n        \"type\":
+    \"image/jpeg\",\n        \"category\": \"photos\",\n        \"name\": \"fake_photo1.jpg\",\n
+    \       \"size\": 26,\n        \"post_version_id\": 6\n      },\n      {\n        \"type\":
+    \"image/jpeg\",\n        \"category\": \"photos\",\n        \"name\": \"fake_photo2.jpg\",\n
+    \       \"size\": 26,\n        \"post_version_id\": 6\n      }\n    ],\n    \"type\":
+    \"https://tent.io/types/post/photo/v0.1.0\",\n    \"version\": 1,\n    \"app\":
+    {\n      \"url\": \"http://example.com\",\n      \"name\": \"FooApp\"\n    },\n
+    \   \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
     \   \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n
     \   \"content\": {\n      \"text\": \"Just landed.\",\n      \"location\": {\n
     \       \"type\": \"Point\",\n        \"coordinates\": [\n          50.923878,\n
-    \         4.028605\n        ]\n      }\n    },\n    \"published_at\": 1347139239,\n
-    \   \"permissions\": {\n      \"public\": true\n    },\n    \"id\": \"404yfx\",\n
-    \   \"app\": {\n      \"url\": \"http://example.com\",\n      \"name\": \"FooApp\"\n
-    \   },\n    \"attachments\": [\n\n    ]\n  },\n  {\n    \"type\": \"https://tent.io/types/post/photo\",\n
-    \   \"entity\": \"https://example.org\",\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"content\": {\n      \"caption\": \"Some fake photos\"\n    },\n
-    \   \"published_at\": 1347139239,\n    \"permissions\": {\n      \"public\": true\n
-    \   },\n    \"id\": \"agr7fh\",\n    \"app\": {\n      \"url\": \"http://example.com\",\n
-    \     \"name\": \"FooApp\"\n    },\n    \"attachments\": [\n      {\n        \"type\":
-    \"image/jpeg\",\n        \"category\": \"photos\",\n        \"name\": \"fake_photo1.jpg\",\n
-    \       \"size\": 26\n      },\n      {\n        \"type\": \"image/jpeg\",\n        \"category\":
-    \"photos\",\n        \"name\": \"fake_photo2.jpg\",\n        \"size\": 26\n      }\n
-    \   ]\n  }\n]\n```\n"
+    \         4.028605\n        ]\n      }\n    },\n    \"published_at\": 1348008594,\n
+    \   \"permissions\": {\n      \"public\": true\n    },\n    \"id\": \"pvws8i\",\n
+    \   \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n
+    \   \"version\": 1,\n    \"app\": {\n      \"url\": \"http://example.com\",\n
+    \     \"name\": \"FooApp\"\n    },\n    \"mentions\": [\n\n    ]\n  }\n]\n```\n"
   :delete_follower: ! '
 
     ```text
 
-    DELETE /followers/pod8nk HTTP/1.1
+    DELETE /followers/562f04 HTTP/1.1
 
     Accept: application/vnd.tent.v0+json
 
-    Authorization: MAC id="s:111dc9ce", ts="1347139239", nonce="404033", mac="u1819D8AqUqlOX/SBp8LiNdjre/94azLUb2dfJf1hUQ="
+    Authorization: MAC id="s:aab46f00", ts="1348008594", nonce="19bfde", mac="QGBnT6JajfdP7/hqKUUi3zF8iRmCEOYDi4GrIqcCqEg="
 
     ```
 
@@ -397,6 +408,7 @@
 '
 :variables:
   :app_code: !binary |-
-    NGVmNDQ4MWFiYjdmM2VmZjEyM2Y1YjRiZGU4MDM4MDY=
-  :app_id: 9zlqt6
-  :post_id: 404yfx
+    MmFkNmQ0NDAyYmYzZDJiNjQ0NTMwZWM5ZDBiZTBlOGE=
+  :app_id: u5qn9p
+  :follower_id: 562f04
+  :post_id: pvws8i
