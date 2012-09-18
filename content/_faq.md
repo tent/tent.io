@@ -163,4 +163,4 @@ World Wide Web, and distributed peer-to-peer services.
 
 ### How is Tent licensed?
 
-Tent will be completely free and open and treated as a standard. To prevent fragmentation before launch, the original authors currently retain copyright. This is a temporary situation which will be remedied immediately after a governance model is chosen. We decided it would be best to share what we could as soon as possible, releasing early and often. We are entirely committed to free and open software and protocols with open governance models leading to a ratified standard. Tent will be released under an open license in the immediate future.
+Tent will be a completely free and open standard. To prevent fragmentation before launch, the original authors currently retain copyright. This is a temporary situation which will be remedied immediately after a governance model is chosen. We decided it would be best to share what we could as soon as possible, releasing early and often. We are entirely committed to free and open software and protocols with open governance models leading to a ratified standard. Tent will be released under an open license in the immediate future.
