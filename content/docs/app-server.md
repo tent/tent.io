@@ -95,6 +95,6 @@ Apps can create a new post with an attachment and send both to the server. Files
 
 #### GET /posts/:post_id/attachments/:name
 
-Apps can retrieve attachments from a specific post by name from the server.
+Apps can retrieve attachments from a specific post by name and content-type from the server.
 
 {get_post_attachment example}

@@ -1,10 +1,41 @@
 ---
-title: Post Types
+title: Posts
 ---
 
-## Post Types
+## Posts
 
-### Status
+Posts are the core of Tent. A post consists of these fields:
+
+{post schema}
+
+### Mentions
+
+Mentions mark a post as mentioning one or more entities and posts. A `mentions`
+array looks like this:
+
+```json
+[
+  {
+    "entity": "https://daniel.tent.is"
+  },
+  {
+    "entity": "https://jonathan.tent.is",
+    "post": "aa123b3"
+  }
+]
+```
+
+Each mention must have an entity and can also specify an optional post
+identifier, which allows replying to posts.
+
+
+### Types
+
+The post type describes the schema and semantics of the `content` object. Types
+are referenced by a url, the last part of the url must be the version of the
+type (ex: `/v0.1.0`).
+
+#### Status
 
 `https://tent.io/types/post/status/v0.1.0`
 
@@ -14,7 +45,7 @@ title: Post Types
 {post_status schema}
 
 
-### Essay
+#### Essay
 
 `https://tent.io/types/post/essay/v0.1.0`
 
@@ -23,7 +54,7 @@ title: Post Types
 
 {post_essay schema}
 
-### Photo
+#### Photo
 
 `https://tent.io/types/post/photo/v0.1.0`
 
@@ -32,7 +63,7 @@ title: Post Types
 {post_photo schema}
 
 
-### Album
+#### Album
 
 `https://tent.io/types/post/album/v0.1.0`
 
@@ -41,7 +72,7 @@ An **album** is a collection of `photo`s. Albums may optionally list a cover pho
 {post_album schema}
 
 
-### Repost
+#### Repost
 
 `https://tent.io/types/post/repost/v0.1.0`
 
@@ -50,7 +81,7 @@ A **repost** is a post that points to a post created by another entity.
 {post_repost schema}
 
 
-### Profile
+#### Profile
 
 `https://tent.io/types/post/profile/v0.1.0`
 
@@ -60,7 +91,7 @@ profile.
 {post_profile schema}
 
 
-### Delete
+#### Delete
 
 `https://tent.io/types/post/delete/v0.1.0`
 
@@ -70,12 +101,12 @@ profile.
 
 
 
-## Creating New Post Types
+### Creating New Post Types
 
 Tent highly extensible and allows developers to create new post types to support new kinds of media, interactions, and functionality.
 
-### Guidelines
-#### Do
+#### Guidelines
+##### Do
 
  - **Use snake case for JSON key names.**
  - **Use existing types when possible.** Consider whether a new type is really necessary. Would an existing type work? Contact the maintainer of the type to suggest changes for a future version. Type-creep makes everyone's lives worse. Avoid proliferation.
@@ -86,9 +117,9 @@ Tent highly extensible and allows developers to create new post types to support
  - **Keep it simple.** Users and developers alike benefit from a small set of simple post types. With a small number of types, users can find apps that suit their specific needs and know their data is portable. Developers can build interoperable, compliant apps without reinventing the wheel. Avoid NIH (Not Invented Here) Syndrome and the desire to start from scratch.
  - **Publish your type.** If you have created a new type, publish it to a popular Tent community site (like this one) so other developers can add support for it into their apps.
  
-#### Do Not
+##### Do Not
 
- - **Create duplicate post types** Multiple post types with the same purpose will create a fragmented ecosystem. Tent was designed to avoid this problem
+ - **Create duplicate post types** Multiple post types with the same purpose will create a fragmented ecosystem. Tent was designed to avoid this problem.
  - **Create proprietary post types** Users and other developers expect to be able to view posts in different applications. Limiting which apps can use a post type is against the spirit of Tent.
  - **Create post types with identical names.** Names should disambiguate post types, not confuse them. Choose a different name for your type when possible.
  - **Use deeply nested data structures.** They make querying difficult.

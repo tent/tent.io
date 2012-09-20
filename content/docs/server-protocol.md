@@ -46,7 +46,22 @@ with the Tent entity.
 
 ### Follow an entity
 
-To follow a user, send a POST request with acceptable licenses, post types, and views. Accepted requests will respond 200 OK and provide authentication credentials
+To follow a user, send a POST request with acceptable licenses, post types, and
+views, and a path to send post notifications to.
+
+To verify the following, the server will first perform discovery on the
+`entity`, then send a GET request to the `notification_path` with a `challenge`
+parameter that must be returned as the response to the request with a 200 status
+code. Subsequent signed GET requests to the notification path with a challenge
+must return the challenge as the response body with a 200 in order to verify
+that the follow is still active.
+
+Accepted follow requests will respond 200 OK and provide authentication
+credentials.
+
+All post notifications will be POSTed to the notification path and signed with
+the credentials.
+
 ### POST /followers
 
 {create_follower example}
@@ -109,9 +124,3 @@ There are a number of parameters available to limit the scope of the request.
 It is also possible to retrieve a single post by that post's id. This is useful in retrieving reposted content and 
 
 {follower_get_post example}
-
-
-## Notifications
-
-New content is sent as a POST request to `/posts` and
-authenticated using the negotiated credentials.
