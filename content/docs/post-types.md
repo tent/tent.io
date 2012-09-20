@@ -39,3 +39,31 @@ title: Post Types
 An **album** is a collection of `photo`s. Albums may optionally list a cover photo, description, and title.
 
 {post_album schema}
+
+
+### Repost
+
+`https://tent.io/types/post/repost/v0.1.0`
+
+A **repost** is a post that points to a post created by another entity.
+
+{post_repost schema}
+
+
+### Profile
+
+`https://tent.io/types/post/profile/v0.1.0`
+
+A **profile** post notifies followers about modifications to an entity's
+profile.
+
+{post_profile schema}
+
+
+### Delete
+
+`https://tent.io/types/post/delete/v0.1.0`
+
+**Delete** informs followers that a post was deleted.
+
+{post_delete schema}
