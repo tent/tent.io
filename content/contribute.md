@@ -1,7 +1,7 @@
 ## How you can help Tent
 <span class="lead">Tent is still very young and needs your help. Everyone has different skills and interests that can help.</span>
 
-If you create or find out about any cool Tent projects, [let us know](mailto:contact@tent.is)!
+If you create or find out about any cool Tent projects, [let us know](mailto:contact@tent.io)!
 
 ### Everyone
 #### Start using Tent
@@ -71,5 +71,4 @@ Existing client libraries need regular maintenance to keep up with Tent as it ev
 Developers coming to Tent need a place to start. Blog articles, Tutorials, Getting Started guides, and code samples are still in short supply. Consider creating 
   
 #### Contribute to the Tent Core
-Tent has many open source elements that need your help and accept pull requests. Applications include tentd, the reference server implementation, TentStatus, a Tent microblogging app, and TentAdmin, a server administration app. Most of these apps were developed to demonstrate basic functionality and shipped with a limited feature set. Additions, changes, and forks are welcome. The documentation accompanying these projects and the Tent protocol are also community curated. All can be found on the [Tent github](http://github.com/tent/). Each has a list of TODO priorities in the readme. 
-  
+Tent has many open source elements that need your help and accept pull requests. Applications include [tentd](https://github.com/tent/tentd), the reference server implementation, [TentStatus](https://github.com/tent/tent-status), a Tent microblogging app, and TentAdmin, a server administration app. Most of these apps were developed to demonstrate basic functionality and shipped with a limited feature set. Additions, changes, and forks are welcome. The documentation accompanying these projects and the Tent protocol are also community curated. All can be found on the [Tent github](http://github.com/tent/). 
