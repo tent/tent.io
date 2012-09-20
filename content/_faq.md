@@ -24,21 +24,24 @@ The social web is too important to leave in the hands of any one company or gove
 
 Tent servers maintain relationships between users and manage apps. Users create and view content on apps. When a users creates new content, their Tent server sends it to the followers they chose. It also listens for and stores new messages and content from the people and organizations that user follows. Every user on Tent also has a profile that stores basic information about the user. Tent also lets users control which apps can access their data and what can be done with it.
 
+### How is Tent different from centralized services?
+
+With Tent, your relationships and data are all in one place that you control. on centralized services, your data and relationships are fragmented across multiple apps and networks. They can be difficult to export, and information about you is often sold. Like email, Tent lets you take your data and relationships with you when you change providers
+
+#### How Tent Works
+![diagram](/assets/images/tent_diagram.png)
+
+#### How Other Services Work
+![diagram](/assets/images/other_services.png)
 
 ### How can I use Tent?
 
-First you need a Tent server. A Tent server sends new content to your followers
-and listens for new content from people you follow. It stores all this content
-safely so it's available for you to view later. You view and create content with
-apps. Apps connect to your server to post new content you've created and ask for
-content from people you follow. You can limit apps so they can't see all your
-content. If you have private photos or messages, you might want only a few apps
-to see them.
+First you need a Tent server. You can use a hosted service like [Tent.is](http://tent.is), or host your own with [tentd](https://github.com/tent/tentd).
 
-Soon you will be able to download and run Tent server on your own hardware or get started with
-a hosted provider who runs the server for you. You could also write your own
-server and apps from scratch using the [developer documentation](/docs).
+Tent servers send new content to your followers and listens for new content from people you follow. It stores all this content
+safely so it's available for you to view later. 
 
+You view and create content with apps. Apps connect to your server to post new content you have created and check for content from people you follow. You can limit apps so they can't see all your content. If you have private photos or messages, you might want only a few apps to see them.
 
 ### Can I switch Tent servers?
 

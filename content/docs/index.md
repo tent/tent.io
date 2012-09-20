@@ -78,7 +78,7 @@ know about new content updates. This includes new posts and profile changes. Not
 
 https://cloudmir.com/ (Lindsay) and https://titanous.com (Jonathan) are both following https://daniel.tent.is (Daniel) and have requested all his status posts. 
 
-2. https://daniel.tent.is creates a `status` post on TentStatus in which he mentions another user, https://jesse.tent.is (Jesse). 
+2. https://daniel.tent.is creates a `status` post with TentStatus, a microblogging app, in which he mentions another user, https://jesse.tent.is (Jesse). 
 
 3. TentStatus sends this post to Daniel's server.
 
