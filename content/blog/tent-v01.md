@@ -1,7 +1,8 @@
 ---
 title: Tent v0.1
 kind: article
-created_at: September 20, 2012 12:05 EDT
+created_at: September 21, 2012 12:05 EDT
+---
 
 The [documentation](/docs) for Tent version 0.1 is now available along with a reference server, [tentd](https://github.com/tent/tentd).
 
