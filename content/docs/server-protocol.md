@@ -26,7 +26,9 @@ added to all responses associated with the Tent entity. Other pages associated w
 ```text
 Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile"
 ```
+
 or
+
 ```text
 Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile", 
 <https://titanous.tent.is/profile>; rel="https://tent.io/rels/profile", 
