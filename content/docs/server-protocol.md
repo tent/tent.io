@@ -30,10 +30,9 @@ Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile"
 or
 
 ```text
-Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile", 
-<https://titanous.tent.is/profile>; rel="https://tent.io/rels/profile", 
-
-<https://tent.jonathan.cloudmir.com/profile>; rel="https://tent.io/rels/profile"
+Link: <https://tent.titanous.com/profile>; rel="https://tent.io/rels/profile",
+      <https://titanous.tent.is/profile>; rel="https://tent.io/rels/profile",
+      <https://tent.jonathan.cloudmir.com/profile>; rel="https://tent.io/rels/profile"
 ```
 
 #### HTML `link` tag
