@@ -36,7 +36,7 @@ With Tent, your relationships and data are all in one place that you control. on
 
 ### How can I use Tent?
 
-First you need a Tent server. You can use a hosted service like [Tent.is](http://tent.is), or host your own with [tentd](https://github.com/tent/tentd).
+First you need a Tent server. You can use a hosted service, or host your own with [tentd](https://github.com/tent/tentd).
 
 Tent servers send new content to your followers and listens for new content from people you follow. It stores all this content
 safely so it's available for you to view later. 
