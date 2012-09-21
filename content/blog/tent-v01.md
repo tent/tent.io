@@ -13,9 +13,7 @@ This version of the Tent protocol, apps, and servers are still very young and ar
 **Users** You can start using Tent. You need a Tent server to get started. There are two options:
 
 1. If you have access to a server and are comfortable running your own server you can use [this repository](https://github.com/tent/tentd) to get up and running on your own hardware. Several PaaS providers are currently working on a simplified install option. We will publish a list when they are ready.
-  
-2. [Tent.is](https://www.Tent.is) offers single-click Tent hosting.  [Tent.is](https://www.Tent.is) hosts your Tent server and some apps, so you can start posting right away. Right now it has TentStatus pre-installed with many more on the way.
-  
+    
 Next Steps
   Tent will continue to evolve rapidly. Version 0.2 is under development and will offer several features we couldn't finish in time for v0.1. In the mean time, let's start posting, hosting, and developing! [Let us know](mailto:contact@tent.io) about the great things you build, make, and discover with Tent!
 
