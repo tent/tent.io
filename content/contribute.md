@@ -8,17 +8,17 @@ If you create or find out about any cool Tent projects, [let us know](mailto:con
 Like all social services, the more people who use Tent, the more useful it is to everyone. Either by self-hosting or using a hosting provider, get your Tent server set up and keep it up to date with the most recent software version. Like all new software, Tent has many bugs. Please report them [here](https://github.com/tent/tentd/issues) or [email us](mailto:contact@tent.io). *Remember, Tent is still in alpha, so it's not safe to use with information you would not want to be public and should not be considered reliable.*
 
 #### Help newcomers
-Tent empowers users, but like other distributed systems (the web, email, but torrent, DNS) it can be hard for new users to understand. Help by creating "Getting Started" guides, tutorials, articles, and blog posts. Diagrams, animations, and videos can go a long way towards helping non-technical users understand how Tent works and why it matters.
+Tent empowers users, but like other distributed systems (the web, email, BitTorrent, DNS) it can be hard for new users to understand. Help by creating "Getting Started" guides, tutorials, articles, and blog posts. Diagrams, animations, and videos can go a long way towards helping non-technical users understand how Tent works and why it matters.
 
 #### Promote Tent
 Tell people you know about Tent any way you can! 
 
- - Put a link to Tent.io on your website, advertise your Tent server on your business card, email signature, and your HTTP headers. 
+ - Put a link to Tent.io on your website, advertise your Tent server on your business card, e-mail signature, and your HTTP headers. 
  - Give a talk about Tent at your local tech or organization meetup. 
  - Email the developers behind your favorite services and ask them to support Tent!
     
 #### Translate Tent
-Help translate Tent.io website and Tent Docs into your native language. Either fork the docs on [Github](https://github.com/tent/tent.io) or [email us](mailto:contact@tent.io).
+Help translate Tent.io website and Tent Docs into your native language. Either fork the docs on [Github](https://github.com/tent/tent.io) or [e-mail us](mailto:contact@tent.io).
 
 All languages are welcome, but our priorities are:
 
@@ -68,7 +68,7 @@ Your favorite language or framework needs a Tent library. Our top priorities are
 Existing client libraries need regular maintenance to keep up with Tent as it evolves.
   
 #### Write Tutorials
-Developers coming to Tent need a place to start. Blog articles, Tutorials, Getting Started guides, and code samples are still in short supply. Consider creating 
+Developers coming to Tent need a place to start. Blog articles, tutorials, getting started guides, and code samples are still in short supply. 
   
 #### Contribute to the Tent Core
-Tent has many open source elements that need your help and accept pull requests. Applications include [tentd](https://github.com/tent/tentd), the reference server implementation, [TentStatus](https://github.com/tent/tent-status), a Tent microblogging app, and TentAdmin, a server administration app. Most of these apps were developed to demonstrate basic functionality and shipped with a limited feature set. Additions, changes, and forks are welcome. The documentation accompanying these projects and the Tent protocol are also community curated. All can be found on the [Tent github](http://github.com/tent/). 
+Tent has many open source elements that need your help and accepts pull requests. Applications include [tentd](https://github.com/tent/tentd), the reference server implementation, [TentStatus](https://github.com/tent/tent-status), a Tent microblogging app, and TentAdmin, a server administration app. Most of these apps were developed to demonstrate basic functionality and shipped with a limited feature set. Additions, changes, and forks are welcome. The documentation accompanying these projects and the Tent protocol are also community curated. All can be found on the [Tent github](http://github.com/tent/). 
