@@ -80,6 +80,20 @@ Apps can retrieve posts.
 
 {get_posts example}
 
+#### URL Parameters
+
+GET parameters can be used to filter and paginate the returned posts.
+
+| Name | Description |
+| ---- | ----------- |
+| `since_id` | Posts made since a specific post identifier. |
+| `before_id` | Posts made before a specific post identifier. |
+| `since_time` | Posts with `published_at` greater than the specified unix epoch. |
+| `before_time` | Posts with `published_at` less than the specified unix epoch. |
+| `entity` | Posts published by the specified entity. |
+| `post_types` | Posts that match specific comma-separated type URIs. |
+| `limit` | The number of posts to return (defaults to the maximum of 200). |
+
 
 ### GET /posts/:id
 
