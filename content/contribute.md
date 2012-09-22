@@ -18,7 +18,7 @@ Tell people you know about Tent any way you can!
  - Email the developers behind your favorite services and ask them to support Tent!
     
 #### Translate Tent
-Help translate Tent.io website and Tent Docs into your native language. Either fork the docs on [Github](https://github.com/tent/tent.io) or [e-mail us](mailto:contact@tent.io).
+Help translate the Tent.io website and Tent Docs into your native language. Either fork the docs on [Github](https://github.com/tent/tent.io) or [e-mail us](mailto:contact@tent.io).
 
 All languages are welcome, but our priorities are:
 
