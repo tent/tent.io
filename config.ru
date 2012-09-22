@@ -68,6 +68,8 @@ use Rack::Rewrite do
   } if ENV['RACK_ENV'] == 'production'
 
   r301 %r{(.+)(/|\.html)$}, '$1'
+  r302 %r{\A/types/post/.+}, '/docs/post-types'
+  r302 %r{\A/types/info/.+}, '/docs/info-types'
 end
 
 use Rack::Deflater
