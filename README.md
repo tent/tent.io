@@ -1,1 +1,1 @@
-This repository hosts the tent.io blog and documentation. A separate repository will be created for the server (not yet available) which users can download to run Tent. If you have any questions please email us: info@tent.io
+This repository hosts the Tent blog and documentation. Take a look at [the other repositories](https://github.com/tent) for Tent server and client implementations.
