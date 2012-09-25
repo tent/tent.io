@@ -59,14 +59,17 @@ Your favorite language or framework needs a Tent library. Our top priorities are
  - Java
  - Javascript
  - Lua
- - Objective-C
  - Perl
  - PHP
  - Python
  - Scala
     
-Existing client libraries need regular maintenance to keep up with Tent as it evolves.
-  
+#### Existing client libraries 
+Libraries for some languages have already been started but need regular maintenance to keep up with Tent as it evolves. Contact the maintainers to find out how you can help.
+
+ - [Objective-C](https://github.com/dustinrue/CocoaTentClient)
+ - [Ruby](https://github.com/tent/tent-client-ruby)
+
 #### Write Tutorials
 Developers coming to Tent need a place to start. Blog articles, tutorials, getting started guides, and code samples are still in short supply. 
   
