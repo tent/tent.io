@@ -39,7 +39,7 @@ type (ex: `/v0.1.0`).
 
 `https://tent.io/types/post/status/v0.1.0`
 
-**Status** is Tent's take on microblogging. Messages are 256 characters or less and have the option to add a location for the post as well.
+**Status** is Tent's take on microblogging. Messages are 256 characters or less and have the option to add a location for the post as well.  The `text` and `location` fields are optional, but at least one of them must be present.
 
 
 {post_status schema}
