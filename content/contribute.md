@@ -59,7 +59,6 @@ Your favorite language or framework needs a Tent library. Our top priorities are
  - Lua
  - Perl
  - PHP
- - Python
  - Scala
     
 #### Existing client libraries 
