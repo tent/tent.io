@@ -73,6 +73,7 @@ help.
  - [Java](https://github.com/mwanji/tent-client-java)
  - [Objective-C](https://github.com/dustinrue/CocoaTentClient)
  - [Ruby](https://github.com/tent/tent-client-ruby)
+ - [Python](https://github.com/longears/python-tent-client)
 
 Please let us know if you begin work on a client library for another language.
 
