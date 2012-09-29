@@ -47,9 +47,11 @@ with the Tent entity.
 #### Completing the discovery process
 
 The address in the `Link` header or `link` tag points not to the Tent server itself, but to its `/profile` API method.
+
 To get a list of canonical API roots, do this:
-* Perform a `GET` on the profile address using an `Accept: application/vnd.tent.v0+json` header, as specified on the [Server API for Apps](http://tent.io/docs/app-server) page.
-* You will get back a JSON dictionary.  The list of API roots will be in `json["https://tent.io/types/info/core/v0.1.0"]["servers"]`.
+
+* Perform a `GET` request on the profile address using an `Accept: application/vnd.tent.v0+json` header, as specified on the [Server API for Apps](http://tent.io/docs/app-server) page.
+* You will get back the profile as a JSON object. The list of API roots will be in `json["https://tent.io/types/info/core/v0.1.0"]["servers"]`.
 
 There may be more than one API root in this list.  Like multiple `Link` headers, multiple server URLs should be
 treated as backups/fallbacks and tried in the order listed. If a post is successfully sent to one of the listed
