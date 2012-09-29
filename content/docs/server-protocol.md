@@ -13,7 +13,7 @@ Servers should always be online and be accessible over HTTPS.
 
 ### Server Discovery
 
-Users and applications discover Tent servers in one of two ways: HTTP `Link` Headers and HTML `link` tags. Users can provide multiple links to access their Tent server. Multiple links are usually provided in case a particular address becomes unavailble. When multiple links are listed, they should be listed in order of preference from most preferred to least preferred, and contact attempted in the same order.
+Users and applications discover Tent servers in one of two ways: HTTP `Link` Headers and HTML `link` tags. Users can provide multiple links to access their Tent server. Multiple links are usually provided in case a particular address becomes unavailable. When multiple links are listed, they should be listed in order of preference from most preferred to least preferred, and contact attempted in the same order.
 
 
 #### HTTP `Link` Header
@@ -44,6 +44,16 @@ with the Tent entity.
 <link href="https://tent.titanous.com/profile" rel="https://tent.io/rels/profile" />
 ```
 
+#### Completing the discovery process
+
+The address in the `Link` header or `link` tag points not to the Tent server itself, but to its `/profile` API method.
+To get a list of canonical API roots, do this:
+* Perform a `GET` on the profile address using an `Accept: application/vnd.tent.v0+json` header, as specified on the [Server API for Apps](http://tent.io/docs/app-server) page.
+* You will get back a JSON dictionary.  The list of API roots will be in `json["https://tent.io/types/info/core/v0.1.0"]["servers"]`.
+
+There may be more than one API root in this list.  Like multiple `Link` headers, multiple server URLs should be
+treated as backups/fallbacks and tried in the order listed. If a post is successfully sent to one of the listed
+servers, then the entity is considered to have received it.
 
 ### Follow an entity
 
