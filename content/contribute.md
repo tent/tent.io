@@ -55,7 +55,6 @@ Your favorite language or framework needs a Tent library. Our top priorities are
  - Clojure
  - Common Lisp
  - Erlang
- - Go
  - Javascript
  - Lua
  - Perl
@@ -64,7 +63,13 @@ Your favorite language or framework needs a Tent library. Our top priorities are
  - Scala
     
 #### Existing client libraries 
-Libraries for some languages have already been started (but may not be functional or complete) and need regular maintenance to keep up with Tent as it evolves. Contact the maintainers to find out how you can help.
+
+Libraries for some languages have already been started (but may not be
+functional or complete) and need regular maintenance to keep up with
+Tent as it evolves. Contact the maintainers to find out how you can
+help.
+
+ - [Go](https://github.com/elimisteve/go.tent)
  - [Java](https://github.com/mwanji/tent-client-java)
  - [Objective-C](https://github.com/dustinrue/CocoaTentClient)
  - [Ruby](https://github.com/tent/tent-client-ruby)
