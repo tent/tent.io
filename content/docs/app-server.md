@@ -94,7 +94,9 @@ Apps can create posts by sending them to the server. The server will then send n
 
 ### GET /posts
 
-Apps can retrieve posts.
+Apps can retrieve posts.  If the request is not authenticated this will return the user's own public posts.
+If the request is authenticated and the app has been granted the necessary scopes, this will also return
+the user's non-public posts, posts from entities the user follows, and posts that mention the user.
 
 {get_posts example}
 
