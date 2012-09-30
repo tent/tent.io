@@ -26,6 +26,15 @@ Apps can tell a server to follow another entity.
 
 {create_following example}
 
+#### URL Parameters
+
+GET parameters can be used to filter and paginate the returned followings.
+
+| Name | Description |
+| ---- | ----------- |
+| `before_id` | Followings before a specific entity identifier. |
+| `since_id` | Followings since a specific entity identifier. |
+| `limit` | The number of followings to return (defaults to the maximum of 50). |
 
 ### GET /followings
 
