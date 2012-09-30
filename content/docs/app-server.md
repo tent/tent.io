@@ -54,6 +54,15 @@ Apps can get a list of current followers.
 
 {get_followers example}
 
+#### URL Parameters
+
+GET parameters can be used to filter and paginate the returned followers.
+
+| Name | Description |
+| ---- | ----------- |
+| `before_id` | Followers before a specific entity identifier. |
+| `since_id` | Followers since a specific entity identifier. |
+| `limit` | The number of followers to return (defaults to the maximum of 50). |
 
 ### GET /followers/:id
 
