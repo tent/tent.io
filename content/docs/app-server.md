@@ -65,7 +65,7 @@ Apps can request information on a specific follower.
 ### DELETE /followers/:id
 
 Apps can end the user's relationship with a follower, which means that the server will no longer notify
-them of your new posts.  They will still be able to get your public posts using the API.
+the follower of the user's new posts.  The follower will still be able to get the user's public posts using the API.
 
 {delete_follower example}
 
