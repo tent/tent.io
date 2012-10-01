@@ -57,7 +57,7 @@ Users set permissions on each post that determine which other users can access t
 
 Post types describe the format and content of each post. Tent posts can be used for almost anything, and developers can create new post types for different kinds of media, interactions, or applications. 
 
-This documentation describes four basic post types: `status`, short messages of 140 characters or less, `essay`, longer form writing, `photo`, pictures, and `album`, a collection of `photo` posts. 
+This documentation describes four basic post types: `status`, short messages of 256 characters or less, `essay`, longer form writing, `photo`, pictures, and `album`, a collection of `photo` posts. 
 
 ### Profiles
 
