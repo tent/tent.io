@@ -77,7 +77,19 @@ help.
 Please let us know if you begin work on a client library for another language.
 
 #### Write Tutorials
+
 Developers coming to Tent need a place to start. Blog articles, tutorials, getting started guides, and code samples are still in short supply. 
   
 #### Contribute to the Tent Core
+
 Tent has many open source elements that need your help and accepts pull requests. Applications include [tentd](https://github.com/tent/tentd), the reference server implementation, [TentStatus](https://github.com/tent/tent-status), a Tent microblogging app, and TentAdmin, a server administration app. Most of these apps were developed to demonstrate basic functionality and shipped with a limited feature set. Additions, changes, and forks are welcome. The documentation accompanying these projects and the Tent protocol are also community curated. All can be found on the [Tent github](http://github.com/tent/). 
+
+#### Mailing List
+
+You can subscribe and post to the development mailing list by emailing
+[tent.dev@librelist.com](mailto:tent.dev@librelist.com).
+
+#### IRC Channel
+
+The official Tent IRC channel is [#tent on
+Freenode](irc://irc.freenode.net/tent).
