@@ -4,7 +4,7 @@ title: Server API for Apps
 
 ## Server API for Apps
 
-Users interact with their own server primarily through apps. They can set permissions for different apps to limit the scope of access and control over the server.
+Users interact with their own server primarily through apps. They can set permissions for different apps to limit the scope of access and control over the server. All requests should be sent to the tent api root, as provided during the first step of authentication via HEAD request to the entity URI.
 
 ### GET /profile
 
