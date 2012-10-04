@@ -15,6 +15,8 @@ Servers should always be online and be accessible over HTTPS.
 
 Users and applications discover Tent servers in one of two ways: HTTP `Link` Headers and HTML `link` tags. Users can provide multiple links to access their Tent server. Multiple links are usually provided in case a particular address becomes unavailable. When multiple links are listed, they should be listed in order of preference from most preferred to least preferred, and contact attempted in the same order.
 
+These links can be either absolute or relative URLs.
+
 
 #### HTTP `Link` Header
 
