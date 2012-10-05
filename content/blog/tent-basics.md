@@ -1,7 +1,7 @@
 ---
 title: Tent Basics
 kind: article
-created_at: October 5, 2012 12:05 EDT
+created_at: October 5, 2012 11:20 EDT
 ---
 
 Tent is a protocol for event-oriented data storage and sharing. 
