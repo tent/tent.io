@@ -18,7 +18,7 @@ Tent is for saving and sharing. You can save any kind of data to Tent and share 
 
 **Developers:** Your users' Tent servers are responsible for storage, notifications, and social integration. 
 
-**Brands:** Have direct conversations with customers instead of third parties intermediating your relationships. 
+**Brands:** Have direct conversations with customers instead of letting third parties intermediate your relationships. 
 
 ### Tent is a protocol
 
@@ -36,7 +36,7 @@ Tent spans the whole internet, so users are identified by URLs, like http://tent
 
 The Tent protocol tells apps and servers how to find Tent servers, save and get posts from them. If you control a domain (example.com) you can add a link so visitors to your site will know you use Tent and how to connect with you. All you need to connect with another Tent user is their URL (i.e. https://daniel.tent.is). Put your Tent address on your business card, email signatures, and legacy social networks. 
 
-Tent.is also runs a friend finder app that lets you look up other Tent users by their email address. You don't need a Tent.is account 
+In the next few days there will be a friend finder app on Tent.is to lookup users by email address.
 
 ### Applications
 
@@ -44,7 +44,7 @@ The first Tent app was TentStatus, a microblogging app. This was the simplest ap
 
 ### Getting Started
 
-You can run your own Tent server with [tentd](https://github.com/tent/tentd) or sign up for an account on [Tent.is](https://tent.is). If you're a developer you can write applications using the [Tent protocol](http://tent.io/docs). Today it's easy to use Tent for microblogging, soon it will be possible to do much more.
+You can run your own Tent server with [tentd](https://github.com/tent/tentd-admin) or sign up for an account on [Tent.is](https://tent.is). If you're a developer you can write applications using the [Tent protocol](http://tent.io/docs). Today it's easy to use Tent for microblogging, soon it will be possible to do much more.
 
 ## In the Future
 
