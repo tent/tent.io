@@ -29,6 +29,29 @@ Each mention must have an entity and can also specify an optional post
 identifier, which allows replying to posts.
 
 
+### Permissions
+
+Tent posts are not always public. The creator of a post can set permissions
+limiting which entities have access. Possible permissions include completely
+public, completely private, shared with one other user, and shared with a group
+of other users.
+
+```json
+{
+  "public": false,
+  "groups": [
+    {
+        "id": "23lkbn7"
+    }
+  ],
+  "entities": {
+    "https://jonathan.tent.is": true,
+    "https://daniel.tent.is": true
+  }
+}
+```
+
+
 ### Types
 
 The post type describes the schema and semantics of the `content` object. Types
@@ -77,6 +100,9 @@ An **album** is a collection of `photo`s. Albums may optionally list a cover pho
 `https://tent.io/types/post/repost/v0.1.0`
 
 A **repost** is a post that points to a post created by another entity.
+
+The repost should also include a mention of the original post so that the
+publisher can see who is reposting her content.
 
 {post_repost schema}
 

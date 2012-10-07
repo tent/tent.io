@@ -81,6 +81,26 @@ the credentials.
 {create_follower example}
 
 
+## Notifications
+
+Tent entities communicate with each other using notifications. Notifications are
+sent out when a new post is created. New post notifications are sent out to all
+entities who subscribed to the post type before the post was published and have
+permission to see it. They are also sent to any entities who are mentioned in
+the post.
+
+If the entity being notified is following the publishing entity, the
+notification will be sent to the `notification_path` that was configured when
+the following was created and signed with the exchanged credentials.
+
+If the entity being notified is not following the publishing entity, the
+notification will be sent to `/posts`. The notification will be signed if the
+publishing entity is following the notification recipient.
+
+A notification is a `POST` request with a body that contains a post in JSON
+format.
+
+
 ## Authentication
 
 
