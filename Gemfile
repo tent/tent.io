@@ -15,5 +15,5 @@ gem 'nokogiri'
 gem 'adsf'
 gem 'builder'
 gem 'tent-schemas', :git => 'git://github.com/tent/tent-schemas.git', :branch => 'master'
-gem 'pygments.rb', :git => 'git://github.com/akzhan/pygments.rb.git', :branch => 'rubypython-0.6'
+gem 'pygments.rb'
 gem 'fssm', :groups => :development
