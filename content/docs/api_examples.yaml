@@ -64,7 +64,7 @@
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\",\n
-    \   \"write_following\": \"Follow new users when you click\"\n  }\n}\n```\n\n```text\nHTTP/1.1
+    \  }\n}\n```\n\n```text\nHTTP/1.1
     200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"b7ea5aae0fe54b7118832840925a983e\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 905\n```\n\n```json\n{\n
     \ \"name\": \"FooApp\",\n  \"description\": \"Does amazing foos with your data\",\n
@@ -72,7 +72,7 @@
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\",\n
-    \   \"write_following\": \"Follow new users when you click\"\n  },\n  \"id\":
+    \  },\n  \"id\":
     \"fbh9mv\",\n  \"authorizations\": [\n    {\n      \"post_types\": [\n        \"https://tent.io/types/post/status/v0.1.0\",\n
     \       \"https://tent.io/types/post/photo/v0.1.0\"\n      ],\n      \"profile_info_types\":
     [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n      ],\n      \"scopes\":
