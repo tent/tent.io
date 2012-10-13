@@ -85,7 +85,7 @@ are signed as well.
 
 ## Get Current Following
 
-Some details are available on who is following whom. A server can request information about a specific following, including your own current details, as specified below. Only your apps and the follower herself can see the specific details of their following.
+Some details are available on who is following whom. A server can request information about a specific following, including your own current details, as specified below. The `entity` and `id` values are available for everyone; only your apps and the follower herself can see the specific details (`permissions`, `licenses` and `types` values) of their following.
 
 ### GET /followers/:id
 
