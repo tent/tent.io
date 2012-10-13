@@ -130,8 +130,11 @@ respectively.
 
 ### App Registration Modification
 
-The request must be authenticated with a MAC generated using the secret from the
-initial registration.
+An app can change its metadata (name, icon, etc) after it's already been
+approved by the user, but it cannot change its permissions.
+
+The request must be authenticated with a MAC generated using the secret
+from the initial registration.
 
 #### GET /apps/:id
 
