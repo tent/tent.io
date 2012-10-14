@@ -26,6 +26,13 @@ Apps can tell a server to follow another entity.
 
 {create_following example}
 
+
+### GET /followings
+
+Apps can also retrieve a list of the entities currently being followed.
+
+{get_followings example}
+
 #### URL Parameters
 
 GET parameters can be used to filter and paginate the returned followings.
@@ -35,12 +42,6 @@ GET parameters can be used to filter and paginate the returned followings.
 | `before_id` | Followings before a specific entity identifier. |
 | `since_id` | Followings since a specific entity identifier. |
 | `limit` | The number of followings to return (defaults to the maximum of 50). |
-
-### GET /followings
-
-Apps can also retrieve a list of the entities currently being followed.
-
-{get_followings example}
 
 
 ### GET /followings/:id
@@ -73,6 +74,7 @@ GET parameters can be used to filter and paginate the returned followers.
 | `since_id` | Followers since a specific entity identifier. |
 | `limit` | The number of followers to return (defaults to the maximum of 50). |
 
+
 ### GET /followers/:id
 
 Apps can request information on a specific follower.
@@ -87,11 +89,13 @@ the follower of the user's new posts.  The follower will still be able to get th
 
 {delete_follower example}
 
+
 ### POST /posts
 
 Apps can create posts by sending them to the server. The server will then send notifications to any entities with permission to see the post and who either requested the post type in their following request or who were mentioned in the post.
 
 {create_post example}
+
 
 ### GET /posts
 
@@ -124,6 +128,7 @@ GET parameters can be used to filter and paginate the returned posts.
 Apps can retrieve a specific post.
 
 {get_post example}
+
 
 ### Post Attachments
 
