@@ -48,7 +48,7 @@ GET parameters can be used to filter and paginate the returned followings.
 
 Apps can request information on the relationship with a specific entity being followed.
 
-{get_followings example}
+{get_following example}
 
 
 ### DELETE /followings/:id
@@ -79,7 +79,7 @@ GET parameters can be used to filter and paginate the returned followers.
 
 Apps can request information on a specific follower.
 
-{get_follower example}
+{auth_get_follower example}
 
 
 ### DELETE /followers/:id
