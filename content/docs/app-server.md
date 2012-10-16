@@ -115,8 +115,8 @@ GET parameters can be used to filter and paginate the returned posts.
 | `before_id` | Posts made before a specific post identifier. |
 | `since_id_entity` | The entity which made the post that has the id given in `since_id`.  This can be omitted if the post's owner is the one receiving the `GET /posts` request.  |
 | `before_id_entity` | The entity which made the post that has the id given in `before_id`.  This can be omitted if the post's owner is the one receiving the `GET /posts` request.  |
-| `since_time` | Posts with `published_at` greater than the specified unix epoch. |
-| `before_time` | Posts with `published_at` less than the specified unix epoch. |
+| `since_time` | Posts with `received_at` greater than the specified unix epoch. |
+| `before_time` | Posts with `received_at` less than the specified unix epoch. |
 | `entity` | Posts published by the specified entity. |
 | `mentioned_entity` | Posts that mention the specified entity. |
 | `post_types` | Posts that match specific comma-separated type URIs. |
