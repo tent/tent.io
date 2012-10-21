@@ -142,3 +142,11 @@ Apps can create a new post with an attachment and send both to the server. Files
 Apps can retrieve attachments from a specific post by name and content-type from the server.
 
 {get_post_attachment example}
+
+### DELETE /posts/:id
+
+Apps can delete a specific post.
+
+{delete_post example}
+
+
