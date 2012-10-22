@@ -474,7 +474,7 @@
     width: 538px;
   }
   .span8 {
-    width: 476px;
+    width: 600px; /* Changed from 476px */
   }
   .span7 {
     width: 414px;
@@ -528,7 +528,7 @@
     margin-left: 206px;
   }
   .offset2 {
-    margin-left: 144px;
+    margin-left: 80px; /* Changed from 144 */
   }
   .offset1 {
     margin-left: 82px;
@@ -862,6 +862,29 @@
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
+
+  .nav > li {
+    display: block;
+    width: 100%;
+  }
+
+  img#arrows {
+    display: none;
+  }
+
+  .feature {
+    width: 100% !important;
+    margin-bottom: 0.5em;
+  }
+
+  .navbar {
+    -webkit-border-image: none !important;
+  }
+
+  h1.intro {
+    font-size: 230% !important;
+  }
+
   .page-header h1 small {
     display: block;
     line-height: 20px;
