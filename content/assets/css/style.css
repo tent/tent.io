@@ -96,11 +96,7 @@ footer {
 
 /* for responsiveness */
 
-h1 {
-  font-size: 200%;
-}
-
-h2 {
+.feature h2 {
   font-size: 140%;
 }
 
