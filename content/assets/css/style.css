@@ -111,7 +111,7 @@ html {
 }
 
 body {
-  background-color: #f5f5f5;   
+  background-color: #FDFDFD;   
 }
 
 h1.intro {
@@ -161,22 +161,6 @@ h1.intro {
 
 /* index.slim */
 
-#intro {
-  text-align: center;
-
-  background-color: #E2E2E2;
-  background-image: -webkit-gradient(linear, left top, left 300px, from(#E2E2E2), to(#f5f5f5)); /* Safari 4+, Chrome */
-  background-image: -webkit-linear-gradient(top, #E2E2E2, #f5f5f5); /* Chrome 10+, Safari 5.1+, iOS 5+ */
-  background-image:    -moz-linear-gradient(top, #E2E2E2, #f5f5f5); /* Firefox 3.6-15 */
-  background-image:      -o-linear-gradient(top, #E2E2E2, #f5f5f5); /* Opera 11.10-12.00 */
-  background-image:         linear-gradient(to bottom, #E2E2E2, #f5f5f5); /* Firefox 16+, IE10, Opera 12.50+ */
-}
-
-#intro img {
-  width: 50%;
-  margin: 0 auto;
-}
-
 .feature {
   text-align: center;
   float: left;
@@ -216,11 +200,11 @@ img.responsive {
   text-align: center;
   font-family: "";
   font-size: 120%;
-  background-color: #f5f5f5;
+  background-color: #FDFDFD;
 
   border: 0;
   border-bottom: 1px;
-  -webkit-border-image: -webkit-gradient(linear,left top,right top,color-stop(25%,#f5f5f5),color-stop(50%,#e2e2e2),color-stop(75%,#f5f5f5)) 21 30 30 21;
+  -webkit-border-image: -webkit-gradient(linear,left top,right top,color-stop(25%,#FDFDFD),color-stop(50%,#e2e2e2),color-stop(75%,#FDFDFD)) 21 30 30 21;
 }
 
 .navbar-inner {
@@ -242,6 +226,6 @@ img.responsive {
   -webkit-box-shadow: inset 0 3px 21px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
   box-shadow: inset 0 4px 7px rgba(0, 0, 0, 0.1);
-  background-color: #F5F5F5;
+  background-color: #FDFDFD;
 }
 
