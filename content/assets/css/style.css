@@ -209,6 +209,7 @@ img.responsive {
 .navbar-inner {
   background: none !important;
 
+  margin-bottom: -4px;
   display: inline-block;
   margin: 0 auto;
   border: 1px solid white;
