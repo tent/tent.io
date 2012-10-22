@@ -1,0 +1,49 @@
+#main
+  h2 Tent is a protocol for social networking.
+  p Tent is open, decentralized, and built for the future. Tent changes everything.
+  h3 Getting Started
+  p Tent allows every user to run their own server, but like email and the web, most users will use a hosting service to handle it. 
+  ol
+    li
+      | Users who want to run their own server should look at 
+      a href="https://github.com/tent/tentd" tentd
+      | , the current reference server implementation.
+    li
+      | Alternatively, 
+      a href="https://tent.is" Tent.is 
+      | offers one-click Tent hosting. 
+
+
+  h3 How Tent Works 
+  b Decentralized
+  p Email, the World Wide Web and the Internet itself are decentralized. 
+  p Centralized services cannot meet the needs of all users because they limit developers and use closed and proprietary APIs. Users are forced to use multiple service providers and fragment their relationships, messages, memories, and data. Users have to check in regularly with multiple sites and apps just to see what is happening in their lives.
+  b Apps 
+  p Anyone can write any kind of Tent app. The only person's permission a developer needs is the user's. Users use the apps they want and keep all their posts, relationships, and messages in one place. 
+  p Tent is built for the future. Developers can create new kinds of posts and profile info to support new kinds of interaction and media, like streaming video, email, maps, and holograms.
+  b Lifecycle of a post
+  p
+    ol
+      li Alice goes to a restaurant.
+      li Alice writes a short message on TentStatus
+      li TentStatus sends the message to Alice's server
+      li Alice's server sends the status to two friends (Bob's and Carol's) servers.
+      li Bob's server sends the message to Bob's TentStatus
+      li Carol's server sends the message to Carol's TentStatus
+      li Bob and Carol each read the post.
+  p All this happens in just a few seconds and is completely decentralized.
+
+
+#mailchimp-signup
+  h3 For updates on Tent, sign up here:
+  form.form-inline action="http://tent.us4.list-manage.com/subscribe/post?u=f318e535ee890f27bfd3ec2d8&amp;id=05ba32ffe8" method="post"
+    label for="mc-email"
+      ' Email Address:
+      input#mc-email.required.email type="email" name="EMAIL"
+    input.btn.btn-primary name="subscribe" type="submit" value="Subscribe"
+
+
+
+#faq
+ h3 FAQ
+ == render_child('/about/_faq/')

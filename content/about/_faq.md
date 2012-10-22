@@ -1,6 +1,7 @@
 ### What is Tent?
 
-Tent is a protocol for open, decentralized social networking. Tent users share content with apps and each other. Anyone can run a Tent server, or write an app or alternative server implementation
+Tent is a protocol for open, decentralized social networking. Tent users share content with
+apps and each other. Anyone can run a Tent server, or write an app or alternative server implementation
 that uses the Tent protocol. Users can take their content and relationships with
 them when they change or move servers. Tent supports extensible data types so developers can create new kinds of interaction.
 

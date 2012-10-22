@@ -1,3 +1,5 @@
+
+
 # A list of file extensions that nanoc will consider to be textual rather than
 # binary. If an item with an extension not in this list is found,  the file
 # will be considered as binary.
@@ -49,6 +51,8 @@ data_sources:
     # The path where layouts should be mounted. The layouts root behaves the
     # same as the items root, but applies to layouts rather than items.
     layouts_root: /
+
+    encoding: utf-8
 
     # Whether to allow periods in identifiers. When turned off, everything
     # past the first period is considered to be the extension, and when
