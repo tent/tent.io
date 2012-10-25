@@ -21,9 +21,12 @@ entity url.
 
 {discovery example}
 
-The next step is to register the application with the server. Registration
-specifies some details about the app, as well as the exact `redirect_uris` that
-will be used during the OAuth flow. The response `id`, `secret`, and
+The next step is to register the application with the server. Applications can get
+the root URLs for the app registration by fetching the profile information and use
+one of the server addresses, specified in the core profile. 
+
+Registration specifies some details about the app, as well as the exact `redirect_uris` 
+that will be used during the OAuth flow. The response `id`, `secret`, and
 `mac_algorithm` are used to authenticate future requests to the Tent server.
 The `id` is used as the `client_id` in all OAuth requests.
 
