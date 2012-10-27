@@ -14,7 +14,7 @@ Tent is a new protocol for open, distributed social networking.
 
 ### What makes Tent different?
 
-‫###ما الذي يجعل Tent مختلف؟‬
+‫ما الذي يجعل Tent مختلف؟ ###‬
 
 Tent is decentralized, not federated or centralized. Any Tent server can connect
 to any other Tent server. All features are available to any server as
@@ -44,7 +44,7 @@ information will be shared with each of their followers.
 
 ### You are your memories and relationships
 
-###آنت ذكرياتك و علاقاتك
+آنت ذكرياتك و علاقاتك‫ ###‬
 
 We use social networks to advertise our identities, communicate with friends,
 families, co-workers, customers, and brands. The content we create in the form
@@ -82,7 +82,7 @@ with its users.
 
 ### The Tent Ecosystem
 
-‫### النظام الإيكولوجي لTent‬
+‫النظام الإيكولوجي لTent ###‬
 
 Tent is not specifying the economics of an ecosystem. There will be many options
 for users, from free to paid to self hosted, from ad-supported to
@@ -98,7 +98,8 @@ provider, niche needs should quickly be met, based on demand.
 ‫ينبغي، الاحتياجات المتخصصة يجب أن تتحقق بسرعة، بناء على الطلب.‬
 
 
-There are many spectrums of need:
+There are many spectrums of need
+
 ‫هناك العديد من أطياف الحاجة:‬
 
 
