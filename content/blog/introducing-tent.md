@@ -14,7 +14,7 @@ Tent is a new protocol for open, distributed social networking.
 
 ### What makes Tent different?
 
-‫### ما الذي يجعل Tent مختلف؟‬
+‫###ما الذي يجعل Tent مختلف؟‬
 
 Tent is decentralized, not federated or centralized. Any Tent server can connect
 to any other Tent server. All features are available to any server as
@@ -22,6 +22,7 @@ first-class citizens. Anyone can host their own Tent server. Tent servers can
 also be run as Tor hidden services to create a social darknet for at-risk
 organizers and activists. Anyone can write applications that connect to Tent in
 order to display or create user content.
+
 ‏‫Tent مركزي، ليس فدرالي او مركزي. يمكن لأي ملقم Tent‬
 ‫الاتصال بأي ملقم Tent أخر. كافة الميزات متاحة لأي ملقم كمواطنين‬
 ‫من الدرجة الأولى. يمكن لأي شخص استضافة خادم Tent الخاص به. كما‬
@@ -81,7 +82,7 @@ with its users.
 
 ### The Tent Ecosystem
 
-### النظام الإيكولوجي لTent
+‫### النظام الإيكولوجي لTent‬
 
 Tent is not specifying the economics of an ecosystem. There will be many options
 for users, from free to paid to self hosted, from ad-supported to
