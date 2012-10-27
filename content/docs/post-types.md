@@ -126,6 +126,23 @@ profile.
 {post_delete schema}
 
 
+#### Following
+
+`https://tent.io/types/post/following/v0.1.0`
+
+**Following** tracks creation and deletion of followings.
+
+{post_following schema}
+
+
+#### Follower
+
+`https://tent.io/types/post/follower/v0.1.0`
+
+**Follower** tracks creation and deletion of followers.
+
+{post_follower schema}
+
 
 ### Creating New Post Types
 
