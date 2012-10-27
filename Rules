@@ -40,6 +40,7 @@ compile '*' do
   when 'md'
     filter :schema_table
     filter :api_example
+    filter :erb
     filter :redcarpet, renderer: MarkdownHTML, options: {
       fenced_code_blocks: true,
       no_intra_emphasis: true,

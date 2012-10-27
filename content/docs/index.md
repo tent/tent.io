@@ -88,4 +88,4 @@ https://cloudmir.com/ (Lindsay) and https://titanous.com (Jonathan) are both fol
 
 6. Lindsay, Jonathan, and Jesse can each read, reply to, repost, or ignore the post as they wish.
 
-![diagram](/assets/images/diagram.png)
+![diagram](<%= image_url('diagram.png') %>)
