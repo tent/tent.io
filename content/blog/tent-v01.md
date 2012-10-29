@@ -14,7 +14,7 @@ This version of the Tent protocol, apps, and servers are still very young and ar
 
 ### What this means for you
 
-# # # ماذا يعني لك ذلك
+### ماذا يعني‫ ‬لك ذلك
 
 **Developers** It's time to start writing apps for Tent and adding Tent support to existing projects based on the current specification. We've built a simple microblogging app and released it under the MIT license [here](https://github.com/tent/tent-status). Both the server and app are alpha releases. There are many bugs and vulnerabilities waiting to be found. Please report and/or repair any problems you find to the development team.
 
