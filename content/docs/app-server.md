@@ -160,8 +160,8 @@ Apps can create groups when they have the `write_groups` scope.
 You can retrieve the groups information:
 
     [
-        {"id": "xab123", "name": "Group Name 1", "created_at": "...", "updated_at": "..."},
-        {"id": "ab53xy", "name": "Group Name 2", "created_at": "...", "updated_at": "..."}
+        {"id": "xab123", "name": "Group Name 1", "created_at": 1351977366, "updated_at": 1351977366},
+        {"id": "ab53xy", "name": "Group Name 2", "created_at": 1351977366, "updated_at": 1351977366}
     ]
 
 ### GET /groups/:id
