@@ -85,6 +85,7 @@ base_url: http://tent.io
 title: Tent
 author_name: Tent
 author_uri: http://tent.io
+cdn_url: https://d31dxsia6hg3x2.cloudfront.net
 
 # Configure the robots.txt file for this site.
 # Setting 'default' to true-ish will use sensible defaults. If you

@@ -29,10 +29,10 @@ Tent servers maintain relationships between users and manage apps. Users create 
 With Tent, your relationships and data are all in one place that you control. on centralized services, your data and relationships are fragmented across multiple apps and networks. They can be difficult to export, and information about you is often sold. Like email, Tent lets you take your data and relationships with you when you change providers
 
 #### How Tent Works
-![diagram](/assets/images/tent_diagram.png)
+![diagram](<%= image_url('tent_diagram.png') %>)
 
 #### How Other Services Work
-![diagram](/assets/images/other_services.png)
+![diagram](<%= image_url('other_services.png') %>)
 
 ### How can I use Tent?
 

@@ -8,5 +8,6 @@ include Nanoc3::Helpers::Blogging
 include Nanoc3::Helpers::Filtering
 include Nanoc3::Helpers::LinkTo
 include Nanoc3::Helpers::CacheBusting
+include Nanoc3::Helpers::AssetURL
 
 Slim::Engine.set_default_options pretty: true

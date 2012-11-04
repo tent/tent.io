@@ -11,7 +11,15 @@ class MarkdownHTML < Redcarpet::Render::HTML
     el('table', el('thead', header) + el('tbody', body), class: 'table table-striped table-bordered')
   end
 
+  def header(text, level)
+    el("h#{level}", text, id: anchor(text))
+  end
+
   private
+
+  def anchor(text)
+    text.downcase.strip.gsub(/[^a-z0-9 ]/, '').gsub(/\s+/, '-')
+  end
 
   def el(el, content, attributes = {})
     if content
