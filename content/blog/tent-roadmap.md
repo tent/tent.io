@@ -8,7 +8,7 @@ The past few months have been a period of intense growth for Tent. Users, develo
 
 ## Schedule
 
-A new point release is schedule to ship every 2 months starting in late November 2012. Below is a list of features scheduled to for each upcoming release.
+A new point release is schedule to ship every 2 months starting in late November 2012. Below is a list of features scheduled for each upcoming release.
 
 ### v0.2 Late November 2012
 
