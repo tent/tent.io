@@ -47,7 +47,7 @@ Tent profiles include information on which versions of Tent they are running and
 
 ### Governance
 
-Tent will remain a benevolent dictatorship until at least the release of v1.0. This structure will allow at least 2x faster development than other models. Community feedback and feature requests are greatly appreciated on Tent, [Github](https://github.com/tent/tent.io), and [email](mailto:contact@tent.io) 
+Tent is an open protocol and all open source software released by Tent.io is published under the MIT license. The docs and spec itself use teh same copyrigth notice as the [IETF](http://ietf.org/) uses on the [HTTP spec](https://tools.ietf.org/html/rfc2616). We are committed to governing Tent in a similar way to prevent fragmentation, ensure clear use of Tent-releated terms and branding, and keep Tent free and open. Tent will remain a benevolent dictatorship until at least the release of v1.0. This structure will dramatically speed development and help Tent reach its fullest potential. Community feedback and feature requests are greatly appreciated on Tent, [Github](https://github.com/tent/tent.io), and [email](mailto:contact@tent.io). 
 
 ### Contributions
 
