@@ -10,7 +10,7 @@ The past few months have been a period of intense growth for Tent. Users, develo
 
 A new point release is schedule to ship every 2 months starting in late November 2012. Below is a list of features scheduled to for each upcoming release.
 
-### v0.2 Late Nov 2012
+### v0.2 Late November 2012
 
  - Auth credential expiration
  - New auth credential request 
@@ -20,7 +20,7 @@ A new point release is schedule to ship every 2 months starting in late November
  - Profile versioning
  - Global & post type cursors
  
-### v0.3 Late jan 2013
+### v0.3 Late January 2013
 
  - Streaming connections
  - Machine Readable post type schemas
