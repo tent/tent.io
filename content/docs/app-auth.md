@@ -76,7 +76,8 @@ user-agent to it:
 | `write_followings` | Read followings list and follow new entities                           |
 | `read_posts`       | Read posts with types listed in the `post_types` parameter             |
 | `write_posts`      | Read and publish posts with types listed in the `post_types` parameter |
-
+| `read_groups`      | Read groups                                                            |
+| `write_groups`     | Read groups and create/update/delete them.                             |
 
 #### Redirect
 

@@ -149,4 +149,31 @@ Apps can delete a specific post.
 
 {delete_post example}
 
+### POST /groups
 
+Apps can create groups when they have the `write_groups` scope.
+
+    {"name": "New Group Name!"}
+
+### GET /groups
+
+You can retrieve the groups information:
+
+    [
+        {"id": "xab123", "name": "Group Name 1", "created_at": 1351977366, "updated_at": 1351977366},
+        {"id": "ab53xy", "name": "Group Name 2", "created_at": 1351977366, "updated_at": 1351977366}
+    ]
+
+### GET /groups/:id
+
+You can retrieve a single group as well.
+
+### PUT /groups/:id
+
+You can update the name of the group with the `write_groups` scope:
+
+    {"name": "New Group Name!"}
+
+### DELETE /groups/:id
+
+You can delete groups using a DELETE on the groups resource with the given id.
