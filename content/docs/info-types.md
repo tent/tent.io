@@ -46,6 +46,23 @@ Cursor properties must be scoped by post type uri.
 }
 ```
 
+### App Specific Cursor
+
+Apps may define a custom profile section for the purpose of custom cursors by using a uri unique to the app as the profile key. App developers should use this as a last resort for when the global cursors don't meet their needs.
+
+**Example:**
+
+```json
+{
+  "https://app.example.org/cursor/v0.1.0": {
+    "xyz" : {
+      "post_id": "hsk4is",
+      "post_entity": "https://example.com"
+    }
+  }
+}
+```
+
 ## Creating New Profile Info Types
 
 Tent highly extensible and allows developers to create new profile info types to support new kinds of user data, interactions, and functionality.
