@@ -21,6 +21,31 @@ Every Tent user needs a profile with the `Core` info type. This block provides c
 
 {info_basic schema}
 
+### Cursor
+
+`https://tent.io/types/info/cursor/v0.1.0`
+
+Global cursors for each post type helps multiple apps hold the same feed position. Each cursor specifies the most recent post the user has seen.
+
+{info_cursor schema}
+
+Cursor properties must be scoped by post type uri.
+
+**Example:**
+
+```json
+{
+	"https://tent.io/types/info/cursor/v0.1.0": {
+		"https://tent.io/types/post/status/v0.1.0": {
+			{
+				"post_id": "fh3n5i",
+				"post_entity": "https://example.com"
+			}
+		}
+	}
+}
+```
+
 ## Creating New Profile Info Types
 
 Tent highly extensible and allows developers to create new profile info types to support new kinds of user data, interactions, and functionality.
