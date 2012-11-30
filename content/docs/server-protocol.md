@@ -80,6 +80,10 @@ the credentials.
 
 {create_follower example}
 
+### Reset auth credentials
+
+{reset_follower example}
+
 
 ## Notifications
 
