@@ -19,6 +19,15 @@ Apps can add or edit information in a user's profile including adding new profil
 
 {update_profile example}
 
+### GET /profile/:type
+
+{get_profile_type example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `version` | Returns specific version of profile type |
 
 ### POST /followings
 
