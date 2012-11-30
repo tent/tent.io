@@ -151,3 +151,7 @@ initial registration.
 #### PUT /apps/:id
 
 {update_app example}
+
+#### DELETE /apps/:id
+
+{delete_app example}
