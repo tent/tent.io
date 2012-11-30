@@ -95,6 +95,11 @@ Apps can request information on a specific follower.
 
 {auth_get_follower example}
 
+### GET /followers/:entity
+
+Redirects to `GET /followers/:id` if exists, otherwise returns `404`.
+
+{get_follower_entity_redirect example}
 
 ### DELETE /followers/:id
 
