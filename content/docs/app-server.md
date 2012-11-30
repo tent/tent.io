@@ -143,6 +143,18 @@ Apps can retrieve attachments from a specific post by name and content-type from
 
 {get_post_attachment example}
 
+### GET /posts/:id/mentions
+
+Returns mentions for a post that reference a known public post.
+
+{get_post_mentions example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `post_types` | Constrains mentions to those referencing posts that match specific comma-separated type URIs. |
+
 ### DELETE /posts/:id
 
 Apps can delete a specific post.
