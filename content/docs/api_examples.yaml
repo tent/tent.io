@@ -1,13 +1,13 @@
 ---
 :examples:
   :get_profile: ! "\n```text\nGET /profile HTTP/1.1\nAccept: application/vnd.tent.v0+json\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"f453519f3b9951c3314b9d8a5ffc2f12\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 534\n```\n\n```json\n{\n
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"73043167d94554e40f5f38c30e40bd05\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 512\n```\n\n```json\n{\n
     \ \"https://tent.io/types/info/basic/v0.1.0\": {\n    \"name\": \"The Tentity\",\n
     \   \"avatar_url\": \"http://example.org/avatar.jpg\",\n    \"birthdate\": \"2012-08-23\",\n
     \   \"location\": \"The Internet\",\n    \"gender\": \"Unknown\",\n    \"bio\":
-    \"Aspernatur qui aut commodi repudiandae enim voluptatem.\",\n    \"permissions\":
-    {\n      \"public\": true\n    },\n    \"version\": 1\n  },\n  \"https://tent.io/types/info/core/v0.1.0\":
+    \"Dignissimos nemo consequuntur at.\",\n    \"permissions\": {\n      \"public\":
+    true\n    },\n    \"version\": 1\n  },\n  \"https://tent.io/types/info/core/v0.1.0\":
     {\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
     \   ],\n    \"entity\": \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.com\",\n
     \     \"http://eqt5g4fuenphqinx.onion/\"\n    ],\n    \"permissions\": {\n      \"public\":
@@ -19,35 +19,35 @@
     \ ],\n  \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to
     describe foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
     \ }\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nETag:
-    \"771b707fdecfd19ee630ac523a1e74e3\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    \"e58841690292061e942df8f7a5987b77\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
     459\n```\n\n```json\n{\n  \"name\": \"FooApp\",\n  \"description\": \"Does amazing
     foos with your data\",\n  \"url\": \"http://example.com\",\n  \"icon\": \"http://example.com/icon.png\",\n
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
-    \ },\n  \"id\": \"8fzhpy\",\n  \"mac_key_id\": \"a:3103f697\",\n  \"mac_key\":
-    \"ec476e51116c7a41833170ca38e4f389\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
+    \ },\n  \"id\": \"k3suar\",\n  \"mac_key_id\": \"a:be306cc0\",\n  \"mac_key\":
+    \"da45322c4b3541387ee6f70181f7c4a4\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
     \ \"authorizations\": [\n\n  ]\n}\n```\n"
-  :app_auth: ! "\n```text\nPOST /apps/8fzhpy/authorizations HTTP/1.1\nContent-Type:
+  :app_auth: ! "\n```text\nPOST /apps/k3suar/authorizations HTTP/1.1\nContent-Type:
     application/vnd.tent.v0+json\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"a:3103f697\", ts=\"1354289252\", nonce=\"546c96\", mac=\"K7uNRyaq+sC+St2IStCIlGjRTDI6itYgXTvADA/Y9YM=\"\n```\n\n```json\n{\n
-    \ \"code\": \"0e74ac0407de92ff00fdbd353cf0b634\",\n  \"token_type\": \"mac\",\n
-    \ \"tent_expires_at\": 1354375652\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type:
-    application/vnd.tent.v0+json\nETag: \"e60ea0c3a5bb1f8e8177f83023232c39\"\nCache-Control:
+    MAC id=\"a:be306cc0\", ts=\"1354290319\", nonce=\"bd0985\", mac=\"mQRa2M+5RrhtqvDazBgTsLMlQZXGx+1u2d1e3xO6eFE=\"\n```\n\n```json\n{\n
+    \ \"code\": \"0e18ac932d24a58f7056412954843079\",\n  \"token_type\": \"mac\",\n
+    \ \"tent_expires_at\": 1354376719\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type:
+    application/vnd.tent.v0+json\nETag: \"d8e9a77c9d1555963c83364023314c18\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 204\n```\n\n```json\n{\n
-    \ \"access_token\": \"u:d5592d46\",\n  \"mac_key\": \"dc49a3b02fd8e773780739c872a4132e\",\n
+    \ \"access_token\": \"u:9eafb9ba\",\n  \"mac_key\": \"65a494719931c00073ce8cdcb661247f\",\n
     \ \"mac_algorithm\": \"hmac-sha-256\",\n  \"token_type\": \"mac\",\n  \"refresh_token\":
-    \"0215ad663e1b5e5f9c7371b7b7fefb81\",\n  \"tent_expires_at\": 1354375652\n}\n```\n"
-  :get_app: ! "\n```text\nGET /apps/8fzhpy HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"a:3103f697\", ts=\"1354289252\", nonce=\"ae0c74\", mac=\"du6fW2dqCp6OsmSvH6+3V+H6hbJjMcscUZ7sYI6egSM=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"8791263c70a18a19bcae8716c1dd417c\"\nCache-Control:
+    \"dbb638bc857ac22f474efa89b2cab326\",\n  \"tent_expires_at\": 1354376719\n}\n```\n"
+  :get_app: ! "\n```text\nGET /apps/k3suar HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"a:be306cc0\", ts=\"1354290319\", nonce=\"467d1e\", mac=\"1IUlLRY+MAiAfb1Shgf6IYw9VhWWNiuL9o7wvDvMyro=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"72e5e404a5290322c1607527a404d086\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 853\n```\n\n```json\n{\n
     \ \"name\": \"FooApp\",\n  \"description\": \"Does amazing foos with your data\",\n
     \ \"url\": \"http://example.com\",\n  \"icon\": \"http://example.com/icon.png\",\n
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
-    \ },\n  \"id\": \"8fzhpy\",\n  \"authorizations\": [\n    {\n      \"post_types\":
+    \ },\n  \"id\": \"k3suar\",\n  \"authorizations\": [\n    {\n      \"post_types\":
     [\n        \"https://tent.io/types/post/status/v0.1.0\",\n        \"https://tent.io/types/post/photo/v0.1.0\"\n
     \     ],\n      \"profile_info_types\": [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n
     \     ],\n      \"scopes\": [\n        \"read_posts\",\n        \"write_posts\",\n
@@ -56,24 +56,24 @@
     \       \"write_followings\",\n        \"read_groups\",\n        \"write_groups\",\n
     \       \"read_permissions\",\n        \"write_permissions\",\n        \"read_apps\",\n
     \       \"write_apps\",\n        \"follow_ui\",\n        \"read_secrets\",\n        \"write_secrets\"\n
-    \     ],\n      \"notification_url\": null,\n      \"id\": \"gubpam\"\n    }\n
+    \     ],\n      \"notification_url\": null,\n      \"id\": \"2ac612\"\n    }\n
     \ ]\n}\n```\n"
-  :update_app: ! "\n```text\nPUT /apps/8fzhpy HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"a:3103f697\", ts=\"1354289252\",
-    nonce=\"d2ae38\", mac=\"YBsm0hCPp+I4suvw9nPrgVeEchkq9Iz8thK8NRFUuUw=\"\n```\n\n```json\n{\n
+  :update_app: ! "\n```text\nPUT /apps/k3suar HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"a:be306cc0\", ts=\"1354290319\",
+    nonce=\"65ee3c\", mac=\"Z8OUnA0dD1/x0LRSm7Ypsy0n50LI8YthP6XuvklBcNA=\"\n```\n\n```json\n{\n
     \ \"name\": \"FooApp\",\n  \"description\": \"Does amazing foos with your data\",\n
     \ \"url\": \"http://example.com\",\n  \"icon\": \"http://example.org/icon.png\",\n
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
     \ }\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nETag:
-    \"2d800771afcd32c931db29944e3d61ca\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    \"d4fbe278786a8f116cb4214e48d6f5ba\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
     853\n```\n\n```json\n{\n  \"name\": \"FooApp\",\n  \"description\": \"Does amazing
     foos with your data\",\n  \"url\": \"http://example.com\",\n  \"icon\": \"http://example.org/icon.png\",\n
     \ \"redirect_uris\": [\n    \"https://app.example.com/tent/callback\"\n  ],\n
     \ \"scopes\": {\n    \"write_profile\": \"Uses an app profile section to describe
     foos\",\n    \"read_followings\": \"Calculates foos based on your followings\"\n
-    \ },\n  \"id\": \"8fzhpy\",\n  \"authorizations\": [\n    {\n      \"post_types\":
+    \ },\n  \"id\": \"k3suar\",\n  \"authorizations\": [\n    {\n      \"post_types\":
     [\n        \"https://tent.io/types/post/status/v0.1.0\",\n        \"https://tent.io/types/post/photo/v0.1.0\"\n
     \     ],\n      \"profile_info_types\": [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n
     \     ],\n      \"scopes\": [\n        \"read_posts\",\n        \"write_posts\",\n
@@ -82,8 +82,38 @@
     \       \"write_followings\",\n        \"read_groups\",\n        \"write_groups\",\n
     \       \"read_permissions\",\n        \"write_permissions\",\n        \"read_apps\",\n
     \       \"write_apps\",\n        \"follow_ui\",\n        \"read_secrets\",\n        \"write_secrets\"\n
-    \     ],\n      \"notification_url\": null,\n      \"id\": \"gubpam\"\n    }\n
+    \     ],\n      \"notification_url\": null,\n      \"id\": \"2ac612\"\n    }\n
     \ ]\n}\n```\n"
+  :create_group: ! "\n```text\nPOST /groups HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\", ts=\"1354290319\",
+    nonce=\"2a9157\", mac=\"iV8yvEjGBz75vGcu2Ab5pPS50XMY1O2mV+2n7BM3ElY=\"\n```\n\n```json\n{\n
+    \ \"name\": \"itaque\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nETag:
+    \"ae7dd2a43a6f5158ff0c44a05309d9ea\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    79\n```\n\n```json\n{\n  \"name\": \"itaque\",\n  \"id\": \"s7k2sw\",\n  \"created_at\":
+    1354290319,\n  \"updated_at\": 1354290319\n}\n```\n"
+  :get_groups: ! "\n```text\nGET /groups HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290319\", nonce=\"6b5e00\", mac=\"kAqA7i3zIMtDUsjzLCgv9BdtYJtfqrSsRLJ94ItIC/4=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/groups?since_id=s7k2sw>;
+    rel=\"prev\",<https://example.com/groups?before_id=s7k2sw>; rel=\"next\"\nETag:
+    \"cae7ecee1995bb5094e0d6ed3dbfdddf\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    81\n```\n\n```json\n[\n  {\n    \"name\": \"itaque\",\n    \"id\": \"s7k2sw\",\n
+    \   \"created_at\": 1354290319,\n    \"updated_at\": 1354290319\n  }\n]\n```\n"
+  :update_group: ! "\n```text\nPUT /groups/s7k2sw HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\", ts=\"1354290320\",
+    nonce=\"506d43\", mac=\"+PxRcRYwJ05x/8WOaEJm8YrV7mj/0orL8Vf2F9ATHY4=\"\n```\n\n```json\n{\n
+    \ \"name\": \"est\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nETag:
+    \"1256e67ed91b8137ff97f0b031cbbf79\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    76\n```\n\n```json\n{\n  \"name\": \"est\",\n  \"id\": \"s7k2sw\",\n  \"created_at\":
+    1354290319,\n  \"updated_at\": 1354290320\n}\n```\n"
+  :get_group: ! "\n```text\nGET /groups/s7k2sw HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"438ab3\", mac=\"I9YOzoOhKMDaZke5kmmgVtI5MRnZ+5rgk8Rm75WyFDQ=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"1256e67ed91b8137ff97f0b031cbbf79\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 76\n```\n\n```json\n{\n  \"name\":
+    \"est\",\n  \"id\": \"s7k2sw\",\n  \"created_at\": 1354290319,\n  \"updated_at\":
+    1354290320\n}\n```\n"
+  :delete_group: ! "\n```text\nDELETE /groups/s7k2sw HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"5df21e\", mac=\"RvbPvojeK9DNMnhygjYAUuCDLEJnxVuif1IdKwyd6JY=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: text/html\nCache-Control: \nContent-Length: 0\n```\n"
   :discovery: ! '
 
     ```text
@@ -112,12 +142,12 @@
 '
   :update_profile: ! "\n```text\nPUT /profile/https%3A%2F%2Ftent.io%2Ftypes%2Finfo%2Fbasic%2Fv0.1.0
     HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289252\", nonce=\"17474f\", mac=\"iF1loJo6AGWnn1iJK5ACk2I4ibe13sq6gUoWiz3bKT8=\"\n```\n\n```json\n{\n
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"d91e4b\", mac=\"d4SIRD326I2ZlSbJiI0QzNZorIJGSidCmAa6frKgnwA=\"\n```\n\n```json\n{\n
     \ \"name\": \"The Tentity\",\n  \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \ \"birthdate\": \"2012-08-23\",\n  \"location\": \"The Internet\",\n  \"gender\":
-    \"Unknown\",\n  \"bio\": \"Fugit dolorem autem culpa eum totam assumenda est.\"\n}\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"51272e9975ca3401e068aff8537b3a27\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 581\n```\n\n```json\n{\n
+    \"Unknown\",\n  \"bio\": \"Est sed quae non doloribus minus.\"\n}\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"df71d7c1ddf9f42e1c63f68b98f186bd\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 564\n```\n\n```json\n{\n
     \ \"https://tent.io/types/info/core/v0.1.0\": {\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
     \   ],\n    \"entity\": \"https://example.org\",\n    \"servers\": [\n      \"https://tent.example.com\",\n
     \     \"http://eqt5g4fuenphqinx.onion/\"\n    ],\n    \"permissions\": {\n      \"groups\":
@@ -125,66 +155,66 @@
     \   \"version\": 1\n  },\n  \"https://tent.io/types/info/basic/v0.1.0\": {\n    \"name\":
     \"The Tentity\",\n    \"avatar_url\": \"http://example.org/avatar.jpg\",\n    \"birthdate\":
     \"2012-08-23\",\n    \"location\": \"The Internet\",\n    \"gender\": \"Unknown\",\n
-    \   \"bio\": \"Fugit dolorem autem culpa eum totam assumenda est.\",\n    \"permissions\":
-    {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
+    \   \"bio\": \"Est sed quae non doloribus minus.\",\n    \"permissions\": {\n
+    \     \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
     true\n    },\n    \"version\": 2\n  }\n}\n```\n"
   :get_profile_type: ! "\n```text\nGET /profile/https%3A%2F%2Ftent.io%2Ftypes%2Finfo%2Fbasic%2Fv0.1.0?version=1
-    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\",
-    ts=\"1354289252\", nonce=\"43bfab\", mac=\"OIYN9tZgjHzgx2tgyMOEzw1KyQ17hIhYi5CcBK8vf70=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"9c6ffe8274afbcafb43009c9c1b2d27e\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 269\n```\n\n```json\n{\n
+    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\",
+    ts=\"1354290320\", nonce=\"973691\", mac=\"VYtzzpNqWenDVTUwg6+xR0otKlPemFXhMTWSZTs67hE=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"f563a5c279fbaece344c16057d587aa8\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 247\n```\n\n```json\n{\n
     \ \"name\": \"The Tentity\",\n  \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \ \"birthdate\": \"2012-08-23\",\n  \"location\": \"The Internet\",\n  \"gender\":
-    \"Unknown\",\n  \"bio\": \"Aspernatur qui aut commodi repudiandae enim voluptatem.\",\n
-    \ \"permissions\": {\n    \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n
-    \   \"public\": true\n  },\n  \"version\": 1\n}\n```\n"
+    \"Unknown\",\n  \"bio\": \"Dignissimos nemo consequuntur at.\",\n  \"permissions\":
+    {\n    \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n
+    \ },\n  \"version\": 1\n}\n```\n"
   :create_post: ! "\n```text\nPOST /posts HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\", ts=\"1354289252\",
-    nonce=\"92c52f\", mac=\"7Lii3mMwryPosm5YAwc+xAv3zlQyhbbwNxjBikFXc2E=\"\n```\n\n```json\n{\n
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\", ts=\"1354290320\",
+    nonce=\"ba3f07\", mac=\"eBU7xaI/usTgDlvMCe7GnmkAw1Tzr12a4CIevBDRUg0=\"\n```\n\n```json\n{\n
     \ \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n  \"published_at\":
-    1354289252,\n  \"permissions\": {\n    \"public\": true\n  },\n  \"licenses\":
+    1354290320,\n  \"permissions\": {\n    \"public\": true\n  },\n  \"licenses\":
     [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n  \"content\": {\n
     \   \"text\": \"Just landed.\",\n    \"location\": {\n      \"type\": \"Point\",\n
     \     \"coordinates\": [\n        50.923878,\n        4.028605\n      ]\n    }\n
     \ }\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type: application/vnd.tent.v0+json\nETag:
-    \"a4f456132d5665ca44f539ff8af4bd07\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    \"7417cd5fe943ee46550d136dcbfc2b8e\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
     477\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n  \"licenses\":
     [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n  \"content\": {\n
     \   \"text\": \"Just landed.\",\n    \"location\": {\n      \"type\": \"Point\",\n
     \     \"coordinates\": [\n        50.923878,\n        4.028605\n      ]\n    }\n
-    \ },\n  \"published_at\": 1354289252,\n  \"permissions\": {\n    \"groups\": [\n\n
-    \   ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\": \"13288h\",\n
-    \ \"updated_at\": 1354289252,\n  \"received_at\": 1354289252,\n  \"attachments\":
+    \ },\n  \"published_at\": 1354290320,\n  \"permissions\": {\n    \"groups\": [\n\n
+    \   ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\": \"j0g8az\",\n
+    \ \"updated_at\": 1354290320,\n  \"received_at\": 1354290320,\n  \"attachments\":
     [\n\n  ],\n  \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n  \"version\":
     1,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\": \"FooApp\"\n
     \ },\n  \"mentions\": [\n\n  ]\n}\n```\n"
-  :get_post_mentions: ! "\n```text\nGET /posts/13288h/mentions HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289252\", nonce=\"44d47d\", mac=\"61fjzN0xOqgTQ2+e85fIK0EKAboLGg2pRUQV4uf6kfU=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/posts/13288h/mentions?since_id=xkd0v8&since_id_entity=https%3A%2F%2Fexample.org>;
-    rel=\"prev\",<https://example.com/posts/13288h/mentions?before_id=xkd0v8&before_id_entity=https%3A%2F%2Fexample.org>;
-    rel=\"next\"\nETag: \"efebcb394022d58ebd38ef5e1339efef\"\nCache-Control: max-age=0,
+  :get_post_mentions: ! "\n```text\nGET /posts/j0g8az/mentions HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"eb23be\", mac=\"7dRlem3UFJ+5OWrnNLUm/9cbSfWc/wsgfYeq2IxvG+s=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/posts/j0g8az/mentions?since_id=5w7nxq&since_id_entity=https%3A%2F%2Fexample.org>;
+    rel=\"prev\",<https://example.com/posts/j0g8az/mentions?before_id=5w7nxq&before_id_entity=https%3A%2F%2Fexample.org>;
+    rel=\"next\"\nETag: \"3e2d0acf120f690a88a09c76cbba501c\"\nCache-Control: max-age=0,
     private, must-revalidate\nContent-Length: 100\n```\n\n```json\n[\n  {\n    \"entity\":
-    \"https://example.org\",\n    \"post\": \"xkd0v8\",\n    \"type\": \"https://tent.io/types/post/status/v0.1.0\"\n
+    \"https://example.org\",\n    \"post\": \"5w7nxq\",\n    \"type\": \"https://tent.io/types/post/status/v0.1.0\"\n
     \ }\n]\n```\n"
   :create_post_with_attachments: ! "\n```text\nPOST /posts HTTP/1.1\nContent-Type:
     multipart/form-data;boundary=-----------TentAttachment\nContent-Length: 875\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\", ts=\"1354289252\",
-    nonce=\"7645c0\", mac=\"xPPCFQLcbXj2qyCO3mHuTEPy9YrBWp+tfinKRXHLfSU=\"\n```\n\n```text\n-------------TentAttachment\r\nContent-Disposition:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\", ts=\"1354290320\",
+    nonce=\"725c89\", mac=\"m1UfnrUOQTMmD+BVt6Vdsbe2r85+jbsjhfOVazzg+U4=\"\n```\n\n```text\n-------------TentAttachment\r\nContent-Disposition:
     form-data; name=\"post\"; filename=\"post.json\"\r\nContent-Length: 206\r\nContent-Type:
-    application/vnd.tent.v0+json\r\nContent-Transfer-Encoding: binary\r\n\r\n{\"type\":\"https://tent.io/types/post/photo/v0.1.0\",\"published_at\":1354289252,\"permissions\":{\"public\":true},\"licenses\":[\"http://creativecommons.org/licenses/by/3.0/\"],\"content\":{\"caption\":\"Some
+    application/vnd.tent.v0+json\r\nContent-Transfer-Encoding: binary\r\n\r\n{\"type\":\"https://tent.io/types/post/photo/v0.1.0\",\"published_at\":1354290320,\"permissions\":{\"public\":true},\"licenses\":[\"http://creativecommons.org/licenses/by/3.0/\"],\"content\":{\"caption\":\"Some
     fake photos\"}}\r\n-------------TentAttachment\r\nContent-Disposition: form-data;
     name=\"photos[0]\"; filename=\"fake_photo1.jpg\"\r\nContent-Length: 26\r\nContent-Type:
     image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nPhoto 1 data would go here\r\n-------------TentAttachment\r\nContent-Disposition:
     form-data; name=\"photos[1]\"; filename=\"fake_photo2.jpg\"\r\nContent-Length:
     26\r\nContent-Type: image/jpeg\r\nContent-Transfer-Encoding: binary\r\n\r\nPhoto
     2 data would go here\r\n-------------TentAttachment--\r\n\r\n\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"b809302dc09b104737d9e83109bec791\"\nCache-Control:
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"507265b719bdaa63cfdfd6da5b44700b\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 587\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
     \ ],\n  \"content\": {\n    \"caption\": \"Some fake photos\"\n  },\n  \"published_at\":
-    1354289252,\n  \"permissions\": {\n    \"groups\": [\n\n    ],\n    \"entities\":
-    {\n    },\n    \"public\": true\n  },\n  \"id\": \"40lq1b\",\n  \"updated_at\":
-    1354289252,\n  \"received_at\": 1354289252,\n  \"attachments\": [\n    {\n      \"type\":
+    1354290320,\n  \"permissions\": {\n    \"groups\": [\n\n    ],\n    \"entities\":
+    {\n    },\n    \"public\": true\n  },\n  \"id\": \"sx7p90\",\n  \"updated_at\":
+    1354290320,\n  \"received_at\": 1354290320,\n  \"attachments\": [\n    {\n      \"type\":
     \"image/jpeg\",\n      \"category\": \"photos\",\n      \"name\": \"fake_photo1.jpg\",\n
     \     \"size\": 26,\n      \"id\": 1\n    },\n    {\n      \"type\": \"image/jpeg\",\n
     \     \"category\": \"photos\",\n      \"name\": \"fake_photo2.jpg\",\n      \"size\":
@@ -195,11 +225,11 @@
 
     ```text
 
-    GET /posts/40lq1b/attachments/fake_photo2.jpg HTTP/1.1
+    GET /posts/sx7p90/attachments/fake_photo2.jpg HTTP/1.1
 
     Accept: image/jpeg
 
-    Authorization: MAC id="u:d5592d46", ts="1354289252", nonce="a11120", mac="ORKtAvT6ibidBl4QHYqadDEo1EkRE2bjbEoylC2FeHw="
+    Authorization: MAC id="u:9eafb9ba", ts="1354290320", nonce="de7f96", mac="kfGWU1zEDdSkJ5dS8qtygriYVzLlWUlKOIyePYV0R0k="
 
     ```
 
@@ -227,192 +257,192 @@
 
 '
   :create_following: ! "\n```text\nPOST /followings HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\", ts=\"1354289252\",
-    nonce=\"90c47f\", mac=\"vszwkmgBXyBEHK842pReMKHCOJttPlvnzu4E0XQRux4=\"\n```\n\n```json\n{\n
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\", ts=\"1354290320\",
+    nonce=\"83ca8d\", mac=\"N8MR/TlFa/0PrQNBYCvlNOitTBjdvT/Ft12GdhhkfCo=\"\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\"\n}\n```\n\n```text\nHTTP/1.1 200 OK\nContent-Type:
-    application/vnd.tent.v0+json\nETag: \"8c555e124088df54c825a56259add646\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 737\n```\n\n```json\n{\n
+    application/vnd.tent.v0+json\nETag: \"704d3647cc52f29afba7ce200404e3e7\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 720\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"groups\":
     [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\":
-    \"yz8ies\",\n  \"created_at\": 1354289252,\n  \"updated_at\": 1354289253,\n  \"groups\":
+    \"dsq39z\",\n  \"created_at\": 1354290320,\n  \"updated_at\": 1354290320,\n  \"groups\":
     [\n\n  ],\n  \"profile\": {\n    \"https://tent.io/types/info/basic/v0.1.0\":
     {\n      \"name\": \"The Tentity\",\n      \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \     \"birthdate\": \"2012-08-23\",\n      \"location\": \"The Internet\",\n
-    \     \"gender\": \"Unknown\",\n      \"bio\": \"Fugit dolorem autem culpa eum
-    totam assumenda est.\",\n      \"permissions\": {\n        \"public\": true\n
-    \     },\n      \"version\": 2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\":
-    {\n      \"licenses\": [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \     ],\n      \"entity\": \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
+    \     \"gender\": \"Unknown\",\n      \"bio\": \"Est sed quae non doloribus minus.\",\n
+    \     \"permissions\": {\n        \"public\": true\n      },\n      \"version\":
+    2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\": {\n      \"licenses\":
+    [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n      ],\n      \"entity\":
+    \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
     \       \"http://eqt5g4fuenphqinx.onion/\"\n      ],\n      \"permissions\": {\n
     \       \"public\": true\n      },\n      \"version\": 1\n    }\n  },\n  \"licenses\":
-    [\n\n  ],\n  \"remote_id\": \"uv197i\"\n}\n```\n"
+    [\n\n  ],\n  \"remote_id\": \"pgi237\"\n}\n```\n"
   :get_followings: ! "\n```text\nGET /followings HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"cc98f5\", mac=\"TD05KOteiGO7WkfbUibQajrtcg2LelShNg8p9Q39+Ec=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/followings?since_id=yz8ies>;
-    rel=\"prev\",<https://example.com/followings?before_id=yz8ies>; rel=\"next\"\nETag:
-    \"a71be42d6c36d9ceb8ce7b3efeed1b18\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
-    739\n```\n\n```json\n[\n  {\n    \"entity\": \"https://example.org\",\n    \"permissions\":
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"e9582f\", mac=\"TBswphtQTHOwuqHxo3uy/2MTAFeDIsO4YwDaMG/3hhQ=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/followings?since_id=dsq39z>;
+    rel=\"prev\",<https://example.com/followings?before_id=dsq39z>; rel=\"next\"\nETag:
+    \"9645202decea7770a6b944ef90972d27\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    722\n```\n\n```json\n[\n  {\n    \"entity\": \"https://example.org\",\n    \"permissions\":
     {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
-    true\n    },\n    \"id\": \"yz8ies\",\n    \"created_at\": 1354289252,\n    \"updated_at\":
-    1354289253,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/basic/v0.1.0\":
+    true\n    },\n    \"id\": \"dsq39z\",\n    \"created_at\": 1354290320,\n    \"updated_at\":
+    1354290320,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/basic/v0.1.0\":
     {\n        \"name\": \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \       \"birthdate\": \"2012-08-23\",\n        \"location\": \"The Internet\",\n
-    \       \"gender\": \"Unknown\",\n        \"bio\": \"Fugit dolorem autem culpa
-    eum totam assumenda est.\",\n        \"permissions\": {\n          \"public\":
-    true\n        },\n        \"version\": 2\n      },\n      \"https://tent.io/types/info/core/v0.1.0\":
+    \       \"gender\": \"Unknown\",\n        \"bio\": \"Est sed quae non doloribus
+    minus.\",\n        \"permissions\": {\n          \"public\": true\n        },\n
+    \       \"version\": 2\n      },\n      \"https://tent.io/types/info/core/v0.1.0\":
     {\n        \"licenses\": [\n          \"http://creativecommons.org/licenses/by/3.0/\"\n
     \       ],\n        \"entity\": \"https://example.org\",\n        \"servers\":
     [\n          \"https://tent.example.com\",\n          \"http://eqt5g4fuenphqinx.onion/\"\n
     \       ],\n        \"permissions\": {\n          \"public\": true\n        },\n
     \       \"version\": 1\n      }\n    },\n    \"licenses\": [\n\n    ],\n    \"remote_id\":
-    \"uv197i\"\n  }\n]\n```\n"
-  :get_following: ! "\n```text\nGET /followings/yz8ies HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"56f93b\", mac=\"rSalvjMuYkOriOetq4NpprY0cCxu6vwFyUboy5SrwAQ=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"8c555e124088df54c825a56259add646\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 737\n```\n\n```json\n{\n
+    \"pgi237\"\n  }\n]\n```\n"
+  :get_following: ! "\n```text\nGET /followings/dsq39z HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"f780f8\", mac=\"ZdLBGFvCk3taSYx0QErW0/C6nUkIaXHHJCQO/bpOiM4=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"704d3647cc52f29afba7ce200404e3e7\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 720\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"groups\":
     [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\":
-    \"yz8ies\",\n  \"created_at\": 1354289252,\n  \"updated_at\": 1354289253,\n  \"groups\":
+    \"dsq39z\",\n  \"created_at\": 1354290320,\n  \"updated_at\": 1354290320,\n  \"groups\":
     [\n\n  ],\n  \"profile\": {\n    \"https://tent.io/types/info/basic/v0.1.0\":
     {\n      \"name\": \"The Tentity\",\n      \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \     \"birthdate\": \"2012-08-23\",\n      \"location\": \"The Internet\",\n
-    \     \"gender\": \"Unknown\",\n      \"bio\": \"Fugit dolorem autem culpa eum
-    totam assumenda est.\",\n      \"permissions\": {\n        \"public\": true\n
-    \     },\n      \"version\": 2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\":
-    {\n      \"licenses\": [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \     ],\n      \"entity\": \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
+    \     \"gender\": \"Unknown\",\n      \"bio\": \"Est sed quae non doloribus minus.\",\n
+    \     \"permissions\": {\n        \"public\": true\n      },\n      \"version\":
+    2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\": {\n      \"licenses\":
+    [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n      ],\n      \"entity\":
+    \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
     \       \"http://eqt5g4fuenphqinx.onion/\"\n      ],\n      \"permissions\": {\n
     \       \"public\": true\n      },\n      \"version\": 1\n    }\n  },\n  \"licenses\":
-    [\n\n  ],\n  \"remote_id\": \"uv197i\"\n}\n```\n"
+    [\n\n  ],\n  \"remote_id\": \"pgi237\"\n}\n```\n"
   :get_following_entity_redirect: ! "\n```text\nGET /followings/https%3A%2F%2Fexample.org
-    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\",
-    ts=\"1354289253\", nonce=\"045c22\", mac=\"HiQneenNGN+PUPkIUOvZl0HiQUK32Z8nczxaiZZkI9Y=\"\n```\n\n```text\nHTTP/1.1
-    302 Found\nContent-Type: text/html\nLocation: https://example.com/followings/yz8ies\nCache-Control:
+    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\",
+    ts=\"1354290320\", nonce=\"6a9770\", mac=\"zwzg6hdNdaXJ2yddUWGgzlTIvnZtNZLt8oDcHa0mPvE=\"\n```\n\n```text\nHTTP/1.1
+    302 Found\nContent-Type: text/html\nLocation: https://example.com/followings/dsq39z\nCache-Control:
     \n```\n"
   :create_follower: ! "\n```text\nPOST /followers HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
     application/vnd.tent.v0+json\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n
-    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/yz8ies\",\n
+    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/dsq39z\",\n
     \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"380679a4925dfa53b582699f638324f5\"\nCache-Control:
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"0e14dfdc3bb03e532857907e8fc16ab8\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 296\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
-    true\n  },\n  \"id\": \"uv197i\",\n  \"mac_key_id\": \"s:d467052e\",\n  \"mac_key\":
-    \"f092b63c51f593dbb0e0adcef244d3d0\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
+    true\n  },\n  \"id\": \"pgi237\",\n  \"mac_key_id\": \"s:6d413088\",\n  \"mac_key\":
+    \"5f12ea2b78dbc62a71d2afbeaf649178\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
     \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
-    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/yz8ies\"\n}\n```\n"
+    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/dsq39z\"\n}\n```\n"
   :reset_follower: ! "\n```text\nPOST /followers HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
     application/vnd.tent.v0+json\n```\n\n```json\n{\n  \"entity\": \"https://example.org\",\n
-    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/yz8ies\",\n
+    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/dsq39z\",\n
     \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"792562363783343962695b8348f3c844\"\nCache-Control:
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"4fb472a321e7831cbc33a683003ae9a3\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 296\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"public\":
-    true\n  },\n  \"id\": \"uv197i\",\n  \"mac_key_id\": \"s:d467052e\",\n  \"mac_key\":
-    \"d4ff9504ca961854078e15adfff5ad2e\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
+    true\n  },\n  \"id\": \"pgi237\",\n  \"mac_key_id\": \"s:6d413088\",\n  \"mac_key\":
+    \"dfb283c9bb3b314005230abd7783edf8\",\n  \"mac_algorithm\": \"hmac-sha-256\",\n
     \ \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n
-    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/yz8ies\"\n}\n```\n"
-  :delete_following: ! "\n```text\nDELETE /followings/yz8ies HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"414f20\", mac=\"awp08kGZTnUuhvd/S7XZT5LzxLTqi9oj87LBWQvNaoQ=\"\n```\n\n```text\nHTTP/1.1
+    \ \"types\": [\n    \"all\"\n  ],\n  \"notification_path\": \"notifications/dsq39z\"\n}\n```\n"
+  :delete_following: ! "\n```text\nDELETE /followings/dsq39z HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"915b2f\", mac=\"oNM2aLRGL/zIEHGhdgrFErxoT6Edlc0+kKCMG+vOlBc=\"\n```\n\n```text\nHTTP/1.1
     200 OK\nContent-Type: text/html\nCache-Control: \nContent-Length: 0\n```\n"
-  :auth_get_follower: ! "\n```text\nGET /followers/uv197i HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"c198d5\", mac=\"ZJ+IHzgAphX314kILTEpvKjjE7wo0hPwFX56oZsoLpo=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"af62dde1f2377ae7dcc926a526233471\"\nCache-Control:
-    max-age=0, private, must-revalidate\nContent-Length: 820\n```\n\n```json\n{\n
+  :auth_get_follower: ! "\n```text\nGET /followers/pgi237 HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"2c63dd\", mac=\"fFBHafa4cU/VmvazKLG9hRJiB8qUSNRuondQcI391Rk=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"c68872a5421502ed12d3e2542ff16319\"\nCache-Control:
+    max-age=0, private, must-revalidate\nContent-Length: 803\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"permissions\": {\n    \"groups\":
     [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n  },\n  \"id\":
-    \"uv197i\",\n  \"created_at\": 1354289252,\n  \"updated_at\": 1354289253,\n  \"groups\":
+    \"pgi237\",\n  \"created_at\": 1354290320,\n  \"updated_at\": 1354290320,\n  \"groups\":
     [\n\n  ],\n  \"profile\": {\n    \"https://tent.io/types/info/basic/v0.1.0\":
     {\n      \"name\": \"The Tentity\",\n      \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \     \"birthdate\": \"2012-08-23\",\n      \"location\": \"The Internet\",\n
-    \     \"gender\": \"Unknown\",\n      \"bio\": \"Fugit dolorem autem culpa eum
-    totam assumenda est.\",\n      \"permissions\": {\n        \"public\": true\n
-    \     },\n      \"version\": 2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\":
-    {\n      \"licenses\": [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \     ],\n      \"entity\": \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
+    \     \"gender\": \"Unknown\",\n      \"bio\": \"Est sed quae non doloribus minus.\",\n
+    \     \"permissions\": {\n        \"public\": true\n      },\n      \"version\":
+    2\n    },\n    \"https://tent.io/types/info/core/v0.1.0\": {\n      \"licenses\":
+    [\n        \"http://creativecommons.org/licenses/by/3.0/\"\n      ],\n      \"entity\":
+    \"https://example.org\",\n      \"servers\": [\n        \"https://tent.example.com\",\n
     \       \"http://eqt5g4fuenphqinx.onion/\"\n      ],\n      \"permissions\": {\n
     \       \"public\": true\n      },\n      \"version\": 1\n    }\n  },\n  \"licenses\":
     [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n  ],\n  \"types\": [\n
-    \   \"all\"\n  ],\n  \"notification_path\": \"notifications/yz8ies\"\n}\n```\n"
+    \   \"all\"\n  ],\n  \"notification_path\": \"notifications/dsq39z\"\n}\n```\n"
   :get_follower_entity_redirect: ! "\n```text\nGET /followers/https%3A%2F%2Fexample.org
-    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:d5592d46\",
-    ts=\"1354289253\", nonce=\"c68fc7\", mac=\"VS/sUU2vQJYsdz7OfpkQZEkiw8VoBj2aNZNwQ8KRkIw=\"\n```\n\n```text\nHTTP/1.1
-    302 Found\nContent-Type: text/html\nLocation: https://example.com/followers/uv197i\nCache-Control:
+    HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization: MAC id=\"u:9eafb9ba\",
+    ts=\"1354290320\", nonce=\"10edc0\", mac=\"ShNBr0esYAScwc69oGE3w1o06a3o8OkazF6NA9U8MwA=\"\n```\n\n```text\nHTTP/1.1
+    302 Found\nContent-Type: text/html\nLocation: https://example.com/followers/pgi237\nCache-Control:
     \n```\n"
-  :get_follower: ! "\n```text\nGET /followers/uv197i HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:d467052e\", ts=\"1354289253\", nonce=\"ebc849\", mac=\"mzTtSBPQb1VJwTaq0JpdvNTf1a/R81JvLL0aRj3jIzc=\"\n```\n\n```text\nHTTP/1.1
+  :get_follower: ! "\n```text\nGET /followers/pgi237 HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"s:6d413088\", ts=\"1354290320\", nonce=\"9dc8e3\", mac=\"YrEF/kf0majMs7f8UqrHI4PHDAuYgtnDFFgyNDJeu7Q=\"\n```\n\n```text\nHTTP/1.1
     403 Forbidden\nContent-Type: application/vnd.tent.v0+json\nCache-Control: \nContent-Length:
     33\n```\n\n```json\n{\n  \"error\": \"Invalid MAC Signature\"\n}\n```\n"
-  :update_follower: ! "\n```text\nPUT /followers/uv197i HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
-    application/vnd.tent.v0+json\nAuthorization: MAC id=\"s:d467052e\", ts=\"1354289253\",
-    nonce=\"224d75\", mac=\"CcNu8JbE2QnE1Hh9ZgvSItTkF7HhV9FPfnWycKmDH6U=\"\n```\n\n```json\n{\n
+  :update_follower: ! "\n```text\nPUT /followers/pgi237 HTTP/1.1\nContent-Type: application/vnd.tent.v0+json\nAccept:
+    application/vnd.tent.v0+json\nAuthorization: MAC id=\"s:6d413088\", ts=\"1354290320\",
+    nonce=\"59a873\", mac=\"GRRLo3GCyiJwPsNlon4nZUmOXniDgz+W7oxTlNLYffY=\"\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
     \ ],\n  \"types\": [\n    \"https://tent.io/types/post/essay/v0.1.0#full\"\n  ]\n}\n```\n\n```text\nHTTP/1.1
     403 Forbidden\nContent-Type: application/vnd.tent.v0+json\nCache-Control: \nContent-Length:
     33\n```\n\n```json\n{\n  \"error\": \"Invalid MAC Signature\"\n}\n```\n"
   :get_followers: ! "\n```text\nGET /followers HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"e84fa8\", mac=\"ZY6JEa8jn3zK0tCbo/d7jEbmkRPMgUQV+8g2Zfpo0qE=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/followers?since_id=uv197i>;
-    rel=\"prev\",<https://example.com/followers?before_id=uv197i>; rel=\"next\"\nETag:
-    \"24a6a52cbe74fd5aa75074f26ff29226\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
-    822\n```\n\n```json\n[\n  {\n    \"entity\": \"https://example.org\",\n    \"permissions\":
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"b8dabc\", mac=\"UeL1REjjWJvQb1eT5xeWJ2Z4yTmqR5PU7ql1OyPbTP8=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/followers?since_id=pgi237>;
+    rel=\"prev\",<https://example.com/followers?before_id=pgi237>; rel=\"next\"\nETag:
+    \"fa751fb67d1f59921479a3aa767956f0\"\nCache-Control: max-age=0, private, must-revalidate\nContent-Length:
+    805\n```\n\n```json\n[\n  {\n    \"entity\": \"https://example.org\",\n    \"permissions\":
     {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
-    true\n    },\n    \"id\": \"uv197i\",\n    \"created_at\": 1354289252,\n    \"updated_at\":
-    1354289253,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/basic/v0.1.0\":
+    true\n    },\n    \"id\": \"pgi237\",\n    \"created_at\": 1354290320,\n    \"updated_at\":
+    1354290320,\n    \"groups\": [\n\n    ],\n    \"profile\": {\n      \"https://tent.io/types/info/basic/v0.1.0\":
     {\n        \"name\": \"The Tentity\",\n        \"avatar_url\": \"http://example.org/avatar.jpg\",\n
     \       \"birthdate\": \"2012-08-23\",\n        \"location\": \"The Internet\",\n
-    \       \"gender\": \"Unknown\",\n        \"bio\": \"Fugit dolorem autem culpa
-    eum totam assumenda est.\",\n        \"permissions\": {\n          \"public\":
-    true\n        },\n        \"version\": 2\n      },\n      \"https://tent.io/types/info/core/v0.1.0\":
+    \       \"gender\": \"Unknown\",\n        \"bio\": \"Est sed quae non doloribus
+    minus.\",\n        \"permissions\": {\n          \"public\": true\n        },\n
+    \       \"version\": 2\n      },\n      \"https://tent.io/types/info/core/v0.1.0\":
     {\n        \"licenses\": [\n          \"http://creativecommons.org/licenses/by/3.0/\"\n
     \       ],\n        \"entity\": \"https://example.org\",\n        \"servers\":
     [\n          \"https://tent.example.com\",\n          \"http://eqt5g4fuenphqinx.onion/\"\n
     \       ],\n        \"permissions\": {\n          \"public\": true\n        },\n
     \       \"version\": 1\n      }\n    },\n    \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n
-    \   ],\n    \"types\": [\n      \"all\"\n    ],\n    \"notification_path\": \"notifications/yz8ies\"\n
+    \   ],\n    \"types\": [\n      \"all\"\n    ],\n    \"notification_path\": \"notifications/dsq39z\"\n
     \ }\n]\n```\n"
   :get_posts: ! "\n```text\nGET /posts HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"1c7662\", mac=\"4tha/s4xR9P6iwXfXxDbENVwRrsqKOIcpcUBSbuf2Qw=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/posts?since_id=72g46l&since_id_entity=https%3A%2F%2Fexample.org>;
-    rel=\"prev\",<https://example.com/posts?before_id=13288h&before_id_entity=https%3A%2F%2Fexample.org>;
-    rel=\"next\"\nETag: \"da41287d409829f9f27258e2d7c5e998\"\nCache-Control: max-age=0,
-    private, must-revalidate\nContent-Length: 3399\n```\n\n```json\n[\n  {\n    \"entity\":
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"a8da0a\", mac=\"v3gm6NpeHtN1JmEvceRNR3QDR1LOltlRUtbrHmJhH70=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nLink: <https://example.com/posts?since_id=7964jb&since_id_entity=https%3A%2F%2Fexample.org>;
+    rel=\"prev\",<https://example.com/posts?before_id=j0g8az&before_id_entity=https%3A%2F%2Fexample.org>;
+    rel=\"next\"\nETag: \"789abc6670aa3415470e929fa7ba715d\"\nCache-Control: max-age=0,
+    private, must-revalidate\nContent-Length: 3398\n```\n\n```json\n[\n  {\n    \"entity\":
     \"https://example.org\",\n    \"licenses\": [\n\n    ],\n    \"content\": {\n
-    \     \"id\": \"uv197i\",\n      \"entity\": \"https://example.org\",\n      \"action\":
-    \"create\"\n    },\n    \"published_at\": 1354289253,\n    \"permissions\": {\n
+    \     \"id\": \"pgi237\",\n      \"entity\": \"https://example.org\",\n      \"action\":
+    \"create\"\n    },\n    \"published_at\": 1354290320,\n    \"permissions\": {\n
     \     \"groups\": [\n\n      ],\n      \"entities\": {\n      },\n      \"public\":
-    true\n    },\n    \"id\": \"72g46l\",\n    \"updated_at\": 1354289253,\n    \"received_at\":
-    1354289253,\n    \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/follower/v0.1.0\",\n
+    true\n    },\n    \"id\": \"7964jb\",\n    \"updated_at\": 1354290320,\n    \"received_at\":
+    1354290320,\n    \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/follower/v0.1.0\",\n
     \   \"version\": 2,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
-    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"uv197i\",\n
+    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"pgi237\",\n
     \     \"entity\": \"https://example.org\",\n      \"action\": \"create\"\n    },\n
-    \   \"published_at\": 1354289253,\n    \"permissions\": {\n      \"groups\": [\n\n
+    \   \"published_at\": 1354290320,\n    \"permissions\": {\n      \"groups\": [\n\n
     \     ],\n      \"entities\": {\n      },\n      \"public\": true\n    },\n    \"id\":
-    \"k0de8j\",\n    \"updated_at\": 1354289253,\n    \"received_at\": 1354289253,\n
+    \"7pbhhu\",\n    \"updated_at\": 1354290320,\n    \"received_at\": 1354290320,\n
     \   \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/follower/v0.1.0\",\n
     \   \"version\": 2,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
-    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"yz8ies\",\n
+    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"dsq39z\",\n
     \     \"entity\": \"https://example.org\",\n      \"action\": \"create\"\n    },\n
-    \   \"published_at\": 1354289253,\n    \"permissions\": {\n      \"groups\": [\n\n
+    \   \"published_at\": 1354290320,\n    \"permissions\": {\n      \"groups\": [\n\n
     \     ],\n      \"entities\": {\n      },\n      \"public\": true\n    },\n    \"id\":
-    \"1qve4j\",\n    \"updated_at\": 1354289253,\n    \"received_at\": 1354289253,\n
+    \"pke93g\",\n    \"updated_at\": 1354290320,\n    \"received_at\": 1354290320,\n
     \   \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/following/v0.1.0\",\n
     \   \"version\": 2,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
-    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"uv197i\",\n
+    \   \"licenses\": [\n\n    ],\n    \"content\": {\n      \"id\": \"pgi237\",\n
     \     \"entity\": \"https://example.org\",\n      \"action\": \"create\"\n    },\n
-    \   \"published_at\": 1354289252,\n    \"permissions\": {\n      \"groups\": [\n\n
+    \   \"published_at\": 1354290320,\n    \"permissions\": {\n      \"groups\": [\n\n
     \     ],\n      \"entities\": {\n      },\n      \"public\": true\n    },\n    \"id\":
-    \"35ja3b\",\n    \"updated_at\": 1354289253,\n    \"received_at\": 1354289252,\n
+    \"734hw\",\n    \"updated_at\": 1354290320,\n    \"received_at\": 1354290320,\n
     \   \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/follower/v0.1.0\",\n
     \   \"version\": 2,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
     \   \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n
     \   \"content\": {\n      \"caption\": \"Some fake photos\"\n    },\n    \"published_at\":
-    1354289252,\n    \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\":
-    {\n      },\n      \"public\": true\n    },\n    \"id\": \"40lq1b\",\n    \"updated_at\":
-    1354289252,\n    \"received_at\": 1354289252,\n    \"attachments\": [\n      {\n
+    1354290320,\n    \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\":
+    {\n      },\n      \"public\": true\n    },\n    \"id\": \"sx7p90\",\n    \"updated_at\":
+    1354290320,\n    \"received_at\": 1354290320,\n    \"attachments\": [\n      {\n
     \       \"type\": \"image/jpeg\",\n        \"category\": \"photos\",\n        \"name\":
     \"fake_photo1.jpg\",\n        \"size\": 26,\n        \"id\": 1\n      },\n      {\n
     \       \"type\": \"image/jpeg\",\n        \"category\": \"photos\",\n        \"name\":
@@ -421,61 +451,62 @@
     \   \"app\": {\n      \"url\": \"http://example.com\",\n      \"name\": \"FooApp\"\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
     \   \"licenses\": [\n\n    ],\n    \"content\": {\n    },\n    \"published_at\":
-    1354289252,\n    \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\":
-    {\n      },\n      \"public\": true\n    },\n    \"id\": \"xkd0v8\",\n    \"updated_at\":
-    1354289252,\n    \"received_at\": 1354289252,\n    \"attachments\": [\n\n    ],\n
+    1354290320,\n    \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\":
+    {\n      },\n      \"public\": true\n    },\n    \"id\": \"5w7nxq\",\n    \"updated_at\":
+    1354290320,\n    \"received_at\": 1354290320,\n    \"attachments\": [\n\n    ],\n
     \   \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n    \"version\":
     1,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n    },\n    \"mentions\":
     [\n\n    ]\n  },\n  {\n    \"entity\": null,\n    \"licenses\": [\n\n    ],\n
     \   \"content\": {\n      \"action\": \"update\",\n      \"types\": [\n        \"https://tent.io/types/info/basic/v0.1.0\"\n
-    \     ]\n    },\n    \"published_at\": 1354289252,\n    \"permissions\": {\n      \"groups\":
+    \     ]\n    },\n    \"published_at\": 1354290320,\n    \"permissions\": {\n      \"groups\":
     [\n\n      ],\n      \"entities\": {\n      },\n      \"public\": true\n    },\n
-    \   \"id\": \"nlyyrz\",\n    \"updated_at\": 1354289252,\n    \"received_at\":
-    1354289252,\n    \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/profile/v0.1.0\",\n
+    \   \"id\": \"5e1h2t\",\n    \"updated_at\": 1354290320,\n    \"received_at\":
+    1354290320,\n    \"attachments\": [\n\n    ],\n    \"type\": \"https://tent.io/types/post/profile/v0.1.0\",\n
     \   \"version\": 2,\n    \"app\": {\n      \"url\": null,\n      \"name\": null\n
     \   },\n    \"mentions\": [\n\n    ]\n  },\n  {\n    \"entity\": \"https://example.org\",\n
     \   \"licenses\": [\n      \"http://creativecommons.org/licenses/by/3.0/\"\n    ],\n
     \   \"content\": {\n      \"text\": \"Just landed.\",\n      \"location\": {\n
     \       \"type\": \"Point\",\n        \"coordinates\": [\n          50.923878,\n
-    \         4.028605\n        ]\n      }\n    },\n    \"published_at\": 1354289252,\n
+    \         4.028605\n        ]\n      }\n    },\n    \"published_at\": 1354290320,\n
     \   \"permissions\": {\n      \"groups\": [\n\n      ],\n      \"entities\": {\n
-    \     },\n      \"public\": true\n    },\n    \"id\": \"13288h\",\n    \"updated_at\":
-    1354289252,\n    \"received_at\": 1354289252,\n    \"attachments\": [\n\n    ],\n
+    \     },\n      \"public\": true\n    },\n    \"id\": \"j0g8az\",\n    \"updated_at\":
+    1354290320,\n    \"received_at\": 1354290320,\n    \"attachments\": [\n\n    ],\n
     \   \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n    \"version\":
     1,\n    \"app\": {\n      \"url\": \"http://example.com\",\n      \"name\": \"FooApp\"\n
     \   },\n    \"mentions\": [\n      {\n        \"entity\": \"https://example.org\",\n
-    \       \"post\": \"xkd0v8\"\n      }\n    ]\n  }\n]\n```\n"
-  :get_post: ! "\n```text\nGET /posts/13288h HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"8233c6\", mac=\"RNQZNHSjVqudJ5y9mbdMPbyb5mddDRGGMoAlwAS0sdo=\"\n```\n\n```text\nHTTP/1.1
-    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"fd8aa0360ecd1c4b3d3ccc48f2016b71\"\nCache-Control:
+    \       \"post\": \"5w7nxq\"\n      }\n    ]\n  }\n]\n```\n"
+  :get_post: ! "\n```text\nGET /posts/j0g8az HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"5d1912\", mac=\"JDbr63JUuWZnwd9HlRHflwGv3VRVD9Ak0t8yO9I1FQk=\"\n```\n\n```text\nHTTP/1.1
+    200 OK\nContent-Type: application/vnd.tent.v0+json\nETag: \"7457fc10fd063667196cc45dd8117e92\"\nCache-Control:
     max-age=0, private, must-revalidate\nContent-Length: 525\n```\n\n```json\n{\n
     \ \"entity\": \"https://example.org\",\n  \"licenses\": [\n    \"http://creativecommons.org/licenses/by/3.0/\"\n
     \ ],\n  \"content\": {\n    \"text\": \"Just landed.\",\n    \"location\": {\n
     \     \"type\": \"Point\",\n      \"coordinates\": [\n        50.923878,\n        4.028605\n
-    \     ]\n    }\n  },\n  \"published_at\": 1354289252,\n  \"permissions\": {\n
+    \     ]\n    }\n  },\n  \"published_at\": 1354290320,\n  \"permissions\": {\n
     \   \"groups\": [\n\n    ],\n    \"entities\": {\n    },\n    \"public\": true\n
-    \ },\n  \"id\": \"13288h\",\n  \"updated_at\": 1354289252,\n  \"received_at\":
-    1354289252,\n  \"attachments\": [\n\n  ],\n  \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n
+    \ },\n  \"id\": \"j0g8az\",\n  \"updated_at\": 1354290320,\n  \"received_at\":
+    1354290320,\n  \"attachments\": [\n\n  ],\n  \"type\": \"https://tent.io/types/post/status/v0.1.0\",\n
     \ \"version\": 1,\n  \"app\": {\n    \"url\": \"http://example.com\",\n    \"name\":
     \"FooApp\"\n  },\n  \"mentions\": [\n    {\n      \"entity\": \"https://example.org\",\n
-    \     \"post\": \"xkd0v8\"\n    }\n  ]\n}\n```\n"
-  :follower_get_post: ! "\n```text\nGET /posts/13288h HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:d467052e\", ts=\"1354289253\", nonce=\"e6d1f2\", mac=\"y91CW4BR4F5MnJu4mYe88HWNUqc6qX3uNRavARSBQsw=\"\n```\n\n```text\nHTTP/1.1
+    \     \"post\": \"5w7nxq\"\n    }\n  ]\n}\n```\n"
+  :follower_get_post: ! "\n```text\nGET /posts/j0g8az HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"s:6d413088\", ts=\"1354290320\", nonce=\"efd4c4\", mac=\"bva/dwDJFzYnHMgzJwM49yBf5giRpI+g31LYB4MSzLA=\"\n```\n\n```text\nHTTP/1.1
     403 Forbidden\nContent-Type: application/vnd.tent.v0+json\nCache-Control: \nContent-Length:
     33\n```\n\n```json\n{\n  \"error\": \"Invalid MAC Signature\"\n}\n```\n"
   :follower_get_posts: ! "\n```text\nGET /posts HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:d467052e\", ts=\"1354289253\", nonce=\"a15379\", mac=\"YcFnizXqVJb56IbmZmmieBERBl8wbGI83hzdFS12YYQ=\"\n```\n\n```text\nHTTP/1.1
+    MAC id=\"s:6d413088\", ts=\"1354290320\", nonce=\"ed11b1\", mac=\"/IAhOmlHv6zzCovUFfgTPvNYy9mQZeTgBmN3ZVEarzA=\"\n```\n\n```text\nHTTP/1.1
     403 Forbidden\nContent-Type: application/vnd.tent.v0+json\nCache-Control: \nContent-Length:
     33\n```\n\n```json\n{\n  \"error\": \"Invalid MAC Signature\"\n}\n```\n"
-  :delete_post: ! "\n```text\nDELETE /posts/13288h HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"u:d5592d46\", ts=\"1354289253\", nonce=\"5c94e1\", mac=\"Ow5KXP0kWKr8cY50p9jEr3u6S7fdZicWAqQOdHyai6I=\"\n```\n\n```text\nHTTP/1.1
+  :delete_post: ! "\n```text\nDELETE /posts/j0g8az HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"u:9eafb9ba\", ts=\"1354290320\", nonce=\"64614b\", mac=\"ZW3/58Qt0OMcncI5Xt3DOhe5Xm+8nRtcLQEWrIvWfo4=\"\n```\n\n```text\nHTTP/1.1
     200 OK\nContent-Type: text/html\nCache-Control: \nContent-Length: 0\n```\n"
-  :delete_follower: ! "\n```text\nDELETE /followers/uv197i HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
-    MAC id=\"s:d467052e\", ts=\"1354289253\", nonce=\"fb8cd4\", mac=\"XzLS7frGn6pTvG1Ttaxmx7nEY6U2HOBcAeHSFbuYebM=\"\n```\n\n```text\nHTTP/1.1
+  :delete_follower: ! "\n```text\nDELETE /followers/pgi237 HTTP/1.1\nAccept: application/vnd.tent.v0+json\nAuthorization:
+    MAC id=\"s:6d413088\", ts=\"1354290321\", nonce=\"8fd091\", mac=\"cKutYrruBJvYMzT0FvPp0UnXMHmPaSLC3HTS6bBXhqE=\"\n```\n\n```text\nHTTP/1.1
     403 Forbidden\nContent-Type: application/vnd.tent.v0+json\nCache-Control: \nContent-Length:
     33\n```\n\n```json\n{\n  \"error\": \"Invalid MAC Signature\"\n}\n```\n"
 :variables:
-  :app_code: 0e74ac0407de92ff00fdbd353cf0b634
-  :app_id: 8fzhpy
-  :post_id: 13288h
-  :follower_id: uv197i
+  :app_code: 0e18ac932d24a58f7056412954843079
+  :app_id: k3suar
+  :group_id: s7k2sw
+  :post_id: j0g8az
+  :follower_id: pgi237
