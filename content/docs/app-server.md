@@ -59,6 +59,11 @@ Apps can request information on the relationship with a specific entity being fo
 
 {get_following example}
 
+### GET /followings/:entity
+
+Redirects to `GET /followings/:id` if exists, otherwise returns `404`.
+
+{get_following_entity_redirect example}
 
 ### DELETE /followings/:id
 
