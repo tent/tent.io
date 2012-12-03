@@ -31,18 +31,24 @@ Global cursors for each post type helps multiple apps hold the same feed positio
 
 Cursor properties must be scoped by post type uri.
 
+There is also a `mentions` cursor that wraps post type cursors and represents the last seen post of each type mentioning the user.
+
 **Example:**
 
 ```json
 {
-	"https://tent.io/types/info/cursor/v0.1.0": {
-		"https://tent.io/types/post/status/v0.1.0": {
-			{
-				"post_id": "fh3n5i",
-				"post_entity": "https://example.com"
-			}
-		}
-	}
+  "https://tent.io/types/info/cursor/v0.1.0": {
+    "https://tent.io/types/post/status/v0.1.0": {
+      "post_id": "fh3n5i",
+      "post_entity": "https://example.com"
+    },
+    "mentions": {
+      "https://tent.io/types/post/status/v0.1.0": {
+        "post_id": "fh3n5i",
+        "post_entity": "https://example.com"
+      }
+    }
+  }
 }
 ```
 
