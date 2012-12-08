@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/tent-schemas.git
-  revision: c126244668b1853d9b9e3c5bdaabb8eeb88df8b2
+  revision: 8c33a680a1e0c6ae5e4b5576e04f9486204f8559
   branch: release_0.2
   specs:
     tent-schemas (0.0.1)
