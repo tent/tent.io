@@ -61,7 +61,7 @@ Apps can request information on the relationship with a specific entity being fo
 
 ### GET /followings/:entity
 
-Redirects to `GET /followings/:id` if exists, otherwise returns `404`.
+Returns following and sets `Content-Location` to `.../followings/:id` if exists, otherwise returns `404`.
 
 {get_following_entity_redirect example}
 
@@ -97,7 +97,7 @@ Apps can request information on a specific follower.
 
 ### GET /followers/:entity
 
-Redirects to `GET /followers/:id` if exists, otherwise returns `404`.
+Returns follower and sets `Content-Location` to `.../followers/:id` if exists, otherwise returns `404`.
 
 {get_follower_entity_redirect example}
 
