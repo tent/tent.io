@@ -19,6 +19,15 @@ Apps can add or edit information in a user's profile including adding new profil
 
 {update_profile example}
 
+### GET /profile/:type
+
+{get_profile_type example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `version` | Returns specific version of profile type |
 
 ### POST /followings
 
@@ -50,6 +59,11 @@ Apps can request information on the relationship with a specific entity being fo
 
 {get_following example}
 
+### GET /followings/:entity
+
+Returns following and sets `Content-Location` to `.../followings/:id` if exists, otherwise returns `404`.
+
+{get_following_entity_redirect example}
 
 ### DELETE /followings/:id
 
@@ -81,6 +95,11 @@ Apps can request information on a specific follower.
 
 {auth_get_follower example}
 
+### GET /followers/:entity
+
+Returns follower and sets `Content-Location` to `.../followers/:id` if exists, otherwise returns `404`.
+
+{get_follower_entity_redirect example}
 
 ### DELETE /followers/:id
 
@@ -143,10 +162,44 @@ Apps can retrieve attachments from a specific post by name and content-type from
 
 {get_post_attachment example}
 
+### GET /posts/:id/mentions
+
+Returns mentions for a post that reference a known public post.
+
+{get_post_mentions example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `post_types` | Constrains mentions to those referencing posts that match specific comma-separated type URIs. |
+
 ### DELETE /posts/:id
 
 Apps can delete a specific post.
 
 {delete_post example}
 
+### POST /groups
 
+Apps can create groups when they have the `write_groups` scope.
+
+{create_group example}
+
+### GET /groups
+
+{get_groups example}
+
+### PUT /groups/:id
+
+You can update the name of the group with the `write_groups` scope.
+
+{update_group example}
+
+### GET /groups/:id
+
+{get_group example}
+
+### DELETE /groups/:id
+
+{delete_group example}

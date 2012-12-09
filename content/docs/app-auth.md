@@ -76,7 +76,8 @@ user-agent to it:
 | `write_followings` | Read followings list and follow new entities                           |
 | `read_posts`       | Read posts with types listed in the `post_types` parameter             |
 | `write_posts`      | Read and publish posts with types listed in the `post_types` parameter |
-
+| `read_groups`      | Read groups                                                            |
+| `write_groups`     | Read groups and create/update/delete them.                             |
 
 #### Redirect
 
@@ -102,6 +103,14 @@ to access the Tent server on behalf of the user.
 The request must be signed with a MAC using the secret obtained during app
 registration. Currently only the `mac` `token_type` is supported.
 
+##### Request Parameters
+
+| Name            | Description                                      |
+| --------------- | ------------------------------------------------ |
+| `code`          | Code received via the auth request callback      |
+| `token_type`    | Specifies the token type. Currently always `mac` |
+| `tent_expires_at` | (Optional) Epoch timestamp indicating when the authorization expires (for temporary authorizations.) |
+
 {app_auth example}
 
 ##### Response Parameters
@@ -112,6 +121,8 @@ registration. Currently only the `mac` `token_type` is supported.
 | `mac_key`       | Used as the MAC key for requests.                |
 | `mac_algorithm` | The MAC algorithm to be used.                    |
 | `token_type`    | Specifies the token type. Currently always `mac` |
+| `refresh_token` | Can be used as `code` to request new credentials.|
+| `tent_expires_at` | Epoch timestamp indicating when the authorization expires. |
 
 
 ### Request Authentication
@@ -140,3 +151,7 @@ initial registration.
 #### PUT /apps/:id
 
 {update_app example}
+
+#### DELETE /apps/:id
+
+{delete_app example}
