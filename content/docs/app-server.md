@@ -164,7 +164,7 @@ Apps can retrieve attachments from a specific post by name and content-type from
 
 ### GET /posts/:id/mentions
 
-Returns mentions for a post that reference a known public post.
+Returns mentions of post that are public and known to the server.
 
 {get_post_mentions example}
 
