@@ -80,6 +80,10 @@ the credentials.
 
 {create_follower example}
 
+### Reset auth credentials
+
+{reset_follower example}
+
 
 ## Notifications
 
@@ -114,7 +118,6 @@ for all requests.
 
 All requests must be signed using MAC, and all notifications from the server
 are signed as well.
-
 
 ## Get Current Following
 
@@ -158,3 +161,15 @@ There are a number of parameters available to limit the scope of the request.
 It is also possible to retrieve a single post by that post's id. This is useful in retrieving reposted content and 
 
 {follower_get_post example}
+
+## Error Responses
+
+As of v0.2 all error responses returned from the server are expected to be in the following format:
+
+{error_response example}
+
+### Response Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `error` | Reason for error. |
