@@ -174,6 +174,12 @@ Returns mentions of post that are public and known to the server.
 | ---- | ----------- |
 | `post_types` | Constrains mentions to those referencing posts that match specific comma-separated type URIs. |
 
+### PUT /posts/:id
+
+Apps can update a specific post.
+
+{update_post example}
+
 ### DELETE /posts/:id
 
 Apps can delete a specific post.
