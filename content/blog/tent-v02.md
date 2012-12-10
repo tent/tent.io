@@ -3,7 +3,7 @@ title: Tent v0.2
 kind: article
 created_at: December 10, 2012 14:05 EDT
 ---
-Tent version 0.2 is now available. All changes to the protocol are additions, no features have been depreciated or removed.
+Tent version 0.2 is now available. All changes to the protocol are additions, no features have been deprecated or removed.
 
 ## What's New
 
