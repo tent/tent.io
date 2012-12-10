@@ -29,6 +29,16 @@ Apps can add or edit information in a user's profile including adding new profil
 | ---- | ----------- |
 | `version` | Returns specific version of profile type |
 
+### DELETE /profile/:type
+
+{delete_profile_type example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `version` | Specifies a specific version to delete. |
+
 ### POST /followings
 
 Apps can tell a server to follow another entity.
