@@ -180,6 +180,12 @@ Apps can delete a specific post.
 
 {delete_post example}
 
+### Delete a specific version
+
+Apps can delete a specific version of a specific post.
+
+{delete_post_version example}
+
 ### POST /groups
 
 Apps can create groups when they have the `write_groups` scope.
