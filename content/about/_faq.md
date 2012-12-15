@@ -135,9 +135,9 @@ social web. Each of them lacked several critical features necessary for modern u
 
 Tent needs *you*, not your money. There are several ways you can help:
 
-1. **Start your own Tent server.**  The most important thing you can do is switch to
-   using Tent. Very soon you will be able to download the source code for Tent server and host your own.
-   There will also be a hosted service at Tent.is soon.
+1. **Start your own Tent server.**  The most important thing you can do is start
+   using Tent. Download the [source code for tentd](https://github.com/tent/tentd-admin) and host your own.
+   [Tent.is](https://tent.is) is a Tent hosting service for users who don't want to manage their own server.
 2. **Tell your friends.**  The next generation of the social web won't be of much
    use if people don't use it for their social networks. Tell your friends to
    get a Tent server and proudly display your Tent address throughout your
