@@ -18,7 +18,7 @@ Some applications use Tent to store a backup, personal copy, or export of users'
 
 ### 100% Tent 
 
-Some applications fully embrace Tent in its entirely. These apps use Tent for communication between users, data and file storage, sign-in, social graph, cross-device sync, and all other transactions. There are many advantages to using applications architected in this way.
+Some applications fully embrace Tent in its entirety. These apps use Tent for communication between users, data and file storage, sign-in, social graph, cross-device sync, and all other transactions. There are many advantages to using applications architected in this way.
 
 These applications do not require server infrastructure which means there is no developer maintenance required. Since users' Tent servers manage storage and communication, developers do not pay for infrastructure. Essentially, developers define logic and create the design and UI, but Tent handles communication, storage, and sign-in. In practice this can remove the need for advertisements or subscription fees/plans to cover the cost of operation since developers can "ship it and forget it". If a developer abandons a project, users are unaffected and the service continues operation. 
 
