@@ -189,6 +189,12 @@ Returns mentions of post that are public and known to the server.
 | Name | Description |
 | ---- | ----------- |
 | `post_types` | Constrains mentions to those referencing posts that match specific comma-separated type URIs. |
+| `before_id` | Mentions referencing posts made before a specific post identifier. |
+| `before_id_entity` | The entity which made the post that has the id given in `before_id`. |
+| `since_id` | Mentions referencing posts made since a specific post identifier. |
+| `since_id_entity` | The entity which made the post that has the id given in `since_id`. |
+| `until_id` | Mentions referencing posts made until a specific post identifier. (Similar to `since_id`). |
+| `until_id_entity` | The entity which made the post that has the id given in `until_id`. |
 
 ### PUT /posts/:id
 
