@@ -156,6 +156,8 @@ GET parameters can be used to filter and paginate the returned posts.
 | `post_types` | Posts that match specific comma-separated type URIs. |
 | `limit` | The number of posts to return (defaults to the maximum of 200). |
 
+[pagination diagram](<%= image_url('tent_pagination.png') %>)
+
 
 ### GET /posts/:id
 
