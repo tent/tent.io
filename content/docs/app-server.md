@@ -195,6 +195,7 @@ Returns mentions of post that are public and known to the server.
 | `since_id_entity` | The entity which made the post that has the id given in `since_id`. |
 | `until_id` | Mentions referencing posts made until a specific post identifier. (Similar to `since_id`). |
 | `until_id_entity` | The entity which made the post that has the id given in `until_id`. |
+| `limit` | The number of mentions to return (maximum of 200). |
 
 ### PUT /posts/:id
 
