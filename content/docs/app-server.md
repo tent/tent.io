@@ -202,6 +202,21 @@ Apps can update a specific post.
 
 {update_post example}
 
+### GET /posts/:id/versions
+
+Returns versions of post.
+
+{get_post_versions example}
+
+#### URL Parameters
+
+| Name | Description |
+| ---- | ----------- |
+| `since_version` | Versions since specific version. |
+| `until_version` | Versions until specific version. |
+| `before_version` | Versions before specific version. |
+| `limit` | The number of versions to return (maximum of 200). |
+
 ### DELETE /posts/:id
 
 Apps can delete a specific post.
