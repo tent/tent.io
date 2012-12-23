@@ -60,6 +60,7 @@ GET parameters can be used to filter and paginate the returned followings.
 | ---- | ----------- |
 | `before_id` | Followings before a specific entity identifier. |
 | `since_id` | Followings since a specific entity identifier. |
+| `until_id` | Followings until a specific entity identifier. |
 | `limit` | The number of followings to return (defaults to the maximum of 50). |
 
 
@@ -96,6 +97,7 @@ GET parameters can be used to filter and paginate the returned followers.
 | ---- | ----------- |
 | `before_id` | Followers before a specific entity identifier. |
 | `since_id` | Followers since a specific entity identifier. |
+| `until_id` | Followers until a specific entity identifier. |
 | `limit` | The number of followers to return (defaults to the maximum of 50). |
 
 
@@ -144,6 +146,8 @@ GET parameters can be used to filter and paginate the returned posts.
 | `before_id` | Posts made before a specific post identifier. |
 | `since_id_entity` | The entity which made the post that has the id given in `since_id`.  This can be omitted if the post's owner is the one receiving the `GET /posts` request.  |
 | `before_id_entity` | The entity which made the post that has the id given in `before_id`.  This can be omitted if the post's owner is the one receiving the `GET /posts` request.  |
+| `until_id` | Posts made until a specific post identifier. (Similar to `since_id`) |
+| `until_id_entity` | The entity which made the post that has the id given in `until_id`. This can be omitted if the post's owner is the one receiving the `GET /posts` request. |
 | `since_time` | Posts with `received_at` greater than the specified unix epoch. |
 | `before_time` | Posts with `received_at` less than the specified unix epoch. |
 | `sort_by` | Possible values are `received_at` (default) and `published_at`. This effects `since_time` and `before_time`. |
