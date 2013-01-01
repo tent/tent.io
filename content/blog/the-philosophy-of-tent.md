@@ -52,7 +52,7 @@ All data should be saved to the user's Tent server. Apps can keep a local cache
 for offline use or to speed the launch process, but all critical data should
 live primarily on the server. Devices can be lost, stolen, or wiped. When this
 occurs Tent servers can revoke an application's access credentials on
-a specific devics. Users benefit from the peace of mind that comes from
+a specific devices. Users benefit from the peace of mind that comes from
 knowing that all their data is stored safely in one place that they contol.
 
 Tent servers try to save all of the posts and profile info they encounter.
