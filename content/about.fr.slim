@@ -1,0 +1,51 @@
+#main
+  h2 Tent est un protocole pour les réseaux sociaux.
+  p Tent est ouvert, décentralisé, et construit pour l'avenir. Tent change tout.
+  h3 Démarrage
+  p Les utilisateurs Tent peuvent héberger ses propres serveurs, mais comme la plupart d'email et d'internet, ils peuvent aussi utiliser une service d'hébergement.
+  ol
+    li
+      | Les utilisateurs qui veulent héberger leurs propres serveurs devrait commencer avec 
+      a href="https://github.com/tent/tentd" tentd
+      | , le serveur de référence.
+    li 
+      | Autrement,
+      a href="https://tent.is" Tent.is 
+      | offre l'hébergement facile d'un compte Tent.
+
+
+  h3 Comment ça marche?
+  b Décentralisé
+  p Email, the World Wide Web and the Internet itself are decentralized. 
+  p L'email et l'Internet soi-même sont décentralisé.
+  p Les services centralisées ne peuvent pas répondre aux besoins de tous les utilisateurs, parce qu'ils mettent des limites aux développeurs avec des API fermés et propriétaires. Les utilisateurs doivent choisir entre les divers réseaux et fournisseurs, donc ils se fragmentent leurs relations, messages, memoires et données. Les utilisateurs doivent fréquenter plusieurs sites et applications juste pour voir ce qui se passe dans leurs vies.
+  b Les applications
+  p Anyone can write any kind of Tent app. The only person's permission a developer needs is the user's. Users use the apps they want and keep all their posts, relationships, and messages in one place. 
+  p N'importe qui peut développer des applications Tent. Le développeur n'a besoin que l'autorisation de l'utilisateur. Les utilisateurs utilisent toutes les applications qu'ils veulent, et ils gardent toutes leurs publications, relations et messages dans un seul endroit.
+  p Tent est construit pour l'avenir. Les développeurs peuvent créer des nouveaux types de post et d'information de profil, donc ils peuvent facilment ajouter des nouvelles types d'interactions comme de la vidéo streaming, d'email, des cartes ou des hologrammes.
+  b Le cycle de vie d'un post
+  p
+    ol
+      li Julie visite un restaurant.
+      li Julie écrit un message court sur TentStatus
+      li TentStatus envoie le message vers le serveur de Julie
+      li Le serveur de Julie envoie le message vers des serveurs des amis (François et Carole).
+      li Le serveur de François envoie le message vers son TentStatus.
+      li Le serveur de Carole envoie le message vers son TentStatus.
+      li François et Carole lisent le message sur ses TentStatus.
+  p Tout se passe en quelques seconds, dans une façon complètement décentralisée.
+
+
+#mailchimp-signup
+  h3 Pour obtenir des mises à jour à propos de Tent, inscrivez-vous :
+  form.form-inline action="http://tent.us4.list-manage.com/subscribe/post?u=f318e535ee890f27bfd3ec2d8&amp;id=05ba32ffe8" method="post"
+    label for="mc-email"
+      ' Adresse email:
+      input#mc-email.required.email type="email" name="EMAIL"
+    input.btn.btn-primary name="subscribe" type="submit" value="Inscrivez-vous"
+
+
+
+#faq
+ h3 FAQ
+ == render_child('/fr/about/_faq-fr/')
