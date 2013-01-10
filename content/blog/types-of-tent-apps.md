@@ -10,7 +10,7 @@ Applications can make use Tent in many ways. This post explains the different le
 
 ### Identity
 
-Tent can be used to sign users into applications as a replacement for email/password logins and centralized OAuth systems like Facebook, Twitter, Github, and Linkedin. Apps can use Tent for login without taking advantage of any othe Tent features. 
+Tent can be used to sign users into applications as a replacement for email/password logins and centralized OAuth systems like Facebook, Twitter, Github, and Linkedin. Apps can use Tent for login without taking advantage of any other Tent features.
   
 ### Backup
 
