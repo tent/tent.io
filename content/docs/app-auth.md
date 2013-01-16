@@ -4,13 +4,13 @@ title: App Authentication
 
 ## App Authentication
 
-Tent uses [OAuth 2](http://tools.ietf.org/html/draft-ietf-oauth-v2-31) for app
+Tent uses [OAuth 2](http://tools.ietf.org/html/rfc6749) for app
 authentication. Because of the distributed nature of Tent,
 apps must register with the Tent entity before starting the authentication flow.
 
 After the authentication flow is complete, requests are authenticated using the credentials
 with [MAC Access
-Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01).
+Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-02).
 
 
 ### App Registration
@@ -128,7 +128,7 @@ registration. Currently only the `mac` `token_type` is supported.
 ### Request Authentication
 
 Tent uses [HTTP MAC Access
-Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01) to
+Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-02) to
 authenticate app requests. Requests to modify the app's registration details
 must be authorized using the provided `id` and `secret` as the
 MAC key identifier and MAC key respectively.

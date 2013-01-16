@@ -113,7 +113,7 @@ All requests should be made using SSL.
 Authentication is required to access resources that are not marked as public.
 
 Tent uses [MAC Access
-Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01)
+Authentication](http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-02)
 for all requests.
 
 All requests must be signed using MAC, and all notifications from the server
