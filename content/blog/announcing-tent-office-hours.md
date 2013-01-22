@@ -4,13 +4,12 @@ kind: article
 created_at: January 14, 2013 12:10 EDT
 ---
 
-**Update**: The first Tent office hours will be held on Tuesday, January 22nd at
-[3:00pm EST](http://everytimezone.com/#2013-1-22,480,6be). The video stream and
-IRC channel [will be available here](/officehours). A recording will be
-made available after the event.
+**Update**: The first Tent office hours were held on Tuesday, January 22nd at
+20:00 UTC. [A recording is
+available](https://tent-media.s3.amazonaws.com/tent-officehours_2013-01-22.mp4).
 
 Starting the week of January 21, the Tent team will host office hours online
-once per week for an hour.
+regularly.
 
 Each session will last one hour including a short talk, video, or demonstration
 and be followed by a public question and answer period. These talks are aimed at
