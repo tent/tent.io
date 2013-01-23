@@ -6,7 +6,7 @@ created_at: January 14, 2013 12:10 EDT
 
 **Update**: The first Tent office hours were held on Tuesday, January 22nd at
 20:00 UTC. [A recording is
-available](https://tent-media.s3.amazonaws.com/tent-officehours_2013-01-22.mp4).
+available](/officehours/2013-01-22).
 
 Starting the week of January 21, the Tent team will host office hours online
 regularly.
