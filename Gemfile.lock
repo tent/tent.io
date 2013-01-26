@@ -63,7 +63,7 @@ GEM
     pygments.rb (0.3.7)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
-    rack (1.4.4)
+    rack (1.5.0)
     rack-rewrite (1.3.3)
     rainpress (1.0)
     redcarpet (2.2.2)
