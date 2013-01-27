@@ -10,7 +10,7 @@ signatures, and apps use [OAuth 2](http://en.wikipedia.org/wiki/OAuth) to access
 content on behalf of users.
 
 
-### Users
+### Entities
 
 Tent users are called **entities** and identified by a URI. 
 
@@ -22,7 +22,7 @@ a Tent profile (e.g. `https://tent.johnsmith.me/profile`)
 
 ### Servers
 
-Tent **servers** are the protocol core. They represent the users and maintain their data and relationships. Servers also handle these responsibilities:
+Every Tent entity needs a Tent **server**. Entites communicate through their Tent servers. A server can support one or many entities and maintains the data and relationships of those entities. Servers also handle these responsibilities:
  
 - Persisting data
 - Notifying other servers about new data
