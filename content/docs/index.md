@@ -22,7 +22,7 @@ a Tent profile (e.g. `https://tent.johnsmith.me/profile`)
 
 ### Servers
 
-Tent **servers** are the protocol core. They represent the users and maintain their data and relationships. Servers also handle these responsibilities:
+Tent **servers** are API endpoints and are the protocol core. They have a one-to-one relationship with a single Tent user and maintain that user's data. Servers also handle these responsibilities:
  
 - Persisting data
 - Notifying other servers about new data
@@ -31,6 +31,8 @@ Tent **servers** are the protocol core. They represent the users and maintain th
 - Managing a list of servers (entities) that are following it
 - Authorizing apps to access data
 - Notifying apps about new or modified data to which they have access
+
+A Tent server can be deployed as part of a multi-tenant server application or it can be deployed as a part of a single server application.
 
 [tentd](https://github.com/tent/tentd) is the current reference Tent server.
 
