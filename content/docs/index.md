@@ -18,7 +18,15 @@ Tent users are called **entities** and identified by a URI.
 
 A [HEAD request](http://en.wikipedia.org/wiki/HEAD_%28HTTP%29#Request_methods) to
 `https://johnsmith.me/` would respond with a `Link` header pointing to
-a Tent profile (e.g. `https://tent.johnsmith.me/profile`)
+a Tent profile (e.g. `https://tent.johnsmith.me/profile`).
+
+Entities are made up of the entire URI including the protocol. This means
+that `http://johnsmith.me` and `https://johnsmith.me` are different entities.
+
+Tent users may have one or more additional discovery URIs. For example, John
+Smith may have an additional discovery URI at `http://about.me/jsmith42` and
+`https://johnsmith.tent.is`.
+
 
 ### Servers
 
