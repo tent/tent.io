@@ -22,7 +22,7 @@ A [HEAD request](http://en.wikipedia.org/wiki/HEAD_%28HTTP%29#Request_methods) t
 `https://johnsmith.me/` would respond with a `Link` header pointing to
 a Tent profile (e.g. `https://tent.johnsmith.me/profile`)
 
-Entities may have more than one discovery URI. For example, John Smith may have an additional discovery URI at `http://about.me/jsmith42` and `https://johnsmith.tent.is`.
+Entities may have more than one discovery URI. For example, John Smith may have additional discovery URIs at `http://about.me/jsmith42` and `https://johnsmith.tent.is`.
 
 ### Servers
 
