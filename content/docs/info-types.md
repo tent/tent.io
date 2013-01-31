@@ -39,13 +39,13 @@ There is also a `mentions` cursor that wraps post type cursors and represents th
 {
   "https://tent.io/types/info/cursor/v0.1.0": {
     "https://tent.io/types/post/status/v0.1.0": {
-      "post_id": "fh3n5i",
-      "post_entity": "https://example.com"
+      "post": "fh3n5i",
+      "entity": "https://example.com"
     },
     "mentions": {
       "https://tent.io/types/post/status/v0.1.0": {
-        "post_id": "fh3n5i",
-        "post_entity": "https://example.com"
+        "post": "fh3n5i",
+        "entity": "https://example.com"
       }
     }
   }
@@ -62,8 +62,8 @@ Apps may define a custom profile section for the purpose of custom cursors by us
 {
   "https://app.example.org/cursor/v0.1.0": {
     "xyz" : {
-      "post_id": "hsk4is",
-      "post_entity": "https://example.com"
+      "post": "hsk4is",
+      "entity": "https://example.com"
     }
   }
 }
