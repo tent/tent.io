@@ -23,7 +23,7 @@ entity url.
 
 The next step is to register the application with the server. Registration
 specifies some details about the app, as well as the exact `redirect_uris` that
-will be used during the OAuth flow. The response `id`, `secret`, and
+will be used during the OAuth flow. The response `mac_key_id`, `mac_key`, and
 `mac_algorithm` are used to authenticate future requests to the Tent server.
 The `id` is used as the `client_id` in all OAuth requests.
 
@@ -46,6 +46,7 @@ user-agent to it:
 /oauth/authorize?client_id={app_id var}
   &redirect_uri=http://app.example.com/tent/callback
   &scope=read_posts,read_profile
+  &response_type=code
   &state=87351cc2f6737bfc8ba
   &tent_profile_info_types=https://tent.io/types/info/music/v0.1.0
   &tent_post_types=https://tent.io/types/posts/status/v0.1.0,https://tent.io/types/posts/photo/v0.1.0
@@ -57,6 +58,7 @@ user-agent to it:
 | --------------------------- | --------- | ----------- |
 | `client_id`                 | Required  | The `id` obtained by registering with the Tent server |
 | `redirect_uri`              | Required  | The URI to redirect to after authentication is complete. It must **exactly** match a URI (including parameters) provided during app registration in `redirect_uris`. |
+| `response_type`             | Required  | The OAuth response type, currently only `code` is supported. |
 | `state`                     | Optional  | This parameter will be added to the `redirect_uri` and should always be set to a random string that is stored in the session, and then verified to prevent cross-site request forgery attacks. |
 | `scope`                     | Optional  | A comma-separated list of scopes that the app is requesting access to. |
 | `tent_profile_info_types`   | Optional  | A comma-separated list of profile info type urls that the app is requesting access to. Set to `all` to request full access to the profile. |
