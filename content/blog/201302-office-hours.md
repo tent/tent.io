@@ -9,3 +9,5 @@ February 26th at [20:00 UTC](http://everytimezone.com/#2013-2-26,480,6be).
 
 Questions can be asked in advance as status posts with the hashtag #officehours,
 or in realtime on IRC. A recording will be made available after the event.
+
+**Update**: [A recording](/officehours/2013-02-26) is available.
