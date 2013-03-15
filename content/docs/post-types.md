@@ -10,6 +10,10 @@ Posts are the core of Tent. A post consists of these fields:
 
 ### Mentions
 
+Mentions drive notifications. Every entity in the Mentions array 
+will receive the entire post. If you do not want someone notified about
+the post, use tags instead.
+
 Mentions mark a post as mentioning one or more entities and posts. A `mentions`
 array looks like this:
 
