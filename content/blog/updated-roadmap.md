@@ -16,7 +16,7 @@ We learned a lot from users, application developers, and hosts during their use 
 
 Today we know a lot more about what Tent can and should do which enabled us to distill the most important parts of Tent. 0.3 is simpler, more consistent, and more powerful.
 
-By reducing the number of extraneous data types and representations we were able to add features that open a whole new set of possibilities for apps and users. This versions brings us *much* closer to achieving the original vision of Tent.
+By reducing the number of extraneous data types and representations we were able to add features that open a whole new set of possibilities for apps and users. This version brings us *much* closer to achieving the original vision of Tent.
 
 There are many small and some large optimizations that come in response to requests from developers and seeing how Tent behaves in the wild. We also tried to consolidate as many "breaking changes" as possible into a single version to make future version transitions cleaner for developers and hosts.
 
