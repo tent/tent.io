@@ -1,7 +1,7 @@
 ---
 title: March Office Hours
 kind: article
-created_at: March 15, 2013 17: EDT
+created_at: March 15, 2013 17:05 EDT
 ---
 
 This month's Tent office hours will be held [online](/officehours) on Tuesday,
