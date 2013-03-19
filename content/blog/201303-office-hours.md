@@ -12,4 +12,4 @@ This session will focus on Tent 0.3. We especially welcome questions about the n
 Questions can be asked in advance as status posts with the hashtag #officehours,
 or in realtime on IRC. A recording will be made available after the event.
 
-
+**Update**: [A recording](/officehours/2013-03-19) is available.
