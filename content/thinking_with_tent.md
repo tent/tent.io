@@ -49,4 +49,20 @@ This page describes how a number os simple Tent applicationns are architected.
   
   A new entity could also be created to aid discovery. All users could mention that entity in their community news posts and it could republish (via an app) all incoming posts. Users could also tag submissions and comments by mentioning topic tag posts belonging to that entity (see tags). This approach is appropriate when post volume has scaled beyond the capacity of the Tent server of the average community member.
   
+  
+### Todo Lists 
+
+  There are two ways to architect a todo list app with Tent. **Option 1**: each to do item is a post. **Option 2**: each list is a post. The first option is more flexible, the second is simpler. If you want users to have the freedom to move items from one list to another or easily provide visibility into the timing of specific events, the first is preferable.
+  
+**Option 1**
+  
+  Create a new post for every to do item mentioning the post for any lists or categories it is a part of.
  
+  Create a new version of each item post when it's list(s) or state changes
+  
+ **Option 2**
+
+  Create a new list post for each list containing all items with their current states
+  
+  Create a new version of each list post whenever an item's state is changed or the item is deleted 
+  
