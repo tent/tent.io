@@ -66,3 +66,9 @@ This page describes how a number os simple Tent applicationns are architected.
   
   Create a new version of each list post whenever an item's state is changed or the item is deleted 
   
+### Collaborative Editing
+
+  Tent posts are lightweight version control systems. Each post can have many immutable versions. Each version specifies its parent(s) one of which must be a post created by the author. However, a post version may specify a post version created by another entity as an additional parent. This allows for collaborative real-time editing applications to be powered by Tent.
+  
+  A document is created by user A. The application creates a corresponding post with the initial state of the document on user A's server. This post is just a list of [operational transformations](https://en.wikipedia.org/wiki/Operational_transformation). User A permits user B to access the post. User B modifies the document in her application which append's user B's transformations to the post. User B's server sends a copy of the new version to user A's server. Tent's version control system allows for multiple parents on a single version (version diamonds) so users also have the option to resolve version conflicts in more complicated document formats
+  
