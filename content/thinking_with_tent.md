@@ -80,4 +80,10 @@ This page describes how a number os simple Tent applicationns are architected.
   
 ### Music Scrobbing 
   
-  Create a new `nowplaying` post whenever a user starts playing a song on their local device of music service. Each play should be a new post, not a new version of an earlier `nowplaying` post.
+  Create a new `nowplaying` post including the song title, artist, and album whenever a user starts playing a song on their local device of music service. Each play should be a new post, not a new version of an earlier `nowplaying` post.
+  
+### Photo Filtering  
+
+  Tent prefers to preserve original data where possible. In the case of photos, this means preserving the original photo. Create a post for the original unaltered photo with the standard `photo` post type and another `photo#filtered` post type fragment for the filtered photo. This preserves a copy of the original unaltered photo for posterity and allows querying for all `photo`s (including the filtered versions), just original `photo#`s, and/or `photo#filtered`s. 
+  
+  To show only filtered photos, `GET /posts?types=https://example.com/types/photo/v0#filtered`
