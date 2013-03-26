@@ -13,7 +13,7 @@ This page describes how a number os simple Tent applicationns are architected.
   
   One of the simplest uses of Tent is microblogging.
 
-  The `status` post type allows short messages up to 256 characters formatted with Tent flavored Markdown and the ability to mention other users inline.
+  The `status` post type allows short messages up to 256 characters formatted with Tent flavored Markdown and the ability to link to other media.
     
   The simplest status app would use a single query: `GET /posts?types=https://tent.io/types/status/v0&entity=following`. This would display all status posts with which the user's server has come into contact. 
 
