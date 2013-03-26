@@ -1,13 +1,13 @@
-Tent applications work differently than centralized web apps or isolated desktop and mobile applications.
+Tent applications are built differently than centralized web apps or isolated desktop and mobile applications.
 
 This page describes how a number os simple Tent applicationns are architected.
 
-## Remember
+## Principles
 
  - Users' Tent servers should be the primary data store
  - Use common post types to make data accessible across applications
 
-## Applications
+## Examples
 
 ### Microblogging
   
