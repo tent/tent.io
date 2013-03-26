@@ -72,8 +72,12 @@ This page describes how a number os simple Tent applicationns are architected.
   
   A document is created by user A. The application creates a corresponding post with the initial state of the document on user A's server. This post is just a list of [operational transformations](https://en.wikipedia.org/wiki/Operational_transformation). User A permits user B to access the post. User B modifies the document in her application which append's user B's transformations to the post. User B's server sends a copy of the new version to user A's server. Tent's version control system allows for multiple parents on a single version (version diamonds) so users also have the option to resolve version conflicts in more complicated document formats
   
-### poll
+### Polls and Surveys
 
   A user could easily survey other entities with Tent. The user would create a `survey` post including the question(s) to be answered, a list of possible answers, and the time the survey stop accepting responses. Each responding user would respond with a `survey_response` containing their answer(s). Respondents choose the permissions for their response post.
   
   To gather the final responses to the survey, `GET /posts/mjyMQY9icvXdFuMnauyoUw/mentions` (change to 0.3 form)
+  
+### Music Scrobbing 
+  
+  Create a new `nowplaying` post whenever a user starts playing a song on their local device of music service. Each play should be a new post, not a new version of an earlier `nowplaying` post.
