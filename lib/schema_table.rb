@@ -10,17 +10,45 @@ class SchemaTableFilter < Nanoc::Filter
 
   private
 
-  def schema_table(schema)
-    table = [['Property', 'Required', 'Type', 'Description']]
-    table << ['---'] * table.first.size
-    table += properties_table(TentSchemas[schema]['properties'])
-    table.map { |r| r.unshift(nil).push(nil).join(' | ').strip }.join("\n")
+  def table_header
+    el('thead', %w(Property Server App Type Description).map { |v| el('th', v) }.join)
   end
 
-  def properties_table(properties)
-    properties.map do |prop,attrs|
-      attrs = resolve_ref(attrs['$ref']) if attrs['$ref']
-      ["`#{prop}`", attrs['required'] ? 'Required' : 'Optional', capitalize(attrs['type']), attrs['description']]
+  def schema_table(schema)
+    el('table', table_header + el('tbody', TentSchemas[schema]['properties'].map { |k,v| property_rows(k, v) }.join), class: 'table table-striped table-bordered')
+  end
+
+  def property_rows(name, attrs)
+    type = capitalize(attrs['type'])
+    if attrs['type'] == 'array'
+      type += " of #{capitalize(attrs['items']['type'])}s"
+    end
+
+    attrs = resolve_ref(attrs['$ref']) if attrs['$ref']
+    rows = [el('tr',
+             el('td', el('code', name)) +
+             el('td', required(attrs['required'])) +
+             el('td', required(attrs['app_required'])) +
+             el('td', type) +
+             el('td', attrs['description'])
+            )]
+    if attrs['items'] && attrs['items']['type'] == 'object'
+      attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v)}
+    elsif attrs['properties']
+      attrs['properties'].each { |k,v| rows << property_rows("#{name}.#{k}", v)}
+    end
+
+    rows.join
+  end
+
+  def required(flag)
+    case flag
+    when true
+      'Required'
+    when 'import'
+      'Import'
+    else
+      'Optional'
     end
   end
 
@@ -30,5 +58,10 @@ class SchemaTableFilter < Nanoc::Filter
 
   def resolve_ref(ref)
     TentSchemas[ref.sub('#/schemas/', '')]
+  end
+
+  def el(el, content, attributes = {})
+      attrs = attributes ? ' ' + attributes.map { |k,v| "#{k}=\"#{v}\"" }.join(' ') : ''
+      "<#{el}#{attrs}>\n#{content}</#{el}>\n"
   end
 end

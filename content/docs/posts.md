@@ -4,6 +4,8 @@ title: Posts
 
 ## Schema
 
+{post schema}
+
 ## Type
 
 ## Content
