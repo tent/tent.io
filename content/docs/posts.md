@@ -49,12 +49,12 @@ that is the same across all posts of the same type.
 
 Each post has one or more versions. Versions are identified by the `version.id`
 member. The version ID is the hex-encoded first 256 bits of a SHA-512 of the
-canonicalized post JSON. Post versions list zero or more "parent versions". Each
-version created after the first version of a post must reference at least one
-previous version of the same post. These `parents` form a [directed acyclic
-graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) of the history of
-a post and may also refer to other posts including posts published by other
-entities.
+[canonical post JSON](#canonical-post-json). Post versions list zero or more
+"parent versions". Each version created after the first version of a post must
+reference at least one previous version of the same post. These `parents` form
+a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
+of the history of a post and may also refer to other posts including posts
+published by other entities.
 
 The version may also optionally have a `version.message`, this may be used as the
 version "commit message".
@@ -119,3 +119,80 @@ request header using the `post_attachment` endpoint.
 ## Post Schema
 
 {post schema}
+
+## Canonical Post JSON
+
+The canonical post JSON format provides meaningful and repeatable hashes of
+JSON-encoded posts.
+
+The grammar for canonical JSON is a subset of the grammar at
+[json.org](http://json.org/):
+
+```text
+object:
+    {}
+    { members }
+ members:
+   pair
+   pair , members
+pair:
+   string : value
+array:
+   []
+   [ elements ]
+elements:
+   value
+   value , elements
+value:
+   string
+   number
+   object
+   array
+   true
+   false
+   null
+string:
+   ""
+   " chars "
+chars:
+   char
+   char chars
+char:
+   any byte except hex 22 (") or hex 5C (\)
+   \\
+   \"
+number:
+   int
+int:
+   digit
+   digit1-9 digits
+   - digit1-9
+   - digit1-9 digits
+digits:
+   digit
+   digit digits
+```
+
+- Floating point numbers are not allowed.
+- Leading zeros and "minus zero" are not allowed.
+- All object keys must be quoted, and must appear in sorted order.
+- All whitespace is eliminated.
+- Trailing commas in members and elements are not allowed.
+- Only one 'escape' sequence is defined for strings, and it is only used for
+  quote and backslash.
+- The `permissions`, `received_at`, `version.received_at` and `version.id`
+  members are removed from the post JSON.
+- Elements of the `mentions` array with the `public` member set to `false` are
+  removed.
+- All `original_entity` members (in the post object as well as `mentions` and
+  `version.parents` array elements) are removed and their sibling `entity`
+  members values are replaced with the `original_entity` value.
+- Empty members are removed. The members that may be empty are `app`,
+  `attachments`, `mentions`, `content`, `licenses`, `version.parents`,
+  `version.message`, and `version`.
+- Optional members that contain redundant data are removed. Currently this is
+  defined as the `post` and `entity` members of a `version.parents` or
+  `mentions` array element when they refer to the identifier or entity of the
+  post that contains them.
+
+*Based on a spec from the [OLPC wiki](http://wiki.laptop.org/go/Canonical_JSON).*
