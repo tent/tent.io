@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/tent-schemas.git
-  revision: 8efb377c69f13d8799a17e3ed7c410d75eaccc7b
+  revision: 8d287af549d4f7699ba9ef7a302652d7897c6fc4
   specs:
     tent-schemas (0.2.0)
       json-schema
