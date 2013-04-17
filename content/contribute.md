@@ -37,9 +37,6 @@ The world needs well designed Tent services. Great apps start with great design 
     
 #### Design Core Tent Apps 
 The Admin and Status apps need your help. They are open source projects created by the Tent Team and community. Since there aren't any designers on the Team (yet!) those applications are ripe for a redesign. Both apps are on Tent's [github page](http://github.com/tent) where you can share your submissions.
-    
-#### Design Tent.io
-Tent.io could use a facelift. Our wishlist includes: diagrams clearly explaining tent to non-technical newcomers, a short (30 second-1.5 minute) Intro to Tent video, and official Tent logo (that users and apps can display and we can put on logo merch). Keep in mind that you must sign over ownership of anything official you create for http://Tent.io. Fan art is great, but official logos and design need to be the exclusive property of the organization running Tent.io for legal reasons.
 
 ### Developers
 
