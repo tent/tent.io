@@ -71,7 +71,7 @@ route '/' do
   '/index.html'
 end
 
-route 'api_examples.yaml' do
+route 'api_examples.json' do
 end
 
 route '*' do
