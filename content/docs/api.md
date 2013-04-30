@@ -4,6 +4,12 @@ title: API Endpoints
 
 ## new_post
 
+{new_post example}
+
+### Attachments
+
+{new_multipart_post example}
+
 ## posts_feed
 
 ## post
@@ -16,12 +22,14 @@ title: API Endpoints
 
 ## attachment
 
+{get_attachment example}
+
 ## post_attachment
 
 ## batch
 
 ## server_info
 
-## app_auth_request
+## oauth_auth
 
-## app_token_request
+## oauth_token
