@@ -26,10 +26,16 @@ title: API Endpoints
 
 ## post_attachment
 
+{get_post_attachment example}
+
 ## batch
 
 ## server_info
 
 ## oauth_auth
 
+{oauth_redirect example}
+
 ## oauth_token
+
+{oauth_token example}
