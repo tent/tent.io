@@ -50,11 +50,33 @@ a deterministic sort.
 
 ## post
 
+### Create New Version
+
+{new_post_version example}
+
 ### Mentions
+
+{post_mentions example}
+
+#### HEAD (Count)
+
+{post_mentions_count example}
 
 ### Versions
 
+{post_versions example}
+
+#### HEAD (Count)
+
+{post_versions_count example}
+
 ### Child Versions
+
+{post_children example}
+
+#### HEAD (Count)
+
+{post_children_count example}
 
 ## attachment
 
