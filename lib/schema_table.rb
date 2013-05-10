@@ -10,12 +10,18 @@ class SchemaTableFilter < Nanoc::Filter
 
   private
 
-  def table_header
-    el('thead', %w(Property Server App Type Description).map { |v| el('th', v) }.join)
+  def table_header(post)
+    headers = if post
+      %w(Property Required Type Description)
+    else
+      %w(Property Server App Type Description)
+    end
+    el('thead', headers.map { |v| el('th', v) }.join)
   end
 
   def schema_table(schema)
-    el('table', table_header + el('tbody', TentSchemas[schema]['properties'].map { |k,v| property_rows(k, v) }.join), class: 'table table-striped table-bordered')
+    post = schema =~ /^post_/
+    el('table', table_header(post) + el('tbody', TentSchemas[schema]['properties'].map { |k,v| property_rows(k, v.merge('post' => post)) }.join), class: 'table table-striped table-bordered')
   end
 
   def property_rows(name, attrs)
@@ -28,14 +34,14 @@ class SchemaTableFilter < Nanoc::Filter
     rows = [el('tr',
              el('td', el('code', name)) +
              el('td', required(attrs['required'])) +
-             el('td', required(attrs['app_required'])) +
+             (!attrs['post'] ? el('td', required(attrs['app_required'])) : '') +
              el('td', type) +
              el('td', attrs['description'])
             )]
     if attrs['items'] && attrs['items']['type'] == 'object'
-      attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v)}
+      attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v.merge('post' => attrs['post']))}
     elsif attrs['properties']
-      attrs['properties'].each { |k,v| rows << property_rows("#{name}.#{k}", v)}
+      attrs['properties'].each { |k,v| rows << property_rows("#{name}.#{k}", v.merge('post' => attrs['post']))}
     end
 
     rows.join
