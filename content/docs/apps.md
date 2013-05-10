@@ -57,4 +57,8 @@ used as the ID in Hawk signatures.
 
 {oauth_token example}
 
+### App Registration Schema
+
+{post_app schema}
+
 ## Notifications
