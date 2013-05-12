@@ -230,3 +230,7 @@ img.responsive {
   background-color: #FDFDFD;
 }
 
+code {
+  color: #000;
+  border: none;
+}
