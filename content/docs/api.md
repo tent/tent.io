@@ -36,6 +36,8 @@ a deterministic sort.
 | `entities` | String | Selects posts published by one or more comma-separated entities. |
 | `mentions` | String | Selects posts that mention specified entities and posts. One or more comma-separated mentions may be specified. Each mention is a entity url optionally followed by a space and a post ID. Multiple `mentions` parameters may be specified. |
 
+[**Pagination Diagram**](<%= image_url('tent_pagination.png') %>)
+
 ### Examples
 
 {posts_feed example}
