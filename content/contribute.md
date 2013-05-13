@@ -23,19 +23,9 @@ Tell people you know about Tent any way you can!
 Tent enables new kinds of communication and sharing, developers can unlock that potential. Add Tent support to open and commercial apps or start from scratch. The protocol is still evolving, so stay in touch with the community as you develop. 
     
 #### Create Tent Libraries
-Your favorite language or framework needs a Tent library. Our top priorities are:
 
- - C
- - C++
- - C#/.NET
- - Clojure
- - Common Lisp
- - Erlang
- - Javascript
- - Lua
- - Perl
- - PHP
- - Scala
+Your favorite language or framework needs a Tent client library. If you can't
+find a library on GitHub to contribute to, start writing one yourself!
 
 
 #### Write Tutorials
