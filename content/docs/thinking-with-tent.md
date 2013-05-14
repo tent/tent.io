@@ -1,3 +1,7 @@
+---
+title: Thinking With Tent
+---
+
 Tent applications are built differently than centralized web apps or isolated
 desktop and mobile applications.
 
