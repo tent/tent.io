@@ -57,7 +57,7 @@ compile '*' do
   when %r{/_}
     layout 'none'
   when %r{^/blog/.+}
-    layout 'post'
+    layout item.identifier == '/blog/archive/' ? 'default' : 'post'
   when %r{^/docs/}
     layout 'doc'
   else

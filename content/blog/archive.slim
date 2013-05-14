@@ -1,0 +1,7 @@
+h2 Blog Archive
+
+- sorted_articles.each do |post|
+    = Time.parse(post[:created_at]).strftime('%Y-%m-%d')
+    '  —
+    == link_to post[:title], post.identifier.chop
+    | <br>
