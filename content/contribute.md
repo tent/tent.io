@@ -1,3 +1,7 @@
+---
+title: Contribute
+---
+
 ## How you can help Tent
 <span class="lead">Tent is still very young and needs your help. Everyone has different skills and interests that can help.</span>
 

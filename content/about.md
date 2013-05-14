@@ -1,3 +1,7 @@
+---
+title: About
+---
+
 ## Basics
 
 Tent is a datastore and communications protocol. It lets users store any kind of data and send that data to other users in real time. Just like other protocol-based services like email or the web, anyone can host their own server or write apps. Also like email, users can host their own Tent server or use a Tent hosting provider.
