@@ -36,7 +36,7 @@ class SchemaTableFilter < Nanoc::Filter
              el('td', required(attrs['required'])) +
              (!attrs['post'] ? el('td', required(attrs['app_required'])) : '') +
              el('td', type) +
-             el('td', attrs['description'].gsub(/`(.+)`/, '<code>\1</code>'))
+             el('td', attrs['description'].gsub(/`(.+?)`/, '<code>\1</code>'))
             )]
     if attrs['items'] && attrs['items']['type'] == 'object'
       attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v.merge('post' => attrs['post']))}
