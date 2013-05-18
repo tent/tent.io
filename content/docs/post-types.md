@@ -178,7 +178,7 @@ a URI identifying the cursor type.
 
 `https://tent.io/types/tag/v0`
 
-A tag is mentioned other posts in order to categorize them.
+A tag is mentioned by other posts in order to categorize them.
 
 {post_tag schema}
 
