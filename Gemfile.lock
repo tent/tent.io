@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/tent-schemas.git
-  revision: 8d287af549d4f7699ba9ef7a302652d7897c6fc4
+  revision: 0f4c29177db4f5558078a22a00329836c1118a89
   specs:
     tent-schemas (0.2.0)
       json-schema
@@ -17,11 +17,11 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (3.2.12)
-      activesupport (= 3.2.12)
+    activemodel (3.2.13)
+      activesupport (= 3.2.13)
       builder (~> 3.0.0)
-    activesupport (3.2.12)
-      i18n (~> 0.6)
+    activesupport (3.2.13)
+      i18n (= 0.6.1)
       multi_json (~> 1.0)
     adsf (1.1.1)
       rack (>= 1.0.0)
@@ -31,35 +31,36 @@ GEM
     colored (1.2)
     cri (2.3.0)
       colored (>= 1.2)
-    excon (0.19.5)
-    fog (1.10.0)
+    excon (0.22.1)
+    fog (1.11.1)
       builder
-      excon (~> 0.14)
+      excon (~> 0.20)
       formatador (~> 0.2.0)
+      json (~> 1.7)
       mime-types
-      multi_json (~> 1.0)
       net-scp (~> 1.1)
       net-ssh (>= 2.1.3)
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.4)
     fssm (0.2.10)
-    i18n (0.6.4)
+    i18n (0.6.1)
+    json (1.8.0)
     json-schema (1.1.1)
-    mime-types (1.21)
-    multi_json (1.6.1)
-    nanoc (3.6.1)
+    mime-types (1.23)
+    multi_json (1.7.3)
+    nanoc (3.6.3)
       cri (~> 2.3)
     nanoc-cachebuster (0.3.1)
       nanoc (>= 3.3.0)
-    net-scp (1.1.0)
+    net-scp (1.1.1)
       net-ssh (>= 2.6.5)
-    net-ssh (2.6.6)
-    nokogiri (1.5.6)
+    net-ssh (2.6.7)
+    nokogiri (1.5.9)
     posix-spawn (0.3.6)
-    puma (1.6.3)
-      rack (~> 1.2)
-    pygments.rb (0.4.2)
+    puma (2.0.1)
+      rack (>= 1.1, < 2.0)
+    pygments.rb (0.5.0)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.1.0)
     rack (1.5.2)
@@ -67,11 +68,11 @@ GEM
     rainpress (1.0)
     redcarpet (2.2.2)
     ruby-hmac (0.4.0)
-    slim (1.3.6)
-      temple (~> 0.5.5)
-      tilt (~> 1.3.3)
-    temple (0.5.5)
-    tilt (1.3.4)
+    slim (1.3.9)
+      temple (~> 0.6.3)
+      tilt (~> 1.3, >= 1.3.3)
+    temple (0.6.4)
+    tilt (1.4.1)
     yajl-ruby (1.1.0)
 
 PLATFORMS
