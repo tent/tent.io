@@ -25,12 +25,11 @@ class SchemaTableFilter < Nanoc::Filter
   end
 
   def property_rows(name, attrs)
+    attrs = resolve_ref(attrs['$ref']) if attrs['$ref']
     type = capitalize(attrs['type'])
     if attrs['type'] == 'array'
       type += " of #{capitalize(attrs['items']['type'])}s"
     end
-
-    attrs = resolve_ref(attrs['$ref']) if attrs['$ref']
     rows = [el('tr',
              el('td', el('code', name)) +
              el('td', required(attrs['required'])) +
