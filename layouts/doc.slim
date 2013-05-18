@@ -7,16 +7,19 @@ html lang='en'
       .row
         .span2
           ul.nav.nav-list.well
-            /li == nav_link_with_active 'Protocol Introduction', '/docs'
-            li == nav_link_with_active 'Thinking with Tent', '/docs/thinking-with-tent'
-            /li == nav_link_with_active 'Servers & Entities', '/docs/servers-entities'
-            li == nav_link_with_active 'Posts', '/docs/posts'
-            /li == nav_link_with_active 'Relationships', '/docs/relationships'
-            li == nav_link_with_active 'Apps', '/docs/apps'
-            li == nav_link_with_active 'API Endpoints', '/docs/api'
-            /li == nav_link_with_active 'Authentication', '/docs/authentication'
-            li == nav_link_with_active 'Post Types', '/docs/post-types'
-            /li == nav_link_with_active 'URI Scheme', '/docs/uri-scheme'
+            /== nav_link_with_active 'Protocol Introduction', '/docs'
+            == nav_link_with_active 'Thinking with Tent', '/docs/thinking-with-tent'
+            /== nav_link_with_active 'Servers & Entities', '/docs/servers-entities'
+            == nav_link_with_active 'Posts', '/docs/posts'
+            /== nav_link_with_active 'Relationships', '/docs/relationships'
+            == nav_link_with_active 'Apps', '/docs/apps'
+            == nav_link_with_active 'API Endpoints', '/docs/api'
+            /== nav_link_with_active 'Authentication', '/docs/authentication'
+            == nav_link_with_active 'Post Types', '/docs/post-types'
+            /== nav_link_with_active 'URI Scheme', '/docs/uri-scheme'
+            li.divider
+            li.nav-header Table of Contents
+            == Redcarpet::Markdown.new(MarkdownHTMLTOC).render(@item.raw_content)
         .span8
           .lead
             p Tent™ is the protocol for decentralized communication.
