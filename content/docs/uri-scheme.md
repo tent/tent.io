@@ -11,7 +11,6 @@ Two schemes are defined: `tent+http` and `tent+https` specifying HTTP and HTTPS
 entity URLs respectively. The scheme is followed by the entity, and query
 parameters are used to specify resources of the entity.
 
-**Examples**
 ```text
 tent+http://example.com/user
 tent+https://jonathan.tent.is
@@ -26,8 +25,6 @@ entity.
 - `version` A post version identifier. Requires `post` to be specified.
 - `attachment_name` An attachment name. Requires `post` to be specified.
 - `attachment_digest` The hex encoded digest of an attachment. Allows referencing and attachment without `post` and `version`.
-
-**Examples**
 
 ```text
 tent+https://jonathan.tent.is?post=123
