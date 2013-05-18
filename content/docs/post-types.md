@@ -191,3 +191,11 @@ A favorite references another post.
 The post must include a mention of the original post. The type fragment must be set to the type of the original post.
 
 {post_favorite schema}
+
+### Basic Profile
+
+`https://tent.io/types/basic-profile/v0`
+
+The basic profile describes the entity that published it.
+
+{post_basic-profile schema}
