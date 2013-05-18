@@ -21,6 +21,7 @@ class SchemaTableFilter < Nanoc::Filter
 
   def schema_table(schema)
     post = schema =~ /^post_/
+    raise "missing #{schema} schema" if !TentSchemas[schema]
     el('table', table_header(post) + el('tbody', TentSchemas[schema]['properties'].map { |k,v| property_rows(k, v.merge('post' => post)) }.join), class: 'table table-striped table-bordered')
   end
 
