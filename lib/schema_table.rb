@@ -5,7 +5,7 @@ class SchemaTableFilter < Nanoc::Filter
   type :text
 
   def run(content, params={})
-    content.gsub(/\{(\w+) schema\}/) { schema_table($1) }
+    content.gsub(/\{([\w-]+) schema\}/) { schema_table($1) }
   end
 
   private
