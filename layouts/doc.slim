@@ -7,6 +7,8 @@ html lang='en'
       .row
         .span2
           ul.nav.nav-list.well
+            li.nav-header Documentation
+            == nav_link_with_active 'Introduction', '/docs'
             /== nav_link_with_active 'Protocol Introduction', '/docs'
             == nav_link_with_active 'Thinking with Tent', '/docs/thinking-with-tent'
             /== nav_link_with_active 'Servers & Entities', '/docs/servers-entities'
@@ -18,7 +20,7 @@ html lang='en'
             == nav_link_with_active 'Post Types', '/docs/post-types'
             /== nav_link_with_active 'URI Scheme', '/docs/uri-scheme'
             li.divider
-            li.nav-header Table of Contents
+            li.nav-header Page Contents
             == Redcarpet::Markdown.new(MarkdownHTMLTOC).render(@item.raw_content)
         .span8
           .lead
