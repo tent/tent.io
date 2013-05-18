@@ -25,7 +25,7 @@ class SchemaTableFilter < Nanoc::Filter
   end
 
   def property_rows(name, attrs)
-    attrs = resolve_ref(attrs['$ref']) if attrs['$ref']
+    attrs = resolve_ref(attrs['$ref'], attrs['post']) if attrs['$ref']
     type = capitalize(attrs['type'])
     if attrs['type'] == 'array'
       type += " of #{capitalize(attrs['items']['type'])}s"
@@ -35,7 +35,7 @@ class SchemaTableFilter < Nanoc::Filter
              el('td', required(attrs['required'])) +
              (!attrs['post'] ? el('td', required(attrs['app_required'])) : '') +
              el('td', type) +
-             el('td', attrs['description'])
+             el('td', attrs['description'].gsub(/`(.+)`/, '<code>\1</code>'))
             )]
     if attrs['items'] && attrs['items']['type'] == 'object'
       attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v.merge('post' => attrs['post']))}
@@ -61,8 +61,8 @@ class SchemaTableFilter < Nanoc::Filter
     str[0].upcase + str[1..-1]
   end
 
-  def resolve_ref(ref)
-    TentSchemas[ref.sub('#/schemas/', '')]
+  def resolve_ref(ref, post)
+    TentSchemas[ref.sub('#/schemas/', '')].merge('post' => post)
   end
 
   def el(el, content, attributes = {})
