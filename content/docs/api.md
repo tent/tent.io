@@ -2,6 +2,31 @@
 title: API Endpoints
 ---
 
+## Concepts
+
+### Pagination
+
+All post lists (feed, versions, children, mentions) support pagination. The
+response to a list request contains a set of links to other pages. These links
+are just the query part of the URL and contain all filtering and limiting
+parameters specified in the request plus additional/updated parameters that
+specify a page. Links to the current page and pages that do not exist are
+omitted.
+
+```json
+{
+  "pages": {
+    "first": "?page=1",
+    "prev": "?page=1",
+    "next": "?page=2",
+    "last": "?page=4"
+  },
+  "data": [
+    "List data here..."
+  ]
+}
+```
+
 ## new_post
 
 {new_post example}
