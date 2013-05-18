@@ -18,7 +18,7 @@ html lang='en'
             == nav_link_with_active 'API Endpoints', '/docs/api'
             /== nav_link_with_active 'Authentication', '/docs/authentication'
             == nav_link_with_active 'Post Types', '/docs/post-types'
-            /== nav_link_with_active 'URI Scheme', '/docs/uri-scheme'
+            == nav_link_with_active 'URI Scheme', '/docs/uri-scheme'
             li.divider
             li.nav-header Page Contents
             == Redcarpet::Markdown.new(MarkdownHTMLTOC).render(@item.raw_content)
