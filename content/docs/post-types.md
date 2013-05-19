@@ -167,7 +167,7 @@ The post must include a mention of the original post. The type fragment must be 
 
 `https://tent.io/types/photo/v0`
 
-An album groups photo posts.
+A photo contains a single photo and metadata about it.
 
 {post_photo schema}
 
