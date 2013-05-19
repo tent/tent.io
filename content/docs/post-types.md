@@ -8,9 +8,10 @@ title: Post Types
 
 `https://tent.io/types/meta/v0`
 
-Every entity has a meta post, it is retrieved during discovery by apps and
-servers. Some of the `servers[].urls` members are Level 1 URI Templates as
-defined in [RFC 6570](https://tools.ietf.org/html/rfc6570).
+Every entity has a meta post, it is retrieved during
+[discovery](/docs/servers-entities#discovery) by apps and servers. Some of the
+`servers[].urls` members are Level 1 URI Templates as defined in [RFC
+6570](https://tools.ietf.org/html/rfc6570).
 
 When selecting a server to contact, sort the servers by `servers[].preference`,
 preferring lower numbers over higher. If multiple servers have the same
