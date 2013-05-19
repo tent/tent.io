@@ -1,4 +1,5 @@
 require 'pygments.rb'
+require 'cgi'
 
 module MarkdownHelpers
   def anchor(text)
@@ -20,7 +21,7 @@ class MarkdownHTML < Redcarpet::Render::HTML
   include MarkdownHelpers
 
   def block_code(code, language)
-    language == "text" ? el('pre', code) : Pygments.highlight(code, lexer: language)
+    language == "text" ? el('pre', CGI::escapeHTML(code)) : Pygments.highlight(code, lexer: language)
   end
 
   def table(header, body)
