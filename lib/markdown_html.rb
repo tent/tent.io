@@ -20,7 +20,7 @@ class MarkdownHTML < Redcarpet::Render::HTML
   include MarkdownHelpers
 
   def block_code(code, language)
-    Pygments.highlight(code, lexer: language)
+    language == "text" ? el('pre', code) : Pygments.highlight(code, lexer: language)
   end
 
   def table(header, body)
