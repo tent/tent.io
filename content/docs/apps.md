@@ -3,9 +3,8 @@ title: Apps
 ---
 
 Apps allow users to interact with data in Tent. [OAuth
-2.0](https://tools.ietf.org/html/rfc6749) combined with the
-[Hawk](https://github.com/hueniverse/hawk) authentication scheme are used for
-authorization and authentication.
+2.0](https://tools.ietf.org/html/rfc6749) combined with the [Hawk authentication
+scheme](/docs/authentication) are used for authorization and authentication.
 
 ## Discovery
 
