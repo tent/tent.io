@@ -12,15 +12,15 @@ class SchemaTableFilter < Nanoc::Filter
 
   def table_header(post)
     headers = if post
-      %w(Property Required Type Description)
-    else
       %w(Property Server App Type Description)
+    else
+      %w(Property Required Type Description)
     end
     el('thead', headers.map { |v| el('th', v) }.join)
   end
 
   def schema_table(schema)
-    post = schema =~ /^post_/
+    post = schema == 'post'
     raise "missing #{schema} schema" if !TentSchemas[schema]
     el('table', table_header(post) + el('tbody', TentSchemas[schema]['properties'].map { |k,v| property_rows(k, v.merge('post' => post)) }.join), class: 'table table-striped table-bordered')
   end
@@ -38,7 +38,7 @@ class SchemaTableFilter < Nanoc::Filter
              el('td', type) +
              el('td', attrs['description'].gsub(/`(.+?)`/, '<code>\1</code>'))
             )]
-    if attrs['items'] && attrs['items']['type'] == 'object'
+    if attrs['items'] && attrs['items']['type'] == 'object' && attrs['items']['properties']
       attrs['items']['properties'].each { |k,v| rows << property_rows("#{name}[].#{k}", v.merge('post' => attrs['post']))}
     elsif attrs['properties']
       attrs['properties'].each { |k,v| rows << property_rows("#{name}.#{k}", v.merge('post' => attrs['post']))}

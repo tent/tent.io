@@ -27,6 +27,8 @@ omitted.
 }
 ```
 
+{list_page schema}
+
 ## new_post
 
 {new_post example}
