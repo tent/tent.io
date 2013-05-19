@@ -34,7 +34,7 @@ class SchemaTableFilter < Nanoc::Filter
     rows = [el('tr',
              el('td', el('code', name)) +
              el('td', required(attrs['required'])) +
-             (!attrs['post'] ? el('td', required(attrs['app_required'])) : '') +
+             (attrs['post'] ? el('td', required(attrs['app_required'])) : '') +
              el('td', type) +
              el('td', attrs['description'].gsub(/`(.+?)`/, '<code>\1</code>'))
             )]
