@@ -8,6 +8,29 @@ title: Post Types
 
 `https://tent.io/types/meta/v0`
 
+Every entity has a meta post, it is retrieved during discovery by apps and
+servers. Some of the `servers[].urls` members are Level 1 URI Templates as
+defined in [RFC 6570](https://tools.ietf.org/html/rfc6570).
+
+When selecting a server to contact, sort the servers by `servers[].preference`,
+preferring lower numbers over higher. If multiple servers have the same
+preference, make a random selection. If server errors are encountered and there
+is more than one server listed, another should be selected.
+
+Changing the `entity` field triggers a change of the entity identifier that the
+server represents. The previous entity must be added to the `previous_entities`
+list in the same request.
+
+All entities notified of this change must rewrite their posts with the updated
+`entity` and add an `original_entity` parameter where applicable. This applies
+to the post `entity` as well as entities used in mentions, version parents,
+groups and permissions.
+
+Modified meta posts are sent to all relationships and apps regardless of
+subscriptions.
+
+{post_meta schema}
+
 ### Credentials
 
 `https://tent.io/types/credentials/v0`
