@@ -45,8 +45,8 @@ All responses to authenticated requests contain a `Server-Authorization` header.
 The header is in the same format as the [Request Header](#request-header), but
 does not have as many fields. The `mac` field is always included, and is based
 on all of the same data provided in the request, except the `hash` and `ext`
-values are replaced with response-specific values. The `hash` is optional and is
-a digest of the response payload.
+values are replaced with response-specific values and the string header is
+different. The `hash` is optional and is a digest of the response payload.
 
 **Example**
 
@@ -62,7 +62,7 @@ Some fields are also included in the request header/bewit.
 
 | Field | Description |
 | ----- | ----------- |
-| Header | One of `hawk.1.header`, `hawk.1.request`, `hawk.1.bewit`. |
+| Header | Specifies the MAC type, one of `hawk.1.header` (request header), `hawk.1.response` (response header), `hawk.1.bewit` (request bewit). |
 | `ts` | The timestamp in seconds since the Unix epoch. |
 | `nonce` | A randomly generated string. |
 | Method | The HTTP request method, all letters capitalized. |
