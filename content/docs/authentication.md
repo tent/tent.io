@@ -69,7 +69,7 @@ Some fields are also included in the request header/bewit.
 | Request URI | The HTTP Request-URI, as sent in the request. Typically this is just the absolute path and query parameters. |
 | Host | The HTTP host, as sent in the `Host` header, port omitted, all lowercase or if no `Host` is sent, the IP address. |
 | Port | The port connected to, typically this will be `443`. |
-| `hash` | The base64 encoded payload digest, blank if none. |
+| `hash` | The base64 encoded [payload digest](#payload-validation), blank if none. |
 | `ext` | The app-specific data, blank if none. |
 | `app` | The app id, omitted if none. |
 | `dlg` | The app delegate, omitted unless `app` is set, blank if `app` is set. |
@@ -89,7 +89,7 @@ dlg
 
 ```
 
-**Example**
+**Example with app**
 
 ```text
 hawk.1.header
@@ -105,6 +105,22 @@ example.com
 
 
 ```
+
+**Example with hash, no app**
+
+```text
+hawk.1.header
+1353832234
+j4h3g2
+POST
+/resource?a=1&b=2
+example.com
+8000
+
+tREz+ddQOD9BUtIoQtq2W0u2qFlJrRbWpr0+y+Ux78Q=
+
+```
+
 
 ## Payload Validation
 
