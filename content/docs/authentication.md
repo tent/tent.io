@@ -173,7 +173,8 @@ The `bewit` is a URL base64-encoded string with any trailing `=` elided of the
 field values separated by `\`.
 
 The request method in the normalized string is always `GET`, and the server
-allows `GET` and `HEAD` requests.
+allows `GET` and `HEAD` requests. The `nonce` field in the normalized string is
+always empty.
 
 | Field | Description |
 | ----- | ----------- |
@@ -249,6 +250,8 @@ WWW-Authenticate: Hawk ts="1368996800", tsm="HPDcD5S3Kw7LM/oyoXKcgv2Z30RnOLAI5eb
 
 ```text
 /posts?bewit=ZXhxYlpXdHlrRlpJaDJEN2NYaTlkQVwxMzY4OTk2ODAwXE8wbWhwcmdvWHFGNDhEbHc1RldBV3ZWUUlwZ0dZc3FzWDc2dHBvNkt5cUk9XA
+
+exqbZWtykFZIh2D7cXi9dA\1368996800\O0mhprgoXqF48Dlw5FWAWvVQIpgGYsqsX76tpo6KyqI=\
 
 "hawk.1.bewit\n1368996800\n\nGET\n/posts\nexample.com\n443\n\n\n"
 ```
