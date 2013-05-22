@@ -106,10 +106,10 @@ example.com
 
 ```
 
-**Example with hash, no app**
+**Example: response with hash, no app**
 
 ```text
-hawk.1.header
+hawk.1.response
 1353832234
 j4h3g2
 POST
