@@ -27,6 +27,9 @@ All entities notified of this change must rewrite their posts with the updated
 to the post `entity` as well as entities used in mentions, version parents,
 groups and permissions.
 
+The post also includes some "profile" details. These details are optionally made
+available to apps when they request posts.
+
 Modified meta posts are sent to all relationships and apps regardless of
 subscriptions.
 
@@ -215,11 +218,3 @@ A favorite references another post.
 The post may include a mention of the original post. The type fragment must be set to the type of the original post.
 
 {post_favorite schema}
-
-### Basic Profile
-
-`https://tent.io/types/basic-profile/v0`
-
-The basic profile describes the entity that published it.
-
-{post_basic-profile schema}
