@@ -209,34 +209,46 @@ url-base64("id\ts\mac\ext")
 
 ```text
 Authorization: Hawk id="exqbZWtykFZIh2D7cXi9dA", mac="2sttHCQJG9ejj1x7eCi35FP23Miu9VtlaUgwk68DTpM=", ts="1368996800", nonce="3yuYCD4Z", hash="neQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU=", app="wn6yzHGe5TLaT-fvOPbAyQ"
+
+"hawk.1.header\n1368996800\n3yuYCD4Z\nPOST\n/posts\nexample.com\n443\nneQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU=\n\nwn6yzHGe5TLaT-fvOPbAyQ\n\n"
 ```
 
 **Server Response**
 
 ```text
-Server-Authorization: Hawk mac="p0CMFwr3Kk1Q2EeexPf9SiQ0ibGR0xo5KzBZvKkGZhI="
+Server-Authorization: Hawk mac="lTG3kTBr33Y97Q4KQSSamu9WY/mOUKnZzq/ho9x+yxw="
+
+"hawk.1.response\n1368996800\n3yuYCD4Z\nPOST\n/posts\nexample.com\n443\n\n\nwn6yzHGe5TLaT-fvOPbAyQ\n\n"
 ```
 
 **Relationship Request**
 
 ```text
 Authorization: Hawk id="exqbZWtykFZIh2D7cXi9dA", mac="OO2ldBDSw8KmNHlEdTC4BciIl8+uiuCRvCnJ9KkcR3Y=", ts="1368996800", nonce="3yuYCD4Z"
+
+"hawk.1.header\n1368996800\n3yuYCD4Z\nPOST\n/posts\nexample.com\n443\n\n\n"
 ```
 
 **Server Response w/hash**
 
 ```text
 Server-Authorization: Hawk mac="LvxASIZ2gop5cwE2mNervvz6WXkPmVslwm11MDgEZ5E=", hash="neQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU="
+
+"hawk.1.response\n1368996800\n3yuYCD4Z\nPOST\n/posts\nexample.com\n443\nneQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU=\n\n"
 ```
 
 **Timestamp Skew Error**
 
 ```text
 WWW-Authenticate: Hawk ts="1368996800", tsm="HPDcD5S3Kw7LM/oyoXKcgv2Z30RnOLAI5ebXpYDGfo4=", error="Stale timestamp"
+
+"hawk.1.ts\n1368996800\n"
 ```
 
 **Bewit (GET /posts)**
 
 ```text
 /posts?bewit=ZXhxYlpXdHlrRlpJaDJEN2NYaTlkQVwxMzY4OTk2ODAwXE8wbWhwcmdvWHFGNDhEbHc1RldBV3ZWUUlwZ0dZc3FzWDc2dHBvNkt5cUk9XA
+
+"hawk.1.bewit\n1368996800\n\nGET\n/posts\nexample.com\n443\n\n\n"
 ```
