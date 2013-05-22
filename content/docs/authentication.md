@@ -190,3 +190,53 @@ url-base64("id\ts\mac\ext")
 123456\1356420707\kscxwNR2tJpP1T1zDLNPbB5UiKIU9tOSJXTUdG7X9h8=\
 ?bewit=MTIzNDU2XDEzNTY0MjA3MDdca3NjeHdOUjJ0SnBQMVQxekRMTlBiQjVVaUtJVTl0T1NKWFRVZEc3WDloOD1c
 ```
+
+## Test Vectors
+
+**Parameters**
+
+| Field | Value |
+| ----- | ----- |
+| Key | `HX9QcbD-r3ItFEnRcAuOSg` |
+| Host | `example.com` |
+| Port | `443` |
+| Request Method | `POST` |
+| Request URI | `/posts` |
+| Content-Type | `application/vnd.tent.post.v0+json` |
+| Payload | `{"type":"https://tent.io/types/status/v0#"}` |
+
+**App request w/hash**
+
+```text
+Authorization: Hawk id="exqbZWtykFZIh2D7cXi9dA", mac="2sttHCQJG9ejj1x7eCi35FP23Miu9VtlaUgwk68DTpM=", ts="1368996800", nonce="3yuYCD4Z", hash="neQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU=", app="wn6yzHGe5TLaT-fvOPbAyQ"
+```
+
+**Server Response**
+
+```text
+Server-Authorization: Hawk mac="p0CMFwr3Kk1Q2EeexPf9SiQ0ibGR0xo5KzBZvKkGZhI="
+```
+
+**Relationship Request**
+
+```text
+Authorization: Hawk id="exqbZWtykFZIh2D7cXi9dA", mac="OO2ldBDSw8KmNHlEdTC4BciIl8+uiuCRvCnJ9KkcR3Y=", ts="1368996800", nonce="3yuYCD4Z"
+```
+
+**Server Response w/hash**
+
+```text
+Server-Authorization: Hawk mac="LvxASIZ2gop5cwE2mNervvz6WXkPmVslwm11MDgEZ5E=", hash="neQFHgYKl/jFqDINrC21uLS0gkFglTz789rzcSr7HYU="
+```
+
+**Timestamp Skew Error**
+
+```text
+WWW-Authenticate: Hawk ts="1368996800", tsm="HPDcD5S3Kw7LM/oyoXKcgv2Z30RnOLAI5ebXpYDGfo4=", error="Stale timestamp"
+```
+
+**Bewit (GET /posts)**
+
+```text
+/posts?bewit=ZXhxYlpXdHlrRlpJaDJEN2NYaTlkQVwxMzY4OTk2ODAwXE8wbWhwcmdvWHFGNDhEbHc1RldBV3ZWUUlwZ0dZc3FzWDc2dHBvNkt5cUk9XA
+```
