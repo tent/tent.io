@@ -8,10 +8,10 @@ title: API Endpoints
 
 All post lists (feed, versions, children, mentions) support pagination. The
 response to a list request contains a set of links to other pages. These links
-are just the query part of the URL and contain all filtering and limiting
-parameters specified in the request plus additional/updated parameters that
-specify a page. Links to the current page and pages that do not exist are
-omitted.
+are just the query part of the URL ("?" followed by zero or more query
+parameters) and contain all filtering and limiting parameters specified in the
+request plus additional/updated parameters that specify a page. Links to the
+current page and pages that do not exist are omitted.
 
 ```json
 {
