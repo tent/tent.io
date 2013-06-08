@@ -5,6 +5,9 @@ html lang='en'
     == render '_navbar'
     .container
       .row
-        .span8.offset2
-          == render '_post', post: @item, content: yield
+        .span4.offset4
+          - if @item.identifier == "/blog/" || @item.identifier == "/blog/archive/"
+            == yield
+          - else
+            == render '_post', post: @item, content: yield
     == render '_footer'

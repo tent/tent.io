@@ -60,8 +60,8 @@ compile '*' do
   case item.identifier
   when %r{/_}
     layout 'none'
-  when %r{^/blog/.+}
-    layout item.identifier == '/blog/archive/' ? 'default' : 'post'
+  when %r{^/blog}
+    layout 'post'
   when %r{^/docs/}
     layout 'doc'
   else
