@@ -70,6 +70,8 @@ Thank you for your help and support of Tent.
 - Before naming your product, service, or company.
 - When in doubt.
 
+### [Download logo](https://s3.amazonaws.com/tent-media/tent-logos.zip)
+
 ## Legal
 
 In short, the Tent logo or Marks represent only Tent and should not be used to
