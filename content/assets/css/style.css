@@ -110,18 +110,6 @@ body {
   background-color: #FDFDFD;   
 }
 
-h1.intro {
-  text-align: center;
-  font-size: 460%;
-  color: #6B55B1;
-  line-height: 100%;
-  padding-bottom:10px;
-
-  background: -webkit-gradient(linear, left top, left bottom, from(#907DBA), to(#6B56A4));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .clear {
   clear: both;
 }
@@ -216,6 +204,8 @@ img.responsive {
   border: 1px solid white;
   position: relative;
 
+  font-weight: 200;
+
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
@@ -234,4 +224,21 @@ code {
   color: #000;
   background-color: #eee;
   border: none;
+}
+
+.align-center {
+  text-align: center;
+}
+
+h1.logo {
+  background-image:  url('/assets/images/tent_png.png');
+  background-image:  url('/assets/images/tent.svg');
+  background-size: 100% 100%;
+  width: 200px;
+  height: 140px;
+  margin: 20px auto 20px;
+
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
