@@ -11,6 +11,10 @@ compile '/assets/css/*' do
   filter :rainpress
 end
 
+route "/assets/images/favicon/" do
+  "/favicon.ico"
+end
+
 route %r{^/(assets/.*|sitemap|robots|atom)/$} do
   next nil if item.identifier.split('/')[-1][0,1] == '_' # partial 
 
@@ -30,7 +34,7 @@ route '/blog/feed/' do
   '/blog.xml'
 end
 
-compile %r{^/(google|robots|assets|favicon)} do
+compile %r{^/(google|robots|assets)} do
 end
 
 compile '*' do
