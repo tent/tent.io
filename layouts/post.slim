@@ -6,8 +6,5 @@ html lang='en'
     .container
       .row
         .span6.offset3
-          - if @item.identifier == "/blog/" || @item.identifier == "/blog/archive/"
-            == yield
-          - else
-            == render '_post', post: @item, content: yield
+          == render '_post', post: @item, content: yield
     == render '_footer'
