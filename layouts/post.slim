@@ -5,7 +5,7 @@ html lang='en'
     == render '_navbar'
     .container
       .row
-        .span4.offset4
+        .span6.offset3
           - if @item.identifier == "/blog/" || @item.identifier == "/blog/archive/"
             == yield
           - else
