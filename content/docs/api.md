@@ -69,7 +69,7 @@ a deterministic sort.
 
 {posts_feed example}
 
-### Refs
+#### Refs
 
 {posts_feed_refs example}
 
