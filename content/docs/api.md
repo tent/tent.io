@@ -20,14 +20,13 @@ current page and pages that do not exist are omitted.
     "prev": "?page=1",
     "next": "?page=2",
     "last": "?page=4"
-  },
-  "data": [
-    "List data here..."
-  ]
+  }
 }
 ```
 
-{list_page schema}
+### Response Envelope
+
+{data schema}
 
 ## new_post
 
@@ -55,6 +54,7 @@ a deterministic sort.
 | Parameter | Value |  Description |
 | --------- | ----- | ------------ |
 | `limit` | Integer | The maximum number of posts to return. Defaults to `25`. |
+| `max-refs` | Integer | The maximum number of refs to return per post. Defaults to `0`. |
 | `sort_by` | String | Specifies the sort order. One of `received_at`, `published_at`, `version.received_at` or `version.published_at`. Defaults to `received_at`. |
 | `since` | String | Requests posts published after the specified timestamp. The last post on the page is the first post published after the specified timestamp. The timestamp is in milliseconds since the Unix epoch, and may be optionally followed by a space and a post version. |
 | `until` | String | Requests posts published after the specified timestamp. The first post on the page is the most recent post published. Must not be combined with `since`. The timestamp is in milliseconds since the Unix epoch, and may be optionally followed by a space and a post version. |
@@ -69,6 +69,10 @@ a deterministic sort.
 
 {posts_feed example}
 
+### Refs
+
+{posts_feed_refs example}
+
 #### Conditional Request
 
 {posts_feed_304 example}
@@ -82,6 +86,10 @@ a deterministic sort.
 ### Create New Version
 
 {new_post_version example}
+
+### Get (with refs)
+
+{post_refs example}
 
 ### Mentions
 

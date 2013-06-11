@@ -88,7 +88,7 @@ requester is permitted to see is shown.
 
 ## Mentions
 
-Mentions reference a specific entity, post, or version. A cross between the CC
+Mentions link to a specific entity, post, or version. A cross between the CC
 field of an email and a hyperlink, mentions allow posts to be linked and
 referenced. When a post is published that mentions an entity and she is
 permitted access, a notification is sent to her automatically. The posts feed
@@ -98,6 +98,11 @@ a given post can be retrieved easily.
 Mentions have a `mentions.public` flag that may optionally be set to `false`,
 hiding the mention from all but the target entity. Unlike public mentions,
 private mentions may be added to existing post versions.
+
+## Refs
+
+Refs reference another post or version. Typically used to embed content in
+a post, they allow apps to fetch posts and referenced posts in the same request.
 
 ## Attachments
 
@@ -184,15 +189,15 @@ digits:
   members are removed from the post JSON.
 - Elements of the `mentions` array with the `public` member set to `false` are
   removed.
-- All `original_entity` members (in the post object as well as `mentions` and
-  `version.parents` array elements) are removed and their sibling `entity`
-  members values are replaced with the `original_entity` value.
+- All `original_entity` members (in the post object as well as `mentions`,
+  `refs`, and `version.parents` array elements) are removed and their sibling
+  `entity` members values are replaced with the `original_entity` value.
 - Empty members are removed. The members that may be empty are `app`,
-  `attachments`, `mentions`, `content`, `licenses`, `version.parents`,
+  `attachments`, `mentions`, `refs`, `content`, `licenses`, `version.parents`,
   `version.message`, and `version`.
 - Optional members that contain redundant data are removed. Currently this is
-  defined as the `post` and `entity` members of a `version.parents` or
-  `mentions` array element when they refer to the identifier or entity of the
+  defined as the `post` and `entity` members of a `version.parents`, `mentions`,
+  and `refs` array element when they refer to the identifier or entity of the
   post that contains them.
 
 *Based on a spec from the [OLPC wiki](http://wiki.laptop.org/go/Canonical_JSON).*
