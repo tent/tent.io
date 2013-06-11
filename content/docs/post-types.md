@@ -54,7 +54,8 @@ subscriptions.
 
 `https://tent.io/types/delete/v0`
 
-{post_delete schema}
+Delete posts indicate posts that were deleted via one or more refs of posts or
+versions published by the same entity.
 
 ### App
 
@@ -75,7 +76,7 @@ subscriptions.
 `https://tent.io/types/status/v0`
 
 Status is Tent's take on microblogging. Messages contain up to 256 characters of
-text and optionally have a location and/or media reference.
+text and optionally have a location.
 
 
 #### Reply fragment
@@ -160,15 +161,14 @@ users (for example `café` is 5 characters, while `café` is 4).
 
 A repost is a post that points to a post published by another entity.
 
-The post must include a mention of the original post. The type fragment must be set to the type of the original post.
-
-{post_repost schema}
+The post must include a mention and a single ref of the original post. The type
+fragment must be set to the type of the original post.
 
 ### Photo
 
 `https://tent.io/types/photo/v0`
 
-A photo contains a single photo and metadata about it.
+A photo post contains a single photo and metadata about it.
 
 {post_photo schema}
 
@@ -176,7 +176,7 @@ A photo contains a single photo and metadata about it.
 
 `https://tent.io/types/album/v0`
 
-An album groups photo posts.
+An album groups photo posts, and has one ref for each included photo.
 
 {post_album schema}
 
@@ -193,10 +193,8 @@ An Essay is a piece of writing.
 
 `https://tent.io/types/cursor/v0`
 
-A cursor indicates an entity's position in the feed. The fragment must be set to
-a URI identifying the cursor type.
-
-{post_cursor schema}
+A cursor indicates an entity's position in the feed and must have a single post
+ref. The fragment must be set to a URI identifying the cursor type.
 
 ### Tag
 
@@ -212,14 +210,7 @@ A tag is mentioned by other posts in order to categorize them.
 
 A favorite references another post.
 
-The post may include a mention of the original post. The type fragment must be set to the type of the original post.
+The post must include a ref may include a mention of the original post. The type
+fragment must be set to the type of the original post.
 
 {post_favorite schema}
-
-### Basic Profile
-
-`https://tent.io/types/basic-profile/v0`
-
-The basic profile describes the entity that published it.
-
-{post_basic-profile schema}
