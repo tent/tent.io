@@ -49,12 +49,13 @@ that is the same across all posts of the same type.
 
 Each post has one or more versions. Versions are identified by the `version.id`
 member. The version ID is the hex-encoded first 256 bits of a SHA-512 of the
-[canonical post JSON](#canonical-post-json). Post versions list zero or more
-"parent versions". Each version created after the first version of a post must
-reference at least one previous version of the same post. These `parents` form
-a [directed acyclic graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph)
-of the history of a post and may also refer to other posts including posts
-published by other entities.
+[canonical post JSON](#canonical-post-json) calculated by the server. Post
+versions list zero or more "parent versions". Each version created after the
+first version of a post must reference at least one previous version of the same
+post. These `parents` form a [directed acyclic
+graph](https://en.wikipedia.org/wiki/Directed_acyclic_graph) of the history of
+a post and may also refer to other posts including posts published by other
+entities.
 
 The version may also optionally have a `version.message`, this may be used as the
 version "commit message".
@@ -185,7 +186,7 @@ digits:
 - Trailing commas in members and elements are not allowed.
 - Only one 'escape' sequence is defined for strings, and it is only used for
   quote and backslash.
-- The `permissions`, `received_at`, `version.received_at` and `version.id`
+- The `permissions`, `app.id`, `received_at`, `version.received_at` and `version.id`
   members are removed from the post JSON.
 - Elements of the `mentions` array with the `public` member set to `false` are
   removed.
