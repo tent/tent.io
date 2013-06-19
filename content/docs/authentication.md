@@ -129,8 +129,8 @@ There is no requirement to do so, but it is strongly recommended where possible.
 
 The payload digest is of a header and the content type, each followed by
 a newline, then the payload itself, also followed by a newline. The content type
-is as provided in the `Content-Type` header with all parameters and
-leading/trailing whitespace stripped.
+is as provided in the `Content-Type` header and stripped of all parameters and
+leading/trailing whitespace.
 
 **Example**
 
