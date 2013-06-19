@@ -239,7 +239,7 @@ h1.logo {
   height: 140px;
   margin: 20px auto 20px;
 
-  text-indent: 100%;
+  text-indent: 101%;
   white-space: nowrap;
   overflow: hidden;
 }
