@@ -28,7 +28,7 @@ Tent is a communications protocol. There is no limit to the type of data or apps
 
 ## Why Tent?
 
-Tent is generic and decentralized. Users aern't stuck in a walled garden. If they choose they can host their own server and control their data and identity. Developers aren't locked into a singple platform. Anyone can build any kind of app and there are no API keys to be revoked later. There are no limits or central authorities to censor or intermediate communication, invade privacy, or take control.
+Tent is generic and decentralized. Users aren't stuck in a walled garden. If they choose they can host their own server and control their data and identity. Developers aren't locked into a single platform. Anyone can build any kind of app and there are no API keys to be revoked later. There are no limits or central authorities to censor or intermediate communication, invade privacy, or take control.
 
 ## Get Started
 
