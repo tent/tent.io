@@ -169,8 +169,8 @@ hawk.1.ts
 
 Pre-signed URLs may be created, allowing temporary read access to the bearer of
 the URL. These are called *bewit* URLs and have an added `bewit` URL parameter.
-The `bewit` is a URL base64-encoded string with any trailing `=` elided of the
-field values separated by `\`.
+To construct the `bewit` value, join the fields with `\`, base64 the string
+using the URL character set, and then strip all trailing `=`.
 
 The request method in the normalized string is always `GET`, and the server
 allows `GET` and `HEAD` requests. The `nonce` field in the normalized string is
@@ -183,8 +183,10 @@ always empty.
 | `mac` | The base64-encoded HMAC digest of the normalized string. |
 | `ext` | Application-specific data. Empty if not set. |
 
+**Example**
+
 ```text
-url-base64("id\ts\mac\ext")
+trim-right(base64-url("id\ts\mac\ext"), "=")
 ```
 
 ```text
