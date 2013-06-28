@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/tent/tent-schemas.git
-  revision: 830d0e18cbede25dc216f3976c88bb301d6b9127
+  revision: f99821c4160dda5690464ed64ab407d2d20c81a3
   specs:
     tent-schemas (0.2.0)
-      json-schema
+      json-schema (= 2.0.0)
 
 GIT
   remote: git://github.com/titanous/asset_sync.git
@@ -46,7 +46,7 @@ GEM
     fssm (0.2.10)
     i18n (0.6.1)
     json (1.8.0)
-    json-schema (1.1.1)
+    json-schema (2.0.0)
     mime-types (1.23)
     multi_json (1.7.3)
     nanoc (3.6.3)
@@ -58,7 +58,7 @@ GEM
     net-ssh (2.6.7)
     nokogiri (1.5.9)
     posix-spawn (0.3.6)
-    puma (2.0.1)
+    puma (2.1.1)
       rack (>= 1.1, < 2.0)
     pygments.rb (0.5.0)
       posix-spawn (~> 0.3.6)
