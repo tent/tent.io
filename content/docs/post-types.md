@@ -54,7 +54,7 @@ subscriptions.
 
 {post_delivery-failure schema}
 
-Delivery failure posts indicate delivery to a mentioned recipient was not successful. The post for which delivery failed must be in the `refs` array of the delivery failure post (`entity`, `post`, `type`, and `version`) and it's type (excluding fragment) must be the fragment of the delivery failure post.
+Delivery failure posts indicate delivery to a mentioned recipient was not successful. The post for which delivery failed must be in the `refs` and `mentions` arrays of the delivery failure post (`entity`, `post`, `type`, and `version`) and it's type (excluding fragment) must be the fragment of the delivery failure post.
 
 ### Delete
 
