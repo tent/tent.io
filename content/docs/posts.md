@@ -187,7 +187,7 @@ digits:
 - Only one 'escape' sequence is defined for strings, and it is only used for
   quote and backslash.
 - The `permissions`, `app.id`, `received_at`, `version.received_at` and `version.id`
-  members are removed from the post JSON.
+  members are removed.
 - Elements of the `mentions` array with the `public` member set to `false` are
   removed.
 - All `original_entity` members (in the post object as well as `mentions`,
