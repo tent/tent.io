@@ -25,7 +25,7 @@ The `status` post type allows short messages up to 256 characters formatted with
 Tent flavored Markdown and the ability to link to other media.
 
 The simplest status app would use a single query: `GET posts_feed` with
-`?types=https://tent.io/types/status/v0&entity=following`. This would display
+`?types=https://tent.io/types/status/v0&entities=following`. This would display
 all status posts with which the user's server has come into contact.
 
 A more powerful application could filter less relevant conversations from
@@ -55,9 +55,9 @@ could be handled in the same application as the editor or another app
 altogether.
 
 To fetch all `essay` posts by a user, `GET posts_feed` with
-`?types=https://tent.io/types/essay/v0&entity=https://daniel.tent.is`. To fetch
+`?types=https://tent.io/types/essay/v0&entities=https://daniel.tent.is`. To fetch
 all essay posts from entities the user follows `GET posts_feed` with
-`?types=https://tent.io/types/essay/v0&entity=followings`.
+`?types=https://tent.io/types/essay/v0&entities=followings`.
 
 You can find all public comments on any post with `GET post` with `Accept:
 application/vnd.tent.post-mentions.v0+json`.
@@ -81,7 +81,7 @@ Votes are up or down votes added by other users. Vote posts mention the
 `submission` they reference and contain an `#up` or `#down` fragment.
 
 To find submissions from those a user follows, `GET posts_feed` with
-`?types=https://example.com/types/submissions/v0&entity=followings`
+`?types=https://example.com/types/submissions/v0&entities=followings`
 
 To find up and down votes for each submission, `GET post` with `Accept:
 application/vnd.tent.post-mentions.v0+json`.
