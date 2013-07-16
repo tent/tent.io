@@ -1,10 +1,11 @@
 .navbar.navbar-static-top
   .navbar-inner
     ul.nav
-      - if @item_rep.path != '/'
-        li
-          a href='/' style='padding-top:6px'
-            img src=image_url('logo-96.png') style='height:28px'
+      li
+        a.logo href='/'
+          - if @item_rep.path != '/'
+            img src=image_url('logo-96.png')
+          | Tent
       == nav_link_with_active 'About', '/about', top: true
       == nav_link_with_active 'Docs', '/docs', top: true
       == nav_link_with_active 'Blog', '/blog', top: true

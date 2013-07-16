@@ -93,6 +93,15 @@ footer {
   font-weight: bold;
 }
 
+a.logo {
+  font-weight: 600;
+}
+a.logo img {
+  margin-top: -5px;
+  margin-right: 5px;
+  height: 28px;
+}
+
 /* RUPERT ADDITIONS */
 
 /* for responsiveness */
