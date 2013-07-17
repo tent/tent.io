@@ -92,6 +92,7 @@ text and optionally have a location.
 Status posts that are replies to another status post (mentioning one or more
 posts) should set the fragment to
 `reply`: `https://tent.io/types/status/v0#reply`
+and ref the mentioned post(s).
 
 #### Markdown
 
