@@ -44,7 +44,7 @@ The first Tent app was TentStatus, a microblogging app. This was the simplest ap
 
 ### Getting Started
 
-You can run your own Tent server with [tentd](https://github.com/tent/tentd-admin) or sign up for an account on [Tent.is](https://tent.is). If you're a developer you can write applications using the [Tent protocol](http://tent.io/docs). Today it's easy to use Tent for microblogging, soon it will be possible to do much more.
+You can run your own Tent server with [tentd](https://github.com/tent/tentd) or sign up for an account on [Tent.is](https://tent.is). If you're a developer you can write applications using the [Tent protocol](http://tent.io/docs). Today it's easy to use Tent for microblogging, soon it will be possible to do much more.
 
 ## In the Future
 
