@@ -66,6 +66,8 @@ compile '*' do
     else
       layout 'post'
     end
+  when %r{^/officehours}
+    layout 'officehours'
   when %r{^/docs/}
     layout 'doc'
   else

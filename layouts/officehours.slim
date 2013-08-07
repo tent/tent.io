@@ -1,0 +1,10 @@
+doctype html
+html lang='en'
+  head == render '_head'
+  body
+    == render '_navbar'
+    .container
+      .row
+        .span9.offset3
+          == yield
+    == render '_footer'
