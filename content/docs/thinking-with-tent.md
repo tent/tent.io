@@ -153,7 +153,7 @@ application/vnd.tent.post-mentions.v0+json`.
 ### Music Scrobbling
 
 Create a new `nowplaying` post including the song title, artist, and album
-whenever a user starts playing a song on their local device of music service.
+whenever a user starts playing a song on their local device or music service.
 Each play should be a new post, not a new version of an earlier `nowplaying`
 post.
 
