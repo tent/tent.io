@@ -157,7 +157,7 @@ Some more text
 The maximum length of the `text` is 256 Unicode characters (also known as code
 points). Applications may want to normalize the text using [Unicode
 Normalization Form C](http://unicode.org/reports/tr15/) to avoid surprising
-users (for example `café` is 5 characters, while `café` is 4).
+users (for example `café` is 5 characters, while `café` is 4).
 
 #### Schema
 
