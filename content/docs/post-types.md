@@ -109,10 +109,10 @@ text and `0` is the index of the mention in the `mentions` array.
   // ...
   "mentions": [
     {
-      "entity": "https://jesse.tent.is"
+      "entity": "https://jesse.cupcake.is"
     },
     {
-      "entity": "https://daniel.tent.is"
+      "entity": "https://daniel.cupcake.is"
     }
   ],
   "content": {

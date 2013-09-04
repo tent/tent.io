@@ -13,7 +13,7 @@ parameters are used to specify resources of the entity.
 
 ```text
 tent+http://example.com/user
-tent+https://jonathan.tent.is
+tent+https://jonathan.cupcake.is
 ```
 
 ## Parameters
@@ -27,9 +27,9 @@ entity.
 - `attachment_digest` The hex encoded digest of an attachment. Allows referencing and attachment without `post` and `version`.
 
 ```text
-tent+https://jonathan.tent.is?post=123
-tent+https://jonathan.tent.is?post=123&version=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
-tent+https://jonathan.tent.is?post=123&attachment_name=foo.txt&version=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
-tent+https://jonathan.tent.is?post=123&attachment_name=bar.txt
-tent+https://jonathan.tent.is?attachment_digest=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+tent+https://jonathan.cupcake.is?post=123
+tent+https://jonathan.cupcake.is?post=123&version=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+tent+https://jonathan.cupcake.is?post=123&attachment_name=foo.txt&version=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
+tent+https://jonathan.cupcake.is?post=123&attachment_name=bar.txt
+tent+https://jonathan.cupcake.is?attachment_digest=d7a8fbb307d7809469ca9abcb0082e4f8d5651e46d3cdb762d02d0bf37c9e592
 ```

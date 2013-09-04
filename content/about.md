@@ -32,7 +32,7 @@ Tent is generic and decentralized. Users aren't stuck in a walled garden. If the
 
 ## Get Started
 
-To get started with Tent, you need a Tent server. You can use a Tent host like [Tent.is](https://tent.is) or host [your own](https://github.com/tent/tentd-omnibus).
+To get started with Tent, you need a Tent server. You can use a Tent host like [Cupcake](https://cupcake.io) or host [your own](https://github.com/tent/tentd-omnibus).
 
 
 Thinking about hosting your own Tent server? Consider the following criteria:

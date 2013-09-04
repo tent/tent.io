@@ -4,7 +4,7 @@ kind: article
 created_at: June 8, 2013 14:00 EDT
 ---
 
-Today we are proud and excited to announce the official Tent logo. The logo was developed from a design by [Christophe Antonio](http://www.designforthem.com). We also thank [Loren Brichter](https://lorenb.tent.is) for his contributions to the design process.
+Today we are proud and excited to announce the official Tent logo. The logo was developed from a design by [Christophe Antonio](http://www.designforthem.com). We also thank [Loren Brichter](https://lorenb.cupcake.is) for his contributions to the design process.
 
 The Tent logo will be used to promote Tent and increase visibility of the ecosystem throughout the web. The Tent logo can be used to link to Tent entities, for "sign in with Tent" buttons, and to show a product's compatibility with Tent. In addition to digital design assets, we hope to have logo apparel available for sale in the future.
 

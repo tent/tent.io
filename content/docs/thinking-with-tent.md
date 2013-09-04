@@ -36,7 +36,7 @@ query `GET posts_feed` with
 `?types=https://tent.io/types/status/v0#reply&mentions=followings` shows
 conversations between entities that the user follows. Status posts by other
 entities that mention the user can be retrieved using `GET posts_feed` with
-`?types=https://tent.io/types/status/v0#&mentions=https://daniel.tent.is`
+`?types=https://tent.io/types/status/v0#&mentions=https://daniel.cupcake.is`
 
 ### Blogs
 
@@ -55,7 +55,7 @@ could be handled in the same application as the editor or another app
 altogether.
 
 To fetch all `essay` posts by a user, `GET posts_feed` with
-`?types=https://tent.io/types/essay/v0&entities=https://daniel.tent.is`. To fetch
+`?types=https://tent.io/types/essay/v0&entities=https://daniel.cupcake.is`. To fetch
 all essay posts from entities the user follows `GET posts_feed` with
 `?types=https://tent.io/types/essay/v0&entities=followings`.
 
