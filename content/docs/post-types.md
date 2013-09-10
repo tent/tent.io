@@ -29,6 +29,9 @@ All entities notified of this change must rewrite their posts with the updated
 to the post `entity` as well as entities used in mentions, version parents,
 groups and permissions.
 
+The post also includes some "profile" details. These details are optionally made
+available to apps when they request posts.
+
 Modified meta posts are sent to all relationships and apps regardless of
 subscriptions.
 
