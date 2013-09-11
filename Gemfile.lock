@@ -9,6 +9,13 @@ GIT
       sprockets-helpers
       sprockets-sass
 
+GIT
+  remote: git://github.com/tent/tent-schemas.git
+  revision: 48deddffd39739603bf01ec88ff195a8503ae4cd
+  specs:
+    tent-schemas (0.2.0)
+      json-schema (= 2.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -37,6 +44,7 @@ GEM
     hike (1.2.3)
     http_parser.rb (0.5.3)
     i18n (0.6.5)
+    json-schema (2.0.0)
     kgio (2.8.0)
     kramdown (1.1.0)
     listen (1.2.3)
@@ -112,6 +120,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    yajl-ruby (1.1.0)
 
 PLATFORMS
   ruby
@@ -122,4 +131,6 @@ DEPENDENCIES
   middleman-blog (~> 3.3.0)
   middleman-livereload (~> 3.1.0)
   middleman-more (~> 3.1.5)
+  tent-schemas!
   unicorn
+  yajl-ruby
