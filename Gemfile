@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'middleman'      , '~> 3.1.5'
-gem 'middleman-more' , '~> 3.1.5'
-gem 'middleman-blog' , '~> 3.3.0'
+gem 'middleman'      , '~> 3.1.3'
+gem 'middleman-more' , '~> 3.1.3'
+gem 'middleman-blog' , '~> 3.2.0'
 
 gem 'unicorn'
 

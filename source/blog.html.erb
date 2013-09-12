@@ -1,0 +1,22 @@
+---
+pageable: true
+per_page: 10
+---
+
+<% page_articles.each_with_index do |article, i| %>
+  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <%= article.body %>
+<% end %>
+
+<% if paginate %>
+  <div class='blog-article'>
+    <% if prev_page %>
+      <a class='blog-nav-later' href="<%= prev_page.url %>">Later posts</a>
+    <% end %>
+    <% if next_page %>
+      <a class='blog-nav-earlier' href="<%= next_page.url %>">Earlier posts</a>
+    <% end %>
+  </div>
+<% end %>

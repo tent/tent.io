@@ -11,11 +11,18 @@ rescue LoadError
 end
 
 activate :blog do |blog|
-  blog.prefix = 'blog'
-  blog.permalink = ":title.html"
-  blog.sources = "blog/:title.html.md"
+  blog.permalink = ":title"
+  blog.sources = "blog/:title.html"
   blog.layout = 'blog'
+  blog.default_extension = '.md'
+
+  blog.paginate = true
+  blog.page_link = "page-:num"
+  blog.per_page = 1
 end
+
+# Pretty URLs
+activate :directory_indexes
 
 set :css_dir, 'stylesheets'
 
