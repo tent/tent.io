@@ -1,17 +1,27 @@
 require 'tent_doc/schema_table'
 require 'tent_doc/api_example'
+require 'middleman-core/renderers/redcarpet'
 
-module TentDoc
-  PROCESSORS = {
-    :schema_table => SchemaTable,
-    :api_example => APIExample
-  }.freeze
+# Piggyback on Middleman's markdown renderer
+module Middleman
+  module Renderers
+    class RedcarpetTemplate
+      PROCESSORS = {
+        :schema_table => ::TentDoc::SchemaTable,
+        :api_example => ::TentDoc::APIExample
+      }.freeze
 
-  def self.compile(data, options = {})
-    PROCESSORS.inject(data) do |data, (key, processor)|
-      processor.compile(data, options[key] || {})
+      alias _evaluate evaluate
+      def evaluate(scope, locals, &block)
+        _output = data
+        _output = PROCESSORS.inject(_output) do |memo, (key, processor)|
+          processor.compile(memo.to_s, options[key] || {}) || memo
+        end
+
+        @data = _output
+
+        _evaluate(scope, locals, &block)
+      end
     end
   end
 end
-
-::Tilt.register(TentDoc, 'tent_doc')

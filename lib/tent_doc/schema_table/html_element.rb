@@ -8,7 +8,7 @@ module TentDoc
       end
 
       def <<(content)
-        self.content << content
+        self.content << content.to_s
       end
 
       def to_html
@@ -21,6 +21,10 @@ module TentDoc
         end
 
         %(<#{name}#{attrs}>\n#{content}\n</#{name}>\n)
+      end
+
+      def to_s
+        to_html
       end
     end
   end

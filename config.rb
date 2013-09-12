@@ -30,6 +30,17 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :markdown_engine, :redcarpet
+set :markdown,
+      fenced_code_blocks: true,
+      no_intra_emphasis: true,
+      autolink: true,
+      tables: true,
+      strikethrough: true,
+      lax_html_blocks: true,
+      space_after_headers: true,
+      superscript: true
+
 # Configure Sprockets
 require 'fly'
 Fly::Sprockets.setup(sprockets)

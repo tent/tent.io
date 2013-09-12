@@ -7,7 +7,7 @@ module TentDoc
     end
 
     DEFAULT_OPTIONS = {
-      :path => File.expand_path("../../../content/docs/api_examples.json", __FILE__)
+      :path => File.expand_path("../../../source/docs/api_examples.json", __FILE__)
     }.freeze
 
     attr_reader :data, :options

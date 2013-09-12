@@ -34,7 +34,8 @@ module TentDoc
     end
 
     def compile
-      data.gsub(/\{([\w-]+) schema\}/) { schema_table($1) }
+      reg = /\{([\w-]+) schema\}/
+      data.gsub(reg) { |m| m.match(reg); schema_table($1) }
     end
 
     def load_schema(schema_name)
