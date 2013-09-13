@@ -1,1 +1,37 @@
-@import 'fly'
+@import 'fly';
+
+.navbar-logo {
+  height: 50px;
+}
+
+.intro-header-container {
+  margin-top: -20px; // negate .navbar margin-bottom of 20px
+  background-color: $blue-color;
+  color: #fff;
+  text-align: center;
+
+  h1 {
+    font-size: 42pt;
+  }
+
+  h2 {
+    font-size: 24pt;
+  }
+
+  h1, h2 {
+    font-family: 'source_sans_pro', 'Helvetica Neue';
+    font-weight: bold;
+  }
+}
+
+.btn-default {
+  &:hover {
+    background-color: $blue-color;
+    border-color: $light-blue-color;
+  }
+}
+
+.btn {
+  font-size: 16pt;
+  border-width: 2px;
+}
