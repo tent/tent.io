@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/fly.git
-  revision: 4f072c2df09f322c428788489e9521f6b08df1bd
+  revision: cb82e7f3cc266184e85a8aaeed90be09e6384351
   branch: master
   specs:
     fly (0.0.1)
@@ -45,7 +45,7 @@ GEM
     http_parser.rb (0.5.3)
     i18n (0.6.5)
     json-schema (2.0.0)
-    kgio (2.8.0)
+    kgio (2.8.1)
     kramdown (1.1.0)
     listen (1.2.3)
       rb-fsevent (>= 0.9.3)
@@ -97,11 +97,11 @@ GEM
       rack (>= 1.0)
     raindrops (0.12.0)
     rb-fsevent (0.9.3)
-    rb-inotify (0.9.1)
+    rb-inotify (0.9.2)
       ffi (>= 0.5.0)
     rb-kqueue (0.2.0)
       ffi (>= 0.5.0)
-    redcarpet (2.2.2)
+    redcarpet (3.0.0)
     sass (3.2.10)
     sprockets (2.10.0)
       hike (~> 1.2)
