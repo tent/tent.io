@@ -41,6 +41,21 @@ set :markdown,
       space_after_headers: true,
       superscript: true
 
+helpers do
+  def nav_link_with_active(text, target, attributes = {})
+    target_path = target
+    item_path = current_page.url
+
+    active = if attributes.delete(:top)
+               /^#{target_path}/ =~ item_path
+             else
+               target_path == item_path
+             end
+
+    "<li #{'class="active"' if active}>" + link_to(text, target, attributes) + "</li>"
+  end
+end
+
 # Configure Sprockets
 require 'fly'
 Fly::Sprockets.setup(sprockets)
