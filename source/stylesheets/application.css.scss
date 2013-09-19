@@ -1,7 +1,7 @@
 @import 'fly';
 
-body > footer {
-  text-align: center;
+body footer {
+  text-align: left;
   font-family: 'source_sans_pro', 'Helvetica Neue';
   font-weight: normal;
   font-style: normal;
@@ -13,6 +13,14 @@ body > footer {
     float: none !important;
     margin-bottom: 90px;
     margin-top: 90px;
+  }
+
+  a {
+    color: #666666;
+
+    &:hover {
+      color: #666666;
+    }
   }
 }
 
