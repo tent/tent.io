@@ -52,6 +52,12 @@ body footer {
     margin-top: 30px;
     margin-bottom: 110px;
   }
+
+  a {
+    &:first-of-type {
+      margin-right: 20px;
+    }
+  }
 }
 
 .btn-default {
