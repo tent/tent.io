@@ -40,7 +40,21 @@ body > footer {
   }
 }
 
+.btn-primary {
+  background-color: #1a4fba;
+  border-color: #1a4fba;
+
+  &:hover {
+    background-color: #0f43ab;
+    border-color: #0f43ab;
+  }
+}
+
 .btn {
   font-size: 16pt;
   border-width: 2px;
+  font-family: 'source_sans_pro', 'Helvetica Neue';
+  font-weight: bold;
+  padding: 12px 20px;
 }
+
