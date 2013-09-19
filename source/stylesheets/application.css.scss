@@ -7,6 +7,12 @@ body > footer {
   font-style: normal;
   font-size: 12pt;
   color: #666;
+
+  hr {
+    float: none !important;
+    margin-bottom: 90px;
+    margin-top: 90px;
+  }
 }
 
 .navbar-logo {
