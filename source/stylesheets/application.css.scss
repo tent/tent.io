@@ -18,7 +18,7 @@ body footer {
   a {
     color: #666666;
 
-    &:hover {
+    &:hover, &:focus, &:active {
       color: #666666;
     }
   }
