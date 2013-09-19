@@ -28,9 +28,14 @@ body footer {
   height: 50px;
 }
 
+.navbar > .container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 .intro-header-container {
   margin-top: -20px; // negate .navbar margin-bottom of 20px
-  padding-top: 110px;
+  padding-top: 40px;
   background-color: $blue-color;
   color: #fff;
   text-align: center;
