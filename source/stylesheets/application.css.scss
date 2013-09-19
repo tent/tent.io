@@ -1,5 +1,14 @@
 @import 'fly';
 
+body > footer {
+  text-align: center;
+  font-family: 'source_sans_pro', 'Helvetica Neue';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16pt;
+  color: #666;
+}
+
 .navbar-logo {
   height: 50px;
 }
