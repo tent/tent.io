@@ -33,6 +33,16 @@ body footer {
   margin-bottom: 40px;
 }
 
+.navbar, .navbar-inverse {
+  .navbar-nav > .active > a {
+    background-color: transparent;
+
+    &:hover, &:focus {
+      background-color: transparent;
+    }
+  }
+}
+
 .intro-header-container {
   margin-top: -20px; // negate .navbar margin-bottom of 20px
   padding-top: 40px;
