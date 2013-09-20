@@ -9,6 +9,7 @@ gem 'unicorn'
 gem 'tent-schemas', :git => 'git://github.com/tent/tent-schemas.git'
 gem 'yajl-ruby'
 gem 'redcarpet'
+gem 'pygments.rb'
 
 # Custom Boostrap 3
 gem 'fly', :git => 'git://github.com/tent/fly.git', :branch => 'master'

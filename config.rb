@@ -2,6 +2,7 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 require 'tilt/tent_doc'
+require 'markdown_html'
 
 begin
   # Reload the browser automatically whenever files change

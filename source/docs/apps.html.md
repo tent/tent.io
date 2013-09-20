@@ -1,5 +1,6 @@
 ---
 title: Apps
+layout: docs
 ---
 
 Apps allow users to interact with data in Tent. [OAuth

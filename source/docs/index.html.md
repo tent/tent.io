@@ -1,5 +1,6 @@
 ---
 title: Protocol Introduction
+layout: docs
 ---
 
 Tent uses HTTPS and JSON to transport [posts](/docs/posts) between servers and

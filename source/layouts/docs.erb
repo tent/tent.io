@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'head' %>
+  </head>
+  
+  <body>
+    <%= partial 'navbar' %>
+
+    <% if current_page.url == '/' %>
+      <%= partial 'intro' %>
+    <% end %>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-2 col-md-offset-1'>
+          <ul class='nav-list'></li>
+            <li class='nav-header'>Documentation</li>
+            <%= nav_link_with_active 'Introduction', '/docs' %>
+            <%= nav_link_with_active 'Thinking with Tent', '/docs/thinking-with-tent' %>
+            <%= nav_link_with_active 'Servers & Entities', '/docs/servers-entities' %>
+            <%= nav_link_with_active 'Posts', '/docs/posts' %>
+            <%= nav_link_with_active 'Relationships', '/docs/relationships' %>
+            <%= nav_link_with_active 'Apps', '/docs/apps' %>
+            <%= nav_link_with_active 'Authentication', '/docs/authentication' %>
+            <%= nav_link_with_active 'API Endpoints', '/docs/api' %>
+            <%= nav_link_with_active 'Post Types', '/docs/post-types' %>
+            <%= nav_link_with_active 'URI Scheme', '/docs/uri-scheme' %>
+
+            <li class='divider'></li>
+
+            <li class='nav-header'>Page Contents</li>
+            <%= Redcarpet::Markdown.new(MarkdownHTMLTOC).render(File.read(current_page.source_file)) %>
+          </ul>
+        </div>
+
+        <div class='col-md-8'>
+          <%= yield %>
+
+          <%= partial 'footer' %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,5 +1,6 @@
 ---
 title: Authentication
+layout: docs
 ---
 
 Tent uses the [Hawk](https://github.com/hueniverse/hawk) HTTP authentication

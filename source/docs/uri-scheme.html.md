@@ -1,5 +1,6 @@
 ---
 title: URI Scheme
+layout: docs
 ---
 
 Tent URIs allow unambiguous referencing of Tent entities, posts, post versions,

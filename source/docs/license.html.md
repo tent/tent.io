@@ -1,5 +1,6 @@
 ---
 title: Documentation License
+layout: docs
 ---
 
 This document and translations of it may be copied and furnished to others, and

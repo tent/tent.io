@@ -1,5 +1,6 @@
 ---
 title: Thinking With Tent
+layout: docs
 ---
 
 Tent applications are built differently than centralized web apps or isolated

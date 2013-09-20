@@ -1,5 +1,6 @@
 ---
 title: Posts
+layout: docs
 ---
 
 Posts are the core of the Tent Protocol. Each piece of data in Tent, from

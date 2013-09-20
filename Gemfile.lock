@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/fly.git
-  revision: 69688e65a4fedb41977d0f22fb0f3a916eb952e7
+  revision: 646f1fb1d5a8e98de0221c81da43f3084154b120
   branch: master
   specs:
     fly (0.0.1)
@@ -90,6 +90,10 @@ GEM
       sprockets-helpers (~> 1.0.0)
       sprockets-sass (~> 1.0.0)
     multi_json (1.8.0)
+    posix-spawn (0.3.6)
+    pygments.rb (0.5.0)
+      posix-spawn (~> 0.3.6)
+      yajl-ruby (~> 1.1.0)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -135,6 +139,7 @@ DEPENDENCIES
   middleman-blog (~> 3.2.0)
   middleman-livereload (~> 3.1.0)
   middleman-more (~> 3.1.3)
+  pygments.rb
   redcarpet
   tent-schemas!
   unicorn

@@ -1,5 +1,6 @@
 ---
 title: Post Types
+layout: docs
 ---
 
 Data is stored in Tent as posts. Posts, like files, are typed. There are a small number of post types specified by the protocol that Tent servers use. Developers are free to create new post types for content/data storage. The list of content post types on this page contains some common types. 

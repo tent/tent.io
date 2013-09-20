@@ -1,5 +1,6 @@
 ---
 title: Servers and Entities
+layout: docs
 ---
 
 ## Entity URLs

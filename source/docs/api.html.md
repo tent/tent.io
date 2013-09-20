@@ -1,5 +1,6 @@
 ---
 title: API Endpoints
+layout: docs
 ---
 
 ## Concepts
