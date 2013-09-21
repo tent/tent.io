@@ -12,7 +12,7 @@ rescue LoadError
 end
 
 activate :blog do |blog|
-  blog.permalink = ":title"
+  blog.permalink = "blog/:title"
   blog.sources = "blog/:title.html"
   blog.layout = 'blog'
   blog.default_extension = '.md'
