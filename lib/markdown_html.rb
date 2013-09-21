@@ -44,7 +44,7 @@ class MarkdownHTMLTOC < Redcarpet::Render::Base
     @current_level ||= 2
     if level > @current_level
       @current_level.upto(level-1) { |d|
-        html << "<ul class='nav nav-list'>"
+        html << "<ul class='nav-list'>"
         html << '<li>'
       }
     elsif level < @current_level
