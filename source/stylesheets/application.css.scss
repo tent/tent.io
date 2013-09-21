@@ -34,11 +34,26 @@ body footer {
 }
 
 .navbar, .navbar-inverse {
-  .navbar-nav > .active > a {
-    background-color: transparent;
+  .navbar-nav > .active {
+    &:after {
+      content: '';
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      top: 41px;
+      width: 0px;
+      height: 0px;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid white;
+    }
 
-    &:hover, &:focus {
+    > a {
       background-color: transparent;
+
+      &:hover, &:focus {
+        background-color: transparent;
+      }
     }
   }
 }
