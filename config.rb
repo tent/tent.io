@@ -45,7 +45,7 @@ set :markdown,
 helpers do
   def nav_link_with_active(text, target, attributes = {})
     target_path = target
-    item_path = current_page.url
+    item_path = current_page.url.sub(/([^\/]+)\/\Z/, '\1')
 
     active = if attributes.delete(:top)
                /^#{target_path}/ =~ item_path
