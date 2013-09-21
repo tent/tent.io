@@ -8,7 +8,7 @@ Tent is a way to store all your data in one place that you control. Instead of y
 
 Tent is built around `posts`. Each Tent server stores a single user's posts and sends copies to the user's subscribers. Every Tent user either signs up for a service provider or sets up their own Tent server. Tent apps read and create posts from the user's server. Different apps use different post types for different kinds of content. Tent apps can talk to any Tent server so if a user changes providers they can still use the same apps.
 
-```
+```text
 Example:
   User A creates a post in app 1.
   App 1 sends the post to user A's server.
