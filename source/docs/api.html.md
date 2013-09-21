@@ -31,11 +31,24 @@ current page and pages that do not exist are omitted.
 
 ## new_post
 
-{new_post example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>POST new_post</div>
+
+  <div class='panel-body'>
+    {new_post example}
+  </div>
+</div>
 
 ### Attachments
 
-{new_multipart_post example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>POST new_post</div>
+
+  <div class='panel-body'>
+    {new_multipart_post example}
+  </div>
+</div>
+
 
 ## posts_feed
 
@@ -68,70 +81,164 @@ a deterministic sort.
 
 ### Examples
 
-{posts_feed example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET posts_feed</div>
+
+  <div class='panel-body'>
+    {posts_feed example}
+  </div>
+</div>
 
 #### Refs
 
-{posts_feed_refs example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET posts_feed</div>
+
+  <div class='panel-body'>
+    {posts_feed_refs example}
+  </div>
+</div>
 
 #### Conditional Request
 
-{posts_feed_304 example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET posts_feed</div>
+
+  <div class='panel-body'>
+    {posts_feed_304 example}
+  </div>
+</div>
 
 #### HEAD Request (Count)
 
-{posts_feed_count example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD posts_feed</div>
+
+  <div class='panel-body'>
+    {posts_feed_count example}
+  </div>
+</div>
 
 ## post
 
 ### Create New Version
 
-{new_post_version example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>PUT post</div>
+
+  <div class='panel-body'>
+    {new_post_version example}
+  </div>
+</div>
 
 ### Get (with refs)
 
-{post_refs example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
+
+  <div class='panel-body'>
+    {post_refs example}
+  </div>
+</div>
 
 ### Mentions
 
-{post_mentions example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
 
-#### HEAD (Count)
+  <div class='panel-body'>
+    {post_mentions example}
+  </div>
+</div>
 
-{post_mentions_count example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD post</div>
+
+  <div class='panel-body'>
+    {post_mentions_count example}
+  </div>
+</div>
 
 ### Versions
 
-{post_versions example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
 
-#### HEAD (Count)
+  <div class='panel-body'>
+    {post_versions example}
+  </div>
+</div>
 
-{post_versions_count example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD post</div>
+
+  <div class='panel-body'>
+    {post_versions_count example}
+  </div>
+</div>
 
 ### Child Versions
 
-{post_children example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
 
-#### HEAD (Count)
+  <div class='panel-body'>
+    {post_children example}
+  </div>
+</div>
 
-{post_children_count example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD post</div>
+
+  <div class='panel-body'>
+    {post_children_count example}
+  </div>
+</div>
 
 ## attachment
 
-{get_attachment example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET attachment</div>
+
+  <div class='panel-body'>
+    {get_attachment example}
+  </div>
+</div>
 
 ## post_attachment
 
-{get_post_attachment example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post_attachment</div>
+
+  <div class='panel-body'>
+    {get_post_attachment example}
+  </div>
+</div>
 
 ## batch
 
+Documentation pending
+
 ## server_info
+
+Documentation pending
 
 ## oauth_auth
 
-{oauth_redirect example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET oauth</div>
+
+  <div class='panel-body'>
+    {oauth_redirect example}
+  </div>
+</div>
 
 ## oauth_token
 
-{oauth_token example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>POST oauth_token</div>
+
+  <div class='panel-body'>
+    {oauth_token example}
+  </div>
+</div>

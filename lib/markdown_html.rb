@@ -2,6 +2,17 @@ require 'pygments.rb'
 require 'cgi'
 require 'middleman-core/renderers/redcarpet'
 
+REDCARPET_EXTENTIONS = {
+  fenced_code_blocks: true,
+  no_intra_emphasis: true,
+  autolink: true,
+  tables: true,
+  strikethrough: true,
+  lax_html_blocks: true,
+  space_after_headers: true,
+  superscript: true
+}.freeze
+
 module MarkdownHelpers
   def anchor(text)
     text.downcase.strip.gsub(/[^a-z0-9 ]/, '').gsub(/\s+/, '-')

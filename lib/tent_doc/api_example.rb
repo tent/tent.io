@@ -1,4 +1,5 @@
 require 'yajl'
+require 'markdown_html'
 
 module TentDoc
   class APIExample
@@ -19,7 +20,9 @@ module TentDoc
     end
 
     def compile
-      data.gsub(/\{(\w+) example\}/) { api_examples[$1] }
+      data.gsub(/\{(\w+) example\}/) do
+        Redcarpet::Markdown.new(Middleman::Renderers::MiddlemanRedcarpetHTML, REDCARPET_EXTENTIONS).render(api_examples[$1])
+      end
     end
 
     private
