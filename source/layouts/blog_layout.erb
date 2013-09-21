@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'head' %>
+  </head>
+
+  <body>
+    <%= partial 'navbar' %>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-6 col-md-offset-3'>
+          <%= yield %>
+        </div>
+      </div>
+
+      <%= partial 'footer' %>
+    </div>
+  </body>
+</html>

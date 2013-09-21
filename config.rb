@@ -14,12 +14,11 @@ end
 activate :blog do |blog|
   blog.permalink = "blog/:title"
   blog.sources = "blog/:title.html"
-  blog.layout = 'blog'
+  blog.layout = 'blog_layout'
   blog.default_extension = '.md'
 
   blog.paginate = true
   blog.page_link = "page-:num"
-  blog.per_page = 1
 end
 
 # Pretty URLs
