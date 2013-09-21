@@ -21,6 +21,8 @@ activate :blog do |blog|
   blog.page_link = "page-:num"
 end
 
+proxy "/blog/archive", "blog_archive.html"
+
 # Pretty URLs
 activate :directory_indexes
 

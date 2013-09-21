@@ -1,0 +1,14 @@
+---
+title: Blog Archive
+layout: blog_layout
+---
+
+<h2>Blog Archive</h2>
+
+<ul class='list-unstyled'>
+  <% blog.articles.each do |article| %>
+    <li>
+      <time datetime="<%= article.date.to_s %>"><%= article.date.strftime("%Y-%m-%d") %></time> &mdash; <%= link_to article.title, article %>
+    </li>
+  <% end %>
+</ul>
