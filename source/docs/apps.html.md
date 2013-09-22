@@ -14,9 +14,21 @@ Typically an entity will provide the app with their Entity URL when logging in.
 order to get the meta post with the list of servers and endpoints necessary to
 talk to the Tent servers that represent the entity.
 
-{discover_head example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD entity</div>
 
-{discover_meta example}
+  <div class='panel-body'>
+    {discover_head example}
+  </div>
+</div>
+
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
+
+  <div class='panel-body'>
+    {discover_meta example}
+  </div>
+</div>
 
 ## Registration
 
@@ -25,13 +37,25 @@ app must be registered. Registration is the process of creating an app post
 using the `new_post` endpoint. The app post contains all of the metadata that
 the server needs from the app.
 
-{app_create example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>POST new_post</div>
+
+  <div class='panel-body'>
+    {app_create example}
+  </div>
+</div>
 
 The response to the post creation request will include a `Link` header that
 contains a link to the credentials for the app. The credentials are used in the
 *Access Token Request*.
 
-{app_credentials example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET post</div>
+
+  <div class='panel-body'>
+    {app_credentials example}
+  </div>
+</div>
 
 ## OAuth
 
@@ -46,7 +70,13 @@ To authorize the app, redirect the user to the `oauth_auth` endpoint with the
 post. If the app is web-based, the `state` parameter should also be set to
 a random value to be verified when the user is redirected back.
 
-{oauth_redirect example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET oauth_auth</div>
+
+  <div class='panel-body'>
+    {oauth_redirect example}
+  </div>
+</div>
 
 After the user authorizes the application, the server will redirect to the app's
 `redirect_uri` provided in the initial registration. The redirect URL will
@@ -55,7 +85,13 @@ redirect. The `code` is then traded by the application for authorized
 credentials that may be used to interact with the server. The `access_token` is
 used as the ID in Hawk signatures.
 
-{oauth_token example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>POST oauth_token</div>
+
+  <div class='panel-body'>
+    {oauth_token example}
+  </div>
+</div>
 
 ### App Registration Schema
 
