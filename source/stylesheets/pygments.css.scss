@@ -28,6 +28,7 @@ $pygments-white-yellow:     hsla(60, 100%, 90%, 1);            // #fefecc
 
 .hll { background-color: $pygments-white-yellow }
 .c { color: $pygments-aqua; font-style: italic } /* Comment */
+/* (disabled)
 .err { border: 1px solid $pygments-light-red } /* Error */
 .k { color: $pygments-dark-green; font-weight: bold } /* Keyword */
 .o { color: $pygments-dark-gray-2 } /* Operator */
