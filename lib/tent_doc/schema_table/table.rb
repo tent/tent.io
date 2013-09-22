@@ -62,7 +62,7 @@ module TentDoc
         main_row = el('tr')
         main_row << el('td', el('code', name))
         main_row << el('td', required_to_s(attrs['required']))
-        main_row << el('td', required_to_s(attrs['app_required'])) if attrs['post']
+        main_row << el('td', required_to_s(attrs['app_required'])) if post_schema?
         main_row << el('td', type)
         main_row << el('td', attrs['description'].gsub(/`([^`]+?)`/, '<code>\1</code>'))
 
