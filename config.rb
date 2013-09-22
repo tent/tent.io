@@ -52,12 +52,17 @@ Fly::Sprockets.setup(sprockets)
 require 'sprockets-helpers'
 ::Sprockets::Helpers.configure do |config|
   config.environment = sprockets
-  config.prefix = "/assets"
-  config.digest = true
 end
 
 sprockets.context_class.class_eval do
   include ::Sprockets::Helpers
+
+  alias _font_path font_path
+  def font_path(source, options = {})
+    options[:prefix] = "/fonts"
+    _path = asset_path source, ::Sprockets::Helpers.default_path_options[:font_path].merge(options)
+    _path
+  end
 end
 
 # Build-specific configuration
