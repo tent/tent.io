@@ -10,7 +10,16 @@
     <div class='container'>
       <div class='row'>
         <div class='col-md-6 col-md-offset-3'>
-          <%= yield %>
+          <article>
+            <header>
+              <% if date = current_page.data[:date] %>
+                <time datetime="<%= date.to_s %>"><%= Date.parse(date.to_s).strftime('%b %e, %Y') %></time>
+              <% end %>
+              <h1><%= current_page.data[:title] %></h1>
+            </header>
+
+            <%= yield %>
+          </article>
         </div>
       </div>
 
