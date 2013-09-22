@@ -11,6 +11,7 @@ gem 'yajl-ruby'
 gem 'redcarpet'
 gem 'pygments.rb'
 gem 'builder'
+gem 'sprockets-helpers'
 
 # Custom Boostrap 3
 gem 'fly', :git => 'git://github.com/tent/fly.git', :branch => 'master'

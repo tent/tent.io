@@ -49,6 +49,17 @@ end
 require 'fly'
 Fly::Sprockets.setup(sprockets)
 
+require 'sprockets-helpers'
+::Sprockets::Helpers.configure do |config|
+  config.environment = sprockets
+  config.prefix = "/assets"
+  config.digest = true
+end
+
+sprockets.context_class.class_eval do
+  include ::Sprockets::Helpers
+end
+
 # Build-specific configuration
 configure :build do
   activate :minify_css
