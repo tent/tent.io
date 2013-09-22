@@ -2,7 +2,7 @@
   <ul class='pagination'>
     <% if prev_page %>
       <li>
-        <a href="<%= prev_page.url %>">&laquo;</a>
+        <a href="<%= prev_page.url.sub('.html', '') %>">&laquo;</a>
       </li>
     <% end %>
 
@@ -15,14 +15,14 @@
         <% if n == 1 %>
           <%= link_to n, "/blog" %>
         <% else %>
-          <%= link_to n, "/blog/page-#{n}" %>
+          <%= link_to n, "/blog/pages/#{n}" %>
         <% end %>
       </li>
     <% end %>
 
     <% if next_page %>
       <li>
-        <a href="<%= next_page.url %>">&raquo;</a>
+        <a href="<%= next_page.url.sub('.html', '') %>">&raquo;</a>
       </li>
     <% end %>
   </ul>

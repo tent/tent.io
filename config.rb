@@ -13,24 +13,18 @@ rescue LoadError
 end
 
 activate :blog do |blog|
-  blog.permalink = "blog/:title"
+  blog.permalink = "blog/:title.html"
   blog.sources = "blog/:title.html"
   blog.layout = 'blog_layout'
   blog.default_extension = '.md'
 
   blog.paginate = true
-  blog.page_link = "page-:num"
+  blog.page_link = "pages/:num"
+  blog.publish_future_dated = true
 end
 
-proxy "/blog/archive", "blog_archive.html"
-
-# Pretty URLs
-activate :directory_indexes
-
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 set :markdown_engine, :redcarpet

@@ -8,7 +8,7 @@ layout: blog_layout
   <article>
     <header>
       <time datetime="<%= article.date.to_s %>"><%= article.date.strftime('%b %e, %Y') %></time>
-      <h2><%= link_to article.title, article %></h2>
+      <h2><%= link_to article.title, article.url.sub('.html', '') %></h2>
     </header>
 
     <%= article.body %>
