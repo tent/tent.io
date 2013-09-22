@@ -24,12 +24,22 @@ with a `link` tag. The `rel` used is `https://tent.io/rels/meta-post`. Multiple
 links may be provided, the first one that has a `200` response status with
 a valid meta post should be used.
 
-{discover_head example}
+<div class='panel panel-primary'>
+  <div class='panel-heading'>HEAD entity</div>
+
+  <div class='panel-body'>
+    {discover_head example}
+  </div>
+</div>
 
 **HTML Example**
 
-```html
-<link href="https://mytent.example.com/posts/aaf43" rel="https://tent.io/rels/meta-post"/>
-```
+<div class='panel panel-primary'>
+  <div class='panel-heading'>GET entity</div>
+
+  <div class='panel-body'>
+    <%= partial 'discovery_html_example' %>
+  </div>
+</div>
 
 ## Server Info
