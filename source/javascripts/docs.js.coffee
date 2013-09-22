@@ -8,7 +8,7 @@ clearFixElement = ->
   el.className = 'clearfix'
   el
 
-PANEL_TOGGLE_EXPAND_TEXT = "Expand"
+PANEL_TOGGLE_EXPAND_TEXT = "Example"
 PANEL_TOGGLE_COLLAPSE_TEXT = "Collapse"
 
 CSS_HIDDEN_CLASS = "hidden"
