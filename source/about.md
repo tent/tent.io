@@ -1,5 +1,6 @@
 ---
 title: About
+layout: blog_layout
 ---
 
 Tent is a way to store all your data in one place that you control. Instead of your digital life being spread across many services, Tent lets you keep it all in one place. Users can choose any hosting provider (or host their own Tent server) and any apps they want to use. Tent handles storing their data and sending it to their friends. Tent is designed to be the hub of your digital life and remove any centralized authorities that could screw it up.
