@@ -9,7 +9,9 @@ If you create or find out about any cool Tent projects, [let us know](mailto:con
 
 ### Everyone
 #### Start using Tent
-Like all social services, the more people who use Tent, the more useful it is to everyone. Either by self-hosting or using a hosting provider, get your Tent server set up and keep it up to date with the most recent software version. Like all new software, Tent has many bugs. Please report them [here](https://github.com/tent/tentd/issues) or [email us](mailto:contact@tent.io). *Remember, Tent is still in alpha, so it's not safe to use with information you would not want to be public and should not be considered reliable.*
+Like all social services, the more people who use Tent, the more useful it is to everyone. Either by self-hosting or using a hosting provider, get your Tent server set up and keep it up to date with the most recent software version. Like all new software, Tent has many bugs. Please report them [here](https://github.com/tent/tentd/issues) or [email us](mailto:contact@tent.io).
+
+*Remember, Tent is still in alpha, so it's not safe to use with information you would not want to be public and should not be considered reliable.*
 
 #### Help newcomers
 Tent empowers users, but like other distributed systems (the web, email, BitTorrent, DNS) it can be hard for new users to understand. Help by creating "Getting Started" guides, tutorials, articles, and blog posts. Diagrams, animations, and videos can go a long way towards helping non-technical users understand how Tent works and why it matters.
