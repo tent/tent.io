@@ -28,6 +28,17 @@ prependChild = (el, node) ->
   else
     el.appendChild(node)
 
+addClass = (el, class_name) ->
+  classes = el.className.split(' ')
+  classes.push(class_name) if classes.indexOf(class_name) == -1
+  el.className = classes.join(' ')
+
+removeClass = (el, class_name) ->
+  classes = el.className.split(' ')
+  unless (index = classes.indexOf(class_name)) == -1
+    classes = classes.slice(0, index).concat(classes.slice(index+1, classes.length))
+  el.className = classes.join(' ')
+
 class Panel
   constructor: (@el) ->
     @elements = {
@@ -54,18 +65,13 @@ class Panel
     @hidden = true
     @elements.toggle.innerHTML = PANEL_TOGGLE_EXPAND_TEXT
 
-    classes = @elements.body.className.split(' ')
-    classes.push(CSS_HIDDEN_CLASS) if classes.indexOf(CSS_HIDDEN_CLASS) == -1
-    @elements.body.className = classes.join(' ')
+    addClass(@elements.body, CSS_HIDDEN_CLASS)
 
   showBody: =>
     @hidden = false
     @elements.toggle.innerHTML = PANEL_TOGGLE_COLLAPSE_TEXT
 
-    classes = @elements.body.className.split(' ')
-    unless (index = classes.indexOf(CSS_HIDDEN_CLASS)) == -1
-      delete classes[index]
-    @elements.body.className = classes.join(' ')
+    removeClass(@elements.body, CSS_HIDDEN_CLASS)
 
 for el in document.querySelectorAll('.panel')
   new Panel(el)
