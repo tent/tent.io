@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/tent/fly.git
-  revision: 2825249597edbe02dce85f288379ce58614516bc
+  revision: f4500e94daceb65b0dd710fc7311930da9fbe40b
   branch: master
   specs:
     fly (0.0.1)
