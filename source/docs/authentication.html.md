@@ -104,7 +104,6 @@ example.com
 
 1234
 
-
 ```
 
 **Example: response with hash, no app**
@@ -117,7 +116,6 @@ POST
 /resource?a=1&b=2
 example.com
 8000
-
 tREz+ddQOD9BUtIoQtq2W0u2qFlJrRbWpr0+y+Ux78Q=
 
 ```
