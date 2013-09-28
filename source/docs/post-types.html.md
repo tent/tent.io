@@ -80,6 +80,8 @@ versions published by the same entity.
 
 ## Content Posts
 
+Only the protocol post types above are required by Tent. The post types below are used by some developers in their apps. Developers are not required to use existing content post types and can create new post types at any time. However, please note that for apps to be compatible, they must use the same content post types. 
+
 ### Status
 
 `https://tent.io/types/status/v0`
