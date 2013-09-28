@@ -21,7 +21,7 @@ Example:
 
 ## What it's for
 
-Different people use Tent in different ways from microblogging and photo filtering to file sync, media library management, and personal data logging, Tent can do it all. Tent can store just about anything which means Tent apps can do just about anything. Tent is content agnostic, so it will be able to handle many new kinds of data that don't exist yet. Developers can create new kinds of applications that wouldn't be possible anywhere else
+Different people use Tent in different ways from microblogging and photo filtering to file sync, media library management, and personal data logging, Tent can do it all. Tent can store just about anything which means Tent apps can do just about anything. Tent is content agnostic, so it will be able to handle many new kinds of data that don't exist yet. Developers can create new kinds of applications that wouldn't be possible anywhere else.
 
 ## What's special about Tent
 
