@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'head' %>
+  </head>
+  
+  <body>
+    <%= partial 'navbar' %>
+
+    <% if current_page.url == '/' %>
+      <%= partial 'intro' %>
+    <% end %>
+
+    <div class='container'>
+      <div class='row'>
+        <div class='col-md-11 col-md-offset-1'>
+          <%= yield %>
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='col-md-10 col-md-offset-1'>
+          <%= partial 'footer' %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
