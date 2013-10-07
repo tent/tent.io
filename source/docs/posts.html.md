@@ -66,9 +66,10 @@ version "commit message".
 
 Posts have four timestamps associated with them. Timestamps are stored as the
 number of milliseconds since the [Unix
-epoch](https://en.wikipedia.org/wiki/Unix_time), and do not have timezone
-information. The first, `published_at` may be set by the application when the
-first version of a post is created. It does not change in subsequent versions.
+epoch](https://en.wikipedia.org/wiki/Unix_time) (not counting leap seconds), and
+do not have timezone information. The first, `published_at` may be set by the
+application when the first version of a post is created. It does not change in
+subsequent versions.
 
 The second timestamp, `received_at` is set when a server receives the post.
 `received_at` is only exposed to applications, not other entities, and is set by
