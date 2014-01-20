@@ -12,9 +12,9 @@ URL query values are shown unencoded for clarity.
 
 ## Principles
 
- - Users' Tent servers should be the primary data store
- - Trust your Tent server: don't client-side encrypt content unless absolutely necessary
- - Use common post types to make data accessible across applications
+ - Users' Tent servers should be the primary data store.
+ - Trust your Tent server: don't client-side encrypt content unless absolutely necessary.
+ - Use common post types to make data accessible across applications.
  - Don't delete old versions of posts unless explicitly requested by the user.
 
 ## Examples
@@ -174,5 +174,28 @@ To show only filtered photos, `GET posts_feed` with
 ### Calendars
 
 Calendars demonstrate the ease of syncinf content in Tent. Each event would be its own post, say `calendar-event` containing all relevant details. Changes to the event data would be created as new versions of the same post. When a calendar app comes online to sync with the user's server it would request all `calendar-event` posts since its last sync. The results would include all new events and changes to existing events since the last sync.
+
+
+### Ride Summoning
+
+_This is the first of a series of apps inspired by the work of [Doc Searls](http://online.wsj.com/article/SB10000872396390444873204577535352521092154.html) and [Project VRM](http://blogs.law.harvard.edu/vrm/). Tent is an idea system for intentcasts as described below._
+
+Tent can be used for communication between customers and drivers to create an Uber-like system without a middleman. The simplest version of this model includes one app for drivers and another for ride seekers. The ride seekers' app would publish a `ride-needed` post which includes the user's location. This post would be delivered immediately to any drives who had already subscribed to the user who published the post. Available drivers could respond with `ride-offer` posts including a price per until of distance or time. The ride seeking user would end the process by creating first a `ride-accepted` post sent privately to the winning driver and then a new version of the `ride-needed` post stating that a ride was no longer needed. 
+
+Posts could also contain additional data such as the destination or intended duration of the ride or acceptable vehicle types to limit the number and types of offers. Users could post reviews of drivers as public `driver-review` posts available for anyone to see, allowing riders to screen drivers based on past feedback. Drivers, of course, could do the same for users.
+
+Search engines, both public and private) could also be built to provide real-time listings of all current `ride-needed` posts, filtered by location. These search engines could even negotiate automatically on behalf of drivers in their network, forming a sort of next-generation taxi dispatch service. 
+
+Ride seekers could publish their `ride-needed` posts privately only to friends creating a ride-sharing service. Posts could be published far in advance to find a friend who could pick them up at the airport upon arriving in town. If a friend was unavailable, the permissions on the post could be altered to allow professional drivers to bid for the job. 
+
+Alternatively ride seekers could choose to share their posts with a small number of taxi/car services or search engines. These services could protect users' privacy by obscuring their identities from drivers and not requiring public posts. 
+
+Users who were particularly concerned about privacy could create "throwaway" Tent entities from which to publish `ride-needed` posts. These anonymous posts might be treated as higher risk or less desirable by some drivers, but would allow users to solicit rides without revealing their identities.
+
+
+
+
+
+
 
 
