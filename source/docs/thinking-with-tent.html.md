@@ -3,16 +3,17 @@ title: Thinking With Tent
 layout: docs
 ---
 
-Tent applications are built differently than centralized web apps or isolated
+Tent applications are designed differently than centralized web apps or isolated
 desktop and mobile applications.
 
-This page describes how a number of simple Tent applications are architected.
+This page describes how different types of Tent applications could be architected.
 
 URL query values are shown unencoded for clarity.
 
 ## Principles
 
  - Users' Tent servers should be the primary data store
+ - Trust your Tent server: don't client-side encrypt content unless absolutely necessary
  - Use common post types to make data accessible across applications
  - Don't delete old versions of posts unless explicitly requested by the user.
 
@@ -169,3 +170,9 @@ the filtered versions), just original `photo#`s, and/or `photo#filtered`s.
 
 To show only filtered photos, `GET posts_feed` with
 `?types=https://example.com/types/photo/v0#filtered`
+
+### Calendars
+
+Calendars demonstrate the ease of syncinf content in Tent. Each event would be its own post, say `calendar-event` containing all relevant details. Changes to the event data would be created as new versions of the same post. When a calendar app comes online to sync with the user's server it would request all `calendar-event` posts since its last sync. The results would include all new events and changes to existing events since the last sync.
+
+
