@@ -191,3 +191,15 @@ Ride seekers could publish their `ride-needed` posts privately only to friends c
 Alternatively ride seekers could choose to share their posts with a small number of taxi/car services or search engines. These services could protect users' privacy by obscuring their identities from drivers and not requiring public posts.
 
 Users who were particularly concerned about privacy could create "throwaway" Tent entities from which to publish `ride-needed` posts. These anonymous posts might be treated as higher risk or less desirable by some drivers, but would allow users to solicit rides without revealing their identities.
+
+### Email
+
+_Most Tent apps will only be concerned with data inside of Tent. However some "bridge apps" will communicate with other protocols and APIs. In these cases it is important to store data within Tent in ways that allow other applications to access and build on top of it._
+
+Tent plays well with most other protocols. For example a user might want to back up her emails to Tent as she receives them. This can be easily accomplished with an application that acts as an email client app and a Tent app. This application would fetch new posts from the user's email server over IMAP or POP3 and store them as `email-backup` posts on the user's Tent server.
+
+A more complicated model would allow the user to manage all her messages in one interface whether she was communicating with email or Tent users. This involves several components including the user's email server, Tent server, and as many as three Tent apps. The first Tent app is described above, its role is to fetch incoming messages from the user's email server via IMAP and store them on her Tent server. The second application performs the opposite function: parsing `outgoing-email` posts from the Tent server and sending them to her email server via SMTP. The third application is an inbox and message UI which allows the user to draft messages and send them either to other Tent users via a `message` post type or to email users via `outgoing email` posts.
+
+In practice these components might be combined into a smaller number of actual applications but are shown separately for the purpose of illustrating their functionality. By dividing the functions across different components and post types, users could for example choose to swap the message composition and inbox UIs for other applications which use the same post types. 
+
+
