@@ -178,7 +178,7 @@ Calendars demonstrate the ease of syncing content in Tent. Each event would be i
 
 ### Ride Summoning
 
-_This is the first of a series of apps inspired by the work of [Doc Searls](http://online.wsj.com/article/SB10000872396390444873204577535352521092154.html) and [Project VRM](http://blogs.law.harvard.edu/vrm/). Tent is an idea system for intentcasts as described below._
+_This is the first of a series of apps inspired by the work of [Doc Searls](http://online.wsj.com/article/SB10000872396390444873204577535352521092154.html) and [Project VRM](http://blogs.law.harvard.edu/vrm/). Tent is an ideal system for intentcasts as described below._
 
 Tent can be used for communication between customers and drivers to create an Uber-like system without a middleman. The simplest version of this model includes one app for drivers and another for ride seekers. The ride seekers' app would publish a `ride-needed` post which includes the user's location. This post would be delivered immediately to any drivers who had already subscribed to the user who published the post. Available drivers could respond with `ride-offer` posts including a price per until of distance or time. The ride seeking user would end the process by creating first a `ride-accepted` post sent privately to the winning driver and then a new version of the `ride-needed` post stating that a ride was no longer needed.
 
@@ -200,6 +200,4 @@ Tent plays well with most other protocols. For example a user might want to back
 
 A more complicated model would allow the user to manage all her messages in one interface whether she was communicating with email or Tent users. This involves several components including the user's email server, Tent server, and as many as three Tent apps. The first Tent app is described above, its role is to fetch incoming messages from the user's email server via IMAP and store them on her Tent server. The second application performs the opposite function: parsing `outgoing-email` posts from the Tent server and sending them to her email server via SMTP. The third application is an inbox and message UI which allows the user to draft messages and send them either to other Tent users via a `message` post type or to email users via `outgoing email` posts.
 
-In practice these components might be combined into a smaller number of actual applications but are shown separately for the purpose of illustrating their functionality. By dividing the functions across different components and post types, users could for example choose to swap the message composition and inbox UIs for other applications which use the same post types. 
-
-
+In practice these components might be combined into a smaller number of actual applications but are shown separately for the purpose of illustrating their functionality. By dividing the functions across different components and post types, users could for example choose to swap the message composition and inbox UIs for other applications which use the same post types.
