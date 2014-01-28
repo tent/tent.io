@@ -3,7 +3,31 @@ title: Office Hours
 layout: officehours
 ---
 
-<iframe src="https://www.ustream.tv/embed/13161332?autoplay=true" class="col-md-11" height="386" scrolling="no" frameborder="0" style="border: 0px none transparent;"></iframe>
+<%= javascript_include_tag 'swfobject' %>
+
+<script type="text/javascript">
+var params = {
+  src: "http://streambox.fr/playlists/test_001/stream.m3u8",
+  autoPlay: "false",
+  controlBarAutoHide: "true",
+  controlBarPosition: "bottom",
+  plugin_hls: "/swfs/HLSProviderOSMF.swf",
+};
+swfobject.embedSWF(
+  "/swfs/GrindPlayer.swf",
+  "StrobeMediaPlayback",
+  640,
+  386,
+  "10.1.0",
+  null,
+  params,
+  { allowFullScreen: true, wmode: "direct" },
+  { name: "StrobeMediaPlayback" }
+);
+</script>
+
+<div class="col-md-11" id="StrobeMediaPlayback"></div>
+
 <iframe src="https://webchat.freenode.net?randomnick=1&channels=tent" class="col-md-11" style="border: 0px none transparent" height="400"></iframe>
 
 <div class='col-md-11'>
