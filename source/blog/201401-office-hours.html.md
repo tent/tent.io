@@ -8,3 +8,5 @@ at [20:00 UTC](http://everytimezone.com/#2014-1-28,480,6bj).
 
 Questions may be asked in advance as status posts with the hashtag #officehours
 or in realtime on IRC. A recording will be made available after the event.
+
+**Update**: [The recording](/officehours/2014-01-28) is available.
