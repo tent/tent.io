@@ -222,7 +222,7 @@ A tag is mentioned by other posts in order to categorize them.
 
 A favorite references another post.
 
-The post must include a ref may include a mention of the original post. The type
+The post must include a ref and may include a mention of the original post. The type
 fragment must be set to the type of the original post.
 
 {post_favorite schema}
