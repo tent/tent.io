@@ -23,3 +23,7 @@ Any company can become a Tent service provider and offer Tent hosting. Since Ten
 Each user has one server and many apps. Since every Tent app works with every Tent server, users can choose the best apps and service provider for them. Tent apps range from microblogging and personal publishing to cloud-backed file sync. This means your ops team focuses on providing a single API that powers all applications. 
 
 Tent creates an open market where anyone can compete directly with Facebook, Dropbox, and iCloud for the consumer cloud storage market. Hosting companies compete on price, SLA, privacy, security, and other core competencies, not  ownership of the biggest social graph.
+
+## Publishers
+
+Tent opens up new distribution channels and monetization options for content publishers. Since Tent is a protocol no outside company can intermediate the publisher-subscriber relationship. Users can subscribe to content sources, share with friends/repost to followers, and remix content. Tent has built-in support for micropayments so consumers can easily compensate publishers for creating great content, even when that content is remixed inside another content creator's work.
