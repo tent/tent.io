@@ -45,11 +45,15 @@ subscriptions.
 
 `https://tent.io/types/relationship/v0`
 
+Relationship post keep track of other entities that subscribe to our posts. The post mentions the subscribing entity and the subscription post of the subscribing entity. Relationship posts have a post type fragment, either `subscriber` or `mutual`.
+
 ### Subscription
 
 `https://tent.io/types/subscription/v0`
 
 {post_subscription schema}
+
+A subscription post with post type fragment F posted by Entity A and mentioning Entity B indicates that A whishes to receive all posts from B where the post type is F. In other words, A follows all posts of post type F from B.
 
 ### Delivery Failure
 
