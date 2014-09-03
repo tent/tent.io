@@ -25,7 +25,7 @@ entity.
 - `post` A post identifier.
 - `version` A post version identifier. Requires `post` to be specified.
 - `attachment_name` An attachment name. Requires `post` to be specified.
-- `attachment_digest` The hex encoded digest of an attachment. Allows referencing and attachment without `post` and `version`.
+- `attachment_digest` The hex encoded digest of an attachment. Allows referencing an attachment without `post` and `version`.
 
 ```text
 tent+https://jonathan.tent.is?post=123
