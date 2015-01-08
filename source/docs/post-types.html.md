@@ -86,7 +86,7 @@ Only the protocol post types above are required by Tent. The post types below ar
 
 `https://tent.io/types/status/v0`
 
-Status is Tent's take on microblogging. Messages contain up to 256 characters of
+Status is Tent's take on microblogging. Messages contain up to 512 characters of
 text and optionally have a location.
 
 

@@ -23,7 +23,7 @@ URL query values are shown unencoded for clarity.
 
 One of the simplest uses of Tent is microblogging.
 
-The `status` post type allows short messages up to 256 characters formatted with
+The `status` post type allows short messages up to 512 characters formatted with
 Tent flavored Markdown and the ability to link to other media.
 
 The simplest status app would use a single query: `GET posts_feed` with
