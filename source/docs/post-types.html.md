@@ -155,6 +155,16 @@ Some text
 Some more text
 ```
 
+##### Blockquotes
+
+Blockquotes are also supported:
+
+`> This is a quote\n>>This is a nested quote\n>>>This is a very nested quote` becomes (styling may differ):
+
+> This is a quote
+> > This is a nested quote
+> > > This is a very nested quote
+
 #### Counting Characters
 
 The maximum length of the `text` is 256 Unicode characters (also known as code
