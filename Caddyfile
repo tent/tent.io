@@ -1,0 +1,20 @@
+www.tent.io:{$PORT} {
+  tls off
+  redir https://tent.io{uri}
+}
+
+tent.io:{$PORT} {
+  tls off
+  root build
+  log stdout
+  tlsredirect
+  ext .html
+  gzip
+
+  header / {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    X-XSS-Protection "1; mode=block"
+    X-Frame-Options "DENY"
+    X-Content-Type-Options "nosniff"
+  }
+}
