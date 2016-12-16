@@ -104,7 +104,6 @@ example.com
 
 1234
 
-
 ```
 
 **Example: response with hash, no app**
