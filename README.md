@@ -1,4 +1,4 @@
-# tent.io
+# tent.io _ "suite of distributed networking protocols"
 
 This repository hosts the Tent blog and documentation. Take a look at [the other repositories](https://github.com/tent) for Tent server and client implementations.
 
